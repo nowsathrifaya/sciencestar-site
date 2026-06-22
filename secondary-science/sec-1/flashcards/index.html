@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XM36L4R49E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XM36L4R49E');
+</script>
+<link rel="canonical" href="https://primayscience.org/secondary-science/sec-1/flashcards/">
+<meta property="og:image" content="https://primayscience.org/images/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://primayscience.org/images/og-image.png">
+<meta charset="UTF-8">
+<meta name="msvalidate.01" content="91CF6C6F33397B7C71988AB0E7FC1F84" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sec 1 Science Flashcards — Active Recall Quiz | ScienceStar</title>
+<meta name="keywords" content="Sec 1 Science Flashcards — Active Recall Quiz | ScienceStar, Singapore science, free study notes, O-Level, PSLE">
+<meta name="description" content="Interactive Sec 1 Science flashcards for active recall. 80+ cards across all 5 topics. Flip, mark known/unknown, track your score. Free.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080f1e;--bg2:#0b1424;--card:#0e1b2e;--card2:#111f36;
+  --border:rgba(255,255,255,.08);--border2:rgba(255,255,255,.15);
+  --text:#e8edf5;--muted:rgba(232,237,245,.55);--dim:rgba(232,237,245,.28);
+  --cyan:#22d3ee;--green:#34d399;--amber:#fbbf24;--red:#f87171;--purple:#a78bfa;
+  --sky:#0ea5e9;--hub:#7c3aed;
+  --c1:#22d3ee;--c2:#818cf8;--c3:#f472b6;--c4:#34d399;--c5:#fb923c;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;align-items:center;padding:0 clamp(16px,5%,48px);background:rgba(8,15,30,.93);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+.nav-brand{font-family:'Sora',sans-serif;font-weight:800;font-size:18px;color:#fff;text-decoration:none}.nav-brand span{color:var(--cyan)}
+.nav-links{display:flex;align-items:center;gap:4px;margin-left:auto}
+.nav-links a{font-size:12px;font-weight:600;color:var(--muted);text-decoration:none;padding:5px 10px;border-radius:8px}.nav-links a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.back-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--cyan);text-decoration:none;padding:76px clamp(16px,5%,48px) 0;display:block}
+
+/* HERO */
+.hero{padding:28px clamp(16px,5%,48px) 36px;border-bottom:1px solid var(--border)}
+.hero-in{max-width:900px;margin:0 auto}
+.badge-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.badge{display:inline-flex;align-items:center;gap:5px;padding:4px 12px;border-radius:50px;font-size:11px;font-weight:700}
+.b1{background:rgba(34,211,238,.1);border:1px solid rgba(34,211,238,.3);color:var(--cyan)}
+.b2{background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.3);color:var(--green)}
+h1{font-family:'Sora',sans-serif;font-size:clamp(22px,3.5vw,36px);font-weight:800;color:#fff;margin-bottom:8px}
+h1 em{font-style:normal;color:var(--amber)}
+.hero-desc{font-size:14px;color:var(--muted);max-width:560px;line-height:1.75;margin-bottom:20px}
+
+/* TOPIC FILTER */
+.filter-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.f-btn{padding:7px 15px;border-radius:50px;font-size:12px;font-weight:700;border:1px solid var(--border2);background:rgba(255,255,255,.04);color:var(--muted);cursor:pointer;transition:.18s;user-select:none}
+.f-btn:hover{color:#fff;background:rgba(255,255,255,.08)}
+.f-btn.on{color:#fff}
+.f-all.on{border-color:rgba(34,211,238,.5);background:rgba(34,211,238,.1);color:var(--cyan)}
+.f-t1.on{border-color:rgba(34,211,238,.5);background:rgba(34,211,238,.1);color:var(--c1)}
+.f-t2.on{border-color:rgba(129,140,248,.5);background:rgba(129,140,248,.1);color:var(--c2)}
+.f-t3.on{border-color:rgba(244,114,182,.5);background:rgba(244,114,182,.1);color:var(--c3)}
+.f-t4.on{border-color:rgba(52,211,153,.5);background:rgba(52,211,153,.1);color:var(--c4)}
+.f-t5.on{border-color:rgba(251,146,60,.5);background:rgba(251,146,60,.1);color:var(--c5)}
+
+/* PROGRESS BAR */
+.prog-wrap{max-width:900px;margin:16px auto 0;padding:0 clamp(16px,5%,48px)}
+.prog-stats{display:flex;gap:20px;margin-bottom:8px;flex-wrap:wrap}
+.prog-stat{font-size:12px;color:var(--muted)}.prog-stat strong{color:#fff}
+.prog-bar-bg{height:6px;background:rgba(255,255,255,.07);border-radius:50px;overflow:hidden}
+.prog-bar-fill{height:100%;border-radius:50px;background:linear-gradient(90deg,var(--green),var(--cyan));transition:width .4s}
+
+/* CARD AREA */
+.card-area{max-width:900px;margin:0 auto;padding:28px clamp(16px,5%,48px)}
+
+/* FLASHCARD */
+.fc-container{perspective:1200px;width:100%;max-width:640px;margin:0 auto 24px;cursor:pointer}
+.fc-inner{position:relative;width:100%;transition:transform .5s cubic-bezier(.4,0,.2,1);transform-style:preserve-3d;min-height:260px}
+.fc-inner.flipped{transform:rotateY(180deg)}
+.fc-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 36px;text-align:center;border:1px solid var(--border2)}
+.fc-front{background:var(--card2)}
+.fc-back{background:linear-gradient(135deg,#0d1f38,#0f2440);transform:rotateY(180deg)}
+.fc-topic-badge{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;padding:3px 10px;border-radius:50px;margin-bottom:16px}
+.fc-q{font-family:'Sora',sans-serif;font-size:clamp(16px,2.5vw,22px);font-weight:800;color:#fff;line-height:1.3}
+.fc-hint{font-size:12px;color:var(--dim);margin-top:12px}
+.fc-a-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--green);margin-bottom:12px}
+.fc-a{font-size:clamp(14px,2vw,17px);color:var(--text);line-height:1.65;max-width:480px}
+.fc-a strong{color:#fff;display:block;font-size:clamp(16px,2.2vw,20px);margin-bottom:8px}
+
+/* CARD COUNTER */
+.card-counter{text-align:center;font-size:13px;color:var(--dim);margin-bottom:16px}
+.card-counter span{color:#fff;font-weight:700}
+
+/* ACTION BUTTONS */
+.fc-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:4px}
+.fc-btn{display:flex;align-items:center;gap:8px;padding:11px 22px;border-radius:50px;font-size:14px;font-weight:700;cursor:pointer;border:none;transition:.2s;user-select:none}
+.btn-got{background:rgba(52,211,153,.15);color:var(--green);border:1px solid rgba(52,211,153,.4)}.btn-got:hover{background:rgba(52,211,153,.25)}
+.btn-miss{background:rgba(248,113,113,.12);color:var(--red);border:1px solid rgba(248,113,113,.35)}.btn-miss:hover{background:rgba(248,113,113,.22)}
+.btn-flip{background:rgba(34,211,238,.1);color:var(--cyan);border:1px solid rgba(34,211,238,.3)}.btn-flip:hover{background:rgba(34,211,238,.2)}
+.btn-skip{background:rgba(255,255,255,.05);color:var(--muted);border:1px solid var(--border)}.btn-skip:hover{background:rgba(255,255,255,.1)}
+
+.fc-tip{text-align:center;font-size:12px;color:var(--dim);margin-top:14px}
+
+/* RESULTS PANEL */
+.results-panel{display:none;background:var(--card);border:1px solid var(--border2);border-radius:20px;padding:32px;text-align:center;max-width:640px;margin:0 auto}
+.results-panel h2{font-family:'Sora',sans-serif;font-size:26px;color:#fff;margin-bottom:8px}
+.results-panel .score{font-family:'Sora',sans-serif;font-size:52px;font-weight:800;color:var(--green);margin:12px 0}
+.results-panel p{font-size:14px;color:var(--muted);margin-bottom:20px}
+.results-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.r-stat{padding:16px;border-radius:12px;font-size:13px}
+.r-got{background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.2);color:var(--green)}
+.r-miss{background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.2);color:var(--red)}
+.r-stat strong{display:block;font-family:'Sora',sans-serif;font-size:28px;font-weight:800;margin-bottom:4px}
+.restart-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:50px;background:var(--cyan);color:#04111f;font-weight:800;font-size:15px;border:none;cursor:pointer;margin-right:8px;transition:.2s}.restart-btn:hover{background:#38e5ff}
+.review-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:50px;background:rgba(248,113,113,.15);color:var(--red);font-weight:700;font-size:14px;border:1px solid rgba(248,113,113,.3);cursor:pointer;transition:.2s}.review-btn:hover{background:rgba(248,113,113,.25)}
+.review-btn:disabled{opacity:.4;cursor:default}
+
+/* MISSED REVIEW */
+.missed-section{display:none;max-width:900px;margin:0 auto;padding:0 clamp(16px,5%,48px) 48px}
+.missed-section h3{font-family:'Sora',sans-serif;font-size:18px;color:var(--red);margin-bottom:16px}
+.missed-list{display:flex;flex-direction:column;gap:10px}
+.missed-item{background:rgba(248,113,113,.05);border:1px solid rgba(248,113,113,.15);border-radius:12px;padding:14px 18px}
+.missed-q{font-size:13px;font-weight:700;color:#fff;margin-bottom:6px}
+.missed-a{font-size:13px;color:var(--muted);line-height:1.6}
+.missed-tag{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--red);opacity:.7;margin-bottom:4px}
+
+footer{background:#040a14;border-top:1px solid var(--border);padding:28px clamp(16px,5%,48px) 20px;margin-top:40px}
+.fi{max-width:900px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;font-size:13px}
+.flogo{font-family:'Sora',sans-serif;font-weight:800;color:#fff;text-decoration:none}.flogo span{color:var(--cyan)}
+.flinks{display:flex;gap:16px;flex-wrap:wrap}.flinks a{color:var(--muted);text-decoration:none;font-size:12px}.flinks a:hover{color:#fff}
+.fb{max-width:900px;margin:12px auto 0;font-size:11px;color:var(--dim)}
+
+@media(max-width:600px){.fc-face{padding:24px 20px}.fc-q{font-size:17px}.fc-actions{gap:8px}.fc-btn{padding:10px 16px;font-size:13px}}
+
+  /* nav search */
+  .nav-search{display:flex;align-items:center;margin-left:8px;position:relative}
+  .ns-icon{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:8px;color:rgba(232,237,245,.6);cursor:pointer;padding:6px 8px;display:flex;align-items:center;transition:.15s}
+  .ns-icon:hover{color:#fff;background:rgba(255,255,255,.12)}
+  .ns-form{display:flex;align-items:center;overflow:hidden;width:0;opacity:0;transition:width .25s ease,opacity .2s;position:absolute;right:36px;top:50%;transform:translateY(-50%)}
+  .nav-search.open .ns-form{width:200px;opacity:1}
+  .ns-input{background:#0d1629;border:1.5px solid rgba(56,189,248,.4);border-radius:8px 0 0 8px;color:#e8edf5;font-size:13px;padding:6px 10px;outline:none;width:100%;font-family:inherit}
+  .ns-input::placeholder{color:rgba(232,237,245,.3)}
+  .ns-submit{background:rgba(56,189,248,.2);border:1.5px solid rgba(56,189,248,.4);border-left:none;border-radius:0 8px 8px 0;color:#38bdf8;cursor:pointer;padding:6px 10px;font-size:13px;font-family:inherit;transition:.15s}
+  .ns-submit:hover{background:rgba(56,189,248,.35)}
+  @media(max-width:500px){.nav-search.open .ns-form{width:150px}}
+</style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Sec 1 Science Flashcards",
+  "url": "https://primayscience.org/secondary-science/sec-1/flashcards/",
+  "description": "Interactive Sec 1 Science flashcards for Singapore students. All 5 topics covered.",
+  "educationalLevel": "Secondary School",
+  "inLanguage": "en-SG",
+  "provider": {"@type": "Organization", "name": "ScienceStar", "url": "https://primayscience.org"},
+  "dateModified": "2026-05-14"
+}</script>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://primayscience.org/secondary-science/sec-1/flashcards/">
+<meta property="og:title" content="Sec 1 Science Flashcards, Sec 1 Lower Secondary Science Singapore, active recall quiz, Science Flashcards Singapore">
+<meta property="og:description" content="Interactive Sec 1 Science flashcards for active recall. 80+ cards across all 5 topics. Flip, mark known/unknown, track your score. Free.">
+<meta property="og:image" content="https://primayscience.org/images/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-brand">⭐ Science<span>Star</span></a>
+  <div class="nav-links">
+    <a href="/secondary-science/sec-1/">← Sec 1 Hub</a>
+    <a href="/secondary-science/sec-1/past-year-questions/">PYQ</a>
+  </div>
+
+  <div class="nav-search" id="navSearch">
+    <button class="ns-icon" onclick="openSearch()" aria-label="Search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
+    <form class="ns-form" action="/search/" method="GET" role="search">
+      <input class="ns-input" type="search" name="q" placeholder="Search topics…" autocomplete="off" aria-label="Search ScienceStar" onfocus="this.closest('.nav-search').classList.add('open')" onblur="setTimeout(()=>this.closest('.nav-search').classList.remove('open'),200)">
+      <button type="submit" class="ns-submit" aria-label="Go">→</button>
+    </form>
+  </div>
+</nav>
+
+<div style="padding:76px clamp(16px,5%,48px) 0;max-width:900px;margin:0 auto;font-size:12px;color:var(--dim)">
+  <a href="/">Home</a><span style="margin:0 6px">›</span><a href="/secondary-science/" style="color:var(--muted);text-decoration:none">Secondary</a><span style="margin:0 6px">›</span><a href="/secondary-science/sec-1/" style="color:var(--muted);text-decoration:none">Sec 1</a><span style="margin:0 6px">›</span> Flashcards
+</div>
+
+<section class="hero">
+  <div class="hero-in">
+    <div class="badge-row">
+      <span class="badge b1">🃏 Active Recall</span>
+      <span class="badge b2">80 cards · All 5 topics</span>
+    </div>
+    <h1>Sec 1 Science<br><em>Flashcard Quiz</em></h1>
+    <p class="hero-desc">Reading notes is passive — this is active. Flip each card, decide if you knew it, and the cards you missed get re-queued automatically until you've got them all.</p>
+    <div class="filter-row" id="filterRow">
+      <button class="f-btn f-all on" onclick="setFilter('all',this)">All topics</button>
+      <button class="f-btn f-t1" onclick="setFilter('1',this)">🔬 Inquiry</button>
+      <button class="f-btn f-t2" onclick="setFilter('2',this)">📊 Models</button>
+      <button class="f-btn f-t3" onclick="setFilter('3',this)">⚗️ Matter</button>
+      <button class="f-btn f-t4" onclick="setFilter('4',this)">🌿 Living</button>
+      <button class="f-btn f-t5" onclick="setFilter('5',this)">⚡ Forces</button>
+    </div>
+  </div>
+</section>
+
+<div class="prog-wrap">
+  <div class="prog-stats">
+    <div class="prog-stat">Card <strong id="cardNum">1</strong> of <strong id="cardTotal">80</strong></div>
+    <div class="prog-stat">✓ Got it: <strong id="gotCount" style="color:var(--green)">0</strong></div>
+    <div class="prog-stat">✗ Missed: <strong id="missCount" style="color:var(--red)">0</strong></div>
+  </div>
+  <div class="prog-bar-bg"><div class="prog-bar-fill" id="progBar" style="width:0%"></div></div>
+</div>
+
+<div class="card-area">
+
+  <!-- FLASHCARD -->
+  <div id="fcWrapper">
+    <div class="card-counter">Card <span id="cn">1</span> / <span id="ct">80</span></div>
+    <div class="fc-container" id="fcContainer" onclick="flipCard()">
+      <div class="fc-inner" id="fcInner">
+        <div class="fc-face fc-front">
+          <div class="fc-topic-badge" id="fcBadge"></div>
+          <div class="fc-q" id="fcQ">Loading...</div>
+          <div class="fc-hint">👆 Tap to reveal answer</div>
+        </div>
+        <div class="fc-face fc-back">
+          <div class="fc-a-label">Answer</div>
+          <div class="fc-a" id="fcA"></div>
+        </div>
+      </div>
+    </div>
+    <div class="fc-tip" id="fcTip">Click the card to flip it, then mark yourself honestly.</div>
+    <div class="fc-actions" id="fcActions" style="display:none">
+      <button class="fc-btn btn-got" onclick="markCard(true)">✓ Got it</button>
+      <button class="fc-btn btn-miss" onclick="markCard(false)">✗ Missed</button>
+      <button class="fc-btn btn-skip" onclick="markCard(null)">→ Skip</button>
+    </div>
+  </div>
+
+  <!-- RESULTS -->
+  <div class="results-panel" id="resultsPanel">
+    <div style="font-size:36px;margin-bottom:8px">🎉</div>
+    <h2>Round complete!</h2>
+    <div class="score" id="scoreDisplay">0%</div>
+    <p id="scoreMsg"></p>
+    <div class="results-grid">
+      <div class="r-stat r-got"><strong id="rGot">0</strong>Cards you knew</div>
+      <div class="r-stat r-miss"><strong id="rMiss">0</strong>Cards to review</div>
+    </div>
+    <button class="restart-btn" onclick="restart(false)">🔄 Restart all cards</button>
+    <button class="review-btn" id="reviewMissedBtn" onclick="restart(true)">⚡ Review missed only</button>
+  </div>
+
+</div><!-- /card-area -->
+
+<!-- MISSED LIST (shown after results) -->
+<div class="missed-section" id="missedSection">
+  <h3>📋 Cards you missed — review these</h3>
+  <div class="missed-list" id="missedList"></div>
+</div>
+
+
+<style>
+.info-sec{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px 32px;margin:24px 0}
+.info-sec h3{font-size:16px;font-weight:800;color:#fff;margin-bottom:12px}
+.info-sec p{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:12px}
+.info-sec ul{padding-left:20px}
+.info-sec li{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:6px}
+.info-sec li strong{color:#fff}
+.info-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin:20px 0}
+.info-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px}
+.info-card-icon{font-size:22px;margin-bottom:10px}
+.info-card h4{font-size:14px;font-weight:800;color:#fff;margin-bottom:8px}
+.info-card p{font-size:13px;color:var(--muted);line-height:1.7}
+.faq-item{border-bottom:1px solid var(--border);padding:16px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-q{font-size:14px;font-weight:700;color:#fff;margin-bottom:8px}
+.faq-a{font-size:13px;color:var(--muted);line-height:1.8}
+.tip-row{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--border)}
+.tip-row:last-child{border-bottom:none}
+.tip-num{width:28px;height:28px;border-radius:50%;background:rgba(var(--rgb),.15);border:1px solid rgba(var(--rgb),.3);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:var(--acc);flex-shrink:0}
+.tip-text{font-size:13px;color:var(--muted);line-height:1.7}
+.tip-text strong{color:#fff}
+</style>
+
+<div class="info-sec">
+<h3>Why active recall beats re-reading</h3>
+<p>Decades of research in cognitive science show that actively retrieving information from memory — rather than passively reading it again — produces dramatically better long-term retention. This is called the testing effect or retrieval practice effect. The flashcard quiz above puts this into practice: every card you struggle to recall gets re-queued until you have retrieved it successfully, which is exactly when memory consolidation occurs.</p>
+<p>The 80 flashcards in this set cover all five Sec 1 Science topics aligned to the Singapore Lower Secondary Science syllabus: Scientific Inquiry, Models and Representations, Matter, Living Diversity, and Interactions. Working through the full set takes approximately 15–25 minutes and is significantly more effective than spending the same time reading notes.</p>
+</div>
+
+<div class="info-sec">
+<h3>What these flashcards cover</h3>
+<div class="info-grid">
+<div class="info-card">
+<div class="info-card-icon">🔬</div>
+<h4>Scientific Inquiry</h4>
+<p>Variables (independent, dependent, controlled), fair test design, hypothesis writing, data collection methods, table and graph construction, and the difference between accuracy and precision. These skills underpin every practical assessment at O-Level.</p>
+</div>
+<div class="info-card">
+<div class="info-card-icon">📊</div>
+<h4>Models and Representations</h4>
+<p>Particle model of matter, states of matter and state changes, kinetic theory, heating and cooling curves, and the use of scientific diagrams and symbols. The kinetic model introduced at Sec 1 is built upon throughout Sec 2, Sec 3, and O-Level.</p>
+</div>
+<div class="info-card">
+<div class="info-card-icon">⚗️</div>
+<h4>Matter</h4>
+<p>Elements, compounds, and mixtures. Physical and chemical changes. Separation techniques (filtration, evaporation, distillation, chromatography). Properties of acids and bases. Introduction to the Periodic Table.</p>
+</div>
+<div class="info-card">
+<div class="info-card-icon">🌿</div>
+<h4>Living Diversity</h4>
+<p>Classification of living organisms. Characteristics of living things. Cells — plant and animal. Microscopy. Adaptation and variation. This topic provides the biological foundation for all Sec 3 and Sec 4 Biology topics.</p>
+</div>
+<div class="info-card">
+<div class="info-card-icon">🌐</div>
+<h4>Interactions</h4>
+<p>Food chains and food webs. Energy flow through ecosystems. Abiotic and biotic factors. Human impact on the environment. Ecosystems and sustainability. These concepts recur in O-Level Biology (Ecology and Health) and in PSLE preparation.</p>
+</div>
+</div>
+</div>
+
+<div class="info-sec">
+<h3>How to get the most from flashcard revision</h3>
+<div class="tip-row"><div class="tip-num">1</div><div class="tip-text"><strong>Do not just flip and read:</strong> before revealing the back of each card, say your answer aloud (or in your head). The act of attempting retrieval — even if incorrect — strengthens the memory trace more than immediately reading the answer.</div></div>
+<div class="tip-row"><div class="tip-num">2</div><div class="tip-text"><strong>Be strict with yourself:</strong> if you were not confident, mark the card as missed even if your answer was technically correct. The re-queue system will bring it back — that repetition is what builds durable memory.</div></div>
+<div class="tip-row"><div class="tip-num">3</div><div class="tip-text"><strong>Do short, frequent sessions:</strong> two 15-minute sessions on different days produces better retention than one 30-minute session. The gap between sessions — known as spaced repetition — forces your brain to reconstruct the memory, making it stronger each time.</div></div>
+<div class="tip-row"><div class="tip-num">4</div><div class="tip-text"><strong>Connect to your class notes:</strong> when a card reveals a term you do not recognise, go to the corresponding ScienceStar study notes page, read the relevant section, then come back and attempt the card again.</div></div>
+</div>
+
+
+<div style="margin:32px 0;padding:18px 20px;background:linear-gradient(135deg,rgba(249,115,22,.08),rgba(167,139,250,.08));border:1px solid rgba(249,115,22,.2);border-radius:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px">
+  <div>
+    <div style="font-size:12px;font-weight:800;color:#f97316;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px">📝 O-Level Exam Practice</div>
+    <div style="font-size:14px;font-weight:700;color:#fff">Free Mock Papers — Chemistry, Physics &amp; Biology</div>
+    <div style="font-size:12px;color:rgba(232,237,245,.5);margin-top:2px">40 MCQ · 1-hour timed · auto-marked with full explanations</div>
+  </div>
+  <a href="/secondary-science/pure-sciences/chemistry/mock-paper-1/" style="display:inline-flex;align-items:center;gap:6px;padding:9px 18px;background:linear-gradient(135deg,#f97316,#a78bfa);border-radius:50px;color:#fff;font-weight:800;font-size:13px;text-decoration:none;white-space:nowrap">Start a Mock Paper →</a>
+</div>
+<footer>
+  <div class="fi">
+    <a href="/" class="flogo">⭐ Science<span>Star</span></a>
+    <div class="flinks">
+      <a href="/secondary-science/sec-1/">Sec 1 Hub</a>
+      <a href="/secondary-science/sec-1/science-inquiry/">Inquiry notes</a>
+      <a href="/secondary-science/sec-1/exploring-matter/">Matter notes</a>
+      <a href="/secondary-science/sec-1/living-diversity/">Living notes</a>
+      <a href="/secondary-science/sec-1/interactions-intro/">Forces notes</a>
+      <a href="/secondary-science/sec-1/past-year-questions/">Past Year Qs</a>
+    </div>
+  </div>
+  <div class="fb">© 2026 ScienceStar · Active recall tool · Not affiliated with MOE or SEAB</div>
+</footer>
+
+<script>
+const TOPICS = {
+  '1': {label:'🔬 Inquiry', color:'#22d3ee', bg:'rgba(34,211,238,.12)'},
+  '2': {label:'📊 Models', color:'#818cf8', bg:'rgba(129,140,248,.12)'},
+  '3': {label:'⚗️ Matter', color:'#f472b6', bg:'rgba(244,114,182,.12)'},
+  '4': {label:'🌿 Living', color:'#34d399', bg:'rgba(52,211,153,.12)'},
+  '5': {label:'⚡ Forces', color:'#fb923c', bg:'rgba(251,146,60,.12)'},
+};
+
+const ALL_CARDS = [
+  // ── INQUIRY (t=1) ──
+  {t:'1',q:'What is the independent variable (IV)?',a:'The one factor you deliberately <strong>change</strong> in an investigation.'},
+  {t:'1',q:'What is the dependent variable (DV)?',a:'The factor you <strong>measure</strong> as a result of changing the IV.'},
+  {t:'1',q:'What is a controlled variable (CV)?',a:'A factor kept <strong>constant</strong> so it cannot affect the result — only the IV causes changes in the DV.'},
+  {t:'1',q:'What is a "fair test"?',a:'An investigation that changes <strong>only one variable</strong> (the IV) while keeping all others constant.'},
+  {t:'1',q:'How do you improve the RELIABILITY of an experiment?',a:'<strong>Repeat</strong> the experiment at least 3 times, calculate the <strong>mean</strong>, and identify and exclude anomalous results.'},
+  {t:'1',q:'What is an anomalous result?',a:'A result that does <strong>not fit</strong> the overall pattern — it should be noted and usually excluded from the mean.'},
+  {t:'1',q:'What is the difference between accuracy and reliability?',a:'<strong>Accuracy</strong> = how close a result is to the true value. <strong>Reliability</strong> = how consistently you get the same result on repetition.'},
+  {t:'1',q:'What must a good scientific hypothesis include?',a:'An "if … then … because" structure linking IV to DV with a <strong>reason</strong> based on existing knowledge.'},
+  {t:'1',q:'How do you write a proper conclusion?',a:'State the <strong>trend</strong>, refer to <strong>specific data values</strong>, and say whether the hypothesis was supported.'},
+  {t:'1',q:'What is parallax error and how do you avoid it?',a:'Error from reading a scale at an angle. Avoid by reading at <strong>eye level</strong> directly perpendicular to the scale.'},
+  {t:'1',q:'Name 3 controlled variables when testing "does temperature affect dissolving time"?',a:'Volume of water (e.g. 100 cm³); mass of solute (e.g. 5 g); type of solute; no stirring / same stirring rate.'},
+  {t:'1',q:'Why must a safety precaution name the HAZARD and the ACTION?',a:'Saying "be careful" scores zero. You must say WHAT could go wrong and WHAT you do — e.g. "wear goggles to protect eyes from acid splashes".'},
+  {t:'1',q:'What does "validity" mean in an experiment?',a:'Whether the experiment actually tests what it claims to test — i.e. only one variable changes, and the DV is measured correctly.'},
+  {t:'1',q:'Mean formula?',a:'<strong>Mean = Sum of all values ÷ Number of values</strong><br>Always exclude anomalies before calculating.'},
+  {t:'1',q:'What goes on the x-axis and y-axis of a line graph?',a:'<strong>X-axis</strong> = Independent variable (IV). <strong>Y-axis</strong> = Dependent variable (DV). Both axes need name + unit.'},
+  {t:'1',q:'What is a line of best fit?',a:'A smooth line or curve that shows the overall <strong>trend</strong> through the data points. Never dot-to-dot. Can pass through none, some or all points.'},
+  // ── MODELS (t=2) ──
+  {t:'2',q:'What is a scientific model?',a:'A <strong>simplified representation</strong> of something real. Used to explain phenomena that are too small, large or complex to observe directly.'},
+  {t:'2',q:'Describe particles in a SOLID.',a:'<strong>Closely packed, regular arrangement. Vibrate in fixed positions.</strong> Strong forces between particles. Fixed shape and volume.'},
+  {t:'2',q:'Describe particles in a LIQUID.',a:'<strong>Close together, irregular arrangement. Slide past each other.</strong> Moderate forces. Fixed volume but no fixed shape.'},
+  {t:'2',q:'Describe particles in a GAS.',a:'<strong>Far apart, random arrangement. Move freely and rapidly in all directions.</strong> Very weak forces. No fixed shape or volume.'},
+  {t:'2',q:'Why can a gas be compressed but a solid cannot?',a:'Gas particles are <strong>far apart</strong> with large spaces between them — they can be pushed closer together. Solid particles are already tightly packed.'},
+  {t:'2',q:'Why does a solid have a fixed shape but a liquid does not?',a:'Solid particles are held in <strong>fixed positions</strong> by strong forces, so they cannot move past each other. Liquid particles can slide past each other.'},
+  {t:'2',q:'What is one LIMITATION of the particle model?',a:'The model shows particles as identical rigid spheres, but in reality particles have <strong>different sizes and shapes</strong>. The model also ignores the forces between them visually.'},
+  {t:'2',q:'What does the command word DESCRIBE mean?',a:'Give the key features or observations — <strong>no explanation or reason needed</strong>.'},
+  {t:'2',q:'What does the command word EXPLAIN mean?',a:'Give a reason — you MUST include <strong>"because"</strong> or a causal link. No marks for description alone.'},
+  {t:'2',q:'What does the command word COMPARE mean?',a:'Give at least <strong>one similarity AND one difference</strong>. Must address both.'},
+  {t:'2',q:'What does the command word EVALUATE mean?',a:'Judge the quality or reliability of something — use evidence, weigh pros and cons, and give a conclusion.'},
+  {t:'2',q:'What does the command word SUGGEST mean?',a:'Give a possible reason — you may need to apply knowledge to an <strong>unfamiliar situation</strong>. There may be more than one acceptable answer.'},
+  {t:'2',q:'How do you calculate percentage change?',a:'<strong>% change = (new value − original value) ÷ original value × 100%</strong><br>Positive = increase, negative = decrease.'},
+  {t:'2',q:'What is interpolation vs extrapolation on a graph?',a:'<strong>Interpolation</strong> = reading values WITHIN the data range (more reliable). <strong>Extrapolation</strong> = extending BEYOND the range (less reliable — trend may not continue).'},
+  // ── MATTER (t=3) ──
+  {t:'3',q:'What is an ELEMENT?',a:'A pure substance made of <strong>only one type of atom</strong>. Cannot be broken down into simpler substances by chemical means. E.g. gold, oxygen, iron.'},
+  {t:'3',q:'What is a COMPOUND?',a:'A pure substance made of <strong>two or more different elements chemically bonded</strong> in a fixed ratio. Has different properties from its elements. E.g. water (H₂O), salt (NaCl).'},
+  {t:'3',q:'What is a MIXTURE?',a:'Two or more substances <strong>physically combined</strong>. Each keeps its own properties. Can be separated by physical means. E.g. air, seawater, soil.'},
+  {t:'3',q:'Is dissolving sugar a physical or chemical change? Why?',a:'<strong>Physical change.</strong> No new substance is formed; the sugar can be recovered by evaporating the water. The change is reversible.'},
+  {t:'3',q:'Name 3 clues that a CHEMICAL change has occurred.',a:'New substance formed; colour change; gas produced (bubbles); large temperature change; light produced; change is not easily reversed.'},
+  {t:'3',q:'Name all 6 changes of state.',a:'Melting · Freezing · Evaporation · Condensation · Boiling · Sublimation'},
+  {t:'3',q:'Which changes of state ABSORB energy?',a:'<strong>Melting, evaporation, boiling, sublimation</strong> — particles gain energy to move further apart.'},
+  {t:'3',q:'Which changes of state RELEASE energy?',a:'<strong>Freezing and condensation</strong> — particles lose energy and come closer together.'},
+  {t:'3',q:'Why does temperature stay constant during melting?',a:'The energy supplied is used to <strong>break the forces between particles</strong> (changing arrangement), not to raise temperature.'},
+  {t:'3',q:'Difference between evaporation and boiling?',a:'<strong>Evaporation:</strong> surface only, any temperature, slow. <strong>Boiling:</strong> throughout liquid, at boiling point only, rapid with bubbles.'},
+  {t:'3',q:'How do you separate sand from water?',a:'<strong>Filtration</strong> — sand is an insoluble solid that cannot pass through filter paper; water passes through as filtrate.'},
+  {t:'3',q:'How do you get pure water from salt water?',a:'<strong>Distillation</strong> — water is boiled into steam, steam is condensed back to liquid water, leaving salt behind.'},
+  {t:'3',q:'How do you separate a mixture of dyes in ink?',a:'<strong>Chromatography</strong> — dyes move at different rates through the paper due to different solubilities; they separate into different spots.'},
+  {t:'3',q:'What does the R_f value tell you?',a:'R_f = distance moved by substance ÷ distance moved by solvent front. A <strong>pure substance</strong> always has the same R_f in the same solvent.'},
+  {t:'3',q:'How does a pure substance\'s melting curve look vs an impure one?',a:'Pure substance: <strong>flat horizontal line</strong> at a single sharp melting point. Impure: melts over a range of temperatures (no flat line).'},
+  {t:'3',q:'Is water an element, compound, or mixture?',a:'<strong>Compound</strong> — H₂O contains hydrogen and oxygen chemically bonded in a fixed 2:1 ratio.'},
+  // ── LIVING (t=4) ──
+  {t:'4',q:'What does MRS GREN stand for?',a:'<strong>M</strong>ovement · <strong>R</strong>espiration · <strong>S</strong>ensitivity · <strong>G</strong>rowth · <strong>R</strong>eproduction · <strong>E</strong>xcretion · <strong>N</strong>utrition'},
+  {t:'4',q:'What is the difference between breathing and respiration?',a:'<strong>Breathing</strong> = physical movement of air in and out of lungs. <strong>Respiration</strong> = chemical reaction in cells releasing energy from glucose.'},
+  {t:'4',q:'What are the 3 things in plant cells but NOT animal cells?',a:'1. <strong>Cell wall</strong> (cellulose) · 2. <strong>Chloroplasts</strong> · 3. Large <strong>central vacuole</strong>'},
+  {t:'4',q:'Function of the NUCLEUS?',a:'Controls cell activities. Contains <strong>DNA</strong> (genetic information/instructions for the cell).'},
+  {t:'4',q:'Function of the MITOCHONDRIA?',a:'Site of <strong>aerobic respiration</strong> — releases energy from glucose for the cell\'s activities.'},
+  {t:'4',q:'Function of the CHLOROPLAST?',a:'Site of <strong>photosynthesis</strong> — converts light energy into chemical energy (glucose). Contains chlorophyll (green pigment).'},
+  {t:'4',q:'Function of the CELL MEMBRANE?',a:'Controls what <strong>enters and leaves</strong> the cell. Present in ALL cells.'},
+  {t:'4',q:'Function of the CELL WALL?',a:'Provides <strong>support and shape</strong> to the plant cell. Made of cellulose. Only in plant cells.'},
+  {t:'4',q:'Why does a root hair cell have no chloroplasts?',a:'Root hair cells are <strong>underground</strong> — no light reaches them, so chloroplasts would be useless for photosynthesis.'},
+  {t:'4',q:'How is a red blood cell adapted for its function?',a:'No nucleus → <strong>more space for haemoglobin</strong>. Biconcave shape → large surface area for oxygen absorption.'},
+  {t:'4',q:'Name the 5 vertebrate groups and one key feature each.',a:'<strong>Fish</strong>: gills, scales · <strong>Amphibians</strong>: moist skin, larvae have gills · <strong>Reptiles</strong>: dry scales, lay leathery eggs · <strong>Birds</strong>: feathers, endothermic · <strong>Mammals</strong>: fur, milk, live birth'},
+  {t:'4',q:'Is a whale a fish or a mammal? Why?',a:'<strong>Mammal</strong> — breathes air through lungs, warm-blooded, gives birth to live young, nurses with milk, has hair.'},
+  {t:'4',q:'What are producers, consumers and decomposers?',a:'<strong>Producers</strong>: make own food (plants). <strong>Consumers</strong>: eat other organisms. <strong>Decomposers</strong>: break down dead matter (bacteria, fungi).'},
+  {t:'4',q:'What do arrows mean in a food chain?',a:'Arrows show the direction of <strong>energy transfer</strong> — from the organism being eaten to the one eating it.'},
+  {t:'4',q:'Grass → Rabbit → Fox. Rabbits decrease. What happens to grass?',a:'Grass <strong>increases</strong> — fewer rabbits eating it, so more grass survives.'},
+  {t:'4',q:'What is a dichotomous key?',a:'A tool to identify organisms by answering a series of <strong>yes/no questions</strong> about observable features, branching at each step until identified.'},
+  // ── FORCES & ENERGY (t=5) ──
+  {t:'5',q:'What is the formula for weight?',a:'<strong>W = m × g</strong><br>W = weight (N), m = mass (kg), g = gravitational field strength (10 N/kg on Earth)'},
+  {t:'5',q:'What is the difference between mass and weight?',a:'<strong>Mass</strong>: amount of matter, measured in kg, constant everywhere. <strong>Weight</strong>: gravitational force, measured in N, varies with location.'},
+  {t:'5',q:'Pressure formula?',a:'<strong>P = F ÷ A</strong><br>Pressure (Pa) = Force (N) ÷ Area (m²). Smaller area = higher pressure for the same force.'},
+  {t:'5',q:'A person weighs 600 N and stands on one heel of area 0.0001 m². What is the pressure?',a:'P = 600 ÷ 0.0001 = <strong>6,000,000 Pa</strong>'},
+  {t:'5',q:'What happens when forces are BALANCED?',a:'The object stays <strong>stationary</strong> OR moves at a <strong>constant speed in a straight line</strong>. Resultant force = 0 N.'},
+  {t:'5',q:'What happens when forces are UNBALANCED?',a:'The object <strong>accelerates</strong> — speeds up, slows down, or changes direction. Resultant force ≠ 0 N.'},
+  {t:'5',q:'In which direction does friction act?',a:'Always <strong>opposite</strong> to the direction of motion or intended motion.'},
+  {t:'5',q:'Name 3 ways to reduce friction.',a:'Lubrication (oil/grease); smoothing surfaces; using ball bearings / rollers; using a fluid (water/air cushion).'},
+  {t:'5',q:'Name 5 forms of energy.',a:'Kinetic · Gravitational PE · Elastic PE · Thermal (heat) · Chemical · Light · Sound · Electrical · Nuclear'},
+  {t:'5',q:'What is the law of conservation of energy?',a:'Energy cannot be <strong>created or destroyed</strong> — it can only be <strong>transferred</strong> between objects or <strong>transformed</strong> between forms.'},
+  {t:'5',q:'Efficiency formula?',a:'<strong>Efficiency = (Useful energy output ÷ Total energy input) × 100%</strong><br>Always less than 100% in real machines.'},
+  {t:'5',q:'A bulb uses 100 J and produces 20 J of light. What is its efficiency?',a:'Efficiency = (20 ÷ 100) × 100% = <strong>20%</strong>. The other 80 J is wasted as thermal energy.'},
+  {t:'5',q:'What is conduction?',a:'Heat transfer through a <strong>solid</strong> by particle-to-particle collisions. Particles do not move from place to place. Metals are good conductors.'},
+  {t:'5',q:'What is convection?',a:'Heat transfer in <strong>fluids</strong> (liquids/gases) by bulk movement. Warm fluid rises (less dense), cool fluid sinks — forming a convection current.'},
+  {t:'5',q:'What is radiation?',a:'Heat transfer by <strong>infrared electromagnetic waves</strong>. Does NOT need a medium — can travel through a vacuum. E.g. heat from the Sun.'},
+  {t:'5',q:'Energy transformation in a burning candle?',a:'<strong>Chemical energy → Light energy + Thermal energy</strong>'},
+];
+
+let deck = [];
+let current = 0;
+let got = 0;
+let missed = 0;
+let missedCards = [];
+let flipped = false;
+let activeFilter = 'all';
+let reviewingMissed = false;
+
+function buildDeck(filter, missedOnly) {
+  let source = missedOnly ? missedCards : ALL_CARDS;
+  if (filter === 'all') deck = [...source];
+  else deck = source.filter(c => c.t === filter);
+  shuffle(deck);
+  current = 0; got = 0; missed = 0;
+  if (!missedOnly) missedCards = [];
+  flipped = false;
+  updateUI();
+}
+
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+}
+
+function setFilter(f, btn) {
+  document.querySelectorAll('.f-btn').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  activeFilter = f;
+  buildDeck(f, false);
+  document.getElementById('resultsPanel').style.display = 'none';
+  document.getElementById('fcWrapper').style.display = 'block';
+  document.getElementById('missedSection').style.display = 'none';
+}
+
+function updateUI() {
+  if (current >= deck.length) { showResults(); return; }
+  const card = deck[current];
+  const topic = TOPICS[card.t];
+  const badge = document.getElementById('fcBadge');
+  badge.textContent = topic.label;
+  badge.style.color = topic.color;
+  badge.style.background = topic.bg;
+  badge.style.border = `1px solid ${topic.color}44`;
+  document.getElementById('fcQ').textContent = card.q;
+  document.getElementById('fcA').innerHTML = card.a;
+  document.getElementById('cn').textContent = current + 1;
+  document.getElementById('ct').textContent = deck.length;
+  document.getElementById('cardNum').textContent = current + 1;
+  document.getElementById('cardTotal').textContent = deck.length;
+  document.getElementById('gotCount').textContent = got;
+  document.getElementById('missCount').textContent = missed;
+  const pct = deck.length > 0 ? Math.round((current / deck.length) * 100) : 0;
+  document.getElementById('progBar').style.width = pct + '%';
+
+  // Reset flip
+  const inner = document.getElementById('fcInner');
+  inner.classList.remove('flipped');
+  flipped = false;
+  document.getElementById('fcActions').style.display = 'none';
+  document.getElementById('fcTip').style.display = 'block';
+}
+
+function flipCard() {
+  if (flipped) return;
+  flipped = true;
+  document.getElementById('fcInner').classList.add('flipped');
+  document.getElementById('fcActions').style.display = 'flex';
+  document.getElementById('fcTip').style.display = 'none';
+}
+
+function markCard(knew) {
+  if (!flipped) return;
+  const card = deck[current];
+  if (knew === true) got++;
+  else if (knew === false) { missed++; missedCards.push(card); }
+  current++;
+  updateUI();
+}
+
+function showResults() {
+  document.getElementById('fcWrapper').style.display = 'none';
+  const panel = document.getElementById('resultsPanel');
+  panel.style.display = 'block';
+  const total = got + missed;
+  const pct = total > 0 ? Math.round((got / total) * 100) : 0;
+  document.getElementById('scoreDisplay').textContent = pct + '%';
+  document.getElementById('rGot').textContent = got;
+  document.getElementById('rMiss').textContent = missed;
+  let msg = pct >= 90 ? '🔥 Excellent! You really know this material.' :
+            pct >= 70 ? '💪 Good work. Review the ones you missed.' :
+            pct >= 50 ? '📖 Getting there. Focus on your missed cards.' :
+                       '💡 Keep going — the more you practice, the faster it sticks.';
+  document.getElementById('scoreMsg').textContent = msg;
+  document.getElementById('progBar').style.width = '100%';
+  document.getElementById('gotCount').textContent = got;
+  document.getElementById('missCount').textContent = missed;
+  const reviewBtn = document.getElementById('reviewMissedBtn');
+  reviewBtn.disabled = missedCards.length === 0;
+
+  if (missedCards.length > 0) {
+    const section = document.getElementById('missedSection');
+    const list = document.getElementById('missedList');
+    list.innerHTML = '';
+    missedCards.forEach(c => {
+      const topic = TOPICS[c.t];
+      const el = document.createElement('div');
+      el.className = 'missed-item';
+      el.innerHTML = `<div class="missed-tag" style="color:${topic.color}">${topic.label}</div>
+        <div class="missed-q">${c.q}</div>
+        <div class="missed-a">${c.a}</div>`;
+      list.appendChild(el);
+    });
+    section.style.display = 'block';
+  }
+}
+
+function restart(missedOnly) {
+  document.getElementById('resultsPanel').style.display = 'none';
+  document.getElementById('fcWrapper').style.display = 'block';
+  document.getElementById('missedSection').style.display = 'none';
+  if (missedOnly) buildDeck(activeFilter, true);
+  else buildDeck(activeFilter, false);
+}
+
+// Keyboard shortcuts
+document.addEventListener('keydown', e => {
+  if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); if (!flipped) flipCard(); }
+  if (e.key === '1' && flipped) markCard(true);
+  if (e.key === '2' && flipped) markCard(false);
+  if (e.key === '3' && flipped) markCard(null);
+});
+
+// Init
+buildDeck('all', false);
+</script>
+
+<script>
+function openSearch(){
+  var ns=document.getElementById('navSearch');
+  ns.classList.add('open');
+  setTimeout(function(){ns.querySelector('.ns-input').focus();},50);
+}
+</script>
+
+<!-- SEO Supporting Content -->
+<div style="max-width:900px;margin:48px auto 0;padding:0 clamp(16px,5%,48px) 32px;">
+  <div style="background:#f8fafc;border:1.5px solid #e2e8f0;border-radius:16px;padding:24px 28px;margin-bottom:28px;">
+    <h2 style="font-size:17px;font-weight:800;color:#1e293b;margin-bottom:12px;">What do these Sec 1 Science flashcards cover?</h2>
+    <p style="font-size:14px;color:#475569;line-height:1.8;margin-bottom:14px;">This set of 80 flashcards covers all five Sec 1 Lower Secondary Science topics from the MOE Singapore syllabus. They are designed for active recall — the most effective way to move facts from short-term to long-term memory before class tests, CAs and SAs.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:14px;">
+      <div style="background:white;border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px;"><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#64748b;margin-bottom:4px;">Topic 1</div><div style="font-size:14px;font-weight:700;color:#1e293b;">Living Things &amp; Diversity</div><div style="font-size:12px;color:#64748b;margin-top:2px;">Cells, classification, MRS GREN</div></div>
+      <div style="background:white;border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px;"><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#64748b;margin-bottom:4px;">Topic 2</div><div style="font-size:14px;font-weight:700;color:#1e293b;">Exploring Matter</div><div style="font-size:12px;color:#64748b;margin-top:2px;">Elements, compounds, mixtures</div></div>
+      <div style="background:white;border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px;"><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#64748b;margin-bottom:4px;">Topic 3</div><div style="font-size:14px;font-weight:700;color:#1e293b;">Scientific Inquiry</div><div style="font-size:12px;color:#64748b;margin-top:2px;">Variables, fair test, hypothesis</div></div>
+      <div style="background:white;border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px;"><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#64748b;margin-bottom:4px;">Topic 4</div><div style="font-size:14px;font-weight:700;color:#1e293b;">Interactions</div><div style="font-size:12px;color:#64748b;margin-top:2px;">Forces, pressure, energy</div></div>
+      <div style="background:white;border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px;"><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#64748b;margin-bottom:4px;">Topic 5</div><div style="font-size:14px;font-weight:700;color:#1e293b;">Scientific Representations</div><div style="font-size:12px;color:#64748b;margin-top:2px;">Graphs, models, data tables</div></div>
+    </div>
+    <h3 style="font-size:15px;font-weight:700;color:#1e293b;margin-bottom:8px;">How to use these flashcards effectively</h3>
+    <ul style="font-size:14px;color:#475569;line-height:1.9;padding-left:18px;margin:0;">
+      <li><strong>Say the answer out loud</strong> before flipping — thinking it silently is less effective.</li>
+      <li><strong>Mark honestly.</strong> If you hesitated, mark it wrong. Overconfidence is the biggest study trap.</li>
+      <li><strong>Do at least two rounds.</strong> The first shows gaps; the second consolidates them.</li>
+      <li><strong>Space it out.</strong> 20 minutes today, 20 minutes tomorrow beats one 40-minute session.</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

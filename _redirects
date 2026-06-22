@@ -1,0 +1,76 @@
+# ============================================================
+# REDIRECTS — primayscience.org
+# Order matters: Netlify processes top-to-bottom, first match wins
+# ============================================================
+
+# ── 1. HTTP → HTTPS (catch all variants) ────────────────────
+http://primayscience.org/*        https://primayscience.org/:splat  301!
+http://www.primayscience.org/*    https://primayscience.org/:splat  301!
+
+# ── 2. www → non-www (HTTPS only) ───────────────────────────
+https://www.primayscience.org/*   https://primayscience.org/:splat  301!
+
+# ── 3. .html → trailing-slash folder (non-www, HTTPS) ───────
+/about.html                                    /about/                                    301
+/al1-guide.html                                /al1-guide/                                301
+/contact.html                                  /contact/                                  301
+/privacy.html                                  /privacy/                                  301
+/terms.html                                    /terms/                                    301
+/articles/animal-adaptations-psle.html         /articles/animal-adaptations-psle/         301
+/articles/animal-life-cycles-psle.html         /articles/animal-life-cycles-psle/         301
+/articles/digestive-system-p4.html             /articles/digestive-system-p4/             301
+/articles/ecosystems-environment-p5-psle.html  /articles/ecosystems-environment-p5-psle/  301
+/articles/electricity-circuits-p4.html         /articles/electricity-circuits-p4/         301
+/articles/food-chains-food-webs.html           /articles/food-chains-food-webs/           301
+/articles/forces-motion-p4-p5.html             /articles/forces-motion-p4-p5/             301
+/articles/heat-temperature-p3.html             /articles/heat-temperature-p3/             301
+/articles/how-to-revise-psle-science.html      /articles/how-to-revise-psle-science/      301
+/articles/human-respiratory-system.html        /articles/human-respiratory-system/        301
+/articles/light-shadows-p3-p4.html             /articles/light-shadows-p3-p4/             301
+/articles/living-non-living-things-p3.html     /articles/living-non-living-things-p3/     301
+/articles/magnets-p3.html                      /articles/magnets-p3/                      301
+/articles/materials-properties-p3.html         /articles/materials-properties-p3/         301
+/articles/p4-science-topics-guide.html         /articles/p4-science-topics-guide/         301
+/articles/photosynthesis-p3-p4.html            /articles/photosynthesis-p3-p4/            301
+/articles/plant-reproduction-p5-psle.html      /articles/plant-reproduction-p5-psle/      301
+/articles/psle-open-ended-questions-tips.html  /articles/psle-open-ended-questions-tips/  301
+/articles/psle-science-2026-topic-checklist.html /articles/psle-science-2026-topic-checklist/ 301
+/articles/psle-science-experiments.html        /articles/psle-science-experiments/        301
+/articles/states-of-matter-p3-p4.html          /articles/states-of-matter-p3-p4/          301
+/articles/water-cycle-explained.html           /articles/water-cycle-explained/           301
+/articles/last-minute-psle-revision.html       /articles/last-minute-psle-revision/       301
+
+# ── 4. No-extension slug → trailing-slash folder ─────────────
+# (Google found these via old links or sitemap without slash)
+/about                                         /about/                                    301
+/al1-guide                                     /al1-guide/                                301
+/contact                                       /contact/                                  301
+/privacy                                       /privacy/                                  301
+/terms                                         /terms/                                    301
+/articles/animal-adaptations-psle              /articles/animal-adaptations-psle/         301
+/articles/animal-life-cycles-psle              /articles/animal-life-cycles-psle/         301
+/articles/digestive-system-p4                  /articles/digestive-system-p4/             301
+/articles/ecosystems-environment-p5-psle       /articles/ecosystems-environment-p5-psle/  301
+/articles/electricity-circuits-p4              /articles/electricity-circuits-p4/         301
+/articles/food-chains-food-webs                /articles/food-chains-food-webs/           301
+/articles/forces-motion-p4-p5                  /articles/forces-motion-p4-p5/             301
+/articles/heat-temperature-p3                  /articles/heat-temperature-p3/             301
+/articles/how-to-revise-psle-science           /articles/how-to-revise-psle-science/      301
+/articles/human-respiratory-system             /articles/human-respiratory-system/        301
+/articles/last-minute-psle-revision            /articles/last-minute-psle-revision/       301
+/articles/light-shadows-p3-p4                  /articles/light-shadows-p3-p4/             301
+/articles/living-non-living-things-p3          /articles/living-non-living-things-p3/     301
+/articles/magnets-p3                           /articles/magnets-p3/                      301
+/articles/materials-properties-p3             /articles/materials-properties-p3/         301
+/articles/p4-science-topics-guide              /articles/p4-science-topics-guide/         301
+/articles/photosynthesis-p3-p4                 /articles/photosynthesis-p3-p4/            301
+/articles/plant-reproduction-p5-psle           /articles/plant-reproduction-p5-psle/      301
+/articles/psle-open-ended-questions-tips       /articles/psle-open-ended-questions-tips/  301
+/articles/psle-science-2026-topic-checklist    /articles/psle-science-2026-topic-checklist/ 301
+/articles/psle-science-experiments             /articles/psle-science-experiments/        301
+/articles/states-of-matter-p3-p4               /articles/states-of-matter-p3-p4/          301
+/articles/water-cycle-explained                /articles/water-cycle-explained/           301
+
+# ── Shop short links ─────────────────────────────────────────
+/buy                                           /shop/psle-science-pack/                   301
+/worksheets                                    /shop/psle-science-pack/                   301

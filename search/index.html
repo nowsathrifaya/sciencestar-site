@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Search all ScienceStar science topics, notes and quizzes. Find any PSLE or O-Level Science topic instantly. Free for all Singapore students.">
+  <meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Science Topics — ScienceStar Singapore</title>
+<link rel="canonical" href="https://primayscience.org/search/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XM36L4R49E"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XM36L4R49E');</script>
+<style>
+:root{--bg:#080f1e;--bg2:#0d1629;--card:#0f1c30;--border:rgba(255,255,255,.08);--border2:rgba(255,255,255,.18);--text:#e8edf5;--muted:rgba(232,237,245,.55);--dim:rgba(232,237,245,.28);--sky:#38bdf8;--green:#34d399;--amber:#fbbf24;--purple:#a78bfa;--chem:#f97316;--hub:#7c3aed;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;align-items:center;padding:0 clamp(16px,5%,56px);background:rgba(8,15,30,.95);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+.nav-brand{font-family:'Sora',sans-serif;font-weight:800;font-size:18px;color:#fff;text-decoration:none}.nav-brand span{color:var(--sky)}
+.nav-links{margin-left:auto;display:flex;gap:8px}
+.nav-links a{font-size:13px;color:var(--muted);text-decoration:none;padding:6px 12px;border-radius:8px;border:1px solid var(--border)}.nav-links a:hover{color:#fff;border-color:var(--border2)}
+.search-wrap{max-width:760px;margin:0 auto;padding:90px clamp(16px,5%,40px) 80px}
+.search-title{font-family:'Sora',sans-serif;font-size:clamp(22px,3vw,34px);font-weight:800;color:#fff;margin-bottom:6px}
+.search-sub{font-size:14px;color:var(--muted);margin-bottom:28px}
+.search-box-wrap{position:relative;margin-bottom:16px}
+.search-icon-lbl{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none;font-size:18px;line-height:1}
+#searchInput{width:100%;padding:16px 52px 16px 50px;background:var(--card);border:1.5px solid var(--border2);border-radius:14px;color:var(--text);font-size:16px;font-family:inherit;outline:none;transition:.2s}
+#searchInput:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(56,189,248,.1)}
+#searchInput::placeholder{color:var(--dim)}
+#clearBtn{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:none;color:var(--muted);cursor:pointer;border-radius:6px;padding:5px 9px;font-size:12px;display:none;font-family:inherit;transition:.15s}
+#clearBtn:hover{color:#fff;background:rgba(255,255,255,.14)}
+#clearBtn.show{display:block}
+.filter-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.filter-btn{padding:5px 14px;border-radius:50px;font-size:12px;font-weight:700;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;transition:.15s;font-family:inherit}
+.filter-btn:hover{color:#fff;border-color:var(--border2)}
+.filter-btn.active{color:#fff;border-color:var(--sky);background:rgba(56,189,248,.1)}
+#resultCount{font-size:13px;color:var(--dim);margin-bottom:14px;min-height:18px}
+#results{display:flex;flex-direction:column;gap:10px}
+.result-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;text-decoration:none;display:block;transition:.18s}
+.result-card:hover{border-color:var(--border2);transform:translateX(3px)}
+.result-top{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.result-cat{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;padding:3px 9px;border-radius:50px}
+.cat-Chemistry{background:rgba(249,115,22,.15);color:#f97316}
+.cat-Physics{background:rgba(56,189,248,.15);color:#38bdf8}
+.cat-Biology{background:rgba(167,139,250,.15);color:#a78bfa}
+.cat-PSLE{background:rgba(56,189,248,.12);color:var(--sky)}
+.cat-Article{background:rgba(52,211,153,.12);color:#34d399}
+.cat-Tools{background:rgba(251,191,36,.12);color:#fbbf24}
+.cat-OLevel,.cat-Sec1,.cat-Sec2,.cat-CombinedScience{background:rgba(124,58,237,.15);color:var(--purple)}
+.result-title{font-size:15px;font-weight:700;color:#fff;line-height:1.35}
+.result-desc{font-size:13px;color:var(--muted);line-height:1.6;margin-top:5px}
+.result-url{font-size:11px;color:var(--dim);margin-top:6px}
+mark{background:rgba(56,189,248,.22);color:#fff;border-radius:3px;padding:0 2px}
+.empty-state{text-align:center;padding:56px 20px;color:var(--muted)}
+.empty-icon{font-size:48px;margin-bottom:16px}
+.empty-title{font-size:18px;font-weight:700;color:var(--text);margin-bottom:8px}
+.empty-sub{font-size:14px;margin-bottom:24px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.chip{padding:6px 14px;border-radius:50px;background:var(--card);border:1px solid var(--border);font-size:13px;color:var(--muted);cursor:pointer;transition:.15s;user-select:none;font-family:inherit}
+.chip:hover{color:#fff;border-color:var(--border2)}
+.popular{margin-bottom:32px}
+.popular-title{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.2px;color:var(--dim);margin-bottom:12px}
+footer{border-top:1px solid var(--border);padding:24px clamp(16px,5%,56px);text-align:center;font-size:12px;color:var(--dim)}
+footer a{color:var(--muted);text-decoration:none;margin:0 8px}.footer a:hover{color:#fff}
+</style>
+  <meta name="keywords" content="search PSLE science topics Singapore, find science notes ScienceStar, primary science search">
+  <meta property="og:title" content="Search ScienceStar — Find Any Science Topic" />
+  <meta property="og:description" content="Search all ScienceStar science topics, notes and quizzes. Find any PSLE or O-Level Science topic instantly. Free for all Singapore students." />
+  <meta property="og:image" content="https://primayscience.org/images/og-image.png" />
+  <meta property="og:url" content="https://primayscience.org/search/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Search ScienceStar — Find Any Science Topic" />
+  <meta name="twitter:description" content="Search all ScienceStar science topics, notes and quizzes. Find any PSLE or O-Level Science topic instantly. Free for all Singapore students." />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Search",
+  "description": "Search all ScienceStar science topics, notes and quizzes. Find any PSLE or O-Level Science topic instantly. Free for all Singapore students.",
+  "provider": {
+    "@type": "Organization",
+    "name": "ScienceStar"
+  },
+  "isAccessibleForFree": true
+}
+</script>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-brand">⭐ Science<span>Star</span></a>
+  <div class="nav-links">
+    <a href="/secondary-science/">O-Level</a>
+    <a href="/psle/">PSLE</a>
+    <a href="/articles/">Articles</a>
+  </div>
+</nav>
+
+<div class="search-wrap">
+  <h1 class="search-title">Search ScienceStar</h1>
+  <p class="search-sub">133 pages — O-Level Biology, Chemistry, Physics, PSLE, articles and tools</p>
+
+  <div class="search-box-wrap">
+    <span class="search-icon-lbl" aria-hidden="true">🔍</span>
+    <input type="search" id="searchInput"
+           placeholder="e.g. mole calculations, forces, photosynthesis, electrolysis…"
+           autocomplete="off" spellcheck="false" autofocus>
+    <button id="clearBtn" onclick="clearSearch()" aria-label="Clear search">✕ Clear</button>
+  </div>
+
+  <div class="filter-row" role="group" aria-label="Filter by subject">
+    <button class="filter-btn active" data-cat="All"              onclick="setFilter(this)">All</button>
+    <button class="filter-btn"        data-cat="Chemistry"        onclick="setFilter(this)">🧪 Chemistry</button>
+    <button class="filter-btn"        data-cat="Physics"          onclick="setFilter(this)">⚡ Physics</button>
+    <button class="filter-btn"        data-cat="Biology"          onclick="setFilter(this)">🧬 Biology</button>
+    <button class="filter-btn"        data-cat="PSLE"             onclick="setFilter(this)">🔭 PSLE</button>
+    <button class="filter-btn"        data-cat="Article"          onclick="setFilter(this)">📰 Articles</button>
+    <button class="filter-btn"        data-cat="Tools"            onclick="setFilter(this)">🛠️ Tools</button>
+  </div>
+
+  <div id="resultCount" aria-live="polite"></div>
+  <div id="results" role="list"></div>
+</div>
+
+<footer>
+  <a href="/">Home</a>
+  <a href="/secondary-science/">O-Level</a>
+  <a href="/psle/">PSLE</a>
+  <a href="/articles/">Articles</a>
+  <a href="/about/">About</a>
+</footer>
+
+<script>
+'use strict';
+let INDEX = [];
+let activeFilter = 'All';
+let query = '';
+let debounceTimer = null;
+
+const POPULAR = [
+  'Mole calculations','Chemical bonding','Electrolysis','Organic chemistry',
+  'Forces and motion','Electricity','Waves','Radioactivity',
+  'Cell biology','Photosynthesis','Genetics','Respiration',
+  'Osmosis','Acids bases salts','Kinetics','Qualitative analysis',
+  'PSLE open-ended','Water cycle','Food chains','Fair test',
+];
+
+// ── Load index ────────────────────────────────────────────────
+fetch('/search_index.json')
+  .then(r => r.json())
+  .then(data => {
+    INDEX = data;
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get('q') || '';
+    if (q) {
+      document.getElementById('searchInput').value = q;
+      query = q;
+      document.getElementById('clearBtn').classList.add('show');
+      doSearch();
+    } else {
+      showPopular();
+    }
+  })
+  .catch(() => {
+    document.getElementById('results').innerHTML =
+      '<p style="color:var(--muted);text-align:center;padding:48px 0">Could not load search index. Please try refreshing.</p>';
+  });
+
+// ── Popular topics (shown before any search) ─────────────────
+function showPopular() {
+  document.getElementById('resultCount').textContent = '';
+  document.getElementById('results').innerHTML = `
+    <div class="popular">
+      <div class="popular-title">Popular topics</div>
+      <div class="chips">
+        ${POPULAR.map(t => `<button class="chip" onclick="chipSearch('${t}')">${t}</button>`).join('')}
+      </div>
+    </div>`;
+}
+
+function chipSearch(term) {
+  document.getElementById('searchInput').value = term;
+  query = term;
+  document.getElementById('clearBtn').classList.add('show');
+  doSearch();
+  document.getElementById('searchInput').focus();
+}
+
+function clearSearch() {
+  document.getElementById('searchInput').value = '';
+  query = '';
+  document.getElementById('clearBtn').classList.remove('show');
+  document.getElementById('resultCount').textContent = '';
+  showPopular();
+  // remove ?q from URL
+  window.history.replaceState({}, '', '/search/');
+}
+
+function setFilter(btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  activeFilter = btn.dataset.cat;
+  if (query.trim()) doSearch();
+}
+
+// ── Scoring ──────────────────────────────────────────────────
+function score(page, terms) {
+  let s = 0;
+  const t = page.t.toLowerCase();
+  const d = page.d.toLowerCase();
+  const k = page.k.toLowerCase();
+  const full = terms.join(' ');
+  // multi-word exact match bonus
+  if (full.length > 3 && t.includes(full)) s += 20;
+  if (full.length > 3 && k.includes(full)) s += 10;
+  for (const term of terms) {
+    if (t.startsWith(term)) s += 12;
+    else if (t.includes(term)) s += 8;
+    if (d.includes(term)) s += 4;
+    if (k.includes(term)) s += 2;
+  }
+  return s;
+}
+
+// ── Highlight ────────────────────────────────────────────────
+function highlight(text, terms) {
+  if (!text) return '';
+  let result = escapeHtml(text);
+  for (const term of terms) {
+    const re = new RegExp(`(${escapeRegex(term)})`, 'gi');
+    result = result.replace(re, '<mark>$1</mark>');
+  }
+  return result;
+}
+
+function escapeHtml(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+function escapeRegex(s) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+}
+
+function catClass(cat) {
+  return 'cat-' + cat.replace(/[\s-]/g,'');
+}
+
+// ── Main search ──────────────────────────────────────────────
+function doSearch() {
+  const raw = query.trim();
+  if (!raw) { showPopular(); return; }
+
+  const terms = raw.toLowerCase().split(/\s+/).filter(t => t.length > 1);
+  if (!terms.length) { showPopular(); return; }
+
+  let results = INDEX
+    .filter(p => activeFilter === 'All' || p.c === activeFilter)
+    .map(p => ({ ...p, _s: score(p, terms) }))
+    .filter(p => p._s > 0)
+    .sort((a, b) => b._s - a._s)
+    .slice(0, 30);
+
+  const countEl = document.getElementById('resultCount');
+
+  if (!results.length) {
+    countEl.textContent = '';
+    document.getElementById('results').innerHTML = `
+      <div class="empty-state">
+        <div class="empty-icon">🔭</div>
+        <div class="empty-title">No results for "${escapeHtml(raw)}"</div>
+        <div class="empty-sub">Try a shorter or different search term</div>
+        <div class="chips">
+          <button class="chip" onclick="chipSearch('chemistry')">Chemistry</button>
+          <button class="chip" onclick="chipSearch('physics')">Physics</button>
+          <button class="chip" onclick="chipSearch('biology')">Biology</button>
+          <button class="chip" onclick="chipSearch('PSLE')">PSLE</button>
+          <button class="chip" onclick="chipSearch('mock paper')">Mock papers</button>
+        </div>
+      </div>`;
+    return;
+  }
+
+  countEl.textContent = `${results.length} result${results.length !== 1 ? 's' : ''} for "${raw}"`;
+
+  document.getElementById('results').innerHTML = results.map(p => {
+    const shortUrl = p.u.replace('https://primayscience.org','') || '/';
+    return `
+    <a href="${p.u}" class="result-card" role="listitem">
+      <div class="result-top">
+        <span class="result-cat ${catClass(p.c)}">${p.c}</span>
+      </div>
+      <div class="result-title">${highlight(p.t, terms)}</div>
+      ${p.d ? `<div class="result-desc">${highlight(p.d, terms)}</div>` : ''}
+      <div class="result-url">${shortUrl}</div>
+    </a>`;
+  }).join('');
+
+  // keep URL in sync for shareability
+  const url = new URL(window.location);
+  url.searchParams.set('q', raw);
+  window.history.replaceState({}, '', url);
+}
+
+// ── Event listeners ──────────────────────────────────────────
+document.getElementById('searchInput').addEventListener('input', e => {
+  query = e.target.value;
+  document.getElementById('clearBtn').classList.toggle('show', !!query);
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(doSearch, 180);
+});
+
+document.getElementById('searchInput').addEventListener('keydown', e => {
+  if (e.key === 'Escape') clearSearch();
+  if (e.key === 'Enter') { clearTimeout(debounceTimer); doSearch(); }
+});
+</script>
+</body>
+</html>

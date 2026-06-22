@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XM36L4R49E"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XM36L4R49E');</script>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Timer — Focus Mode | ScienceStar</title>
+<meta name="description" content="Free Pomodoro-style study timer for Singapore students. Track study sessions, earn XP, build streaks. PSLE and O-Level Science focus mode.">
+<link rel="canonical" href="https://primayscience.org/timer/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080f1e;--bg2:#0d1629;--card:#0f1c30;
+  --border:rgba(255,255,255,.08);--border2:rgba(255,255,255,.14);
+  --text:#e8edf5;--muted:rgba(232,237,245,.5);--dim:rgba(232,237,245,.22);
+  --sky:#38bdf8;--sky2:#0ea5e9;--lime2:#84cc16;
+  --amber:#fbbf24;--purple:#a78bfa;--red:#f87171;--green:#34d399;
+  --p3:#fb923c;--p4:#818cf8;--p5:#34d399;
+  --r:12px;--rl:18px;--rxl:24px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;display:flex;align-items:center;padding:0 clamp(16px,5%,56px);background:rgba(8,15,30,.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-brand{font-family:'Sora',sans-serif;font-weight:800;font-size:18px;color:#fff;text-decoration:none;display:flex;align-items:center;gap:6px}
+.nav-brand span{color:var(--sky)}
+.nav-links{display:flex;align-items:center;gap:4px;margin-left:auto}
+.nav-links a{font-size:12px;font-weight:600;color:var(--muted);text-decoration:none;padding:5px 10px;border-radius:8px;transition:all .15s;white-space:nowrap}
+.nav-links a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.nav-links a.active{color:var(--sky);background:rgba(56,189,248,.12)}
+.npill{padding:5px 12px!important;border-radius:50px!important;font-weight:700!important;font-size:11px!important;color:#fff!important}
+.np3{background:var(--p3)!important}.npsle{background:var(--sky2)!important}.nsec{background:#7c3aed!important}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;margin-left:8px;border:none;background:none;flex-shrink:0}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--muted);border-radius:2px;transition:all .3s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;top:60px;left:0;right:0;background:rgba(8,15,30,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:20px clamp(16px,5%,56px);z-index:99;flex-direction:column;gap:6px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:14px;font-weight:600;color:var(--muted);text-decoration:none;padding:10px 14px;border-radius:8px;transition:all .15s}
+.mobile-menu a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.mm-row{display:flex;gap:8px;flex-wrap:wrap;padding:4px 0}
+.mm-divider{height:1px;background:var(--border);margin:6px 0}
+.mobile-menu .mpill{color:#fff!important;border-radius:50px;padding:8px 16px!important;font-weight:700!important}
+.mobile-menu .mp3{background:var(--p3)}.mobile-menu .mpsle{background:var(--sky2)}.mobile-menu .msec{background:#7c3aed}
+
+/* LAYOUT */
+.wrap{max-width:760px;margin:0 auto;padding:80px clamp(16px,5%,48px) 60px}
+
+/* HERO */
+.page-hero{text-align:center;padding:36px 0 32px}
+.page-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(163,230,53,.1);border:1px solid rgba(163,230,53,.25);border-radius:50px;padding:5px 14px;font-size:11px;font-weight:700;color:var(--lime2);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
+.page-hero h1{font-family:'Sora',sans-serif;font-size:clamp(24px,4vw,38px);font-weight:800;color:#fff;margin-bottom:8px}
+.page-hero h1 span{color:var(--lime2)}
+.page-hero p{font-size:14px;color:var(--muted);max-width:420px;margin:0 auto}
+
+/* SUBJECT SELECTOR */
+.subject-row{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:28px}
+.subj-btn{padding:8px 18px;border-radius:50px;border:1.5px solid var(--border2);background:transparent;color:var(--muted);font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s}
+.subj-btn:hover{color:#fff;border-color:rgba(255,255,255,.3)}
+.subj-btn.active{color:#0d1629;border-color:var(--lime2);background:var(--lime2)}
+
+/* MAIN TIMER CARD */
+.timer-card{background:var(--card);border:1px solid var(--border);border-radius:var(--rxl);padding:40px 32px;text-align:center;margin-bottom:24px;position:relative;overflow:hidden}
+.timer-card::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% -20%,rgba(163,230,53,.06),transparent 60%);pointer-events:none}
+
+/* SVG RING */
+.ring-wrap{position:relative;width:220px;height:220px;margin:0 auto 28px}
+.ring-wrap svg{transform:rotate(-90deg)}
+.ring-bg{fill:none;stroke:rgba(255,255,255,.07);stroke-width:10}
+.ring-fill{fill:none;stroke:var(--lime2);stroke-width:10;stroke-linecap:round;transition:stroke-dashoffset .5s ease;stroke-dasharray:628;stroke-dashoffset:0}
+.ring-fill.break{stroke:var(--sky2)}
+.ring-fill.warning{stroke:var(--amber)}
+.ring-fill.danger{stroke:var(--red)}
+.ring-time{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring-mins{font-family:'Sora',sans-serif;font-size:52px;font-weight:800;color:#fff;line-height:1}
+.ring-secs{font-family:'Sora',sans-serif;font-size:22px;font-weight:700;color:var(--muted);margin-top:2px}
+.ring-mode{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--lime2);margin-top:4px}
+.ring-mode.break{color:var(--sky2)}
+
+/* MODE PILLS */
+.mode-row{display:flex;gap:8px;justify-content:center;margin-bottom:24px}
+.mode-pill{padding:7px 18px;border-radius:50px;border:1.5px solid var(--border2);background:transparent;color:var(--muted);font-family:inherit;font-size:12px;font-weight:700;cursor:pointer;transition:all .2s}
+.mode-pill:hover{color:#fff;border-color:rgba(255,255,255,.3)}
+.mode-pill.active{border-color:var(--lime2);color:var(--lime2);background:rgba(163,230,53,.08)}
+.mode-pill.active.break{border-color:var(--sky2);color:var(--sky2);background:rgba(56,189,248,.08)}
+
+/* CONTROLS */
+.controls{display:flex;gap:12px;justify-content:center;margin-bottom:24px;flex-wrap:wrap}
+.btn-start{padding:14px 40px;background:var(--lime2);border:none;border-radius:50px;font-family:'Sora',sans-serif;font-size:16px;font-weight:800;color:#0d1629;cursor:pointer;transition:all .2s;min-width:140px}
+.btn-start:hover{background:#a3e635;transform:translateY(-1px)}
+.btn-start.running{background:rgba(248,113,113,.15);border:1.5px solid rgba(248,113,113,.3);color:var(--red)}
+.btn-start.running:hover{background:rgba(248,113,113,.25)}
+.btn-reset{padding:14px 24px;background:rgba(255,255,255,.06);border:1.5px solid var(--border2);border-radius:50px;font-family:inherit;font-size:14px;font-weight:700;color:var(--muted);cursor:pointer;transition:all .2s}
+.btn-reset:hover{background:rgba(255,255,255,.1);color:#fff}
+.btn-skip{padding:14px 20px;background:rgba(56,189,248,.08);border:1.5px solid rgba(56,189,248,.2);border-radius:50px;font-family:inherit;font-size:13px;font-weight:700;color:var(--sky);cursor:pointer;transition:all .2s}
+.btn-skip:hover{background:rgba(56,189,248,.15)}
+
+/* SESSION STATUS */
+.session-status{font-size:13px;color:var(--muted);margin-bottom:8px}
+.session-status strong{color:var(--lime2)}
+.pomodoro-dots{display:flex;gap:6px;justify-content:center;margin-bottom:4px}
+.pom-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);transition:all .3s}
+.pom-dot.done{background:var(--lime2);border-color:var(--lime2)}
+.pom-dot.active{background:rgba(163,230,53,.4);border-color:var(--lime2);animation:breathe 1.5s infinite}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+
+/* STATS ROW */
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:var(--rl);padding:16px;text-align:center}
+.stat-val{font-family:'Sora',sans-serif;font-size:22px;font-weight:800;color:#fff}
+.stat-lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-top:3px}
+
+/* TODAY LOG */
+.log-section{background:var(--card);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden;margin-bottom:24px}
+.log-header{padding:14px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.log-title{font-family:'Sora',sans-serif;font-size:14px;font-weight:800;color:#fff}
+.log-clear{font-size:11px;color:var(--dim);cursor:pointer;background:none;border:none;font-family:inherit;transition:.15s}
+.log-clear:hover{color:var(--red)}
+.log-empty{padding:24px;text-align:center;font-size:13px;color:var(--dim)}
+.log-item{display:flex;align-items:center;gap:12px;padding:11px 18px;border-bottom:1px solid var(--border)}
+.log-item:last-child{border-bottom:none}
+.log-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.log-dot.focus{background:var(--lime2)}
+.log-dot.break{background:var(--sky2)}
+.log-info{flex:1}
+.log-label{font-size:13px;font-weight:600;color:#fff}
+.log-sub{font-size:11px;color:var(--muted)}
+.log-dur{font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:var(--muted)}
+
+/* TIPS */
+.tips-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+.tip-card{background:var(--card);border:1px solid var(--border);border-radius:var(--rl);padding:16px 18px}
+.tip-icon{font-size:22px;margin-bottom:8px}
+.tip-title{font-size:13px;font-weight:700;color:#fff;margin-bottom:4px}
+.tip-text{font-size:12px;color:var(--muted);line-height:1.5}
+
+/* NOTIFICATION BANNER */
+.notif-banner{background:rgba(163,230,53,.08);border:1px solid rgba(163,230,53,.2);border-radius:var(--r);padding:12px 16px;display:flex;align-items:center;gap:12px;margin-bottom:20px;font-size:13px;color:var(--muted)}
+.notif-banner.hidden{display:none}
+.btn-notif{padding:6px 14px;background:var(--lime2);border:none;border-radius:50px;font-family:'Sora',sans-serif;font-size:11px;font-weight:800;color:#0d1629;cursor:pointer;flex-shrink:0}
+
+/* FULLSCREEN MODE */
+body.fullscreen-mode nav{display:none}
+body.fullscreen-mode .wrap{padding-top:20px}
+body.fullscreen-mode .tips-grid,
+body.fullscreen-mode .log-section,
+body.fullscreen-mode .page-hero p{display:none}
+.btn-fullscreen{position:fixed;bottom:20px;right:20px;padding:10px 16px;background:rgba(255,255,255,.07);border:1.5px solid var(--border2);border-radius:50px;font-family:inherit;font-size:12px;font-weight:700;color:var(--muted);cursor:pointer;transition:all .2s;z-index:50}
+.btn-fullscreen:hover{background:rgba(255,255,255,.12);color:#fff}
+
+/* AMBIENT SOUND */
+.ambient-row{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.amb-btn{padding:5px 14px;border-radius:50px;border:1.5px solid var(--border2);background:transparent;color:var(--muted);font-family:inherit;font-size:11px;font-weight:700;cursor:pointer;transition:all .2s}
+.amb-btn:hover{color:#fff;border-color:rgba(255,255,255,.3)}
+.amb-btn.active{border-color:var(--purple);color:var(--purple);background:rgba(167,139,250,.1)}
+
+@media(max-width:720px){
+  .nav-links{display:none}.nav-hamburger{display:flex}
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .tips-grid{grid-template-columns:1fr}
+  .ring-wrap{width:180px;height:180px}
+  .ring-mins{font-size:42px}
+}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-brand">⭐ Science<span>Star</span></a>
+  <div class="nav-links">
+    <a href="/arena/">⚔️ Arena</a>
+    <a href="/timer/" class="active">⏱ Timer</a>
+    <a href="/exam/">📝 Exam</a>
+    <a href="/leaderboard/">🏆</a>
+    <a href="/groups/">👥</a>
+    <a href="/dashboard/">📊</a>
+    <a href="/p3/" class="npill np3">P3</a>
+    <a href="/psle/" class="npill npsle">PSLE</a>
+    <a href="/secondary-science/" class="npill nsec">Secondary</a>
+  </div>
+  <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mm-row">
+    <a href="/p3/" class="mpill mp3">P3</a>
+    <a href="/psle/" class="mpill mpsle">PSLE</a>
+    <a href="/secondary-science/" class="mpill msec">Secondary</a>
+  </div>
+  <div class="mm-divider"></div>
+  <a href="/arena/" style="color:var(--sky);font-weight:800;">⚔️ Arena</a>
+  <a href="/timer/" style="color:var(--lime2);font-weight:800;">⏱ Study Timer</a>
+  <a href="/exam/">📝 Mock Exam</a>
+  <a href="/leaderboard/">🏆 Leaderboard</a>
+  <a href="/groups/">👥 Groups</a>
+  <a href="/dashboard/">📊 Dashboard</a>
+</div>
+
+<div class="wrap">
+  <div class="page-hero">
+    <div class="page-badge">⏱ Focus Mode</div>
+    <h1>Study Timer for <span>Singapore Science</span></h1>
+    <p>Pomodoro-style focus sessions with XP rewards. Beat distractions, build streaks.</p>
+  </div>
+
+  <!-- NOTIFICATION PERMISSION BANNER -->
+  <div class="notif-banner" id="notifBanner">
+    <span>🔔 Enable notifications so we can alert you when the timer ends — even if you switch tabs.</span>
+    <button class="btn-notif" onclick="requestNotif()">Enable</button>
+  </div>
+
+  <!-- SUBJECT SELECTOR -->
+  <div class="subject-row" id="subjectRow">
+    <button class="subj-btn active" data-subj="Science" onclick="setSubject(this)">🔬 Science</button>
+    <button class="subj-btn" data-subj="Biology" onclick="setSubject(this)">🧬 Biology</button>
+    <button class="subj-btn" data-subj="Chemistry" onclick="setSubject(this)">⚗️ Chemistry</button>
+    <button class="subj-btn" data-subj="Physics" onclick="setSubject(this)">🔭 Physics</button>
+    <button class="subj-btn" data-subj="PSLE Science" onclick="setSubject(this)">📚 PSLE</button>
+    <button class="subj-btn" data-subj="Maths" onclick="setSubject(this)">➗ Maths</button>
+    <button class="subj-btn" data-subj="English" onclick="setSubject(this)">✏️ English</button>
+  </div>
+
+  <!-- TIMER CARD -->
+  <div class="timer-card">
+    <!-- MODE PILLS -->
+    <div class="mode-row">
+      <button class="mode-pill active" id="pill25" onclick="setDuration(25,'focus')">25 min focus</button>
+      <button class="mode-pill" id="pill50" onclick="setDuration(50,'focus')">50 min focus</button>
+      <button class="mode-pill break" id="pill5" onclick="setDuration(5,'break')">5 min break</button>
+      <button class="mode-pill break" id="pill15" onclick="setDuration(15,'break')">15 min break</button>
+    </div>
+
+    <!-- RING -->
+    <div class="ring-wrap">
+      <svg width="220" height="220" viewBox="0 0 220 220">
+        <circle class="ring-bg" cx="110" cy="110" r="100"/>
+        <circle class="ring-fill" id="ringFill" cx="110" cy="110" r="100"/>
+      </svg>
+      <div class="ring-time">
+        <div class="ring-mins" id="ringMins">25</div>
+        <div class="ring-secs" id="ringSecs">:00</div>
+        <div class="ring-mode" id="ringMode">Focus</div>
+      </div>
+    </div>
+
+    <!-- POMODORO DOTS -->
+    <div class="pomodoro-dots" id="pomDots"></div>
+    <div class="session-status" id="sessionStatus">Session 1 of 4 · Complete 4 to earn <strong>+50 XP bonus</strong></div>
+
+    <!-- CONTROLS -->
+    <div class="controls">
+      <button class="btn-reset" onclick="resetTimer()">↩ Reset</button>
+      <button class="btn-start" id="btnStart" onclick="toggleTimer()">▶ Start</button>
+      <button class="btn-skip" onclick="skipSession()">Skip →</button>
+    </div>
+
+    <!-- AMBIENT SOUND -->
+    <div class="ambient-row" id="ambientRow">
+      <button class="amb-btn active" data-sound="none" onclick="setAmbient(this,'none')">🔇 Silent</button>
+      <button class="amb-btn" data-sound="rain" onclick="setAmbient(this,'rain')">🌧 Rain</button>
+      <button class="amb-btn" data-sound="cafe" onclick="setAmbient(this,'cafe')">☕ Café</button>
+      <button class="amb-btn" data-sound="white" onclick="setAmbient(this,'white')">〰️ White noise</button>
+      <button class="amb-btn" data-sound="forest" onclick="setAmbient(this,'forest')">🌿 Forest</button>
+    </div>
+  </div>
+
+  <!-- STATS ROW -->
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-val" id="statToday">0</div>
+      <div class="stat-lbl">Min today</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-val" id="statSessions">0</div>
+      <div class="stat-lbl">Sessions</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-val" id="statXP" style="color:var(--amber)">0</div>
+      <div class="stat-lbl">XP earned</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-val" id="statStreak" style="color:var(--p3)">0</div>
+      <div class="stat-lbl">Day streak</div>
+    </div>
+  </div>
+
+  <!-- TODAY'S LOG -->
+  <div class="log-section">
+    <div class="log-header">
+      <div class="log-title">Today's Sessions</div>
+      <button class="log-clear" onclick="clearLog()">Clear log</button>
+    </div>
+    <div id="logBody"><div class="log-empty">No sessions yet — start your first focus session above.</div></div>
+  </div>
+
+  <!-- TIPS -->
+  <div class="tips-grid">
+    <div class="tip-card">
+      <div class="tip-icon">🍅</div>
+      <div class="tip-title">Pomodoro technique</div>
+      <div class="tip-text">25 minutes of focused work, then a 5-minute break. After 4 sessions, take a 15-minute break. Scientifically proven to improve focus and retention.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">⭐</div>
+      <div class="tip-title">Earn XP while studying</div>
+      <div class="tip-text">Every completed focus session earns XP — 10 XP per 25 min, 20 XP per 50 min. Complete 4 in a row for a +50 XP bonus. XP syncs to your Arena dashboard.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">📵</div>
+      <div class="tip-title">Eliminate distractions</div>
+      <div class="tip-text">Put your phone face down. Close social media tabs. Let your family know you're in a session. The timer gives you permission to focus fully.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">📖</div>
+      <div class="tip-title">Active recall</div>
+      <div class="tip-text">During study sessions, don't just re-read notes. Test yourself using the Arena quizzes after each session to lock in what you studied.</div>
+    </div>
+  </div>
+
+</div>
+
+<button class="btn-fullscreen" id="btnFullscreen" onclick="toggleFullscreen()">⛶ Focus mode</button>
+
+<script>
+// ─── STATE ────────────────────────────────────────────────────────────────────
+let timerState = {
+  running:    false,
+  mode:       'focus',   // 'focus' | 'break'
+  totalSecs:  25 * 60,
+  remaining:  25 * 60,
+  interval:   null,
+  subject:    'Science',
+  pomCount:   0,         // completed focus sessions in current cycle
+  cycleGoal:  4,
+  sessionLog: [],        // {type, subject, durationMins, timestamp}
+  todayMins:  0,
+  todaySessions: 0,
+  xpEarned:  0,
+  dayStreak: 0,
+  lastStudyDate: null,
+  ambient:   'none',
+};
+
+const circumference = 2 * Math.PI * 100; // r=100
+
+// ─── PERSISTENCE ─────────────────────────────────────────────────────────────
+function loadTimerState() {
+  try {
+    const s = localStorage.getItem('timer_v1');
+    if (s) {
+      const saved = JSON.parse(s);
+      // Reset daily stats if new day
+      const today = new Date().toISOString().split('T')[0];
+      if (saved.lastStudyDate !== today) {
+        saved.todayMins = 0;
+        saved.todaySessions = 0;
+        saved.sessionLog = [];
+        // streak: only counts if studied yesterday
+        const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
+        if (saved.lastStudyDate !== yesterday) saved.dayStreak = 0;
+      }
+      Object.assign(timerState, saved);
+      timerState.running = false;
+      timerState.interval = null;
+    }
+  } catch(e) {}
+}
+
+function saveTimerState() {
+  try {
+    const toSave = {...timerState, running:false, interval:null};
+    localStorage.setItem('timer_v1', JSON.stringify(toSave));
+  } catch(e) {}
+}
+
+// ─── SUBJECT ─────────────────────────────────────────────────────────────────
+window.setSubject = function(el) {
+  timerState.subject = el.dataset.subj;
+  document.querySelectorAll('.subj-btn').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+};
+
+// ─── DURATION ─────────────────────────────────────────────────────────────────
+window.setDuration = function(mins, mode) {
+  if (timerState.running) return;
+  timerState.mode      = mode;
+  timerState.totalSecs = mins * 60;
+  timerState.remaining = mins * 60;
+  document.querySelectorAll('.mode-pill').forEach(p => p.classList.remove('active'));
+  document.getElementById(`pill${mins}`).classList.add('active');
+  updateRingUI();
+  updateRingMode();
+};
+
+// ─── TOGGLE ───────────────────────────────────────────────────────────────────
+window.toggleTimer = function() {
+  if (timerState.running) {
+    pauseTimer();
+  } else {
+    startTimer();
+  }
+};
+
+function startTimer() {
+  timerState.running = true;
+  document.getElementById('btnStart').textContent = '⏸ Pause';
+  document.getElementById('btnStart').classList.add('running');
+  timerState.interval = setInterval(tick, 1000);
+  // Wake lock attempt (keeps screen on on mobile)
+  if ('wakeLock' in navigator) {
+    navigator.wakeLock.request('screen').catch(() => {});
+  }
+}
+
+function pauseTimer() {
+  timerState.running = false;
+  clearInterval(timerState.interval);
+  document.getElementById('btnStart').textContent = '▶ Resume';
+  document.getElementById('btnStart').classList.remove('running');
+}
+
+window.resetTimer = function() {
+  pauseTimer();
+  timerState.remaining = timerState.totalSecs;
+  document.getElementById('btnStart').textContent = '▶ Start';
+  updateRingUI();
+};
+
+window.skipSession = function() {
+  pauseTimer();
+  sessionComplete(true);
+};
+
+// ─── TICK ─────────────────────────────────────────────────────────────────────
+function tick() {
+  timerState.remaining--;
+  updateRingUI();
+  if (timerState.remaining <= 0) {
+    clearInterval(timerState.interval);
+    timerState.running = false;
+    sessionComplete(false);
+  }
+}
+
+// ─── SESSION COMPLETE ─────────────────────────────────────────────────────────
+function sessionComplete(skipped) {
+  const durationMins = Math.round((timerState.totalSecs - timerState.remaining) / 60);
+
+  if (!skipped && timerState.mode === 'focus') {
+    const xp = timerState.totalSecs === 50*60 ? 20 : 10;
+    timerState.xpEarned    += xp;
+    timerState.todayMins   += Math.round(timerState.totalSecs / 60);
+    timerState.todaySessions++;
+    timerState.pomCount++;
+
+    // Streak
+    const today = new Date().toISOString().split('T')[0];
+    const yesterday = new Date(Date.now()-86400000).toISOString().split('T')[0];
+    if (timerState.lastStudyDate === yesterday || timerState.lastStudyDate === today) {
+      if (timerState.lastStudyDate !== today) timerState.dayStreak++;
+    } else {
+      timerState.dayStreak = 1;
+    }
+    timerState.lastStudyDate = today;
+
+    // Cycle bonus
+    if (timerState.pomCount >= timerState.cycleGoal) {
+      timerState.xpEarned += 50;
+      timerState.pomCount  = 0;
+      showBanner('🎉 Cycle complete! +50 bonus XP earned! Take a long break.');
+    }
+
+    // Log it
+    timerState.sessionLog.unshift({
+      type:'focus', subject:timerState.subject,
+      durationMins: Math.round(timerState.totalSecs/60),
+      timestamp: Date.now()
+    });
+
+    // Sync XP to localStorage arena state
+    try {
+      const arena = JSON.parse(localStorage.getItem('arena_v2')||'{}');
+      arena.xp = (arena.xp||0) + xp + (timerState.pomCount===0?50:0);
+      localStorage.setItem('arena_v2', JSON.stringify(arena));
+    } catch(e) {}
+
+    sendNotification(`✅ Focus session done! +${xp} XP`, `${timerState.subject} session complete. Time for a break!`);
+
+  } else if (!skipped && timerState.mode === 'break') {
+    timerState.sessionLog.unshift({
+      type:'break', subject: timerState.subject,
+      durationMins: Math.round(timerState.totalSecs/60),
+      timestamp: Date.now()
+    });
+    sendNotification('⏰ Break over!', 'Time to get back to studying. You got this!');
+  }
+
+  // Auto-switch mode
+  if (!skipped) {
+    if (timerState.mode === 'focus') {
+      const breakLen = timerState.pomCount % timerState.cycleGoal === 0 ? 15 : 5;
+      setDuration(breakLen, 'break');
+    } else {
+      setDuration(25, 'focus');
+    }
+  } else {
+    timerState.remaining = timerState.totalSecs;
+  }
+
+  saveTimerState();
+  updateStats();
+  renderLog();
+  updatePomDots();
+  updateSessionStatus();
+  document.getElementById('btnStart').textContent = '▶ Start';
+  document.getElementById('btnStart').classList.remove('running');
+}
+
+// ─── UI UPDATES ───────────────────────────────────────────────────────────────
+function updateRingUI() {
+  const pct      = timerState.remaining / timerState.totalSecs;
+  const offset   = circumference * (1 - pct);
+  const mins     = Math.floor(timerState.remaining / 60);
+  const secs     = timerState.remaining % 60;
+  const ring     = document.getElementById('ringFill');
+  const minsEl   = document.getElementById('ringMins');
+  const secsEl   = document.getElementById('ringSecs');
+
+  ring.style.strokeDashoffset = offset;
+  minsEl.textContent = String(mins).padStart(2, '0');
+  secsEl.textContent = ':' + String(secs).padStart(2, '0');
+
+  ring.className = 'ring-fill';
+  if (timerState.mode === 'break') ring.classList.add('break');
+  else if (timerState.remaining < 60) ring.classList.add('danger');
+  else if (timerState.remaining < 5*60) ring.classList.add('warning');
+
+  // Page title
+  document.title = `${String(mins).padStart(2,'0')}:${String(secs).padStart(2,'0')} — ${timerState.mode==='focus'?'Focus':'Break'} | ScienceStar`;
+}
+
+function updateRingMode() {
+  const el = document.getElementById('ringMode');
+  el.textContent = timerState.mode === 'focus' ? 'Focus' : 'Break';
+  el.className   = 'ring-mode' + (timerState.mode === 'break' ? ' break' : '');
+}
+
+function updateStats() {
+  document.getElementById('statToday').textContent    = timerState.todayMins;
+  document.getElementById('statSessions').textContent = timerState.todaySessions;
+  document.getElementById('statXP').textContent       = timerState.xpEarned;
+  document.getElementById('statStreak').textContent   = timerState.dayStreak;
+}
+
+function updatePomDots() {
+  const dots = document.getElementById('pomDots');
+  dots.innerHTML = Array.from({length: timerState.cycleGoal}, (_, i) => {
+    const cls = i < timerState.pomCount ? 'done' :
+                i === timerState.pomCount && timerState.running && timerState.mode==='focus' ? 'active' : '';
+    return `<div class="pom-dot ${cls}"></div>`;
+  }).join('');
+}
+
+function updateSessionStatus() {
+  const el  = document.getElementById('sessionStatus');
+  const rem = timerState.cycleGoal - timerState.pomCount;
+  el.innerHTML = `Session ${timerState.pomCount + 1} of ${timerState.cycleGoal} · ${rem} more to earn <strong>+50 XP bonus</strong>`;
+}
+
+function renderLog() {
+  const body = document.getElementById('logBody');
+  const log  = timerState.sessionLog.slice(0, 15);
+  if (log.length === 0) {
+    body.innerHTML = '<div class="log-empty">No sessions yet — start your first focus session above.</div>';
+    return;
+  }
+  body.innerHTML = log.map(s => {
+    const t   = new Date(s.timestamp);
+    const fmt = t.toLocaleTimeString('en-SG', {hour:'2-digit', minute:'2-digit'});
+    return `<div class="log-item">
+      <div class="log-dot ${s.type}"></div>
+      <div class="log-info">
+        <div class="log-label">${s.type === 'focus' ? '🎯 Focus' : '☕ Break'} — ${s.subject}</div>
+        <div class="log-sub">${fmt}</div>
+      </div>
+      <div class="log-dur">${s.durationMins} min</div>
+    </div>`;
+  }).join('');
+}
+
+window.clearLog = function() {
+  timerState.sessionLog = [];
+  timerState.todayMins = 0;
+  timerState.todaySessions = 0;
+  saveTimerState();
+  renderLog();
+  updateStats();
+};
+
+// ─── NOTIFICATIONS ────────────────────────────────────────────────────────────
+window.requestNotif = function() {
+  if (!('Notification' in window)) return;
+  Notification.requestPermission().then(p => {
+    if (p === 'granted') {
+      document.getElementById('notifBanner').classList.add('hidden');
+      showBanner('🔔 Notifications enabled!');
+    }
+  });
+};
+
+function sendNotification(title, body) {
+  if ('Notification' in window && Notification.permission === 'granted') {
+    new Notification(title, {body, icon:'/images/icon-192.png'});
+  }
+}
+
+function showBanner(msg) {
+  const b = document.createElement('div');
+  b.style.cssText = 'position:fixed;top:72px;left:50%;transform:translateX(-50%);background:var(--card);border:1px solid var(--border2);border-radius:50px;padding:10px 20px;font-size:13px;font-weight:700;color:#fff;z-index:500;white-space:nowrap;animation:slideIn .3s ease';
+  b.textContent = msg;
+  document.body.appendChild(b);
+  setTimeout(() => b.remove(), 3500);
+}
+
+// ─── AMBIENT SOUND ────────────────────────────────────────────────────────────
+let audioCtx = null;
+let ambientNode = null;
+
+window.setAmbient = function(el, type) {
+  document.querySelectorAll('.amb-btn').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+  timerState.ambient = type;
+
+  if (ambientNode) { ambientNode.stop?.(); ambientNode = null; }
+  if (type === 'none' || !audioCtx) {
+    if (type !== 'none') initAmbient(type);
+    return;
+  }
+  initAmbient(type);
+};
+
+function initAmbient(type) {
+  if (!audioCtx) {
+    try { audioCtx = new (window.AudioContext || window.webkitAudioContext)(); } catch(e) { return; }
+  }
+  if (audioCtx.state === 'suspended') audioCtx.resume();
+
+  const buf = audioCtx.createBuffer(2, audioCtx.sampleRate * 3, audioCtx.sampleRate);
+  for (let c = 0; c < 2; c++) {
+    const data = buf.getChannelData(c);
+    for (let i = 0; i < data.length; i++) {
+      data[i] = (Math.random() * 2 - 1) * (type === 'white' ? 0.08 : 0.04);
+    }
+  }
+  const src    = audioCtx.createBufferSource();
+  const filter = audioCtx.createBiquadFilter();
+  const gain   = audioCtx.createGain();
+
+  src.buffer = buf;
+  src.loop   = true;
+
+  filter.type = type === 'rain' || type === 'forest' ? 'lowpass' :
+                type === 'cafe' ? 'bandpass' : 'allpass';
+  filter.frequency.value = type === 'rain' ? 600 : type === 'cafe' ? 1200 : type === 'forest' ? 400 : 8000;
+  gain.gain.value = 0.15;
+
+  src.connect(filter);
+  filter.connect(gain);
+  gain.connect(audioCtx.destination);
+  src.start();
+  ambientNode = src;
+}
+
+// ─── FULLSCREEN ────────────────────────────────────────────────────────────────
+window.toggleFullscreen = function() {
+  const btn = document.getElementById('btnFullscreen');
+  document.body.classList.toggle('fullscreen-mode');
+  btn.textContent = document.body.classList.contains('fullscreen-mode') ? '✕ Exit focus' : '⛶ Focus mode';
+};
+
+// ─── INIT ─────────────────────────────────────────────────────────────────────
+document.getElementById('hamburger').addEventListener('click', function() {
+  this.classList.toggle('open');
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+
+// Hide notif banner if already granted/denied
+if ('Notification' in window && Notification.permission !== 'default') {
+  document.getElementById('notifBanner').classList.add('hidden');
+}
+
+// Initialise
+loadTimerState();
+updateRingUI();
+updateRingMode();
+updateStats();
+updatePomDots();
+updateSessionStatus();
+renderLog();
+
+// Ring circumference setup
+document.getElementById('ringFill').style.strokeDasharray = circumference;
+document.getElementById('ringFill').style.strokeDashoffset = 0;
+
+// Keyboard shortcuts
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); toggleTimer(); }
+  if (e.code === 'KeyR')  resetTimer();
+  if (e.code === 'KeyF')  toggleFullscreen();
+});
+
+// Prevent sleep on mobile while running
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden && timerState.running) saveTimerState();
+});
+
+// CSS animation for banner
+const style = document.createElement('style');
+style.textContent = '@keyframes slideIn{from{opacity:0;transform:translateX(-50%) translateY(-10px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}';
+document.head.appendChild(style);
+</script>
+</body>
+</html>

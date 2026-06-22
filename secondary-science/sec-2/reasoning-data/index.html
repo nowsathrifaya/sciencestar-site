@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XM36L4R49E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XM36L4R49E');
+</script>
+<meta property="og:image" content="https://primayscience.org/images/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://primayscience.org/images/og-image.png">
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scientific Reasoning & Data — Sec 2 Science | ScienceStar</title>
+<meta name="keywords" content="PSLE data interpretation practice, graphs tables PSLE science Singapore, data skills primary science free">>
+<meta name="description" content="Complete Sec 2 reasoning and data skills notes: observation vs inference, variables, anomalies, errors, graph analysis, correlation vs causation.">
+<link rel="canonical" href="https://primayscience.org/secondary-science/sec-2/reasoning-data/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080f1e;--bg2:#0d1629;--card:#0e1b2e;--card2:#111f36;--border:rgba(255,255,255,.08);--border2:rgba(255,255,255,.14);--text:#e8edf5;--muted:rgba(232,237,245,.55);--dim:rgba(232,237,245,.28);--cyan:#22d3ee;--pink:#f472b6;--green:#34d399;--amber:#fbbf24;--red:#f87171;--purple:#a78bfa;--hub:#7c3aed;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;align-items:center;padding:0 clamp(16px,5%,56px);background:rgba(8,15,30,.93);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+.nav-brand{font-family:'Sora',sans-serif;font-weight:800;font-size:18px;color:#fff;text-decoration:none}.nav-brand span{color:var(--cyan)}
+.nav-links{display:flex;align-items:center;gap:4px;margin-left:auto;flex-wrap:wrap}.nav-links a{font-size:12px;font-weight:600;color:var(--muted);text-decoration:none;padding:5px 10px;border-radius:8px}.nav-links a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.npill{padding:5px 12px!important;border-radius:50px!important;font-weight:700!important;font-size:11px!important;color:#fff!important}.nsec{background:var(--hub)!important}.nmock{background:linear-gradient(135deg,#f97316,#a78bfa)!important}
+.crumb{font-size:12px;color:var(--dim);padding:76px clamp(16px,5%,56px) 0;max-width:1100px;margin:0 auto}.crumb a{color:var(--muted);text-decoration:none}.crumb a:hover{color:var(--cyan)}.crumb span{margin:0 6px}
+.hero{padding:32px clamp(16px,5%,56px) 44px;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(244,114,182,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(244,114,182,.05) 1px,transparent 1px);background-size:52px 52px}
+.hero-in{max-width:900px;margin:0 auto;position:relative;z-index:1}
+.badge{display:inline-flex;align-items:center;gap:6px;background:rgba(244,114,182,.12);border:1px solid rgba(244,114,182,.35);color:var(--pink);padding:5px 14px;border-radius:50px;font-size:11px;font-weight:700;margin-bottom:14px}
+h1{font-family:'Sora',sans-serif;font-size:clamp(26px,3.5vw,40px);font-weight:800;color:#fff;line-height:1.1;margin-bottom:12px}
+.lead{font-size:15px;color:var(--muted);max-width:680px;line-height:1.8;margin-bottom:20px}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;padding:10px 20px;border-radius:50px;font-weight:700;font-size:13px;text-decoration:none;transition:.18s}
+.btn-back{background:var(--pink);color:#04111f}.btn-hub{background:rgba(255,255,255,.07);border:1px solid var(--border2);color:var(--text)}
+.wrap{max-width:900px;margin:0 auto;padding:clamp(28px,4vw,48px) clamp(16px,5%,56px)}
+.section-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--pink);margin-bottom:18px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px 24px;margin-bottom:14px}
+.card-accent{border-left:3px solid var(--pink)}
+.card h2{font-family:'Sora',sans-serif;font-size:17px;font-weight:800;color:#fff;margin-bottom:10px}
+.card h3{font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:var(--pink);margin:14px 0 6px;text-transform:uppercase;letter-spacing:.5px}
+.card p,.card li{font-size:14px;color:var(--muted);line-height:1.75}
+.card ul,.card ol{margin:8px 0 4px 20px}.card li+li{margin-top:5px}
+.card strong{color:var(--text)}
+.tip{display:flex;gap:10px;align-items:flex-start;background:rgba(52,211,153,.07);border:1px solid rgba(52,211,153,.25);border-radius:10px;padding:11px 14px;margin-top:12px}
+.tip-icon{font-size:14px;flex-shrink:0;margin-top:1px}.tip p{font-size:13px;color:var(--muted);line-height:1.6;margin:0}
+.trap{display:flex;gap:10px;align-items:flex-start;background:rgba(251,191,36,.07);border:1px solid rgba(251,191,36,.25);border-radius:10px;padding:11px 14px;margin-top:12px}
+.trap p{font-size:13px;color:var(--muted);line-height:1.6;margin:0}
+.formula{background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.25);border-radius:10px;padding:11px 16px;margin:12px 0;font-size:14px;font-weight:700;color:#c4b5fd;text-align:center}
+.example{background:rgba(34,211,238,.05);border:1px solid rgba(34,211,238,.18);border-radius:10px;padding:14px 16px;margin-top:12px}
+.example-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--cyan);margin-bottom:8px}
+.example p,.example li{font-size:13px;color:var(--muted);line-height:1.65}
+.example ul{margin:6px 0 0 18px}
+.checklist{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-direction:column;gap:6px}
+.checklist li{display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:var(--muted);line-height:1.6}
+.checklist li::before{content:'□';color:var(--pink);font-size:14px;flex-shrink:0;margin-top:1px}
+.nav-bar{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px;padding-top:22px;border-top:1px solid var(--border)}
+.nav-bar a{font-size:13px;font-weight:600;color:var(--cyan);text-decoration:none;padding:7px 14px;border-radius:10px;border:1px solid var(--border);background:rgba(255,255,255,.03);transition:.18s}.nav-bar a:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.16)}
+footer{background:#040a14;border-top:1px solid var(--border);padding:32px clamp(16px,5%,56px) 20px;margin-top:16px}
+.fi{max-width:900px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;font-size:13px}
+.flogo{font-family:'Sora',sans-serif;font-weight:800;color:#fff;text-decoration:none}.flogo span{color:var(--cyan)}
+.flinks{display:flex;gap:14px;flex-wrap:wrap}.flinks a{color:var(--muted);text-decoration:none;font-size:12px}.flinks a:hover{color:#fff}
+.fb{max-width:900px;margin:12px auto 0;font-size:11px;color:var(--dim)}
+
+  /* nav search */
+  .nav-search{display:flex;align-items:center;margin-left:8px;position:relative}
+  .ns-icon{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:8px;color:rgba(232,237,245,.6);cursor:pointer;padding:6px 8px;display:flex;align-items:center;transition:.15s}
+  .ns-icon:hover{color:#fff;background:rgba(255,255,255,.12)}
+  .ns-form{display:flex;align-items:center;overflow:hidden;width:0;opacity:0;transition:width .25s ease,opacity .2s;position:absolute;right:36px;top:50%;transform:translateY(-50%)}
+  .nav-search.open .ns-form{width:200px;opacity:1}
+  .ns-input{background:#0d1629;border:1.5px solid rgba(56,189,248,.4);border-radius:8px 0 0 8px;color:#e8edf5;font-size:13px;padding:6px 10px;outline:none;width:100%;font-family:inherit}
+  .ns-input::placeholder{color:rgba(232,237,245,.3)}
+  .ns-submit{background:rgba(56,189,248,.2);border:1.5px solid rgba(56,189,248,.4);border-left:none;border-radius:0 8px 8px 0;color:#38bdf8;cursor:pointer;padding:6px 10px;font-size:13px;font-family:inherit;transition:.15s}
+  .ns-submit:hover{background:rgba(56,189,248,.35)}
+  @media(max-width:500px){.nav-search.open .ns-form{width:150px}}
+</style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Sec 2 Science Reasoning & Data Skills",
+  "url": "https://primayscience.org/secondary-science/sec-2/reasoning-data/",
+  "description": "Sec 2 Science reasoning and data-based questions practice for Singapore students.",
+  "educationalLevel": "Secondary School",
+  "inLanguage": "en-SG",
+  "provider": {"@type": "Organization", "name": "ScienceStar", "url": "https://primayscience.org"},
+  "dateModified": "2026-05-14"
+}</script>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://primayscience.org/secondary-science/sec-2/reasoning-data/">
+<meta property="og:title" content="Scientific Reasoning & Data — Sec 2 Science | ScienceStar">
+<meta property="og:description" content="Complete Sec 2 reasoning and data skills notes: observation vs inference, variables, anomalies, errors, graph analysis, correlation vs causation.">
+<meta property="og:image" content="https://primayscience.org/images/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-brand">⭐ Science<span>Star</span></a>
+  <div class="nav-links"><a href="/psle/">PSLE</a><a href="/secondary-science/sec-2/" class="npill nsec">Sec 2</a></div>
+
+  <div class="nav-search" id="navSearch">
+    <button class="ns-icon" onclick="openSearch()" aria-label="Search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
+    <form class="ns-form" action="/search/" method="GET" role="search">
+      <input class="ns-input" type="search" name="q" placeholder="Search topics…" autocomplete="off" aria-label="Search ScienceStar" onfocus="this.closest('.nav-search').classList.add('open')" onblur="setTimeout(()=>this.closest('.nav-search').classList.remove('open'),200)">
+      <button type="submit" class="ns-submit" aria-label="Go">→</button>
+    </form>
+  </div>
+</nav>
+<div class="crumb"><a href="/">Home</a><span>›</span><a href="/secondary-science/">Secondary</a><span>›</span><a href="/secondary-science/sec-2/">Sec 2</a><span>›</span> Reasoning &amp; Data</div>
+<section class="hero">
+  <div class="hero-in">
+    <div class="badge">📊 Sec 2 · Reasoning &amp; Data</div>
+    <h1>Scientific Reasoning<br>&amp; Data Skills</h1>
+    <p class="lead">These skills appear in <strong>every</strong> Sec 2 paper regardless of topic. Master observation vs inference, anomaly handling, and graph analysis before anything else.</p>
+    <div class="btn-row"><a href="/secondary-science/sec-2/" class="btn btn-back">← Back to Sec 2</a><a href="/secondary-science/sec-2/study-notes/" class="btn btn-hub">All-topic notes</a></div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="section-label">Core concepts</div>
+
+  <div class="card card-accent">
+    <h2>1. Observation vs Inference</h2>
+    <p>An <strong>observation</strong> is what you directly detect with your senses or instruments — something you can point to in the data. An <strong>inference</strong> is an interpretation or conclusion you draw from those observations. Examiners mark these separately and penalise mixing them.</p>
+    <div class="example">
+      <div class="example-label">Worked example</div>
+      <ul>
+        <li><strong>Observation:</strong> "The liquid turned blue-black when iodine solution was added."</li>
+        <li><strong>Inference:</strong> "Starch is present in the liquid."</li>
+        <li><strong>Observation:</strong> "The temperature rose from 22 °C to 35 °C over 5 minutes."</li>
+        <li><strong>Inference:</strong> "An exothermic reaction occurred."</li>
+      </ul>
+    </div>
+    <div class="trap"><span class="tip-icon">⚠️</span><p><strong>Common trap:</strong> When a question says "State what you observe," write only what is directly seen, heard, or measured — never explain why. Adding "because…" to an observation answer costs marks.</p></div>
+  </div>
+
+  <div class="card card-accent">
+    <h2>2. Variables — IV, DV and Controlled</h2>
+    <ul>
+      <li><strong>Independent variable (IV)</strong> — the one factor you deliberately change. There is only one IV per experiment.</li>
+      <li><strong>Dependent variable (DV)</strong> — what you measure as a result of changing the IV.</li>
+      <li><strong>Controlled variables (CV)</strong> — all other factors kept constant so only the IV causes changes in the DV. Always name specific CVs with values or units, never just say "all other variables."</li>
+    </ul>
+    <div class="example">
+      <div class="example-label">Example — testing how temperature affects enzyme activity</div>
+      <ul>
+        <li>IV: temperature of water bath (°C)</li>
+        <li>DV: time for starch to be fully digested (seconds)</li>
+        <li>CVs: volume of amylase solution (e.g. 2 cm³), concentration of starch solution (1%), pH of solution (pH 7)</li>
+      </ul>
+    </div>
+    <div class="tip"><span class="tip-icon">✅</span><p>A good hypothesis: <em>"If [IV] increases, then [DV] will [increase/decrease] because [reason based on science]."</em></p></div>
+  </div>
+
+  <div class="card card-accent">
+    <h2>3. Precision, Accuracy, Reliability &amp; Validity</h2>
+    <ul>
+      <li><strong>Precision</strong> — how finely an instrument can read. A thermometer with 0.1 °C divisions is more precise than one with 1 °C divisions. Smaller scale divisions = higher precision.</li>
+      <li><strong>Accuracy</strong> — how close a reading is to the true value. Improved by calibrating instruments and eliminating systematic errors.</li>
+      <li><strong>Reliability</strong> — how reproducible results are. Improved by repeating readings (≥3 times) and calculating the mean.</li>
+      <li><strong>Validity</strong> — whether the experiment genuinely tests the hypothesis. Requires all variables except the IV to be controlled.</li>
+    </ul>
+    <div class="trap"><span class="tip-icon">⚠️</span><p><strong>Common trap:</strong> Confusing precision with accuracy. A balance not zeroed before use gives consistently wrong readings — precise but inaccurate. Repeating won't fix it.</p></div>
+  </div>
+
+  <div class="card card-accent">
+    <h2>4. Types of Error</h2>
+    <ul>
+      <li><strong>Random error</strong> — unpredictable, varies direction each time. Caused by slight fluctuations (e.g. reaction timing, reading a scale). Reduced by repeating and averaging.</li>
+      <li><strong>Systematic error</strong> — consistent offset, always in the same direction. Not reduced by repeating. Must be identified and corrected at the source (e.g. re-zero the balance, recalibrate thermometer).</li>
+      <li><strong>Parallax error</strong> — reading a scale at an angle instead of eye level. Causes a consistent reading error. Always read at eye level, perpendicular to the scale.</li>
+    </ul>
+    <div class="example">
+      <div class="example-label">Examples</div>
+      <ul>
+        <li>Random: stopwatch reaction time varies ±0.2 s each trial</li>
+        <li>Systematic: thermometer always reads 1.5 °C too high due to calibration fault</li>
+        <li>Parallax: reading a meniscus from above — always records too high a volume</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card card-accent">
+    <h2>5. Identifying &amp; Handling Anomalies</h2>
+    <p>An anomalous result is one that clearly does not fit the pattern of the other results. Steps to handle correctly:</p>
+    <ol style="margin:10px 0 0 20px">
+      <li style="color:var(--muted);font-size:14px;line-height:1.75;margin-bottom:4px">Identify which reading is anomalous (state the actual value).</li>
+      <li style="color:var(--muted);font-size:14px;line-height:1.75;margin-bottom:4px">State a plausible reason (parallax error, contamination, misread timer, equipment fault).</li>
+      <li style="color:var(--muted);font-size:14px;line-height:1.75;margin-bottom:4px">Exclude it from the mean calculation — but keep it visible in the table and mark it clearly.</li>
+      <li style="color:var(--muted);font-size:14px;line-height:1.75">State that the mean was calculated from the remaining consistent readings only.</li>
+    </ol>
+    <div class="formula">Mean = Sum of valid readings ÷ Number of valid readings</div>
+    <div class="example">
+      <div class="example-label">Worked example</div>
+      <p>Readings: 21.0 cm, 21.2 cm, 27.9 cm, 21.1 cm<br>
+      Anomaly: 27.9 cm (significantly higher than others — possible parallax error).<br>
+      Mean = (21.0 + 21.2 + 21.1) ÷ 3 = <strong>21.1 cm</strong> (rounded to same d.p. as readings)</p>
+    </div>
+    <div class="trap"><span class="tip-icon">⚠️</span><p><strong>Common trap:</strong> Silently dropping an anomaly or including it in the mean without comment. Examiners expect an explicit reason for any excluded value.</p></div>
+  </div>
+
+  <div class="card card-accent">
+    <h2>6. Describing Graph Trends</h2>
+    <h3>Step-by-step structure</h3>
+    <ol style="margin:6px 0 0 20px">
+      <li style="color:var(--muted);font-size:14px;line-height:1.75;margin-bottom:4px">State the overall relationship (positive/negative correlation, directly proportional, no relationship, levels off).</li>
+      <li style="color:var(--muted);font-size:14px;line-height:1.75;margin-bottom:4px">Describe the nature of the trend (linear, non-linear/curved, steep then flattening).</li>
+      <li style="color:var(--muted);font-size:14px;line-height:1.75;margin-bottom:4px">Quote specific values with units from the graph to support your description.</li>
+      <li style="color:var(--muted);font-size:14px;line-height:1.75">Note any anomalous points or changes in gradient.</li>
+    </ol>
+    <h3>Useful language</h3>
+    <ul>
+      <li>"As X increases from ___ to ___, Y increases from ___ to ___."</li>
+      <li>"The relationship is linear between ___ and ___."</li>
+      <li>"Beyond ___, Y levels off / begins to decrease."</li>
+      <li>"There is a positive/negative/no correlation between X and Y."</li>
+    </ul>
+    <div class="trap"><span class="tip-icon">⚠️</span><p><strong>Common trap:</strong> "X goes up so Y goes up." Too vague — no marks. You must state the direction, nature (linear or curved), and cite at least two data points with units.</p></div>
+  </div>
+
+  <div class="card card-accent">
+    <h2>7. Correlation vs Causation</h2>
+    <p>Two variables may correlate (rise or fall together) without one <em>causing</em> the other. A <strong>confounding variable</strong> — a third factor — may be causing changes in both.</p>
+    <div class="example">
+      <div class="example-label">Classic example</div>
+      <p>Ice cream sales and drowning rates both rise in summer. Conclusion: ice cream causes drowning? No — the confounding variable is <strong>hot weather</strong>, which independently causes both.</p>
+    </div>
+    <p style="margin-top:10px">To establish causation, you need a <strong>controlled experiment</strong> where only the IV is changed. Survey or observational data alone cannot prove causation.</p>
+    <div class="tip"><span class="tip-icon">✅</span><p>Always end correlation-based conclusions with: <em>"This shows a correlation only. A controlled experiment is needed to establish causation."</em></p></div>
+  </div>
+
+  <div class="card card-accent">
+    <h2>8. Evaluating a Conclusion</h2>
+    <p>For any given conclusion, ask:</p>
+    <ul>
+      <li>Does the data range actually cover the claim? (Extrapolating beyond the tested range is risky.)</li>
+      <li>Were there enough repeats to trust the mean?</li>
+      <li>Were all relevant variables controlled (validity)?</li>
+      <li>Is the sample size large enough to generalise?</li>
+      <li>Were anomalies handled correctly, or were they ignored?</li>
+      <li>Does the conclusion match only what the data shows, or does it overreach?</li>
+    </ul>
+  </div>
+
+  <div class="card card-accent">
+    <h2>9. Suggesting Improvements</h2>
+    <p>Always link each improvement to the specific problem it solves:</p>
+    <ul>
+      <li><em>"Increase the number of repeats from 3 to 5"</em> → improves reliability, reduces effect of random error.</li>
+      <li><em>"Use a thermometer with 0.1 °C divisions instead of 1 °C"</em> → improves precision of temperature readings.</li>
+      <li><em>"Control [specific variable] by [specific method]"</em> → improves validity of the fair test.</li>
+      <li><em>"Extend the range of IV from 20–60 °C to 20–80 °C"</em> → strengthens the conclusion by covering a wider range.</li>
+      <li><em>"Use a data logger instead of a stopwatch"</em> → reduces reaction-time error, improving accuracy.</li>
+    </ul>
+    <div class="trap"><span class="tip-icon">⚠️</span><p><strong>Common trap:</strong> Saying "repeat the experiment" without specifying how many times or what you're improving. Always state the number and the reason.</p></div>
+  </div>
+
+  <div class="card card-accent">
+    <h2>10. Command Words — quick reference</h2>
+    <ul>
+      <li><strong>State</strong> — give a fact; no reason needed.</li>
+      <li><strong>Describe</strong> — say what you observe or what happens; no "because."</li>
+      <li><strong>Explain</strong> — give a reason using "because"; the mechanism is required.</li>
+      <li><strong>Compare</strong> — give at least one similarity AND one difference.</li>
+      <li><strong>Suggest</strong> — give a possible reason; apply knowledge to an unfamiliar context.</li>
+      <li><strong>Evaluate</strong> — judge quality/reliability; weigh evidence and give a reasoned conclusion.</li>
+      <li><strong>Predict</strong> — use existing data/knowledge to say what will happen next.</li>
+      <li><strong>Calculate</strong> — show working, state formula, substitute values with units, give answer with units.</li>
+    </ul>
+  </div>
+
+  <div class="section-label" style="margin-top:36px">Worked practice questions</div>
+
+  <div class="card">
+    <h2>Practice Q1</h2>
+    <p>Four readings of volume are: 12.1 cm³, 12.0 cm³, 18.9 cm³ and 12.2 cm³. (a) Identify the anomalous result and suggest a reason. (b) Calculate the correct mean.</p>
+    <div class="example" style="margin-top:14px">
+      <div class="example-label">Answer</div>
+      <p>(a) 18.9 cm³ is anomalous — it is significantly higher than the other three consistent readings. Possible reason: parallax error when reading the measuring cylinder, or a contaminated sample.<br><br>
+      (b) Mean = (12.1 + 12.0 + 12.2) ÷ 3 = <strong>12.1 cm³</strong></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Practice Q2</h2>
+    <p>A student claims that students who eat breakfast score higher in exams, based on a survey of 200 students. Evaluate this claim.</p>
+    <div class="example" style="margin-top:14px">
+      <div class="example-label">Answer</div>
+      <p>The claim cannot be established from survey data alone — this shows a correlation, not causation. Confounding variables such as family income, sleep habits, or general health may independently explain both breakfast eating and exam performance. A controlled experiment would be needed to establish causation. The sample size of 200 is reasonable, but the survey method cannot control for other variables.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Practice Q3</h2>
+    <p>A graph shows reaction rate (y-axis) vs temperature (x-axis). The curve rises steeply from 10 °C to 37 °C, then falls sharply above 40 °C. Describe the trend and explain the fall.</p>
+    <div class="example" style="margin-top:14px">
+      <div class="example-label">Answer</div>
+      <p><strong>Describe:</strong> Reaction rate increases as temperature rises from 10 °C to 37 °C, reaching a maximum at 37 °C (optimum temperature). Above 37 °C, reaction rate decreases sharply, falling toward zero by approximately 50 °C.<br><br>
+      <strong>Explain:</strong> Above the optimum temperature, the enzyme begins to denature — the active site permanently changes shape, so the substrate can no longer bind. Enzyme activity falls as more enzyme molecules are denatured.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Practice Q4</h2>
+    <p>A student measures pulse rate before and after exercise. Name two variables that must be controlled, and explain why she should repeat measurements three times.</p>
+    <div class="example" style="margin-top:14px">
+      <div class="example-label">Answer</div>
+      <p><strong>Controlled variables (any two):</strong> type and intensity of exercise (e.g. same running speed on a treadmill); duration of exercise; time of day measurements are taken; rest period before measurement; age and fitness level of the participant.<br><br>
+      <strong>Why repeat:</strong> Repeating three times and calculating the mean reduces the effect of random error (e.g. slight variation in how rested the student is) and improves the reliability of the results.</p>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top:36px">Must-know checklist</div>
+  <div class="card">
+    <ul class="checklist">
+      <li>I can distinguish observation from inference in any given scenario.</li>
+      <li>I can identify IV, DV and at least two specific CVs (with units) in any experiment.</li>
+      <li>I can distinguish random error from systematic error and state how to reduce each.</li>
+      <li>I can identify an anomaly, give a plausible reason, and calculate the mean without it.</li>
+      <li>I can describe a graph trend with specific values, correct vocabulary, and note shape changes.</li>
+      <li>I can explain why correlation does not prove causation and identify confounding variables.</li>
+      <li>I can evaluate a conclusion against data provided and identify overreach.</li>
+      <li>I can suggest specific, justified improvements linked to the weakness they address.</li>
+      <li>I know what each command word (state, describe, explain, compare, evaluate) requires.</li>
+    </ul>
+  </div>
+
+  <div class="nav-bar">
+    <a href="/secondary-science/sec-2/matter-cycles/">♻️ Matter &amp; Cycles →</a>
+    <a href="/secondary-science/sec-2/systems-living/">🧬 Living Systems →</a>
+    <a href="/secondary-science/sec-2/physical-systems/">⚡ Physical Systems →</a>
+    <a href="/secondary-science/sec-2/environment-sustainability/">🌍 Environment →</a>
+    <a href="/secondary-science/sec-2/study-notes/">📝 All-topic notes →</a>
+    <a href="/secondary-science/sec-2/past-year-questions/">📄 Practice Qs →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="fi">
+    <a href="/" class="flogo">⭐ Science<span>Star</span></a>
+    <div class="flinks"><a href="/secondary-science/sec-2/">← Sec 2 Hub</a><a href="/secondary-science/sec-2/flashcards/">Flashcards</a><a href="/secondary-science/sec-2/cheat-sheet/">Cheat Sheet</a><a href="/">Home</a></div>
+  </div>
+  <div class="fb">© 2026 ScienceStar · Not affiliated with MOE or SEAB.</div>
+</footer>
+
+<script>
+function openSearch(){
+  var ns=document.getElementById('navSearch');
+  ns.classList.add('open');
+  setTimeout(function(){ns.querySelector('.ns-input').focus();},50);
+}
+</script>
+</body>
+</html>

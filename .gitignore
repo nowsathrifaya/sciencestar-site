@@ -1,0 +1,22 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependencies (none currently used, but safe to exclude if added later)
+node_modules/
+
+# Local Wrangler / Cloudflare dev artifacts
+.wrangler/
+.dev.vars
+
+# Never commit real secrets if a local env file is ever added
+.env
+.env.local

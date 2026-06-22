@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XM36L4R49E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XM36L4R49E');
+</script>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Science Diagram Labelling — Free PSLE Practice Tool</title>
+
+  
+  <meta property="og:description" content="Label digestive system, plant parts, water cycle & more. Interactive PSLE Science diagrams with instant feedback. Free.">
+  <meta property="og:url" content="https://primayscience.org/diagrams/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Science Diagram Labelling — Free PSLE Practice Tool">
+<meta name="keywords" content="PSLE science diagram labelling Singapore, digestive system plant parts water cycle diagram, free labelling tool">>
+<meta name="description" content="Free interactive diagram labelling for PSLE Science. Label the digestive system, plant parts, water cycle and more. Instant feedback and model answers included.">>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f0f9ff;--card:#fff;--ink:#0f172a;--muted:#64748b;--border:#e2e8f0;--radius:20px;--shadow:0 4px 24px rgba(0,0,0,.08);--shadow-lg:0 12px 40px rgba(0,0,0,.14);}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;overflow-x:hidden;}
+.bg-grid{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:radial-gradient(circle,#0ea5e920 1px,transparent 1px);background-size:32px 32px;}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(60px);opacity:.12;pointer-events:none;z-index:0;}
+.blob1{width:500px;height:500px;background:#0ea5e9;top:-150px;right:-150px;animation:drift 18s ease-in-out infinite;}
+.blob2{width:400px;height:400px;background:#6366f1;bottom:-100px;left:-100px;animation:drift 22s ease-in-out infinite reverse;}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,-30px)}}
+header{position:relative;z-index:20;background:linear-gradient(135deg,#0ea5e9,#6366f1);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 4px 24px rgba(14,165,233,.3);}
+.logo{font-family:system-ui,sans-serif;font-size:22px;font-weight:800;color:#fff;text-decoration:none;display:flex;align-items:center;gap:8px;}
+.logo-em{font-size:28px;animation:spin 10s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg)}}
+.back-lnk{background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.4);border-radius:50px;padding:6px 16px;font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;color:#fff;text-decoration:none;transition:.2s;}
+.back-lnk:hover{background:rgba(255,255,255,.35);}
+.ticker{background:linear-gradient(90deg,#0ea5e9,#6366f1);color:#fff;font-weight:700;font-size:12px;padding:5px 0;overflow:hidden;position:relative;z-index:10;}
+.tick-inner{display:inline-block;white-space:nowrap;animation:ticker 30s linear infinite;padding-left:100%;}
+@keyframes ticker{to{transform:translateX(-100%)}}
+.xp-pill{background:rgba(255,255,255,.25);border:2px solid rgba(255,255,255,.4);border-radius:50px;padding:5px 14px;font-weight:800;font-size:14px;color:#fff;display:flex;align-items:center;gap:5px;}
+.container{position:relative;z-index:5;max-width:920px;margin:0 auto;padding:28px 16px;}
+.screen{display:none;}.screen.active{display:block;}
+.hero{text-align:center;margin-bottom:32px;animation:fadeUp .5s ease;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero h1{font-family:system-ui,sans-serif;font-size:clamp(26px,5vw,42px);font-weight:800;background:linear-gradient(135deg,#0ea5e9,#6366f1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px;line-height:1.15;}
+.hero p{font-size:15px;color:var(--muted);font-weight:600;max-width:580px;margin:0 auto 16px;}
+.stats-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:8px;}
+.stat-pill{background:var(--card);border:2px solid var(--border);border-radius:50px;padding:6px 16px;font-size:13px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:6px;box-shadow:var(--shadow);}
+.sec-label{font-family:system-ui,sans-serif;font-size:19px;font-weight:700;color:#0ea5e9;margin:28px 0 14px;display:flex;align-items:center;gap:8px;}
+.diag-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px;margin-bottom:32px;}
+.diag-card{background:var(--card);border-radius:var(--radius);padding:18px 14px;cursor:pointer;border:3px solid var(--border);text-align:center;box-shadow:var(--shadow);transition:all .3s cubic-bezier(.34,1.56,.64,1);position:relative;overflow:hidden;}
+.diag-card:hover{transform:translateY(-6px) scale(1.03);box-shadow:var(--shadow-lg);border-color:var(--dc,#0ea5e9);}
+.diag-em{font-size:38px;display:block;margin-bottom:8px;transition:.3s;}
+.diag-card:hover .diag-em{transform:scale(1.2);}
+.diag-name{font-weight:800;font-size:13px;color:var(--ink);line-height:1.3;margin-bottom:4px;}
+.diag-level{display:inline-block;background:var(--dc,#0ea5e9);color:#fff;font-size:10px;font-weight:800;padding:2px 8px;border-radius:50px;margin-bottom:8px;}
+.diag-prog{height:5px;background:#e2e8f0;border-radius:50px;overflow:hidden;}
+.diag-prog-fill{height:100%;border-radius:50px;background:var(--dc,#0ea5e9);transition:width .5s;}
+.done-badge{position:absolute;top:10px;right:10px;width:24px;height:24px;background:#22c55e;border-radius:50%;display:none;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:900;}
+.done-badge.show{display:flex;}
+.global-prog{background:var(--card);border-radius:50px;height:10px;overflow:hidden;margin-bottom:6px;border:2px solid var(--border);}
+.global-prog-fill{height:100%;border-radius:50px;background:linear-gradient(90deg,#0ea5e9,#6366f1);transition:width .6s ease;}
+.global-prog-lbl{font-size:12px;color:var(--muted);font-weight:600;text-align:right;margin-bottom:16px;}
+.lab-header{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap;}
+.back-btn{background:var(--card);border:none;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;color:#0ea5e9;display:flex;align-items:center;gap:6px;padding:8px 16px;border-radius:50px;box-shadow:var(--shadow);transition:.2s;}
+.back-btn:hover{background:#e0f2fe;transform:translateX(-2px);}
+.lab-title{font-family:system-ui,sans-serif;font-size:20px;font-weight:800;color:var(--ink);flex:1;}
+.score-badge{background:#0ea5e9;color:#fff;font-weight:800;font-size:14px;padding:6px 16px;border-radius:50px;}
+.reveal-btn{background:var(--card);border:2px solid #f59e0b;border-radius:50px;padding:8px 16px;font-family:'Nunito',sans-serif;font-weight:800;font-size:13px;color:#92400e;cursor:pointer;transition:.2s;}
+.reveal-btn:hover{background:#fef9c3;}
+.progress-row{display:flex;gap:6px;align-items:center;margin-bottom:16px;flex-wrap:wrap;}
+.prog-dot{width:13px;height:13px;border-radius:50%;background:#e2e8f0;transition:.3s;}
+.prog-dot.done{background:#22c55e;}
+.prog-dot.missed{background:#ef4444;}
+.instruct{background:linear-gradient(135deg,#eff6ff,#eef2ff);border:2px solid #c7d2fe;border-radius:14px;padding:14px 16px;margin-bottom:16px;font-size:13px;font-weight:600;color:#3730a3;display:flex;align-items:flex-start;gap:8px;}
+.diag-wrap{background:var(--card);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);margin-bottom:20px;border:3px solid var(--border);}
+.diag-wrap svg{width:100%;height:auto;display:block;user-select:none;}
+.hotspot{cursor:pointer;}
+.hotspot circle{transition:.2s;}
+.hotspot:hover circle{r:11;}
+.hotspot.correct circle{fill:#22c55e;stroke:#166534;}
+.hotspot.revealed circle{fill:#f59e0b;stroke:#92400e;}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.wrong-flash{animation:shake .4s ease;}
+.bank-label{font-family:system-ui,sans-serif;font-size:16px;font-weight:700;color:#6366f1;margin-bottom:12px;}
+.bank{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:20px;min-height:44px;}
+.label-chip{background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;font-family:'Nunito',sans-serif;font-weight:800;font-size:13px;padding:8px 16px;border-radius:50px;cursor:pointer;border:none;box-shadow:0 3px 10px rgba(99,102,241,.3);transition:all .2s cubic-bezier(.34,1.56,.64,1);}
+.label-chip:hover:not(:disabled){transform:translateY(-3px) scale(1.05);box-shadow:0 6px 18px rgba(99,102,241,.4);}
+.label-chip.selected{background:linear-gradient(135deg,#f59e0b,#d97706);box-shadow:0 3px 10px rgba(245,158,11,.4);transform:scale(1.08);}
+.label-chip:disabled{opacity:.35;cursor:not-allowed;background:#94a3b8;transform:none;box-shadow:none;}
+.result-card{background:var(--card);border-radius:var(--radius);padding:36px 24px;text-align:center;box-shadow:var(--shadow);animation:popIn .5s cubic-bezier(.34,1.56,.64,1);}
+@keyframes popIn{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
+.result-em{font-size:72px;display:block;margin-bottom:12px;animation:bob 1s ease infinite;}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.result-score{font-family:system-ui,sans-serif;font-size:52px;font-weight:800;background:linear-gradient(135deg,#0ea5e9,#6366f1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.result-msg{font-size:17px;font-weight:700;color:var(--muted);margin:10px 0 20px;}
+.result-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.rbtn{padding:12px 24px;border:none;border-radius:50px;font-family:'Nunito',sans-serif;font-size:14px;font-weight:800;cursor:pointer;transition:all .3s cubic-bezier(.34,1.56,.64,1);}
+.rbtn:hover{transform:translateY(-3px);}
+.rbtn-p{background:linear-gradient(135deg,#0ea5e9,#6366f1);color:#fff;box-shadow:0 4px 16px rgba(14,165,233,.35);}
+.rbtn-s{background:var(--card);color:#0ea5e9;border:3px solid #0ea5e9;}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:#0f172a;color:#fff;padding:10px 22px;border-radius:50px;font-weight:700;font-size:14px;z-index:500;transition:transform .4s cubic-bezier(.34,1.56,.64,1);pointer-events:none;white-space:nowrap;}
+.toast.show{transform:translateX(-50%) translateY(0);}
+.cw{position:fixed;inset:0;z-index:1000;pointer-events:none;}
+.cp{position:absolute;opacity:0;animation:cf 2.8s ease-in forwards;border-radius:50%;}
+@keyframes cf{0%{opacity:1;transform:translateY(-30px) rotate(0)}100%{opacity:0;transform:translateY(100vh) rotate(720deg)}}
+@media(max-width:600px){.diag-grid{grid-template-columns:repeat(2,1fr);}.lab-title{font-size:16px;}.label-chip{font-size:11px;padding:6px 11px;}}
+
+  /* nav search */
+  .nav-search{display:flex;align-items:center;margin-left:8px;position:relative}
+  .ns-icon{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:8px;color:rgba(232,237,245,.6);cursor:pointer;padding:6px 8px;display:flex;align-items:center;transition:.15s}
+  .ns-icon:hover{color:#fff;background:rgba(255,255,255,.12)}
+  .ns-form{display:flex;align-items:center;overflow:hidden;width:0;opacity:0;transition:width .25s ease,opacity .2s;position:absolute;right:36px;top:50%;transform:translateY(-50%)}
+  .nav-search.open .ns-form{width:200px;opacity:1}
+  .ns-input{background:#0d1629;border:1.5px solid rgba(56,189,248,.4);border-radius:8px 0 0 8px;color:#e8edf5;font-size:13px;padding:6px 10px;outline:none;width:100%;font-family:inherit}
+  .ns-input::placeholder{color:rgba(232,237,245,.3)}
+  .ns-submit{background:rgba(56,189,248,.2);border:1.5px solid rgba(56,189,248,.4);border-left:none;border-radius:0 8px 8px 0;color:#38bdf8;cursor:pointer;padding:6px 10px;font-size:13px;font-family:inherit;transition:.15s}
+  .ns-submit:hover{background:rgba(56,189,248,.35)}
+  @media(max-width:500px){.nav-search.open .ns-form{width:150px}}
+</style>
+<meta property="og:image" content="https://primayscience.org/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://primayscience.org/images/og-image.png">
+<link rel="canonical" href="https://primayscience.org/diagrams/">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Diagram Labelling – ScienceStar Singapore Primary Science",
+  "description": "Interactive diagram labelling for Singapore Primary Science PSLE. Label plant cells, digestive system, respiratory system, water cycle and more. Free practice.",
+  "url": "https://primayscience.org/diagrams/",
+  "isPartOf": {"@type": "WebSite", "url": "https://primayscience.org", "name": "ScienceStar"}
+}</script>
+<meta name="twitter:title" content="Science Diagram Labelling — Free PSLE Practice Tool">
+<meta name="twitter:description" content="Label digestive system, plant parts, water cycle & more. Interactive PSLE Science diagrams with instant feedback. Free.">
+</head>
+<body>
+<div class="bg-grid"></div>
+<div class="bg-blob blob1"></div>
+<div class="bg-blob blob2"></div>
+<div class="ticker"><span class="tick-inner">🔬 Tip: Click a label first, then click the correct dot on the diagram! 🎯 10 diagrams — every one tested in PSLE Science! 📍 Correct first try = full 5 XP! 💡 Use Reveal if you're stuck — but try first! 🏆 Complete all 10 to become a Diagram Master!</span></div>
+<header>
+  <a href="/" class="logo"><span class="logo-em">🔬</span> ScienceStar</a>
+  <div style="display:flex;align-items:center;gap:10px">
+    <div class="xp-pill">⭐ <span id="xpD">0</span> XP</div>
+    <a href="/" class="back-lnk">← Home</a>
+  </div>
+</header>
+
+<!-- HOME -->
+<div id="homeScreen" class="screen active">
+<div class="container">
+  <div class="hero">
+    <h1>🏷️ Diagram Labelling</h1>
+    <p>Click a label from the bank, then click the correct spot on the diagram. Master every diagram that appears in PSLE Science!</p>
+    <div class="stats-row">
+      <div class="stat-pill">📊 <span id="statDone">0</span> / 10 completed</div>
+      <div class="stat-pill">⭐ <span id="statXP">0</span> XP earned</div>
+      <div class="stat-pill">🎯 <span id="statAcc">—</span> accuracy</div>
+    </div>
+    <div class="global-prog" style="max-width:420px;margin:16px auto 0"><div class="global-prog-fill" id="gFill" style="width:0%"></div></div>
+    <div class="global-prog-lbl" id="gLbl" style="max-width:420px;margin:4px auto 0">0 of 10 diagrams mastered</div>
+  </div>
+  <div style="background:#eff6ff;border:2px solid #bfdbfe;border-radius:14px;padding:12px 16px;margin-bottom:16px;font-size:13px;font-weight:600;color:#1e40af;"><strong>📌 After each correct label:</strong> A tooltip tells you what that part DOES — not just its name. Study these functions because PSLE often asks "state the function of X".</div>
+  <div class="sec-label">🌱 Biology Diagrams</div>
+  <div class="diag-grid" id="bioGrid"></div>
+  <div class="sec-label">⚗️ Physics &amp; Earth Science</div>
+  <div class="diag-grid" id="physGrid"></div>
+</div>
+</div>
+
+<!-- LABELLING -->
+<div id="labScreen" class="screen">
+<div class="container">
+  <div class="lab-header">
+    <button class="back-btn" onclick="goHome()">← Back</button>
+    <div class="lab-title" id="labTitle">Diagram</div>
+    <div class="score-badge" id="scoreBadge">0 / 0</div>
+    <button class="reveal-btn" onclick="revealAll()">👁 Reveal All</button>
+  </div>
+  <div class="progress-row" id="progRow"></div>
+  <div id="diagNote" style="display:none;background:#fef9c3;border:2px solid #fde68a;border-radius:10px;padding:9px 14px;font-size:12px;font-weight:700;color:#92400e;margin-bottom:10px;"></div>
+  <div class="instruct"><span style="font-size:18px;flex-shrink:0">💡</span><span><strong>How to play:</strong> Click a <strong>label chip</strong> below (it turns orange), then click the matching <strong>yellow dot ●</strong> on the diagram. Green = correct ✅. You have 3 tries per label before it locks.</span></div>
+  <div class="diag-wrap" id="diagWrap"></div>
+  <div class="bank-label">🏷️ Label Bank — select a label, then click its spot</div>
+  <div class="bank" id="bank"></div>
+</div>
+</div>
+
+<!-- RESULT -->
+<div id="resultScreen" class="screen">
+<div class="container"><div class="result-card" id="resultCard"></div></div>
+</div>
+
+<div class="toast" id="toast"></div>
+<div class="cw" id="cw"></div>
+
+<script>
+const DIAGS=[
+{id:'plantcell',name:'Plant Cell',emoji:'🌱',level:'P3/P5',color:'#16a34a',cat:'bio',
+ labels:[{id:'nucleus',text:'Nucleus',cx:310,cy:175},{id:'membrane',text:'Cell Membrane',cx:115,cy:220},{id:'wall',text:'Cell Wall',cx:58,cy:175},{id:'chloroplast',text:'Chloroplast',cx:185,cy:305},{id:'vacuole',text:'Vacuole',cx:310,cy:310},{id:'cytoplasm',text:'Cytoplasm',cx:420,cy:275}],
+ svg:'<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg" font-family="Nunito,sans-serif"><text x="250" y="22" text-anchor="middle" font-size="14" font-weight="800" fill="#166534">Plant Cell</text><rect x="52" y="35" width="396" height="340" rx="18" fill="none" stroke="#9ca3af" stroke-width="14"/><rect x="65" y="48" width="370" height="316" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/><ellipse cx="310" cy="215" rx="98" ry="82" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2.5"/><text x="310" y="219" text-anchor="middle" font-size="10" fill="#1d4ed8" font-weight="700" pointer-events="none">Vacuole</text><ellipse cx="310" cy="170" rx="38" ry="27" fill="#fef9c3" stroke="#854d0e" stroke-width="2.5"/><ellipse cx="310" cy="170" rx="14" ry="10" fill="#fde68a" stroke="#854d0e" stroke-width="1.5"/><ellipse cx="150" cy="285" rx="28" ry="15" fill="#4ade80" stroke="#166534" stroke-width="2"/><ellipse cx="195" cy="315" rx="27" ry="14" fill="#4ade80" stroke="#166534" stroke-width="2"/><ellipse cx="145" cy="145" rx="25" ry="14" fill="#4ade80" stroke="#166534" stroke-width="2"/><g class="hotspot" data-spot="nucleus"><circle cx="310" cy="192" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="membrane"><circle cx="115" cy="220" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="wall"><circle cx="58" cy="175" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="chloroplast"><circle cx="185" cy="305" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="vacuole"><circle cx="310" cy="310" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="cytoplasm"><circle cx="420" cy="275" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g></svg>'},
+
+{id:'animalcell',name:'Animal Cell',emoji:'🔴',level:'P3/P5',color:'#ef4444',cat:'bio',note:'Mitochondria shown here is not always required as a labelling target at P3/P5 — know it, but focus on nucleus, membrane, cytoplasm, nucleolus.',
+ labels:[{id:'nucleus',text:'Nucleus',cx:238,cy:162},{id:'membrane',text:'Cell Membrane',cx:88,cy:195},{id:'cytoplasm',text:'Cytoplasm',cx:368,cy:258},{id:'nucleolus',text:'Nucleolus',cx:238,cy:198},{id:'mito',text:'Mitochondria',cx:328,cy:150}],
+ svg:'<svg viewBox="0 0 480 370" xmlns="http://www.w3.org/2000/svg" font-family="Nunito,sans-serif"><text x="240" y="22" text-anchor="middle" font-size="14" font-weight="800" fill="#991b1b">Animal Cell</text><ellipse cx="238" cy="195" rx="178" ry="148" fill="#fee2e2" stroke="#ef4444" stroke-width="3"/><ellipse cx="238" cy="185" rx="54" ry="44" fill="#fef9c3" stroke="#854d0e" stroke-width="2.5"/><ellipse cx="238" cy="188" rx="17" ry="13" fill="#fde68a" stroke="#854d0e" stroke-width="1.5"/><ellipse cx="335" cy="148" rx="28" ry="14" fill="#fbbf24" stroke="#b45309" stroke-width="1.5"/><line x1="307" y1="148" x2="363" y2="148" stroke="#b45309" stroke-width="1.2" stroke-dasharray="4,3"/><ellipse cx="148" cy="265" rx="25" ry="13" fill="#fbbf24" stroke="#b45309" stroke-width="1.5"/><g class="hotspot" data-spot="nucleus"><circle cx="238" cy="162" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="membrane"><circle cx="88" cy="195" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="cytoplasm"><circle cx="368" cy="258" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="nucleolus"><circle cx="238" cy="198" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="mito"><circle cx="328" cy="150" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g></svg>'},
+
+{id:'flower',name:'Flower Cross-Section',emoji:'🌸',level:'P4',color:'#db2777',cat:'bio',
+ labels:[{id:'petal',text:'Petal',cx:82,cy:110},{id:'sepal',text:'Sepal',cx:168,cy:320},{id:'anther',text:'Anther',cx:184,cy:135},{id:'stamen',text:'Stamen (Filament)',cx:178,cy:228},{id:'stigma',text:'Stigma',cx:228,cy:152},{id:'style',text:'Style',cx:228,cy:202},{id:'ovary',text:'Ovary',cx:228,cy:252},{id:'receptacle',text:'Receptacle',cx:228,cy:340}],
+ svg:'<svg viewBox="0 0 460 390" xmlns="http://www.w3.org/2000/svg" font-family="Nunito,sans-serif"><text x="230" y="22" text-anchor="middle" font-size="14" font-weight="800" fill="#be185d">Flower Cross-Section</text><rect x="218" y="340" width="20" height="45" fill="#16a34a"/><ellipse cx="228" cy="342" rx="38" ry="16" fill="#86efac" stroke="#16a34a" stroke-width="2"/><ellipse cx="165" cy="328" rx="50" ry="20" fill="#4ade80" stroke="#16a34a" stroke-width="1.5" transform="rotate(-28 165 328)"/><ellipse cx="292" cy="328" rx="50" ry="20" fill="#4ade80" stroke="#16a34a" stroke-width="1.5" transform="rotate(28 292 328)"/><ellipse cx="82" cy="162" rx="62" ry="28" fill="#fda4af" stroke="#be185d" stroke-width="1.5" transform="rotate(-52 82 162)"/><ellipse cx="375" cy="162" rx="62" ry="28" fill="#fda4af" stroke="#be185d" stroke-width="1.5" transform="rotate(52 375 162)"/><ellipse cx="228" cy="58" rx="68" ry="26" fill="#fda4af" stroke="#be185d" stroke-width="1.5"/><ellipse cx="228" cy="252" rx="36" ry="27" fill="#fef9c3" stroke="#854d0e" stroke-width="2"/><ellipse cx="221" cy="255" rx="8" ry="7" fill="#fde68a" stroke="#854d0e" stroke-width="1.2"/><ellipse cx="237" cy="259" rx="7" ry="7" fill="#fde68a" stroke="#854d0e" stroke-width="1.2"/><rect x="223" y="168" width="10" height="82" fill="#fbbf24" stroke="#b45309" stroke-width="1.5" rx="4"/><ellipse cx="228" cy="162" rx="19" ry="11" fill="#fde68a" stroke="#b45309" stroke-width="2"/><line x1="172" y1="305" x2="183" y2="145" stroke="#d97706" stroke-width="2"/><ellipse cx="183" cy="138" rx="12" ry="8" fill="#fbbf24" stroke="#b45309" stroke-width="1.5"/><line x1="278" y1="305" x2="268" y2="145" stroke="#d97706" stroke-width="2"/><ellipse cx="268" cy="138" rx="12" ry="8" fill="#fbbf24" stroke="#b45309" stroke-width="1.5"/><g class="hotspot" data-spot="petal"><circle cx="82" cy="112" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="sepal"><circle cx="168" cy="318" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="anther"><circle cx="184" cy="135" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="stamen"><circle cx="178" cy="228" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="stigma"><circle cx="228" cy="152" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="style"><circle cx="228" cy="202" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="ovary"><circle cx="228" cy="252" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="receptacle"><circle cx="228" cy="340" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g></svg>'},
+
+{id:'digestive',name:'Digestive System',emoji:'🍎',level:'P4',color:'#f97316',cat:'bio',
+ labels:[{id:'mouth',text:'Mouth',cx:228,cy:50},{id:'oesophagus',text:'Oesophagus',cx:248,cy:96},{id:'stomach',text:'Stomach',cx:172,cy:178},{id:'liver',text:'Liver',cx:305,cy:158},{id:'small',text:'Small Intestine',cx:198,cy:280},{id:'large',text:'Large Intestine',cx:315,cy:295},{id:'rectum',text:'Rectum',cx:258,cy:382}],
+ svg:'<svg viewBox="0 0 460 420" xmlns="http://www.w3.org/2000/svg" font-family="Nunito,sans-serif"><text x="230" y="22" text-anchor="middle" font-size="14" font-weight="800" fill="#c2410c">Human Digestive System</text><ellipse cx="228" cy="50" rx="30" ry="17" fill="#fca5a5" stroke="#ef4444" stroke-width="2"/><text x="228" y="54" text-anchor="middle" font-size="8" fill="#7f1d1d" font-weight="700" pointer-events="none">Mouth</text><path d="M228,67 Q234,95 240,108" fill="none" stroke="#f87171" stroke-width="9" stroke-linecap="round"/><path d="M208,112 Q148,118 143,162 Q137,208 172,218 Q212,228 232,208 Q252,188 242,153 Q239,128 222,116 Z" fill="#fecaca" stroke="#ef4444" stroke-width="2"/><text x="188" y="174" text-anchor="middle" font-size="8" fill="#7f1d1d" font-weight="700" pointer-events="none">Stomach</text><path d="M258,122 Q316,112 330,142 Q344,172 306,182 Q278,186 263,168 Z" fill="#fde68a" stroke="#b45309" stroke-width="2"/><text x="300" y="156" text-anchor="middle" font-size="8" fill="#78350f" font-weight="700" pointer-events="none">Liver</text><path d="M208,222 Q168,237 163,267 Q158,298 173,308 Q193,320 213,308 Q232,296 237,278 Q242,260 228,250 Q213,243 206,256 Q198,270 208,280 Q220,290 229,280" fill="none" stroke="#f97316" stroke-width="9" stroke-linecap="round"/><path d="M248,238 L286,238 Q326,238 326,272 L326,356 Q326,385 298,385 L198,385 Q170,385 170,356 L170,326" fill="none" stroke="#dc2626" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><rect x="243" y="377" width="28" height="36" rx="8" fill="#fca5a5" stroke="#dc2626" stroke-width="2"/><g class="hotspot" data-spot="mouth"><circle cx="228" cy="48" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="oesophagus"><circle cx="238" cy="93" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="stomach"><circle cx="172" cy="175" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="liver"><circle cx="302" cy="152" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="small"><circle cx="200" cy="275" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="large"><circle cx="315" cy="292" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="rectum"><circle cx="257" cy="382" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g></svg>'},
+
+{id:'respiratory',name:'Respiratory System',emoji:'🫁',level:'P5',color:'#0ea5e9',cat:'bio',
+ labels:[{id:'trachea',text:'Trachea',cx:238,cy:80},{id:'bronchus',text:'Bronchus',cx:172,cy:152},{id:'bronchiole',text:'Bronchiole',cx:146,cy:232},{id:'alveolus',text:'Alveolus',cx:115,cy:298},{id:'lung_l',text:'Left Lung',cx:118,cy:215},{id:'lung_r',text:'Right Lung',cx:360,cy:215},{id:'diaphragm',text:'Diaphragm',cx:238,cy:355}],
+ svg:'<svg viewBox="0 0 480 395" xmlns="http://www.w3.org/2000/svg" font-family="Nunito,sans-serif"><text x="240" y="22" text-anchor="middle" font-size="14" font-weight="800" fill="#0369a1">Respiratory System</text><rect x="223" y="36" width="30" height="83" rx="10" fill="#bae6fd" stroke="#0ea5e9" stroke-width="2.5"/><line x1="223" y1="55" x2="253" y2="55" stroke="#7dd3fc" stroke-width="3" stroke-dasharray="5,3"/><line x1="223" y1="69" x2="253" y2="69" stroke="#7dd3fc" stroke-width="3" stroke-dasharray="5,3"/><line x1="223" y1="83" x2="253" y2="83" stroke="#7dd3fc" stroke-width="3" stroke-dasharray="5,3"/><line x1="223" y1="97" x2="253" y2="97" stroke="#7dd3fc" stroke-width="3" stroke-dasharray="5,3"/><path d="M223,118 Q198,132 173,150" fill="none" stroke="#0ea5e9" stroke-width="12" stroke-linecap="round"/><path d="M253,118 Q278,132 303,150" fill="none" stroke="#0ea5e9" stroke-width="12" stroke-linecap="round"/><path d="M78,150 Q57,165 55,227 Q52,290 97,330 Q136,360 170,336 Q200,311 205,266 Q210,221 196,182 Q181,150 162,146 Z" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2.5" opacity=".9"/><path d="M398,150 Q418,165 420,227 Q423,290 383,330 Q344,360 310,336 Q280,311 275,266 Q270,221 284,182 Q299,150 318,146 Z" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2.5" opacity=".9"/><path d="M163,150 Q153,186 148,222" fill="none" stroke="#60a5fa" stroke-width="6" stroke-linecap="round"/><path d="M148,222 Q138,250 128,270" fill="none" stroke="#60a5fa" stroke-width="4"/><path d="M148,222 Q158,247 156,268" fill="none" stroke="#60a5fa" stroke-width="4"/><circle cx="115" cy="286" r="11" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/><circle cx="132" cy="295" r="9" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/><circle cx="110" cy="305" r="9" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/><circle cx="128" cy="310" r="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/><path d="M52,352 Q152,333 238,338 Q322,333 422,352" fill="none" stroke="#7c3aed" stroke-width="8" stroke-linecap="round"/><g class="hotspot" data-spot="trachea"><circle cx="238" cy="80" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="bronchus"><circle cx="172" cy="150" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="bronchiole"><circle cx="146" cy="230" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="alveolus"><circle cx="115" cy="296" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="lung_l"><circle cx="118" cy="215" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="lung_r"><circle cx="360" cy="215" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="diaphragm"><circle cx="238" cy="353" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g></svg>'},
+
+{id:'heart',name:'Heart & Circulation',emoji:'🫀',level:'P5',color:'#ef4444',cat:'bio',
+ labels:[{id:'la',text:'Left Atrium',cx:172,cy:133},{id:'ra',text:'Right Atrium',cx:302,cy:133},{id:'lv',text:'Left Ventricle',cx:183,cy:238},{id:'rv',text:'Right Ventricle',cx:293,cy:238},{id:'aorta',text:'Aorta',cx:183,cy:60},{id:'pa',text:'Pulmonary Artery',cx:322,cy:60},{id:'vc',text:'Vena Cava',cx:365,cy:190},{id:'pv',text:'Pulmonary Vein',cx:110,cy:180}],
+ svg:'<svg viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg" font-family="Nunito,sans-serif"><text x="240" y="20" text-anchor="middle" font-size="14" font-weight="800" fill="#991b1b">Heart &amp; Circulation</text><path d="M208,83 Q198,53 183,40 Q168,30 153,33 Q138,36 138,53 Q138,68 153,70 Q173,73 183,63" fill="none" stroke="#ef4444" stroke-width="10" stroke-linecap="round"/><path d="M268,80 Q283,56 303,48 Q323,40 342,46 Q362,56 352,73 Q342,86 327,84" fill="none" stroke="#60a5fa" stroke-width="9" stroke-linecap="round"/><rect x="348" y="112" width="16" height="118" rx="8" fill="#93c5fd" stroke="#3b82f6" stroke-width="2"/><rect x="110" y="112" width="15" height="98" rx="7" fill="#fca5a5" stroke="#ef4444" stroke-width="2"/><path d="M238,305 Q168,272 143,228 Q116,180 128,146 Q140,113 173,113 Q198,113 218,136 Q226,146 238,163 Q250,146 258,136 Q278,113 303,113 Q336,113 348,146 Q360,180 333,228 Q308,272 238,305 Z" fill="#fecaca" stroke="#dc2626" stroke-width="3"/><line x1="238" y1="163" x2="238" y2="292" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="5,3"/><ellipse cx="203" cy="183" rx="17" ry="9" fill="#fda4af" stroke="#be185d" stroke-width="1.5"/><ellipse cx="273" cy="183" rx="17" ry="9" fill="#93c5fd" stroke="#1d4ed8" stroke-width="1.5"/><text x="173" y="145" text-anchor="middle" font-size="7" fill="#7f1d1d" font-weight="800" pointer-events="none">L. Atrium</text><text x="303" y="145" text-anchor="middle" font-size="7" fill="#1e40af" font-weight="800" pointer-events="none">R. Atrium</text><text x="173" y="245" text-anchor="middle" font-size="7" fill="#7f1d1d" font-weight="800" pointer-events="none">L. Ventricle</text><text x="303" y="245" text-anchor="middle" font-size="7" fill="#1e40af" font-weight="800" pointer-events="none">R. Ventricle</text><g class="hotspot" data-spot="la"><circle cx="172" cy="132" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="ra"><circle cx="302" cy="132" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="lv"><circle cx="183" cy="238" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="rv"><circle cx="293" cy="238" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="aorta"><circle cx="170" cy="58" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="pa"><circle cx="322" cy="58" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="vc"><circle cx="364" cy="182" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="pv"><circle cx="110" cy="172" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g></svg>'},
+
+{id:'watercycle',name:'Water Cycle',emoji:'💧',level:'P5',color:'#6366f1',cat:'phys',
+ labels:[{id:'evap',text:'Evaporation',cx:88,cy:238},{id:'transp',text:'Transpiration',cx:256,cy:242},{id:'cond',text:'Condensation',cx:292,cy:88},{id:'precip',text:'Precipitation',cx:412,cy:162},{id:'runoff',text:'Surface Runoff',cx:392,cy:308},{id:'gwater',text:'Groundwater',cx:258,cy:374},{id:'cloud',text:'Cloud',cx:342,cy:57}],
+ svg:'<svg viewBox="0 0 480 405" xmlns="http://www.w3.org/2000/svg" font-family="Nunito,sans-serif"><defs><marker id="a1" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#0284c7"/></marker><marker id="a2" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#22c55e"/></marker></defs><text x="240" y="20" text-anchor="middle" font-size="14" font-weight="800" fill="#4338ca">The Water Cycle</text><rect x="0" y="28" width="480" height="248" fill="#e0f2fe" rx="6" opacity=".45"/><rect x="0" y="315" width="480" height="90" fill="#d9f99d"/><rect x="0" y="350" width="480" height="55" fill="#86efac"/><rect x="0" y="370" width="480" height="35" fill="#bfdbfe" opacity=".65"/><ellipse cx="125" cy="320" rx="108" ry="20" fill="#38bdf8" stroke="#0284c7" stroke-width="2"/><circle cx="48" cy="60" r="27" fill="#fde68a" stroke="#f59e0b" stroke-width="2"/><text x="48" y="65" text-anchor="middle" font-size="14" pointer-events="none">☀️</text><ellipse cx="332" cy="66" rx="54" ry="26" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/><ellipse cx="304" cy="70" rx="36" ry="21" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/><ellipse cx="354" cy="73" rx="33" ry="19" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/><path d="M88,302 Q74,248 108,158 Q128,108 172,78" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="7,4" marker-end="url(#a1)"/><path d="M240,248 Q244,198 263,153 Q276,128 293,108" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-dasharray="7,4" marker-end="url(#a2)"/><rect x="224" y="293" width="12" height="28" fill="#854d0e"/><ellipse cx="230" cy="280" rx="24" ry="21" fill="#4ade80" stroke="#16a34a" stroke-width="1.5"/><ellipse cx="217" cy="290" rx="17" ry="15" fill="#4ade80" stroke="#16a34a" stroke-width="1.5"/><ellipse cx="243" cy="287" rx="17" ry="14" fill="#4ade80" stroke="#16a34a" stroke-width="1.5"/><line x1="408" y1="98" x2="398" y2="140" stroke="#0ea5e9" stroke-width="2.2" stroke-linecap="round"/><line x1="418" y1="102" x2="408" y2="148" stroke="#0ea5e9" stroke-width="2.2" stroke-linecap="round"/><line x1="428" y1="106" x2="418" y2="155" stroke="#0ea5e9" stroke-width="2.2" stroke-linecap="round"/><line x1="398" y1="97" x2="388" y2="143" stroke="#0ea5e9" stroke-width="2.2" stroke-linecap="round"/><path d="M428,287 Q415,302 386,314 Q355,324 316,323" fill="none" stroke="#0284c7" stroke-width="3" stroke-linecap="round" marker-end="url(#a1)"/><path d="M178,372 Q218,377 258,375 Q298,373 336,375" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-dasharray="6,3"/><g class="hotspot" data-spot="evap"><circle cx="88" cy="238" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="transp"><circle cx="256" cy="242" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="cond"><circle cx="292" cy="88" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="precip"><circle cx="412" cy="162" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="runoff"><circle cx="392" cy="308" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="gwater"><circle cx="258" cy="374" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="cloud"><circle cx="342" cy="57" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g></svg>'},
+
+{id:'foodchain',name:'Food Chain & Pyramid',emoji:'🌿',level:'P5',color:'#22c55e',cat:'phys',
+ labels:[{id:'producer',text:'Producer',cx:238,cy:365},{id:'primary',text:'Primary Consumer',cx:238,cy:280},{id:'secondary',text:'Secondary Consumer',cx:238,cy:202},{id:'tertiary',text:'Tertiary Consumer',cx:238,cy:128},{id:'sun',text:'Sun (Energy Source)',cx:52,cy:58},{id:'earrow',text:'Energy Flow Arrow',cx:418,cy:248}],
+ svg:'<svg viewBox="0 0 480 405" xmlns="http://www.w3.org/2000/svg" font-family="Nunito,sans-serif"><defs><marker id="sa" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#f59e0b"/></marker><marker id="ea" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#22c55e"/></marker></defs><text x="240" y="20" text-anchor="middle" font-size="14" font-weight="800" fill="#166534">Food Chain &amp; Energy Pyramid</text><circle cx="52" cy="62" r="30" fill="#fde68a" stroke="#f59e0b" stroke-width="2"/><text x="52" y="67" text-anchor="middle" font-size="17" pointer-events="none">☀️</text><path d="M83,62 Q112,76 122,116" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="6,3" marker-end="url(#sa)"/><polygon points="98,388 380,388 340,328 138,328" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/><text x="238" y="362" text-anchor="middle" font-size="10" font-weight="700" fill="#166534" pointer-events="none">🌿 Grass / Plants (Producers)</text><polygon points="138,328 340,328 303,263 173,263" fill="#86efac" stroke="#16a34a" stroke-width="2"/><text x="238" y="300" text-anchor="middle" font-size="10" font-weight="700" fill="#166534" pointer-events="none">🐛 Caterpillar (1° Consumer)</text><polygon points="173,263 303,263 275,198 200,198" fill="#4ade80" stroke="#16a34a" stroke-width="2"/><text x="238" y="234" text-anchor="middle" font-size="9" font-weight="700" fill="#14532d" pointer-events="none">🐸 Frog (2° Consumer)</text><polygon points="200,198 275,198 255,138 220,138" fill="#16a34a" stroke="#166534" stroke-width="2"/><text x="238" y="170" text-anchor="middle" font-size="9" font-weight="700" fill="#fff" pointer-events="none">🦅 Hawk (3°)</text><path d="M418,382 L418,118" fill="none" stroke="#22c55e" stroke-width="4" marker-end="url(#ea)"/><text x="418" y="258" text-anchor="middle" font-size="9" fill="#166534" font-weight="700" transform="rotate(90,418,258)" pointer-events="none">Energy (10% per level)</text><text x="388" y="360" text-anchor="middle" font-size="8" fill="#166534" pointer-events="none">100%</text><text x="388" y="296" text-anchor="middle" font-size="8" fill="#166534" pointer-events="none">10%</text><text x="388" y="230" text-anchor="middle" font-size="8" fill="#166534" pointer-events="none">1%</text><text x="388" y="165" text-anchor="middle" font-size="8" fill="#166534" pointer-events="none">0.1%</text><g class="hotspot" data-spot="producer"><circle cx="238" cy="365" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="primary"><circle cx="238" cy="296" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="secondary"><circle cx="238" cy="230" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="tertiary"><circle cx="238" cy="163" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="sun"><circle cx="52" cy="58" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="earrow"><circle cx="418" cy="248" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g></svg>'},
+
+{id:'circuit',name:'Electrical Circuit Symbols',emoji:'⚡',level:'P4',color:'#6366f1',cat:'phys',
+ labels:[{id:'cell',text:'Cell (Battery)',cx:224,cy:52},{id:'bulb',text:'Bulb',cx:398,cy:173},{id:'switch',text:'Switch (Open)',cx:238,cy:300},{id:'wire',text:'Connecting Wire',cx:80,cy:178},{id:'ammeter',text:'Ammeter',cx:398,cy:255},{id:'buzzer',text:'Buzzer',cx:92,cy:300}],
+ svg:'<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" font-family="Nunito,sans-serif"><text x="240" y="20" text-anchor="middle" font-size="14" font-weight="800" fill="#4338ca">Electrical Circuit Symbols</text><line x1="78" y1="62" x2="198" y2="62" stroke="#374151" stroke-width="3"/><line x1="198" y1="52" x2="198" y2="72" stroke="#374151" stroke-width="4"/><line x1="207" y1="57" x2="207" y2="67" stroke="#374151" stroke-width="2"/><line x1="216" y1="52" x2="216" y2="72" stroke="#374151" stroke-width="4"/><line x1="225" y1="57" x2="225" y2="67" stroke="#374151" stroke-width="2"/><line x1="234" y1="52" x2="234" y2="72" stroke="#374151" stroke-width="4"/><line x1="243" y1="57" x2="243" y2="67" stroke="#374151" stroke-width="2"/><text x="220" y="85" text-anchor="middle" font-size="8" fill="#6b7280" pointer-events="none">+ — + — +</text><line x1="252" y1="62" x2="398" y2="62" stroke="#374151" stroke-width="3"/><line x1="398" y1="62" x2="398" y2="142" stroke="#374151" stroke-width="3"/><circle cx="398" cy="172" r="22" fill="none" stroke="#374151" stroke-width="3"/><line x1="384" y1="158" x2="412" y2="186" stroke="#374151" stroke-width="2"/><line x1="412" y1="158" x2="384" y2="186" stroke="#374151" stroke-width="2"/><line x1="398" y1="150" x2="398" y2="142" stroke="#374151" stroke-width="3"/><line x1="398" y1="194" x2="398" y2="226" stroke="#374151" stroke-width="3"/><circle cx="398" cy="252" r="19" fill="none" stroke="#374151" stroke-width="3"/><text x="398" y="257" text-anchor="middle" font-size="13" font-weight="800" fill="#374151" pointer-events="none">A</text><line x1="398" y1="226" x2="398" y2="233" stroke="#374151" stroke-width="3"/><line x1="398" y1="271" x2="398" y2="300" stroke="#374151" stroke-width="3"/><line x1="398" y1="300" x2="296" y2="300" stroke="#374151" stroke-width="3"/><circle cx="266" cy="300" r="5" fill="#374151"/><circle cx="218" cy="300" r="5" fill="#374151"/><line x1="218" y1="300" x2="256" y2="283" stroke="#374151" stroke-width="3" stroke-linecap="round"/><line x1="156" y1="300" x2="218" y2="300" stroke="#374151" stroke-width="3"/><line x1="266" y1="300" x2="128" y2="300" stroke="#374151" stroke-width="3"/><rect x="72" y="282" width="36" height="34" fill="none" stroke="#374151" stroke-width="3" rx="4"/><line x1="90" y1="291" x2="90" y2="307" stroke="#374151" stroke-width="2"/><path d="M90,296 Q98,299 90,305" fill="none" stroke="#374151" stroke-width="2"/><line x1="78" y1="300" x2="78" y2="62" stroke="#374151" stroke-width="3"/><text x="146" y="55" font-size="14" fill="#6366f1" pointer-events="none">→</text><text x="406" y="108" font-size="14" fill="#6366f1" pointer-events="none">↓</text><text x="330" y="312" font-size="14" fill="#6366f1" pointer-events="none">←</text><text x="65" y="216" font-size="14" fill="#6366f1" pointer-events="none">↑</text><g class="hotspot" data-spot="cell"><circle cx="224" cy="52" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="bulb"><circle cx="398" cy="172" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="switch"><circle cx="240" cy="290" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="wire"><circle cx="78" cy="178" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="ammeter"><circle cx="398" cy="252" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="buzzer"><circle cx="90" cy="300" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g></svg>'},
+
+{id:'eye',name:'Human Eye & Light',emoji:'👁️',level:'P4/PSLE',color:'#eab308',cat:'phys',
+ labels:[{id:'cornea',text:'Cornea',cx:80,cy:188},{id:'iris',text:'Iris',cx:132,cy:152},{id:'pupil',text:'Pupil',cx:146,cy:188},{id:'lens',text:'Lens',cx:173,cy:174},{id:'retina',text:'Retina',cx:365,cy:163},{id:'optic',text:'Optic Nerve',cx:402,cy:215},{id:'sclera',text:'Sclera (White)',cx:262,cy:102}],
+ svg:'<svg viewBox="0 0 480 365" xmlns="http://www.w3.org/2000/svg" font-family="Nunito,sans-serif"><defs><marker id="la" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#f59e0b"/></marker></defs><text x="240" y="20" text-anchor="middle" font-size="14" font-weight="800" fill="#a16207">Human Eye (Cross-Section)</text><ellipse cx="228" cy="188" rx="158" ry="128" fill="#f8fafc" stroke="#94a3b8" stroke-width="3"/><path d="M228,60 Q368,63 386,188 Q368,313 228,316" fill="#fef3c7" stroke="#d97706" stroke-width="2.5" fill-opacity=".75"/><ellipse cx="255" cy="188" rx="116" ry="106" fill="#dbeafe" opacity=".3"/><ellipse cx="173" cy="188" rx="21" ry="38" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2"/><ellipse cx="136" cy="188" rx="30" ry="46" fill="#6b7280" stroke="#374151" stroke-width="1.5"/><ellipse cx="146" cy="188" rx="17" ry="29" fill="#1a1a2e"/><path d="M95,154 Q68,168 68,188 Q68,208 95,222" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" opacity=".85"/><path d="M368,215 Q398,218 438,213" fill="none" stroke="#7c3aed" stroke-width="8" stroke-linecap="round"/><path d="M18,118 L78,152" fill="none" stroke="#fbbf24" stroke-width="2.5" stroke-dasharray="6,3" marker-end="url(#la)"/><path d="M18,188 L68,188" fill="none" stroke="#fbbf24" stroke-width="2.5" stroke-dasharray="6,3" marker-end="url(#la)"/><path d="M18,258 L78,224" fill="none" stroke="#fbbf24" stroke-width="2.5" stroke-dasharray="6,3" marker-end="url(#la)"/><text x="12" y="188" text-anchor="middle" font-size="10" fill="#b45309" font-weight="700" pointer-events="none" transform="rotate(-90,12,188)">Light</text><g class="hotspot" data-spot="cornea"><circle cx="80" cy="188" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="iris"><circle cx="130" cy="152" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="pupil"><circle cx="146" cy="188" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="lens"><circle cx="173" cy="174" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="retina"><circle cx="365" cy="163" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="optic"><circle cx="400" cy="215" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g><g class="hotspot" data-spot="sclera"><circle cx="262" cy="102" r="8" fill="#f59e0b" stroke="#fff" stroke-width="2.5" opacity=".95"/></g></svg>'},
+];
+
+// ── PART FUNCTIONS ──
+var FUNS={"plantcell": {"nucleus": "Controls all cell activities — the brain of the cell.", "membrane": "Controls what enters and leaves the cell.", "wall": "Gives the plant cell its fixed, rigid shape. Made of cellulose.", "chloroplast": "Where photosynthesis happens — contains chlorophyll.", "vacuole": "Stores water and sap; keeps the cell firm (turgid).", "cytoplasm": "Jelly-like fluid where chemical reactions take place."}, "animalcell": {"nucleus": "Controls all cell activities — the brain of the cell.", "membrane": "Controls what enters and leaves the cell.", "cytoplasm": "Jelly-like fluid where chemical reactions take place.", "nucleolus": "Makes ribosomes; found inside the nucleus.", "mito": "Produces energy through respiration — the powerhouse of the cell."}, "flower": {"petal": "Bright colour and scent attracts pollinators (insects or birds).", "sepal": "Protects the flower bud before it opens.", "anther": "Produces pollen grains (male sex cells).", "stamen": "The male reproductive structure (anther + filament).", "stigma": "Sticky surface that receives pollen grains during pollination.", "style": "Connects stigma to ovary; pollen tube grows down here.", "ovary": "Contains ovules; develops into the FRUIT after fertilisation.", "receptacle": "Base that supports the flower parts."}, "digestive": {"mouth": "Chews food (mechanical) and mixes with saliva — chemical digestion starts here.", "oesophagus": "Muscular tube that pushes food from mouth to stomach.", "stomach": "Churns food; acid and enzymes break down proteins.", "liver": "Produces bile that breaks down fats; detoxifies blood.", "small": "Most digestion and ALL nutrient absorption happen here.", "large": "Absorbs water from undigested food; forms solid waste.", "rectum": "Stores faeces before they are removed from the body."}, "respiratory": {"trachea": "Windpipe — carries air from throat to bronchi. Kept open by C-shaped rings.", "bronchus": "One of two branches taking air from trachea into each lung.", "bronchiole": "Tiny air tubes inside the lung that branch off the bronchi.", "alveolus": "Tiny air sacs where oxygen enters blood and CO2 leaves — gas exchange.", "lung_l": "Left lung — slightly smaller to make room for the heart.", "lung_r": "Right lung — slightly larger, has three lobes.", "diaphragm": "Dome-shaped muscle: contracts to breathe IN, relaxes to breathe OUT."}, "heart": {"la": "Left Atrium — receives oxygenated blood from the lungs via pulmonary vein.", "ra": "Right Atrium — receives deoxygenated blood from the body via vena cava.", "lv": "Left Ventricle — pumps oxygenated blood to the whole body via aorta.", "rv": "Right Ventricle — pumps deoxygenated blood to the lungs via pulmonary artery.", "aorta": "Largest artery — carries oxygenated blood from left ventricle to body.", "pa": "Pulmonary Artery — carries deoxygenated blood from right ventricle to lungs.", "vc": "Vena Cava — carries deoxygenated blood from body back to right atrium.", "pv": "Pulmonary Vein — carries oxygenated blood from lungs back to left atrium."}, "watercycle": {"evap": "Liquid water becomes water vapour. Driven by heat energy from the Sun.", "transp": "Plants release water vapour through stomata in their leaves.", "cond": "Water vapour cools and changes back to liquid droplets, forming clouds.", "precip": "Water falls from clouds as rain, snow, sleet or hail.", "runoff": "Rainwater flows over land surface into rivers and lakes.", "gwater": "Water that soaks into the ground and is stored underground.", "cloud": "Formed by condensation of water vapour at high altitude."}, "foodchain": {"producer": "Makes own food via photosynthesis. Always at the BASE of a food chain.", "primary": "First consumer — eats the producer (plant-eater / herbivore).", "secondary": "Second consumer — eats the primary consumer.", "tertiary": "Third consumer — top predator in this chain.", "sun": "Original energy source for all food chains. Energy flows from Sun to producers.", "earrow": "Shows ENERGY FLOW — arrows point from food to the organism that eats it."}, "circuit": {"cell": "Provides electrical energy to drive current around the circuit.", "bulb": "Converts electrical energy into light (and heat) energy.", "switch": "Opens or closes the circuit — controls current flow (on or off).", "wire": "Carries electric current between components. Usually copper.", "ammeter": "Measures electric current in Amperes. Always connected in series.", "buzzer": "Converts electrical energy into sound energy."}, "eye": {"cornea": "Transparent front layer — bends (refracts) light entering the eye.", "iris": "Coloured ring of muscle — controls size of pupil (how much light enters).", "pupil": "Opening in the iris — allows light to enter the eye.", "lens": "Focuses light onto the retina. Changes shape to focus near or far objects.", "retina": "Light-sensitive layer at back of eye — detects light and sends signals.", "optic": "Carries electrical signals from retina to the brain.", "sclera": "White outer coat of the eyeball — protects and maintains shape."}};
+
+// ── STATE ──
+var xp=0,tc=0,ta=0,cd={};
+try{var sv=JSON.parse(localStorage.getItem('ss_diag')||'{}');xp=sv.xp||0;tc=sv.tc||0;ta=sv.ta||0;cd=sv.cd||{};}catch(e){}
+function save(){try{localStorage.setItem('ss_diag',JSON.stringify({xp,tc,ta,cd}));}catch(e){}}
+
+// ── LABELLING STATE ──
+var curD=null,ls={},selL=null;
+
+// ── HOME ──
+function renderHome(){
+  document.getElementById('xpD').textContent=xp;
+  document.getElementById('statXP').textContent=xp;
+  var done=Object.keys(cd).length;
+  document.getElementById('statDone').textContent=done;
+  document.getElementById('statAcc').textContent=ta>0?Math.round(tc/ta*100)+'%':'—';
+  document.getElementById('gFill').style.width=(done/DIAGS.length*100)+'%';
+  document.getElementById('gLbl').textContent=done+' of '+DIAGS.length+' diagrams mastered';
+  var bio=DIAGS.filter(function(d){return d.cat==='bio';});
+  var phys=DIAGS.filter(function(d){return d.cat==='phys';});
+  document.getElementById('bioGrid').innerHTML=bio.map(cardHTML).join('');
+  document.getElementById('physGrid').innerHTML=phys.map(cardHTML).join('');
+}
+function cardHTML(d){
+  return '<div class="diag-card" style="--dc:'+d.color+'" onclick="openDiag(\''+d.id+'\')">'
+    +'<div class="done-badge'+(cd[d.id]?' show':'')+'">✓</div>'
+    +'<span class="diag-em">'+d.emoji+'</span>'
+    +'<div class="diag-name">'+d.name+'</div>'
+    +'<div class="diag-level">'+d.level+'</div>'
+    +'<div class="diag-prog"><div class="diag-prog-fill" style="width:'+(cd[d.id]?100:0)+'%"></div></div>'
+    +'</div>';
+}
+
+// ── OPEN DIAGRAM ──
+function openDiag(id){
+  curD=DIAGS.find(function(d){return d.id===id;});
+  if(!curD)return;
+  ls={};selL=null;
+  curD.labels.forEach(function(l){ls[l.id]={att:0,ok:false,revealed:false};});
+  document.getElementById('labTitle').textContent=curD.emoji+' '+curD.name;
+  var _noteEl=document.getElementById('diagNote');
+  if(_noteEl){_noteEl.style.display=curD.note?'block':'none';if(curD.note)_noteEl.textContent='📌 '+curD.note;}
+  updateBadge();
+  renderProgDots();
+  document.getElementById('diagWrap').innerHTML=curD.svg;
+  document.querySelectorAll('.hotspot').forEach(function(hs){
+    hs.addEventListener('click',function(){onSpot(hs.dataset.spot);});
+  });
+  renderBank();
+  showScreen('labScreen');
+}
+
+function renderProgDots(){
+  document.getElementById('progRow').innerHTML=
+    '<span style="font-size:12px;font-weight:700;color:#64748b;margin-right:6px">Progress:</span>'+
+    curD.labels.map(function(l,i){
+      return '<div class="prog-dot" id="pd'+i+'"></div>';
+    }).join('');
+}
+
+function updateDots(){
+  curD.labels.forEach(function(l,i){
+    var dot=document.getElementById('pd'+i);
+    if(!dot)return;
+    dot.classList.toggle('done',ls[l.id].ok);
+    dot.classList.toggle('missed',!ls[l.id].ok && ls[l.id].att>=3);
+  });
+}
+
+function renderBank(){
+  document.getElementById('bank').innerHTML=curD.labels.map(function(l){
+    var s=ls[l.id];
+    var cls=s.ok?'disabled':selL===l.id?'selected':'';
+    return '<button class="label-chip '+cls+'" id="chip_'+l.id+'"'+(s.ok?' disabled':'')+' onclick="selChip(\''+l.id+'\')">'+l.text+'</button>';
+  }).join('');
+}
+
+function selChip(id){
+  if(ls[id].ok)return;
+  selL=selL===id?null:id;
+  curD.labels.forEach(function(l){
+    var c=document.getElementById('chip_'+l.id);
+    if(c)c.className='label-chip'+(ls[l.id].ok?' disabled':selL===l.id?' selected':'');
+  });
+  if(selL)showToast('📍 Now click the matching dot on the diagram!');
+}
+
+function onSpot(spotId){
+  if(!selL){showToast('💡 Click a label first!');return;}
+  if(ls[spotId]&&ls[spotId].ok){showToast('✅ Already labelled!');return;}
+  ta++;
+  var correct=selL===spotId;
+  if(correct){
+    tc++;xp+=5;
+    ls[spotId].ok=true;
+    markSpot(spotId,'#22c55e','#166534',curD.labels.find(function(l){return l.id===spotId;}).text);
+    showToast('🎉 Correct! +5 XP');
+    selL=null;
+    renderBank();
+    updateDots();
+    updateBadge();
+    document.getElementById('xpD').textContent=xp;
+    save();
+    checkAll();
+  } else {
+    ls[selL].att++;
+    var hs=document.querySelector('[data-spot="'+spotId+'"]');
+    if(hs){hs.classList.add('wrong-flash');setTimeout(function(){hs.classList.remove('wrong-flash');},450);}
+    var left=3-ls[selL].att;
+    showToast(left>0?'❌ Wrong! '+left+' try left':'❌ Try Reveal if stuck');
+  }
+}
+
+function markSpot(spotId,fill,stroke,label){
+  var hs=document.querySelector('[data-spot="'+spotId+'"]');
+  if(!hs)return;
+  var c=hs.querySelector('circle');
+  if(c){c.setAttribute('fill',fill);c.setAttribute('stroke',stroke);}
+  var svg=hs.closest('svg');
+  if(svg){
+    var lbl=curD.labels.find(function(l){return l.id===spotId;});
+    var t=document.createElementNS('http://www.w3.org/2000/svg','text');
+    t.setAttribute('x',lbl.cx+13);t.setAttribute('y',lbl.cy+4);
+    t.setAttribute('font-size','9.5');t.setAttribute('font-weight','800');
+    t.setAttribute('fill',stroke);t.setAttribute('pointer-events','none');
+    t.textContent=label;svg.appendChild(t);
+  }
+  if(FUNS[curD.id]&&FUNS[curD.id][spotId]){
+    var fn=FUNS[curD.id][spotId];
+    showFnToast(label+': '+fn);
+  }
+}
+
+function updateBadge(){
+  if(!curD)return;
+  var done=curD.labels.filter(function(l){return ls[l.id]&&ls[l.id].ok;}).length;
+  document.getElementById('scoreBadge').textContent=done+' / '+curD.labels.length+' labelled';
+}
+
+function checkAll(){
+  var all=curD.labels.every(function(l){return ls[l.id].ok;});
+  if(all){
+    cd[curD.id]=true;save();
+    setTimeout(function(){confetti();showResult();},400);
+  }
+}
+
+function revealAll(){
+  curD.labels.forEach(function(l){
+    if(!ls[l.id].ok){
+      ls[l.id].ok=true;ls[l.id].revealed=true;
+      markSpot(l.id,'#f59e0b','#92400e',l.text);
+    }
+  });
+  renderBank();updateDots();updateBadge();
+  showToast('👁 All labels revealed — study them!');
+  setTimeout(showResult,1500);
+}
+
+function showResult(){
+  var d=curD,total=d.labels.length;
+  var correct=d.labels.filter(function(l){return ls[l.id].ok&&!ls[l.id].revealed;}).length;
+  var pct=Math.round(correct/total*100);
+  var em,msg;
+  if(pct>=90){em='🏆';msg='Perfect! You know this diagram cold!';}
+  else if(pct>=70){em='🎉';msg='Great work! Almost there!';}
+  else if(pct>=50){em='💪';msg='Good effort — try again!';}
+  else{em='📖';msg='Study the diagram and try again!';}
+  document.getElementById('resultCard').innerHTML=
+    '<span class="result-em">'+em+'</span>'
+    +'<div class="result-score">'+correct+' / '+total+'</div>'
+    +'<div style="font-size:13px;color:var(--muted);font-weight:700;margin:4px 0 8px">'+pct+'% on '+d.name+'</div>'
+    +'<div class="result-msg">'+msg+'</div>'
+    +'<div style="display:inline-block;background:#ecfdf5;border:2px solid #a7f3d0;border-radius:50px;padding:8px 20px;font-weight:800;font-size:14px;color:#065f46;margin-bottom:20px">+'+(correct*5)+' XP</div>'
+    +'<div style="text-align:left;background:#f8fafc;border-radius:14px;padding:14px 16px;margin-bottom:18px;">'    +'<div style="font-family:Sora,sans-serif;font-size:14px;font-weight:800;color:#0ea5e9;margin-bottom:8px;">📚 What each part does — study these!</div>'    +d.labels.map(function(l){      var fn=(FUNS[d.id]&&FUNS[d.id][l.id])||'';      return '<div style="margin-bottom:6px;font-size:12px;line-height:1.5;"><strong>'+l.text+'</strong>'+(fn?' — <span style="color:#475569;">'+fn+'</span>':'')+'</div>';    }).join('')    +'</div>'    +'<div class="result-btns">'    +'<button class="rbtn rbtn-p" onclick="openDiag(\''+d.id+'\')">🔄 Try Again</button>'    +'<button class="rbtn rbtn-s" onclick="goHome()">← All Diagrams</button>'    +'</div>';
+  showScreen('resultScreen');
+}
+
+// ── UTILS ──
+function showScreen(id){
+  document.querySelectorAll('.screen').forEach(function(s){s.classList.remove('active');});
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+}
+function goHome(){curD=null;selL=null;renderHome();showScreen('homeScreen');}
+function confetti(){
+  var w=document.getElementById('cw');
+  var cs=['#0ea5e9','#6366f1','#22c55e','#f59e0b','#ec4899','#10b981'];
+  for(var i=0;i<70;i++){
+    var d=document.createElement('div');d.className='cp';
+    var s=6+Math.random()*10;
+    d.style.cssText='left:'+Math.random()*100+'%;top:-20px;background:'+cs[Math.floor(Math.random()*cs.length)]+';width:'+s+'px;height:'+s+'px;border-radius:'+(Math.random()>.5?'50%':'3px')+';animation-delay:'+Math.random()*1.2+'s;animation-duration:'+(2+Math.random()*2)+'s;';
+    w.appendChild(d);setTimeout(function(){d.remove();},4500);
+  }
+}
+function showToast(msg){
+  var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
+  setTimeout(function(){t.classList.remove('show');},2200);
+}
+function showFnToast(msg){
+  var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
+  setTimeout(function(){t.classList.remove('show');},4500);
+}
+document.addEventListener('DOMContentLoaded',renderHome);
+</script>
+
+
+<!-- Adsterra Native Banner -->
+<div style="max-width:900px;margin:0 auto;padding:0 16px 32px">
+<script async="async" data-cfasync="false" src="https://pl29317883.profitablecpmratenetwork.com/0308be89ae30df4fb0bab6a540f70887/invoke.js" defer></script>
+<div id="container-0308be89ae30df4fb0bab6a540f70887"></div>
+</div>
+
+
+<!-- SEO CONTENT SECTION -->
+<section style="background:#eff6ff;border-top:3px solid #bfdbfe;padding:48px clamp(16px,5%,56px)">
+  <div style="max-width:860px;margin:0 auto">
+    <h2 style="font-family:system-ui,sans-serif;font-size:clamp(22px,3vw,32px);font-weight:800;color:#1e3a5f;margin-bottom:16px">Diagram Labelling Practice for PSLE Science</h2>
+    <p style="font-size:15px;color:#1e40af;line-height:1.9;margin-bottom:14px">Diagram labelling is a key skill tested in PSLE Science. Students are asked to label parts of biological systems, scientific apparatus and natural processes. Marks are often lost when students confuse similar-sounding terms or cannot recall the exact name required by the marking scheme.</p>
+    <p style="font-size:15px;color:#1e40af;line-height:1.9;margin-bottom:14px">This free interactive diagram labelling tool gives Singapore Primary students hands-on practice labelling the most commonly tested diagrams in PSLE Science. Click on each hotspot and select the correct label from the word bank — just like the labelling tasks that appear in the actual PSLE paper.</p>
+
+    <h3 style="font-family:system-ui,sans-serif;font-size:20px;font-weight:800;color:#1e3a5f;margin:24px 0 12px">Which Diagrams Are Tested in PSLE Science?</h3>
+    <p style="font-size:15px;color:#1e40af;line-height:1.9;margin-bottom:12px">These are the most commonly tested diagrams in PSLE Science examinations:</p>
+    <ul style="font-size:14px;color:#1e40af;line-height:2;margin-left:20px;margin-bottom:16px">
+      <li><strong>The Human Digestive System</strong> — mouth, oesophagus, stomach, small intestine, large intestine, rectum, anus, liver, pancreas</li>
+      <li><strong>The Human Respiratory System</strong> — nose, trachea, bronchus, bronchioles, lungs, diaphragm, alveoli</li>
+      <li><strong>The Human Heart and Blood Circulation</strong> — heart chambers, arteries, veins, capillaries</li>
+      <li><strong>Parts of a Flower</strong> — petal, sepal, stamen, anther, filament, pistil, stigma, style, ovary, ovule</li>
+      <li><strong>Parts of a Plant</strong> — roots, stem, leaves, flower, fruit, seed</li>
+      <li><strong>The Water Cycle</strong> — evaporation, condensation, precipitation, collection, surface runoff</li>
+      <li><strong>An Electrical Circuit</strong> — cell, battery, switch, bulb, wire, ammeter, voltmeter</li>
+      <li><strong>A Plant Cell and Animal Cell</strong> — cell wall, cell membrane, nucleus, cytoplasm, vacuole, chloroplast</li>
+    </ul>
+
+    <h3 style="font-family:system-ui,sans-serif;font-size:20px;font-weight:800;color:#1e3a5f;margin:24px 0 12px">Tips for Diagram Labelling in PSLE Science</h3>
+    <p style="font-size:15px;color:#1e40af;line-height:1.9;margin-bottom:12px">Follow these tips to score full marks on diagram labelling questions:</p>
+    <ul style="font-size:14px;color:#1e40af;line-height:2;margin-left:20px;margin-bottom:16px">
+      <li><strong>Spell correctly</strong> — the PSLE marking scheme requires exact spelling. "Oesophagus" not "esophagus"</li>
+      <li><strong>Use the correct scientific term</strong> — do not use common names like "food pipe" instead of "oesophagus"</li>
+      <li><strong>Follow the arrow carefully</strong> — check exactly which part the arrow is pointing to before writing your answer</li>
+      <li><strong>Learn parts in groups</strong> — memorise the digestive system as a sequence from mouth to anus to avoid mixing up the order</li>
+      <li><strong>Practise drawing and labelling</strong> — drawing diagrams from memory helps reinforce the correct labels</li>
+    </ul>
+
+    <h3 style="font-family:system-ui,sans-serif;font-size:20px;font-weight:800;color:#1e3a5f;margin:24px 0 12px">How to Use This Diagram Labelling Tool</h3>
+    <p style="font-size:15px;color:#1e40af;line-height:1.9;margin-bottom:14px">Select a diagram from the menu above. Each diagram shows interactive hotspots — the numbered or coloured circles — that mark the parts to be labelled. Click on a hotspot, then select the correct label from the word bank at the bottom of the screen.</p>
+    <p style="font-size:15px;color:#1e40af;line-height:1.9">After completing the diagram, review any incorrect answers and study the correct labels. Repeat each diagram until you can label all parts correctly without any help. Regular practice with this tool will help you achieve full marks on diagram labelling questions in the PSLE Science examination.</p>
+  </div>
+</section>
+
+<section style="background:#fff;border-top:2px solid #bfdbfe;padding:48px clamp(16px,5%,56px)">
+  <div style="max-width:860px;margin:0 auto">
+    <h2 style="font-family:system-ui,sans-serif;font-size:clamp(20px,2.5vw,28px);font-weight:800;color:#1e3a5f;margin-bottom:16px">Why Diagram Labelling Costs Students Easy Marks — And How to Fix It</h2>
+    <p style="font-size:15px;color:#1e40af;line-height:1.9;margin-bottom:14px">Every year, PSLE Science markers report the same pattern: students lose marks on diagram labelling not because they don't know the topic, but because they write the wrong word for a part they actually understand. A student who can explain how the digestive system works in full sentences still writes "food tube" instead of "oesophagus" and loses the mark. This is a vocabulary problem, not a knowledge problem — and it is completely fixable with the right practice.</p>
+    <p style="font-size:15px;color:#1e40af;line-height:1.9;margin-bottom:14px">Diagram labelling questions appear in both Booklet A (as options in multiple-choice questions) and Booklet B (as direct label-the-diagram tasks). In Booklet B, these questions are often worth 2–4 marks and take only seconds to answer correctly — making them some of the highest-value marks-per-minute in the entire paper. Students who drill diagram labels consistently find that these questions become fast, reliable mark-getters on exam day.</p>
+
+    <h3 style="font-family:system-ui,sans-serif;font-size:20px;font-weight:800;color:#1e3a5f;margin:28px 0 12px">How the Brain Learns Labels: The Right Way to Memorise</h3>
+    <p style="font-size:15px;color:#1e40af;line-height:1.9;margin-bottom:14px">Simply reading a diagram in a textbook is one of the least effective ways to memorise labels. Research on how memory works shows that active recall — where you force yourself to produce the answer rather than recognise it — creates far stronger memory traces. This is why this tool works: instead of reading that the trachea connects the throat to the lungs, you must recall and place the word "trachea" yourself.</p>
+    <p style="font-size:15px;color:#1e40af;line-height:1.9;margin-bottom:14px">The most effective study method combines three steps. First, study the diagram with labels visible. Second, cover the labels and attempt to recall each one aloud or in writing. Third, check your answers immediately and note which labels you got wrong. Repeating this cycle — study, cover, recall, check — is far more effective than re-reading the diagram multiple times. This tool automates that cycle for you.</p>
+
+    <h3 style="font-family:system-ui,sans-serif;font-size:20px;font-weight:800;color:#1e3a5f;margin:28px 0 12px">The 10 Diagrams Every PSLE Student Must Master — With Exact Labels</h3>
+    <p style="font-size:15px;color:#1e40af;line-height:1.9;margin-bottom:12px">These diagrams have appeared consistently across PSLE papers from 2015 to 2024. Master every label on this list and you will be fully prepared for any diagram question in the examination.</p>
+
+    <p style="font-size:15px;color:#1e3a5f;font-weight:700;margin:16px 0 4px">1. The Human Digestive System</p>
+    <p style="font-size:14px;color:#1e40af;line-height:1.9;margin-bottom:12px">The digestive system must be understood as a tube with accessory organs. The tube itself runs: mouth → oesophagus → stomach → small intestine → large intestine → rectum → anus. Students frequently confuse the small intestine and large intestine — remember that "small" and "large" refer to the diameter, not the length. The small intestine is actually much longer (about 6–7 metres) but narrower. The accessory organs — liver, pancreas and gallbladder — are not part of the tube but they produce or store digestive juices that flow into it. The liver is the largest organ on the right side. Many students forget to label the liver at all.</p>
+
+    <p style="font-size:15px;color:#1e3a5f;font-weight:700;margin:16px 0 4px">2. The Human Respiratory System</p>
+    <p style="font-size:14px;color:#1e40af;line-height:1.9;margin-bottom:12px">Air enters through the nose (or mouth), passes through the trachea, splits into two bronchi (one for each lung), then divides further into bronchioles, and finally reaches the alveoli where gas exchange occurs. The diaphragm is the dome-shaped muscle below the lungs — it flattens when you breathe in, creating space for the lungs to expand. The most commonly missed label is the diaphragm. Students also confuse bronchus (singular) with bronchi (plural) — the PSLE marking scheme accepts both if the arrow points to the correct structure.</p>
+
+    <p style="font-size:15px;color:#1e3a5f;font-weight:700;margin:16px 0 4px">3. Parts of a Flower</p>
+    <p style="font-size:14px;color:#1e40af;line-height:1.9;margin-bottom:12px">The flower has male parts (stamen = anther + filament) and female parts (pistil = stigma + style + ovary + ovule). The petals attract pollinators. The sepals are the green leaf-like parts that protected the flower when it was a bud. A very common mistake: students write "ovule" when the arrow points to "ovary" or vice versa. Remember — the ovary is the whole container; the ovule is the egg inside it. In a cross-section diagram, the ovule is shown as a small oval shape inside the ovary.</p>
+
+    <p style="font-size:15px;color:#1e3a5f;font-weight:700;margin:16px 0 4px">4. The Water Cycle</p>
+    <p style="font-size:14px;color:#1e40af;line-height:1.9;margin-bottom:12px">The water cycle has four main processes: evaporation (liquid water becomes water vapour, driven by the sun's heat), condensation (water vapour cools and becomes liquid droplets, forming clouds), precipitation (water falls as rain, hail or snow), and collection (water gathers in rivers, lakes and the sea). A fifth process — transpiration — is the evaporation of water from plant leaves. In PSLE questions, students often confuse condensation and precipitation. Condensation makes clouds; precipitation makes rain fall from clouds.</p>
+
+    <p style="font-size:15px;color:#1e3a5f;font-weight:700;margin:16px 0 4px">5. An Electrical Circuit</p>
+    <p style="font-size:14px;color:#1e40af;line-height:1.9;margin-bottom:12px">In a circuit diagram, students must identify: the cell (one short and one long line), the battery (multiple cells in series), the switch (an open or closed gap), the bulb (circle with an X inside), the ammeter (circle with A), and the connecting wires. The most common error is calling a single cell a "battery" — a battery is technically two or more cells. The PSLE marking scheme is strict about this distinction.</p>
+
+    <h3 style="font-family:system-ui,sans-serif;font-size:20px;font-weight:800;color:#1e3a5f;margin:28px 0 12px">Spelling Rules for Diagram Labelling — Non-Negotiable</h3>
+    <p style="font-size:15px;color:#1e40af;line-height:1.9;margin-bottom:12px">The PSLE marking scheme awards marks only for the correct scientific term, spelled correctly. Here are the words that students most commonly misspell, with the correct spelling you must memorise:</p>
+    <ul style="font-size:14px;color:#1e40af;line-height:2.1;margin-left:20px;margin-bottom:16px">
+      <li><strong>Oesophagus</strong> — not "esophagus" (Singapore uses the British spelling)</li>
+      <li><strong>Diaphragm</strong> — not "diafragm" or "diaphram"</li>
+      <li><strong>Trachea</strong> — not "trakea" or "tracheia"</li>
+      <li><strong>Alveoli</strong> — not "alveolus" when labelling the cluster (singular = alveolus)</li>
+      <li><strong>Bronchioles</strong> — not "bronchials" or "bronchiols"</li>
+      <li><strong>Chlorophyll</strong> — not "chlorophyl" (double l at the end)</li>
+      <li><strong>Filament</strong> — not "filement"</li>
+      <li><strong>Stigma</strong> — not "stigmar" or "stamen" (stamen is the male part)</li>
+      <li><strong>Transpiration</strong> — not "transpirations" or "transperation"</li>
+      <li><strong>Precipitation</strong> — not "precipation" (remember: pre-cip-i-ta-tion)</li>
+    </ul>
+
+    <h3 style="font-family:system-ui,sans-serif;font-size:20px;font-weight:800;color:#1e3a5f;margin:28px 0 12px">A Teacher's Study Plan: How to Master All 10 Diagrams in 2 Weeks</h3>
+    <p style="font-size:15px;color:#1e40af;line-height:1.9;margin-bottom:12px">Use this structured plan to work through all 10 diagrams systematically:</p>
+    <ul style="font-size:14px;color:#1e40af;line-height:2.1;margin-left:20px;margin-bottom:16px">
+      <li><strong>Days 1–2:</strong> Digestive system and respiratory system. These have the most labels and appear most frequently.</li>
+      <li><strong>Days 3–4:</strong> Flower parts and plant parts. Focus on male vs female structures and how to tell them apart.</li>
+      <li><strong>Day 5:</strong> Water cycle. Draw the cycle from memory and label each arrow with the correct process name.</li>
+      <li><strong>Day 6:</strong> Electrical circuit symbols. Make a reference card of each symbol and its name.</li>
+      <li><strong>Days 7–8:</strong> Review all six using this tool. Note every label you got wrong.</li>
+      <li><strong>Days 9–10:</strong> Focus only on the labels you got wrong. Drill those specific terms daily.</li>
+      <li><strong>Days 11–14:</strong> Complete all 10 diagrams without any hints. Time yourself. Aim for zero errors.</li>
+    </ul>
+
+    <h3 style="font-family:system-ui,sans-serif;font-size:20px;font-weight:800;color:#1e3a5f;margin:28px 0 12px">Frequently Asked Questions About PSLE Diagram Labelling</h3>
+    <p style="font-size:15px;color:#1e3a5f;font-weight:700;margin:14px 0 4px">Q: Will the exact same diagram appear in the PSLE every year?</p>
+    <p style="font-size:14px;color:#1e40af;line-height:1.9;margin-bottom:12px">Not the same diagram, but the same body parts and systems are tested repeatedly. The angle of the diagram or which specific parts are labelled may change, but the underlying structures — trachea, bronchi, alveoli, oesophagus, etc. — remain constant. Mastering the full label list for each system means you will be prepared for any variation.</p>
+    <p style="font-size:15px;color:#1e3a5f;font-weight:700;margin:14px 0 4px">Q: Can I use common names like "food pipe" or "windpipe" in my answer?</p>
+    <p style="font-size:14px;color:#1e40af;line-height:1.9;margin-bottom:12px">No. The PSLE marking scheme requires the correct scientific term. "Food pipe" is not accepted for "oesophagus", and "windpipe" is not accepted for "trachea". Always use the scientific name.</p>
+    <p style="font-size:15px;color:#1e3a5f;font-weight:700;margin:14px 0 4px">Q: How many marks are diagram labelling questions worth in PSLE?</p>
+    <p style="font-size:14px;color:#1e40af;line-height:1.9;margin-bottom:12px">In Booklet B, diagram labelling questions are typically 1 mark per label, with 3–6 labels per question. This makes them worth 3–6 marks per question set. In Booklet A, diagrams appear as part of multiple-choice questions where you must identify a labelled part — worth 2 marks per question. Together, diagram-based questions can account for 15–20 marks across the full paper.</p>
+    <p style="font-size:15px;color:#1e3a5f;font-weight:700;margin:14px 0 4px">Q: My child keeps confusing the same labels. What should we do?</p>
+    <p style="font-size:14px;color:#1e40af;line-height:1.9;margin-bottom:12px">Confusion between similar-sounding parts (such as bronchi and bronchioles, or stigma and stamen) is extremely common. The best fix is to create a simple contrast statement: "Bronchi are the big branches; bronchioles are the little branches." For stigma vs stamen: "Stamen = male (S for seed-producing); Stigma = sticky top of female part." Creating your own memory triggers for the pairs you confuse is more effective than re-reading definitions.</p>
+  </div>
+</section>
+
+
+<div style="margin:32px 0;padding:18px 20px;background:linear-gradient(135deg,rgba(249,115,22,.08),rgba(167,139,250,.08));border:1px solid rgba(249,115,22,.2);border-radius:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px">
+  <div>
+    <div style="font-size:12px;font-weight:800;color:#f97316;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px">📝 O-Level Exam Practice</div>
+    <div style="font-size:14px;font-weight:700;color:#fff">Free Mock Papers — Chemistry, Physics &amp; Biology</div>
+    <div style="font-size:12px;color:rgba(232,237,245,.5);margin-top:2px">40 MCQ · 1-hour timed · auto-marked with full explanations</div>
+  </div>
+  <a href="/secondary-science/pure-sciences/chemistry/mock-paper-1/" style="display:inline-flex;align-items:center;gap:6px;padding:9px 18px;background:linear-gradient(135deg,#f97316,#a78bfa);border-radius:50px;color:#fff;font-weight:800;font-size:13px;text-decoration:none;white-space:nowrap">Start a Mock Paper →</a>
+</div>
+
+<script>
+function openSearch(){
+  var ns=document.getElementById('navSearch');
+  ns.classList.add('open');
+  setTimeout(function(){ns.querySelector('.ns-input').focus();},50);
+}
+</script>
+
+<footer style="background:#1e293b;color:#94a3b8;text-align:center;padding:28px 20px;font-size:14px;margin-top:48px;">
+  <p>© 2026 ScienceStar — Free Science for Singapore Students</p>
+  <p style="margin-top:8px;">
+    <a href="/" style="color:#38bdf8;text-decoration:none;margin:0 8px;">Home</a>
+    <a href="/about/" style="color:#38bdf8;text-decoration:none;margin:0 8px;">About</a>
+    <a href="/contact/" style="color:#38bdf8;text-decoration:none;margin:0 8px;">Contact</a>
+    <a href="/privacy/" style="color:#38bdf8;text-decoration:none;margin:0 8px;">Privacy</a>
+    <a href="/terms/" style="color:#38bdf8;text-decoration:none;margin:0 8px;">Terms</a>
+  </p>
+  <p style="margin-top:8px;font-size:12px;">Not affiliated with MOE Singapore. PSLE and O-Level are registered trademarks of SEAB.</p>
+</footer>
+</body>
+</html>

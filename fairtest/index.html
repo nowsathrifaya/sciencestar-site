@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XM36L4R49E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XM36L4R49E');
+</script>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fair Test Design Practice — Free PSLE Science Tool</title>
+
+  
+  <meta property="og:description" content="Practice designing fair experiments for PSLE Science. Identify variables, write methods & check model answers. Free.">
+  <meta property="og:url" content="https://primayscience.org/fairtest/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fair Test Design Practice — Free PSLE Science Tool">
+<meta name="keywords" content="PSLE fair test practice Singapore, variables hypothesis experiment PSLE, fair test design primary science free">>
+<meta name="description" content="Practice fair test design for PSLE Science. Identify variables, write methods and check model answers. Covers biology and physics experiments. Free, no sign-up.">>>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧪</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f3ff;--card:#fff;--ink:#1e1b4b;--muted:#6b7280;--border:#e0e7ff;--r:18px;--sh:0 4px 20px rgba(0,0,0,.07);--shl:0 12px 36px rgba(0,0,0,.13);--acc:#7c3aed;--acc2:#6d28d9;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;overflow-x:hidden;}
+.bg-dots{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:radial-gradient(circle,#7c3aed18 1px,transparent 1px);background-size:30px 30px;}
+.bg-glow{position:fixed;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,#a78bfa18,transparent 70%);top:-200px;left:-200px;pointer-events:none;z-index:0;}
+header{position:relative;z-index:20;background:linear-gradient(135deg,#7c3aed,#6d28d9);padding:13px 20px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 4px 20px rgba(124,58,237,.35);}
+.logo{font-family:system-ui,sans-serif;font-size:22px;font-weight:800;color:#fff;text-decoration:none;display:flex;align-items:center;gap:8px;}
+.logo-em{animation:spin 12s linear infinite;font-size:26px;}
+@keyframes spin{to{transform:rotate(360deg)}}
+.back-lnk{background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.4);border-radius:50px;padding:5px 14px;font-weight:700;font-size:13px;color:#fff;text-decoration:none;transition:.2s;}
+.back-lnk:hover{background:rgba(255,255,255,.35);}
+.xp-pill{background:rgba(255,255,255,.25);border:2px solid rgba(255,255,255,.4);border-radius:50px;padding:5px 14px;font-weight:800;font-size:14px;color:#fff;display:flex;align-items:center;gap:5px;}
+.ticker{background:linear-gradient(90deg,#7c3aed,#6d28d9);color:#fff;font-weight:700;font-size:12px;padding:5px 0;overflow:hidden;position:relative;z-index:10;}
+.tick-in{display:inline-block;white-space:nowrap;animation:tick 32s linear infinite;padding-left:100%;}
+@keyframes tick{to{transform:translateX(-100%)}}
+.container{position:relative;z-index:5;max-width:900px;margin:0 auto;padding:28px 16px;}
+.screen{display:none;}.screen.active{display:block;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.hero{text-align:center;margin-bottom:32px;animation:fadeUp .5s ease;}
+.hero h1{font-family:system-ui,sans-serif;font-size:clamp(26px,5vw,42px);font-weight:800;background:linear-gradient(135deg,#7c3aed,#4f46e5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px;line-height:1.15;}
+.hero p{font-size:15px;color:var(--muted);font-weight:600;max-width:580px;margin:0 auto;}
+.stats-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:12px 0;}
+.stat-pill{background:var(--card);border:2px solid var(--border);border-radius:50px;padding:5px 14px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:5px;box-shadow:var(--sh);}
+.sec-lbl{font-family:system-ui,sans-serif;font-size:18px;font-weight:700;color:var(--acc);margin:24px 0 14px;display:flex;align-items:center;gap:8px;}
+.e-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-bottom:28px;}
+.e-card{background:var(--card);border-radius:var(--r);padding:18px 16px;cursor:pointer;border:3px solid var(--border);box-shadow:var(--sh);transition:all .3s cubic-bezier(.34,1.56,.64,1);position:relative;}
+.e-card:hover{transform:translateY(-5px) scale(1.02);box-shadow:var(--shl);border-color:var(--ec,#7c3aed);}
+.e-em{font-size:34px;display:block;margin-bottom:8px;transition:.3s;}
+.e-card:hover .e-em{transform:scale(1.15);}
+.e-name{font-weight:800;font-size:14px;color:var(--ink);line-height:1.3;margin-bottom:4px;}
+.e-level{display:inline-block;background:var(--ec,#7c3aed);color:#fff;font-size:10px;font-weight:800;padding:2px 8px;border-radius:50px;margin-bottom:6px;}
+.e-diff{font-size:11px;color:var(--muted);font-weight:700;}
+.e-done{position:absolute;top:10px;right:10px;width:22px;height:22px;background:#22c55e;border-radius:50%;display:none;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:900;}
+.e-done.show{display:flex;}
+/* EXPERIMENT SCREEN */
+.back-btn{background:var(--card);border:none;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;color:var(--acc);display:flex;align-items:center;gap:6px;padding:8px 16px;border-radius:50px;box-shadow:0 2px 8px rgba(0,0,0,.07);margin-bottom:18px;transition:.2s;}
+.back-btn:hover{background:#ede9fe;transform:translateX(-2px);}
+/* SCENARIO */
+.scenario{background:linear-gradient(135deg,#ede9fe,#e0e7ff);border:3px solid #c4b5fd;border-radius:var(--r);padding:20px 22px;margin-bottom:20px;}
+.sc-q{font-family:system-ui,sans-serif;font-size:15px;font-weight:700;color:#4c1d95;margin-bottom:10px;}
+.sc-body{font-size:14px;color:#1e1b4b;font-weight:600;line-height:1.7;}
+/* TEMPLATE */
+.template{display:flex;flex-direction:column;gap:14px;}
+.field-card{background:var(--card);border-radius:14px;border:2px solid var(--border);padding:16px;box-shadow:var(--sh);}
+.field-hdr{display:flex;align-items:center;gap:8px;margin-bottom:8px;}
+.field-icon{font-size:20px;}
+.field-title{font-family:system-ui,sans-serif;font-size:15px;font-weight:700;color:var(--acc);}
+.field-badge{background:#ede9fe;color:#7c3aed;font-size:10px;font-weight:800;padding:2px 8px;border-radius:50px;}
+.field-hint{font-size:12px;color:var(--muted);font-weight:600;margin-bottom:8px;line-height:1.5;}
+.field-ta{width:100%;border:2.5px solid var(--border);border-radius:10px;padding:11px;font-family:'Nunito',sans-serif;font-size:13px;font-weight:600;resize:vertical;transition:border-color .2s;background:#fafaf9;min-height:72px;}
+.field-ta:focus{outline:none;border-color:var(--acc);background:#fff;}
+.field-ta.done{background:#f9fafb;color:var(--muted);border-color:var(--border);}
+.field-ta.correct-flash{border-color:#22c55e;background:#f0fdf4;}
+/* VARIABLE GRID */
+.var-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+@media(max-width:600px){.var-grid{grid-template-columns:1fr;}}
+.var-box{background:#fafaf9;border:2px solid var(--border);border-radius:10px;padding:10px;}
+.var-lbl{font-size:11px;font-weight:800;color:var(--acc);margin-bottom:4px;}
+.var-ta{width:100%;border:none;background:transparent;font-family:'Nunito',sans-serif;font-size:13px;font-weight:600;resize:none;outline:none;min-height:52px;}
+/* SUBMIT */
+.submit-btn{width:100%;padding:14px;background:linear-gradient(135deg,#7c3aed,#6d28d9);color:#fff;border:none;border-radius:14px;font-family:'Nunito',sans-serif;font-size:16px;font-weight:800;cursor:pointer;margin-top:8px;box-shadow:0 4px 16px rgba(124,58,237,.35);transition:all .3s;}
+.submit-btn:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(124,58,237,.45);}
+.submit-btn:disabled{opacity:.45;cursor:not-allowed;transform:none;}
+/* MODEL ANSWERS */
+.model-section{display:none;margin-top:20px;animation:fadeUp .4s ease;}
+.model-section.show{display:block;}
+.model-card{background:var(--card);border-radius:var(--r);padding:22px;box-shadow:var(--sh);margin-bottom:14px;border:3px solid #c4b5fd;}
+.mc-hdr{font-family:system-ui,sans-serif;font-size:18px;color:#4c1d95;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.mc-field{margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid #f3f4f6;}
+.mc-field:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+.mc-field-lbl{font-size:12px;font-weight:800;color:#7c3aed;margin-bottom:5px;display:flex;align-items:center;gap:5px;}
+.mc-field-body{font-size:13px;color:#1e1b4b;font-weight:600;line-height:1.7;background:#faf5ff;border-radius:8px;padding:10px;}
+/* SELF-MARK */
+.selfmark{background:#fff;border:2px solid #e5e7eb;border-radius:14px;padding:16px;margin-bottom:14px;}
+.sm-hdr{font-size:14px;font-weight:800;color:#7c3aed;margin-bottom:10px;}
+.sm-item{display:flex;align-items:flex-start;gap:8px;padding:7px 0;border-bottom:1px solid #f5f5f4;cursor:pointer;user-select:none;font-size:12px;font-weight:700;color:var(--ink);border-radius:6px;transition:.15s;}
+.sm-item:last-child{border-bottom:none;}
+.sm-item:hover{background:#faf5ff;padding-left:4px;}
+.sm-box{width:20px;height:20px;border-radius:50%;border:2.5px solid #d1d5db;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:.2s;margin-top:1px;}
+.sm-box.on{background:#22c55e;border-color:#22c55e;color:#fff;font-size:11px;}
+.tip-box{background:#fef3c7;border:2px solid #fde68a;border-radius:12px;padding:14px;margin-bottom:14px;}
+.tip-hdr{font-size:13px;font-weight:800;color:#92400e;margin-bottom:6px;display:flex;align-items:center;gap:5px;}
+.tip-body{font-size:12px;color:#78350f;font-weight:600;line-height:1.6;}
+.xp-earned{display:inline-block;background:#ede9fe;border:2px solid #c4b5fd;border-radius:50px;padding:8px 20px;font-weight:800;font-size:14px;color:#4c1d95;margin:12px 0;}
+.nav-btns{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;}
+.nav-btn{flex:1;padding:11px;border:none;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;cursor:pointer;transition:.2s;}
+.nav-btn:hover{transform:translateY(-2px);}
+.nb-next{background:linear-gradient(135deg,#7c3aed,#6d28d9);color:#fff;box-shadow:0 3px 12px rgba(124,58,237,.3);}
+.nb-home{background:#f5f5f4;color:var(--ink);}
+/* RESULT */
+.result-card{background:var(--card);border-radius:var(--r);padding:36px 24px;text-align:center;box-shadow:var(--sh);}
+.r-em{font-size:68px;display:block;margin-bottom:10px;animation:bob 1s ease infinite;}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.r-score{font-family:system-ui,sans-serif;font-size:50px;font-weight:800;background:linear-gradient(135deg,#7c3aed,#4f46e5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.r-msg{font-size:16px;font-weight:700;color:var(--muted);margin:8px 0 20px;}
+.r-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.rb{padding:11px 22px;border:none;border-radius:50px;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;cursor:pointer;transition:.2s;}
+.rb:hover{transform:translateY(-2px);}
+.rb-p{background:linear-gradient(135deg,#7c3aed,#6d28d9);color:#fff;box-shadow:0 3px 12px rgba(124,58,237,.3);}
+.rb-s{background:#fff;color:#7c3aed;border:3px solid #7c3aed;}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e1b4b;color:#fff;padding:10px 22px;border-radius:50px;font-weight:700;font-size:14px;z-index:500;transition:transform .4s cubic-bezier(.34,1.56,.64,1);pointer-events:none;white-space:nowrap;}
+.toast.show{transform:translateX(-50%) translateY(0);}
+.cw{position:fixed;inset:0;z-index:1000;pointer-events:none;}
+.cp{position:absolute;opacity:0;animation:cf 2.8s ease-in forwards;border-radius:50%;}
+@keyframes cf{0%{opacity:1;transform:translateY(-30px) rotate(0)}100%{opacity:0;transform:translateY(100vh) rotate(720deg)}}
+.prog-bar-wrap{max-width:400px;margin:10px auto 0;background:#e0e7ff;border-radius:50px;height:9px;overflow:hidden;}
+.prog-bar-fill{height:100%;border-radius:50px;background:linear-gradient(90deg,#7c3aed,#6d28d9);transition:width .6s ease;}
+.prog-lbl{font-size:11px;color:var(--muted);font-weight:600;text-align:right;max-width:400px;margin:3px auto 0;}
+
+  /* nav search */
+  .nav-search{display:flex;align-items:center;margin-left:8px;position:relative}
+  .ns-icon{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:8px;color:rgba(232,237,245,.6);cursor:pointer;padding:6px 8px;display:flex;align-items:center;transition:.15s}
+  .ns-icon:hover{color:#fff;background:rgba(255,255,255,.12)}
+  .ns-form{display:flex;align-items:center;overflow:hidden;width:0;opacity:0;transition:width .25s ease,opacity .2s;position:absolute;right:36px;top:50%;transform:translateY(-50%)}
+  .nav-search.open .ns-form{width:200px;opacity:1}
+  .ns-input{background:#0d1629;border:1.5px solid rgba(56,189,248,.4);border-radius:8px 0 0 8px;color:#e8edf5;font-size:13px;padding:6px 10px;outline:none;width:100%;font-family:inherit}
+  .ns-input::placeholder{color:rgba(232,237,245,.3)}
+  .ns-submit{background:rgba(56,189,248,.2);border:1.5px solid rgba(56,189,248,.4);border-left:none;border-radius:0 8px 8px 0;color:#38bdf8;cursor:pointer;padding:6px 10px;font-size:13px;font-family:inherit;transition:.15s}
+  .ns-submit:hover{background:rgba(56,189,248,.35)}
+  @media(max-width:500px){.nav-search.open .ns-form{width:150px}}
+</style>
+<meta property="og:image" content="https://primayscience.org/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://primayscience.org/images/og-image.png">
+<link rel="canonical" href="https://primayscience.org/fairtest/">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Fair Test Design – ScienceStar Singapore Primary Science",
+  "description": "Practice designing fair test experiments for PSLE Science. Identify variables, write a method, make predictions and check against model answers. Free Singapore primary science.",
+  "url": "https://primayscience.org/fairtest/",
+  "isPartOf": {"@type": "WebSite", "url": "https://primayscience.org", "name": "ScienceStar"}
+}</script>
+<meta name="twitter:title" content="Fair Test Design Practice — Free PSLE Science Tool">
+<meta name="twitter:description" content="Practice designing fair experiments for PSLE Science. Identify variables, write methods & check model answers. Free.">
+</head>
+<body>
+<div class="bg-dots"></div>
+<div class="bg-glow"></div>
+<div class="ticker"><span class="tick-in">🧪 FAIR TEST: Change ONE variable, measure ONE variable, keep EVERYTHING ELSE the same! 🔬 Independent variable = what you CHANGE. Dependent variable = what you MEASURE. Controlled variables = what stays the SAME! 📐 Always state HOW you will measure and what equipment you will use! 🎯 Prediction must link to your hypothesis — not just "it will work"!</span></div>
+<header>
+  <a href="/" class="logo"><span class="logo-em">🧪</span> ScienceStar</a>
+  <div style="display:flex;align-items:center;gap:10px">
+    <div class="xp-pill">⭐ <span id="xpD">0</span> XP</div>
+    <a href="/" class="back-lnk">← Home</a>
+  </div>
+</header>
+
+<!-- HOME -->
+<div id="homeScreen" class="screen active">
+<div class="container">
+  <div class="hero">
+    <h1>🧪 Fair Test Design</h1>
+<div style="margin:1.5rem 0;padding:1rem 1.25rem;background:#f0f7f0;border-left:4px solid #1D9E75;border-radius:4px;">
+  <strong>New: Complete inquiry skills guide →</strong> Hypothesis writing, variables, fair test design and 6 model answers — all with exact mark-scheme language for PSLE 2026.
+  <a href="/articles/psle-2026-scientific-inquiry/" style="display:inline-block;margin-top:0.5rem;color:#0F6E56;text-decoration:underline;font-weight:600;">Read the PSLE 2026 Scientific Inquiry Guide →</a>
+</div>
+    <p>Design experiments step by step — identify variables, write a method, make a prediction. Master the skill that every PSLE student needs.</p>
+    <div class="stats-row">
+      <div class="stat-pill">✅ <span id="sDone">0</span> / 10 completed</div>
+      <div class="stat-pill">⭐ <span id="sXP">0</span> XP</div>
+    </div>
+    <div class="prog-bar-wrap"><div class="prog-bar-fill" id="gFill" style="width:0%"></div></div>
+    <div class="prog-lbl" id="gLbl">0 of 10 experiments completed</div>
+  </div>
+  <div style="background:#f5f3ff;border:2px solid #c4b5fd;border-radius:16px;padding:16px 18px;margin-bottom:20px;max-width:680px;margin-left:auto;margin-right:auto;">
+    <div style="font-family:system-ui,sans-serif;font-weight:800;font-size:15px;color:#4c1d95;margin-bottom:10px;">📖 Quick Reminder — Fair Test Structure</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;font-size:12px;font-weight:700;">
+      <div style="background:#fff;border-radius:8px;padding:9px;border:1.5px solid #e0e7ff;"><div style="color:#7c3aed;margin-bottom:3px;">🎯 Aim</div><div style="color:#374151;">To investigate the effect of [IV] on [DV]</div></div>
+      <div style="background:#fff;border-radius:8px;padding:9px;border:1.5px solid #e0e7ff;"><div style="color:#7c3aed;margin-bottom:3px;">🔄 IV</div><div style="color:#374151;">The ONE thing you deliberately change</div></div>
+      <div style="background:#fff;border-radius:8px;padding:9px;border:1.5px solid #e0e7ff;"><div style="color:#7c3aed;margin-bottom:3px;">📏 DV</div><div style="color:#374151;">What you measure — include instrument and unit</div></div>
+      <div style="background:#fff;border-radius:8px;padding:9px;border:1.5px solid #e0e7ff;"><div style="color:#7c3aed;margin-bottom:3px;">🔒 CV</div><div style="color:#374151;">List 3+ things kept the same to make it fair</div></div>
+      <div style="background:#fff;border-radius:8px;padding:9px;border:1.5px solid #e0e7ff;"><div style="color:#7c3aed;margin-bottom:3px;">📋 Method</div><div style="color:#374151;">Step-by-step — include amounts, time, repeats</div></div>
+      <div style="background:#fff;border-radius:8px;padding:9px;border:1.5px solid #e0e7ff;"><div style="color:#7c3aed;margin-bottom:3px;">🔮 Prediction</div><div style="color:#374151;">I predict... because... (use science)</div></div>
+    </div>
+  </div>
+  <div class="sec-lbl">🌱 Biology Experiments</div>
+  <div class="e-grid" id="bioGrid"></div>
+  <div class="sec-lbl">⚗️ Physics &amp; Chemistry Experiments</div>
+  <div class="e-grid" id="physGrid"></div>
+</div>
+</div>
+
+<!-- EXPERIMENT SCREEN -->
+<div id="expScreen" class="screen">
+<div class="container">
+  <button class="back-btn" onclick="goHome()">← All Experiments</button>
+  <div class="scenario" id="scenarioBox"></div>
+  <div class="template" id="templateWrap"></div>
+  <button class="submit-btn" id="submitBtn" onclick="submitExp()">📖 Check Against Model Answer</button>
+  <div class="model-section" id="modelSection"></div>
+</div>
+</div>
+
+<!-- RESULT -->
+<div id="resultScreen" class="screen">
+<div class="container"><div class="result-card" id="resultCard"></div></div>
+</div>
+
+<div class="toast" id="toast"></div>
+<div class="cw" id="cw"></div>
+
+<script>
+var EXPS=[
+{id:'light_plant',name:'Does Light Affect Plant Growth?',emoji:'🌱',level:'P3/P4',color:'#16a34a',cat:'bio',difficulty:'⭐ Starter',
+ scenario:'A student wants to find out whether the amount of light a plant receives affects how tall it grows. She has 5 identical bean seedlings, identical pots, and can control the light they receive.',
+ question:'Design a fair test to investigate how light intensity affects the growth of bean seedlings.',
+ fields:[
+   {id:'aim',label:'Aim',icon:'🎯',badge:'1 mark',hint:'Complete this sentence: "To investigate the effect of ______ on ______."',placeholder:'To investigate the effect of...'},
+   {id:'iv',label:'Independent Variable (what you change)',icon:'🔄',badge:'1 mark',hint:'This is the ONE thing you deliberately change between the different setups.',placeholder:'The independent variable is...'},
+   {id:'dv',label:'Dependent Variable (what you measure)',icon:'📏',badge:'1 mark',hint:'This is what you observe or measure as a result of the change. Be specific — how exactly will you measure it?',placeholder:'The dependent variable is...'},
+   {id:'cv',label:'Controlled Variables (what you keep the same)',icon:'🔒',badge:'2 marks',hint:'List at least 3 things that MUST stay the same so it is a fair test.',placeholder:'The controlled variables are:\n1.\n2.\n3.'},
+   {id:'method',label:'Method (step-by-step procedure)',icon:'📋',badge:'3 marks',hint:'Write at least 4 steps. Include: setup, what you do, how long you wait, what you measure and how, how many readings you take.',placeholder:'1.\n2.\n3.\n4.\n5.'},
+   {id:'prediction',label:'Prediction (with reason)',icon:'🔮',badge:'1 mark',hint:'Predict what you think will happen AND explain why using science.',placeholder:'I predict that... because...'},
+ ],
+ model:{
+   aim:'To investigate the effect of light intensity (amount of light) on the height of bean seedling growth.',
+   iv:'The independent variable is the amount of light (light intensity/number of hours of light) each seedling receives.',
+   dv:'The dependent variable is the height of the bean seedling (in cm), measured using a ruler from the base of the stem to the highest point of the shoot, after 2 weeks.',
+   cv:'Controlled variables include:\n1. Type and size of seedling (identical bean seedlings)\n2. Amount of water given to each plant (same volume, same frequency)\n3. Type and amount of soil used in each pot\n4. Temperature of the environment\n5. Size and type of pot',
+   method:'1. Place 5 identical bean seedlings in identical pots with the same amount of soil.\n2. Set up 5 different light conditions: 0, 2, 4, 6, and 8 hours of light per day using timers.\n3. Give each plant the same amount of water (50 ml) every day.\n4. Keep all other conditions (temperature, soil, pot size) the same.\n5. After 2 weeks, measure the height of each seedling from the base to the tip using a ruler.\n6. Record results in a table and compare.',
+   prediction:'I predict that the seedling receiving the most light (8 hours) will be the tallest, because plants need light for photosynthesis to make food for growth. More light enables more photosynthesis and therefore more energy available for growth.'
+ },
+ markscheme:[
+   {t:'Aim clearly states testing light intensity effect on growth',k:true},
+   {t:'IV: amount/hours of light — only ONE variable changed',k:true},
+   {t:'DV: height of seedling measured in cm with ruler, after set time period',k:true},
+   {t:'CV: at least 3 valid items (water, soil, pot, temperature, seedling type)',k:true},
+   {t:'Method: at least 4 logical sequential steps with quantities',k:true},
+   {t:'Method: states HOW the DV is measured (ruler, cm, after 2 weeks)',k:true},
+   {t:'Prediction: states which plant grows tallest AND links to photosynthesis/light',k:true},
+ ],
+ tips:'The most common errors: (1) Changing MORE than one variable — e.g., changing both light AND water. Always change ONLY the IV. (2) Vague DV — "observe the plant" is wrong. You must say WHAT you measure and HOW. (3) Forgetting repeats — always state you will repeat and average.',
+},
+{id:'temp_dissolve',name:'Does Temperature Affect Dissolving?',emoji:'🧪',level:'P4',color:'#0ea5e9',cat:'phys',difficulty:'⭐ Starter',
+ scenario:'A student notices that sugar dissolves faster when she stirs her hot tea compared to cold water. She wants to find out if temperature alone (without stirring) affects how quickly sugar dissolves.',
+ question:'Design a fair test to investigate whether water temperature affects the time taken for sugar to dissolve.',
+ fields:[
+   {id:'aim',label:'Aim',icon:'🎯',badge:'1 mark',hint:'State clearly what you are testing.',placeholder:'To investigate...'},
+   {id:'iv',label:'Independent Variable',icon:'🔄',badge:'1 mark',hint:'What ONE thing will you change between each setup?',placeholder:'The independent variable is...'},
+   {id:'dv',label:'Dependent Variable',icon:'📏',badge:'1 mark',hint:'What will you measure? Include units and method of measurement.',placeholder:'The dependent variable is...'},
+   {id:'cv',label:'Controlled Variables (at least 3)',icon:'🔒',badge:'2 marks',hint:'What must stay exactly the same in each trial?',placeholder:'1.\n2.\n3.'},
+   {id:'method',label:'Method',icon:'📋',badge:'3 marks',hint:'Step-by-step. Include specific temperatures, amounts, equipment, and how you judge when dissolving is complete.',placeholder:'1.\n2.\n3.\n4.'},
+   {id:'prediction',label:'Prediction with reason',icon:'🔮',badge:'1 mark',hint:'Use particle theory in your explanation.',placeholder:'I predict...'},
+ ],
+ model:{
+   aim:'To investigate the effect of water temperature on the time taken for sugar to dissolve.',
+   iv:'The independent variable is the temperature of the water (e.g., 20°C, 30°C, 40°C, 50°C, 60°C).',
+   dv:'The dependent variable is the time taken (in seconds or minutes) for 5 g of sugar to completely dissolve in 100 ml of water, measured using a stopwatch.',
+   cv:'Controlled variables:\n1. Mass of sugar (5 g each time, measured on a balance)\n2. Volume of water (100 ml each time)\n3. No stirring (or stir at exactly the same rate and duration)\n4. Same type/brand of sugar\n5. Same container/beaker size',
+   method:'1. Measure 100 ml of water using a measuring cylinder and heat/cool it to the required temperature (e.g., 20°C). Check temperature with a thermometer.\n2. Measure 5 g of sugar using a balance.\n3. Add the sugar to the water and start a stopwatch immediately.\n4. Observe the water without stirring until all sugar crystals have disappeared.\n5. Stop the stopwatch and record the time.\n6. Repeat steps 1–5 for water at 30°C, 40°C, 50°C, and 60°C.\n7. Repeat each trial 3 times and calculate the average time.',
+   prediction:'I predict that sugar will dissolve faster in hotter water. This is because hotter water particles have more kinetic energy and move faster, so they collide with the sugar particles more frequently and with greater force, breaking the sugar apart more quickly.'
+ },
+ markscheme:[
+   {t:'IV: water temperature — clearly stated',k:true},
+   {t:'DV: time for sugar to dissolve, measured with stopwatch in seconds/minutes',k:true},
+   {t:'CV: at least 3 valid — mass of sugar, volume of water, no stirring, same sugar type',k:true},
+   {t:'Method: includes specific temperatures and amounts',k:true},
+   {t:'Method: states how to judge when dissolving is COMPLETE (no crystals visible)',k:true},
+   {t:'Method: mentions repeating and averaging',k:true},
+   {t:'Prediction: faster dissolving in hotter water + particle theory explanation',k:true},
+ ],
+ tips:'Key mistake: not saying HOW you know when dissolving is complete. You must state "when no more sugar crystals are visible at the bottom". Also, if you don\'t mention repeating 3 times and averaging, you will lose a mark for reliability.',
+},
+{id:'magnet_strength',name:'Does Distance Affect Magnetic Force?',emoji:'🧲',level:'P4',color:'#8b5cf6',cat:'phys',difficulty:'⭐ Starter',
+ scenario:'A student wants to find out if moving a magnet further away from a steel paperclip affects the magnetic force acting on the clip.',
+ question:'Design a fair test to investigate how distance affects the strength of a magnet\'s force on a steel paperclip.',
+ fields:[
+   {id:'aim',label:'Aim',icon:'🎯',badge:'1 mark',hint:'What effect are you investigating?',placeholder:'To investigate...'},
+   {id:'iv',label:'Independent Variable',icon:'🔄',badge:'1 mark',hint:'What changes between each test?',placeholder:'The independent variable is...'},
+   {id:'dv',label:'Dependent Variable',icon:'📏',badge:'1 mark',hint:'How will you measure magnetic force? Think carefully.',placeholder:'The dependent variable is...'},
+   {id:'cv',label:'Controlled Variables (at least 3)',icon:'🔒',badge:'2 marks',hint:'What must stay the same?',placeholder:'1.\n2.\n3.'},
+   {id:'method',label:'Method',icon:'📋',badge:'3 marks',hint:'Step by step. Include specific distances and how you measure.',placeholder:'1.\n2.\n3.\n4.'},
+   {id:'prediction',label:'Prediction with reason',icon:'🔮',badge:'1 mark',hint:'What do you predict and why?',placeholder:'I predict...'},
+ ],
+ model:{
+   aim:'To investigate the effect of distance between a magnet and a steel paperclip on the magnetic force (measured by the number of paperclips attracted in a chain).',
+   iv:'The independent variable is the distance between the magnet and the first paperclip (e.g., 0 cm, 1 cm, 2 cm, 3 cm, 4 cm, 5 cm).',
+   dv:'The dependent variable is the number of steel paperclips that can be picked up in a chain (this indicates the strength of the magnetic force).',
+   cv:'Controlled variables:\n1. Same magnet used throughout\n2. Same type and size of paperclips\n3. Same surface (flat table)\n4. No other magnetic objects nearby',
+   method:'1. Place the magnet on a ruler at the 0 cm mark (touching the first paperclip).\n2. Count how many paperclips can be picked up in a chain. Record the result.\n3. Move the magnet to 1 cm from the first clip. Count and record the number of clips picked up.\n4. Repeat for distances of 2 cm, 3 cm, 4 cm, and 5 cm.\n5. Repeat each distance 3 times and calculate the average number of clips.',
+   prediction:'I predict that as the distance between the magnet and the paperclip increases, the number of paperclips that can be picked up will decrease. This is because magnetic force decreases with increasing distance, so the magnet will have less force to attract and hold the paperclips.'
+ },
+ markscheme:[
+   {t:'IV: distance between magnet and paperclip — with specific values',k:true},
+   {t:'DV: number of clips in chain (or similar measurable indicator of force)',k:true},
+   {t:'CV: same magnet, same clip type, same surface — at least 3',k:true},
+   {t:'Method: uses ruler to set specific distances',k:true},
+   {t:'Method: counts clips as measure of force',k:true},
+   {t:'Method: repeats and averages',k:true},
+   {t:'Prediction: fewer clips with greater distance + links to magnetic force decreasing with distance',k:true},
+ ],
+ tips:'The hardest part: how do you MEASURE magnetic force? You cannot directly measure force without a newton meter, so in primary school science we use the number of paperclips as an INDICATOR of magnetic force. State this clearly.',
+},
+{id:'insulation_heat',name:'Which Material is the Best Insulator?',emoji:'🌡️',level:'P4',color:'#f97316',cat:'phys',difficulty:'⭐⭐ Intermediate',
+ scenario:'A student wants to test which of four materials — cotton wool, bubble wrap, newspaper, and aluminium foil — is the best thermal insulator. She has identical cups of hot water and thermometers.',
+ question:'Design a fair test to compare the insulating ability of four different materials.',
+ fields:[
+   {id:'aim',label:'Aim',icon:'🎯',badge:'1 mark',hint:'State what you are comparing and how.',placeholder:'To investigate...'},
+   {id:'iv',label:'Independent Variable',icon:'🔄',badge:'1 mark',hint:'What changes between each setup?',placeholder:'The independent variable is...'},
+   {id:'dv',label:'Dependent Variable',icon:'📏',badge:'1 mark',hint:'What will you measure, how, and when?',placeholder:'The dependent variable is...'},
+   {id:'cv',label:'Controlled Variables (at least 4)',icon:'🔒',badge:'2 marks',hint:'Be specific — thickness of material matters!',placeholder:'1.\n2.\n3.\n4.'},
+   {id:'method',label:'Method',icon:'📋',badge:'3 marks',hint:'Include starting temperature, how often you measure, duration of experiment.',placeholder:'1.\n2.\n3.\n4.\n5.'},
+   {id:'prediction',label:'Prediction with reason',icon:'🔮',badge:'1 mark',hint:'Which material do you predict will be best and why?',placeholder:'I predict...'},
+ ],
+ model:{
+   aim:'To investigate which material (cotton wool, bubble wrap, newspaper, or aluminium foil) is the best thermal insulator by comparing how well each material prevents heat loss from a cup of hot water.',
+   iv:'The independent variable is the type of material used to wrap the cup (cotton wool / bubble wrap / newspaper / aluminium foil).',
+   dv:'The dependent variable is the temperature of the water (°C) inside each cup, measured using a thermometer every 5 minutes for 25 minutes.',
+   cv:'Controlled variables:\n1. Starting temperature of water (same, e.g., 80°C)\n2. Volume of water in each cup (same, e.g., 200 ml)\n3. Thickness of material wrapped around each cup (same number of layers)\n4. Type and size of cup used\n5. Room temperature (same environment)',
+   method:'1. Fill 5 identical cups with 200 ml of hot water at 80°C. Use a thermometer to confirm starting temperature.\n2. Wrap 4 cups with the same thickness of each material: cotton wool, bubble wrap, newspaper, aluminium foil. Leave the 5th cup unwrapped as a control.\n3. Place all cups in the same room environment.\n4. Measure and record the temperature of each cup every 5 minutes for 25 minutes.\n5. Record results in a table.\n6. The material whose cup retains the highest temperature after 25 minutes is the best insulator.\n7. Repeat the experiment 3 times and calculate the average temperatures.',
+   prediction:'I predict that bubble wrap will be the best insulator because it contains pockets of trapped air. Air is a poor conductor of heat, so bubble wrap will slow down heat loss the most, resulting in the highest water temperature after 25 minutes.'
+ },
+ markscheme:[
+   {t:'IV: type of insulating material — four named materials',k:true},
+   {t:'DV: temperature of water measured at set time intervals with thermometer',k:true},
+   {t:'CV: starting temperature, volume of water, thickness of material, same cup — at least 4',k:true},
+   {t:'Method: includes a control (no insulation) for comparison',k:true},
+   {t:'Method: specifies measurement intervals and total duration',k:true},
+   {t:'Method: repeats and averages',k:true},
+   {t:'Prediction: names bubble wrap (or cotton) + reason (trapped air = insulator)',k:true},
+ ],
+ tips:'Two commonly missed points: (1) Including a CONTROL group (unwrapped cup). Without this, you cannot compare the materials meaningfully. (2) Keeping the THICKNESS of material constant — otherwise you are testing both material type AND thickness.',
+},
+{id:'water_evap',name:'Factors Affecting Evaporation Rate',emoji:'💧',level:'P5',color:'#6366f1',cat:'phys',difficulty:'⭐⭐ Intermediate',
+ scenario:'A student wonders whether temperature affects how quickly water evaporates. She wants to design a controlled experiment using wet filter papers.',
+ question:'Design a fair test to investigate how temperature affects the rate of evaporation of water.',
+ fields:[
+   {id:'aim',label:'Aim',icon:'🎯',badge:'1 mark',hint:'State what you are investigating.',placeholder:'To investigate...'},
+   {id:'iv',label:'Independent Variable',icon:'🔄',badge:'1 mark',hint:'The one factor you will deliberately vary.',placeholder:'The independent variable is...'},
+   {id:'dv',label:'Dependent Variable',icon:'📏',badge:'1 mark',hint:'How will you measure evaporation rate? Be precise — what instrument and what measurement?',placeholder:'The dependent variable is...'},
+   {id:'cv',label:'Controlled Variables (at least 4)',icon:'🔒',badge:'2 marks',hint:'What other factors could affect evaporation that you must keep constant?',placeholder:'1.\n2.\n3.\n4.'},
+   {id:'method',label:'Method',icon:'📋',badge:'3 marks',hint:'Be specific about temperatures, masses, timing. How do you know how much water has evaporated?',placeholder:'1.\n2.\n3.\n4.\n5.'},
+   {id:'prediction',label:'Prediction with reason',icon:'🔮',badge:'1 mark',hint:'Predict and link to what you know about energy and water molecules.',placeholder:'I predict...'},
+ ],
+ model:{
+   aim:'To investigate the effect of temperature on the rate of evaporation of water.',
+   iv:'The independent variable is the temperature of the environment/water surface (e.g., 20°C, 30°C, 40°C, 50°C).',
+   dv:'The dependent variable is the mass of water evaporated (in grams) per hour, measured by weighing the wet filter paper on a balance before and after a set time period. Rate = (initial mass − final mass) ÷ time.',
+   cv:'Controlled variables:\n1. Initial mass of water on each filter paper (same amount)\n2. Size and type of filter paper (same)\n3. Absence of wind/air movement (same still-air environment)\n4. Humidity of the environment\n5. Time period of measurement (same duration)',
+   method:'1. Weigh 4 identical filter papers on a balance. Record initial mass.\n2. Add exactly 5 ml of water to each filter paper using a measuring cylinder. Weigh again to confirm initial mass.\n3. Place each wet filter paper in environments of different temperatures: 20°C, 30°C, 40°C, 50°C (use a temperature-controlled oven or water bath). Confirm temperature with a thermometer.\n4. After exactly 30 minutes, remove each filter paper and immediately weigh it on the balance.\n5. Calculate mass of water evaporated = initial mass − final mass.\n6. Calculate evaporation rate = mass evaporated ÷ 30 minutes.\n7. Repeat 3 times and calculate the average.',
+   prediction:'I predict that the rate of evaporation will be greater at higher temperatures. This is because at higher temperatures, water molecules have more kinetic energy and can escape from the surface of the liquid more easily, resulting in faster evaporation.'
+ },
+ markscheme:[
+   {t:'IV: temperature — with specific values stated',k:true},
+   {t:'DV: mass of water evaporated, measured with balance, calculated as loss in mass',k:true},
+   {t:'CV: initial water mass, filter paper size, no wind, same time — at least 4',k:true},
+   {t:'Method: uses balance to measure mass before and after',k:true},
+   {t:'Method: uses thermometer to confirm and control temperature',k:true},
+   {t:'Method: calculates rate (mass ÷ time) and repeats for average',k:true},
+   {t:'Prediction: faster evaporation at higher temp + energy/particle explanation',k:true},
+ ],
+ tips:'The trick to measuring evaporation rate: you CANNOT directly see water evaporating. Instead, measure the LOSS IN MASS of the wet filter paper using a balance. Initial mass − final mass = water evaporated. This is the key measurement technique examiners look for.',
+},
+{id:'photosyn_leaves',name:'Does Leaf Colour Affect Photosynthesis?',emoji:'🍃',level:'PSLE',color:'#65a30d',cat:'bio',difficulty:'⭐⭐⭐ Challenge',
+ scenario:'A student wants to test whether plants with darker green leaves photosynthesise faster than plants with lighter green leaves. She plans to use the oxygen bubble method with pond plants.',
+ question:'Design a fair test to compare the rate of photosynthesis between a dark-green leaved plant and a light-green leaved plant.',
+ fields:[
+   {id:'aim',label:'Aim',icon:'🎯',badge:'1 mark',hint:'What is being compared?',placeholder:'To investigate...'},
+   {id:'iv',label:'Independent Variable',icon:'🔄',badge:'1 mark',hint:'What is the ONE thing that differs between the two setups?',placeholder:'The independent variable is...'},
+   {id:'dv',label:'Dependent Variable',icon:'📏',badge:'1 mark',hint:'How will you measure the rate of photosynthesis?',placeholder:'The dependent variable is...'},
+   {id:'cv',label:'Controlled Variables (at least 5)',icon:'🔒',badge:'2 marks',hint:'This is a challenge question — think carefully about ALL factors that affect photosynthesis.',placeholder:'1.\n2.\n3.\n4.\n5.'},
+   {id:'method',label:'Method',icon:'📋',badge:'3 marks',hint:'Include how you set up the plants, what light source you use, how you count bubbles, and for how long.',placeholder:'1.\n2.\n3.\n4.\n5.'},
+   {id:'prediction',label:'Prediction with reason',icon:'🔮',badge:'1 mark',hint:'What do you predict? Think about what determines photosynthesis rate.',placeholder:'I predict...'},
+ ],
+ model:{
+   aim:'To investigate whether the shade of green (dark vs light) of a plant\'s leaves affects the rate of photosynthesis.',
+   iv:'The independent variable is the leaf colour of the plant — one plant with dark green leaves, one with light green leaves.',
+   dv:'The dependent variable is the number of oxygen bubbles produced per minute, counted over 5 minutes. Oxygen is a product of photosynthesis, so more bubbles = faster photosynthesis.',
+   cv:'Controlled variables:\n1. Light intensity and distance from light source (same lamp, same distance for both plants)\n2. Temperature of the water (same water bath temperature)\n3. Amount/concentration of CO₂ in water (add same amount of sodium bicarbonate to both)\n4. Length/mass of plant used (same)\n5. Duration of each count (count bubbles for same 5-minute period)\n6. Volume of water in the container',
+   method:'1. Set up two identical glass containers with the same volume of water containing the same concentration of sodium bicarbonate (to provide CO₂).\n2. Place one dark-green leaved Elodea plant in Container A and one light-green leaved Elodea plant of the same length in Container B.\n3. Position both containers at the same distance (e.g., 10 cm) from an identical lamp.\n4. Allow both plants to acclimatise to the light for 5 minutes, then count the number of oxygen bubbles produced in exactly 5 minutes for each plant.\n5. Record the results.\n6. Repeat 3 times and calculate the average bubble count per minute.\n7. Compare the average rates for both plants.',
+   prediction:'I predict that the dark green leaved plant will have a faster rate of photosynthesis (more bubbles per minute). This is because darker leaves contain more chlorophyll, which can absorb more light energy, allowing photosynthesis to proceed at a faster rate.'
+ },
+ markscheme:[
+   {t:'IV: leaf colour (dark vs light green) — only this one factor differs',k:true},
+   {t:'DV: number of oxygen bubbles per minute — specifically counted per unit time',k:true},
+   {t:'CV: light intensity/distance, temperature, CO₂ concentration, plant size — at least 5',k:true},
+   {t:'Method: uses sodium bicarbonate to control CO₂',k:true},
+   {t:'Method: counts bubbles over a set time period',k:true},
+   {t:'Method: repeats 3 times and averages',k:true},
+   {t:'Prediction: darker leaves → more chlorophyll → faster photosynthesis',k:true},
+ ],
+ tips:'The hardest part of this experiment: controlling CO₂ concentration. Students often forget that CO₂ is needed for photosynthesis and must be controlled. Adding sodium bicarbonate provides a constant CO₂ source. Without controlling this, the experiment is not fair.',
+},
+{id:'friction_surface',name:'Does Surface Affect Friction?',emoji:'🏎️',level:'P5/PSLE',color:'#ef4444',cat:'phys',difficulty:'⭐ Starter',
+ scenario:'A student wants to test whether the type of surface affects the friction force acting on a toy car. She has a toy car, a newton meter, and several different surfaces.',
+ question:'Design a fair test to investigate how the type of surface affects the friction force acting on a toy car.',
+ fields:[
+   {id:'aim',label:'Aim',icon:'🎯',badge:'1 mark',hint:'What are you testing?',placeholder:'To investigate...'},
+   {id:'iv',label:'Independent Variable',icon:'🔄',badge:'1 mark',hint:'What changes between trials?',placeholder:'The independent variable is...'},
+   {id:'dv',label:'Dependent Variable',icon:'📏',badge:'1 mark',hint:'How do you measure friction? What instrument?',placeholder:'The dependent variable is...'},
+   {id:'cv',label:'Controlled Variables',icon:'🔒',badge:'2 marks',hint:'What could affect the friction force besides surface type?',placeholder:'1.\n2.\n3.'},
+   {id:'method',label:'Method',icon:'📋',badge:'3 marks',hint:'Be specific. How do you use the newton meter? At what angle?',placeholder:'1.\n2.\n3.\n4.'},
+   {id:'prediction',label:'Prediction with reason',icon:'🔮',badge:'1 mark',hint:'Which surface do you predict will have greatest friction and why?',placeholder:'I predict...'},
+ ],
+ model:{
+   aim:'To investigate the effect of surface type on the friction force acting on a toy car.',
+   iv:'The independent variable is the type of surface (e.g., smooth tile, rough sandpaper, carpet, wooden floor).',
+   dv:'The dependent variable is the friction force in Newtons (N), measured by pulling the toy car along each surface at a slow, constant speed using a newton meter and reading the force displayed.',
+   cv:'Controlled variables:\n1. The same toy car used for every trial\n2. The same speed of pulling (slow and constant)\n3. The same length of surface pulled across (e.g., 50 cm)\n4. The same direction of pulling (horizontal)',
+   method:'1. Place the toy car on the first surface (e.g., smooth tile).\n2. Attach a newton meter to the front of the toy car.\n3. Pull the car slowly and steadily in a horizontal direction along the surface for 50 cm.\n4. Read and record the force shown on the newton meter while pulling (this equals the friction force).\n5. Repeat steps 1–4 for each different surface.\n6. Repeat each surface 3 times and calculate the average friction force.\n7. Compare results to find which surface produces the greatest friction.',
+   prediction:'I predict that the rough sandpaper will produce the greatest friction force. This is because rough surfaces have more tiny bumps and ridges that interlock with the surface of the car, creating greater resistance to movement.'
+ },
+ markscheme:[
+   {t:'IV: type of surface — at least 3 different surfaces named',k:true},
+   {t:'DV: friction force in Newtons, measured with newton meter while pulling',k:true},
+   {t:'CV: same car, same speed, same distance — at least 3',k:true},
+   {t:'Method: newton meter attached to car and pulled horizontally',k:true},
+   {t:'Method: reads force WHILE pulling at constant speed',k:true},
+   {t:'Method: repeats and averages',k:true},
+   {t:'Prediction: rough surface = more friction + reason (interlocking bumps/ridges)',k:true},
+ ],
+ tips:'Key point: you must pull the car at CONSTANT SPEED. If you accelerate, the newton meter reading will be higher than the friction force alone. Also, you read the newton meter WHILE the car is moving steadily, not when you start or stop pulling.',
+},
+{id:'seed_germination',name:'Does Water Affect Seed Germination?',emoji:'🌰',level:'P3',color:'#a16207',cat:'bio',difficulty:'⭐ Starter',
+ scenario:'A student wants to find out whether seeds need water to germinate. She has 20 identical mung bean seeds.',
+ question:'Design a fair test to investigate whether water is needed for seed germination.',
+ fields:[
+   {id:'aim',label:'Aim',icon:'🎯',badge:'1 mark',hint:'What are you testing the effect of?',placeholder:'To investigate...'},
+   {id:'iv',label:'Independent Variable',icon:'🔄',badge:'1 mark',hint:'The one condition that differs between setups.',placeholder:'The independent variable is...'},
+   {id:'dv',label:'Dependent Variable',icon:'📏',badge:'1 mark',hint:'How will you tell if a seed has germinated? What will you observe or count?',placeholder:'The dependent variable is...'},
+   {id:'cv',label:'Controlled Variables',icon:'🔒',badge:'2 marks',hint:'What else might affect germination? Keep these the same.',placeholder:'1.\n2.\n3.'},
+   {id:'method',label:'Method',icon:'📋',badge:'3 marks',hint:'Include how many seeds per group, how much water, temperature, and observation period.',placeholder:'1.\n2.\n3.\n4.'},
+   {id:'prediction',label:'Prediction with reason',icon:'🔮',badge:'1 mark',hint:'What will happen and why?',placeholder:'I predict...'},
+ ],
+ model:{
+   aim:'To investigate whether water is needed for mung bean seeds to germinate.',
+   iv:'The independent variable is whether water is provided or not (with water vs without water).',
+   dv:'The dependent variable is whether the seeds germinate — observed by counting the number of seeds that sprout a root (radicle) after 5 days.',
+   cv:'Controlled variables:\n1. Type and size of seeds (identical mung bean seeds)\n2. Temperature (room temperature, same location)\n3. Amount of light (same light conditions)\n4. Amount of air (not sealed containers)',
+   method:'1. Set up 2 groups of 10 identical mung bean seeds each.\n2. Group A (with water): place seeds on damp cotton wool in a container; add 5 ml of water per day to keep cotton wool moist.\n3. Group B (without water): place seeds on DRY cotton wool in a container; add no water.\n4. Keep both containers in the same location at room temperature with the same light.\n5. Observe both groups daily for 5 days.\n6. After 5 days, count how many seeds in each group have germinated (shown by a visible root/radicle).\n7. Record results in a table and compare.',
+   prediction:'I predict that seeds in Group A (with water) will germinate and those in Group B (without water) will not germinate. This is because water is needed to activate the enzymes inside the seed that trigger germination and early growth.'
+ },
+ markscheme:[
+   {t:'IV: presence/absence of water — clear binary comparison',k:true},
+   {t:'DV: number of seeds germinated / presence of radicle (root) after set number of days',k:true},
+   {t:'CV: same seed type, same temperature, same light — at least 3',k:true},
+   {t:'Method: two clear groups (with/without water) with same number of seeds',k:true},
+   {t:'Method: states observation period and what counts as germination',k:true},
+   {t:'Method: uses cotton wool as growing medium (or soil)',k:true},
+   {t:'Prediction: Group A germinates, Group B does not + reason (water activates enzymes/triggers germination)',k:true},
+ ],
+ tips:'Define germination clearly — a seed has germinated when a root (radicle) is visible. Students sometimes say "it sprouted" which is too vague. Use the correct term and be specific about what you observe.',
+},
+{id:'lung_capacity',name:'Exercise and Lung Capacity',emoji:'🫁',level:'P5/PSLE',note:'This experiment involves humans over time — more common at secondary level. Good challenge practice for PSLE thinking skills.',color:'#0ea5e9',cat:'bio',difficulty:'⭐⭐ Intermediate',
+ scenario:'A student claims that exercising regularly increases a person\'s lung capacity. She wants to design an experiment to test whether 4 weeks of regular jogging changes lung capacity.',
+ question:'Design an experiment to investigate whether regular exercise (jogging) over 4 weeks affects lung capacity.',
+ fields:[
+   {id:'aim',label:'Aim',icon:'🎯',badge:'1 mark',hint:'What are you testing?',placeholder:'To investigate...'},
+   {id:'iv',label:'Independent Variable',icon:'🔄',badge:'1 mark',hint:'What is being changed/introduced over the 4 weeks?',placeholder:'The independent variable is...'},
+   {id:'dv',label:'Dependent Variable',icon:'📏',badge:'1 mark',hint:'How do you measure lung capacity? (Think: a bag, spirometer, or balloon method.)',placeholder:'The dependent variable is...'},
+   {id:'cv',label:'Controlled Variables (at least 4)',icon:'🔒',badge:'2 marks',hint:'What other factors could affect lung capacity?',placeholder:'1.\n2.\n3.\n4.'},
+   {id:'method',label:'Method',icon:'📋',badge:'3 marks',hint:'Include baseline measurement, exercise regime, and final measurement. Include a control group.',placeholder:'1.\n2.\n3.\n4.\n5.'},
+   {id:'prediction',label:'Prediction with reason',icon:'🔮',badge:'1 mark',hint:'What change do you predict and why?',placeholder:'I predict...'},
+ ],
+ model:{
+   aim:'To investigate whether regular jogging exercise over 4 weeks increases a person\'s lung capacity.',
+   iv:'The independent variable is whether the participant undergoes regular jogging (30 minutes, 3 times per week for 4 weeks) or no jogging.',
+   dv:'The dependent variable is the lung capacity, measured by asking participants to take a deep breath and exhale completely into a balloon. The diameter of the balloon is measured using a ruler as an indicator of lung capacity.',
+   cv:'Controlled variables:\n1. Age and health of participants (similar age and fitness level)\n2. No other changes in lifestyle (same diet, same other activities)\n3. Same method and time of day for measuring lung capacity\n4. Same type of balloon used\n5. Participants should not be suffering from respiratory illness',
+   method:'1. Select 20 participants of similar age and fitness. Randomly split into Group A (exercise group) and Group B (control group, no change).\n2. Measure baseline lung capacity for all participants using the balloon method. Record results.\n3. Group A jogs for 30 minutes, 3 times per week for 4 weeks. Group B maintains normal lifestyle.\n4. After 4 weeks, measure lung capacity for all participants again using the same balloon method.\n5. Compare the change in lung capacity for Group A vs Group B.\n6. Calculate average change for each group and record in a table.',
+   prediction:'I predict that Group A (who jogged regularly) will show an increase in lung capacity after 4 weeks. Regular exercise strengthens the breathing muscles (diaphragm and intercostal muscles) and makes the lungs more efficient at expanding, increasing the volume of air they can hold.'
+ },
+ markscheme:[
+   {t:'IV: regular jogging exercise (vs no exercise control group)',k:true},
+   {t:'DV: lung capacity measured using balloon diameter or similar practical method',k:true},
+   {t:'CV: age/fitness of participants, same lifestyle, same measurement method — at least 4',k:true},
+   {t:'Method: includes both exercise group AND a control group (no exercise)',k:true},
+   {t:'Method: takes baseline measurement before AND after 4 weeks',k:true},
+   {t:'Method: states specific exercise regime (frequency, duration)',k:true},
+   {t:'Prediction: increased lung capacity + reason (stronger breathing muscles / more efficient lungs)',k:true},
+ ],
+ tips:'This experiment requires a CONTROL GROUP (no exercise). Without this, you cannot tell if the lung capacity changed due to jogging or due to other factors like growing older, seasonal changes, etc. Always include a control group in experiments involving humans over time.',
+},
+{id:'acid_react',name:'Does Concentration Affect Reaction Rate?',emoji:'⚗️',level:'PSLE',note:'Concentration and reaction rate is beyond the standard MOE primary syllabus — treat this as a challenge question.',color:'#dc2626',cat:'phys',difficulty:'⭐⭐⭐ Challenge',
+ scenario:'A student investigates how the concentration of vinegar (acetic acid) affects the rate of reaction with baking soda (sodium bicarbonate). The reaction produces carbon dioxide gas.',
+ question:'Design a fair test to investigate how the concentration of vinegar affects the rate of its reaction with baking soda.',
+ fields:[
+   {id:'aim',label:'Aim',icon:'🎯',badge:'1 mark',hint:'State clearly what you are testing.',placeholder:'To investigate...'},
+   {id:'iv',label:'Independent Variable',icon:'🔄',badge:'1 mark',hint:'What changes between trials? Be specific about how you will vary concentration.',placeholder:'The independent variable is...'},
+   {id:'dv',label:'Dependent Variable',icon:'📏',badge:'1 mark',hint:'How will you measure the RATE of reaction? Think about what the reaction produces.',placeholder:'The dependent variable is...'},
+   {id:'cv',label:'Controlled Variables (at least 4)',icon:'🔒',badge:'2 marks',hint:'What factors could affect the reaction rate besides concentration?',placeholder:'1.\n2.\n3.\n4.'},
+   {id:'method',label:'Method',icon:'📋',badge:'3 marks',hint:'Include exact amounts, how you prepare different concentrations, and exactly how you measure reaction rate.',placeholder:'1.\n2.\n3.\n4.\n5.'},
+   {id:'prediction',label:'Prediction with reason',icon:'🔮',badge:'1 mark',hint:'Use particle theory in your explanation.',placeholder:'I predict...'},
+ ],
+ model:{
+   aim:'To investigate the effect of vinegar concentration on the rate of reaction between vinegar and baking soda.',
+   iv:'The independent variable is the concentration of vinegar, prepared by diluting with water: 100%, 75%, 50%, 25%, and 0% (water only as control).',
+   dv:'The dependent variable is the rate of reaction, measured by counting the number of CO₂ bubbles produced per minute, OR by measuring the time taken for a set amount of baking soda to fully react (stop bubbling), using a stopwatch.',
+   cv:'Controlled variables:\n1. Mass of baking soda (5 g each time, measured on balance)\n2. Total volume of liquid (100 ml each time — only concentration changes, not volume)\n3. Temperature of the vinegar (room temperature, use thermometer)\n4. Size of container (same beaker)\n5. No stirring (or stir at same rate)',
+   method:'1. Prepare 5 concentrations of vinegar: 100 ml vinegar, 75 ml vinegar + 25 ml water, 50 ml + 50 ml water, 25 ml + 75 ml water, and 0 ml vinegar + 100 ml water.\n2. Measure 5 g of baking soda for each trial using a balance.\n3. Add the baking soda to the first concentration of vinegar and immediately start the stopwatch.\n4. Count the number of bubbles produced in 1 minute (or time until bubbling stops).\n5. Record the result. Repeat for each concentration.\n6. Repeat all trials 3 times and calculate average reaction rates.\n7. Plot results in a table and bar chart.',
+   prediction:'I predict that the reaction rate will be fastest with the highest concentration of vinegar (100%). This is because at higher concentrations, there are more acid particles in the same volume. More frequent collisions between acid particles and baking soda particles occur, resulting in a faster rate of reaction.'
+ },
+ markscheme:[
+   {t:'IV: concentration of vinegar — with specific % values and how to prepare them',k:true},
+   {t:'DV: bubbles per minute OR time for reaction to complete — with stopwatch',k:true},
+   {t:'CV: mass of baking soda, total volume of liquid, temperature — at least 4',k:true},
+   {t:'Method: includes a control (water only, 0% acid)',k:true},
+   {t:'Method: keeps TOTAL VOLUME constant while changing concentration',k:true},
+   {t:'Method: repeats and averages',k:true},
+   {t:'Prediction: higher concentration = faster rate + collision frequency explanation',k:true},
+ ],
+ tips:'The most common error: changing BOTH the volume of vinegar AND concentration. You must keep TOTAL volume constant (e.g., always 100 ml total) and only change the ratio of vinegar to water. Otherwise you are changing two variables at once.',
+},
+];
+
+// ── STATE ──
+var xp=0,done={};
+try{var sv=JSON.parse(localStorage.getItem('ss_fair')||'{}');xp=sv.xp||0;done=sv.done||{};}catch(e){}
+function save(){try{localStorage.setItem('ss_fair',JSON.stringify({xp,done}));}catch(e){}}
+var curExp=null,ptState=[];
+
+function renderHome(){
+  document.getElementById('xpD').textContent=xp;
+  document.getElementById('sXP').textContent=xp;
+  var d=Object.keys(done).length;
+  document.getElementById('sDone').textContent=d;
+  document.getElementById('gFill').style.width=(d/EXPS.length*100)+'%';
+  document.getElementById('gLbl').textContent=d+' of '+EXPS.length+' experiments completed';
+  var bio=EXPS.filter(function(e){return e.cat==='bio';});
+  var phys=EXPS.filter(function(e){return e.cat==='phys';});
+  document.getElementById('bioGrid').innerHTML=bio.map(expCard).join('');
+  document.getElementById('physGrid').innerHTML=phys.map(expCard).join('');
+}
+function expCard(e){
+  return '<div class="e-card" style="--ec:'+e.color+'" onclick="openExp(\''+e.id+'\')">'
+    +'<div class="e-done'+(done[e.id]?' show':'')+'">✓</div>'
+    +'<span class="e-em">'+e.emoji+'</span>'
+    +'<div class="e-name">'+e.name+'</div>'
+    +'<div class="e-level">'+e.level+'</div>'
+    +'<div class="e-diff">'+e.difficulty+'</div>'
+    +(e.note?'<div style="font-size:10px;color:#d97706;font-weight:700;margin-top:4px;line-height:1.4;">⚠️ Challenge/extension</div>':'')
+    +'</div>';
+}
+
+function openExp(id){
+  curExp=EXPS.find(function(e){return e.id===id;});
+  if(!curExp)return;
+  ptState=curExp.markscheme.map(function(){return false;});
+  // Scenario
+  document.getElementById('scenarioBox').innerHTML=
+    '<div class="sc-q">📋 Scenario</div>'
+    +'<div class="sc-body">'+curExp.scenario+'<br><br><strong>❓ Task: </strong>'+curExp.question+'</div>'
+    +(curExp.note?'<div style="background:#fef9c3;border:2px solid #fde68a;border-radius:10px;padding:8px 12px;margin-top:10px;font-size:12px;font-weight:700;color:#92400e;">📌 Note: '+curExp.note+'</div>':'');
+  // Template fields
+  var html='';
+  curExp.fields.forEach(function(f){
+    html+='<div class="field-card">'
+      +'<div class="field-hdr"><span class="field-icon">'+f.icon+'</span>'
+      +'<span class="field-title">'+f.label+'</span>'
+      +'<span class="field-badge">'+f.badge+'</span></div>'
+      +'<div class="field-hint">'+f.hint+'</div>'      +(f.id==='cv'?'<div style="background:#f0f9ff;border:1.5px solid #bae6fd;border-radius:8px;padding:7px 10px;font-size:11px;font-weight:700;color:#0369a1;margin-bottom:8px;">💡 Why control variables? If two things change at once, you cannot tell WHICH one caused the result — making your conclusion unreliable.</div>':'')      +'<textarea class="field-ta" id="f_'+f.id+'" rows="4" placeholder="'+f.placeholder+'"></textarea>'
+      +'</div>';
+  });
+  document.getElementById('templateWrap').innerHTML=html;
+  document.getElementById('submitBtn').disabled=false;
+  document.getElementById('modelSection').classList.remove('show');
+  document.getElementById('modelSection').innerHTML='';
+  showScreen('expScreen');
+}
+
+function submitExp(){
+  var coreFields=['aim','iv','dv'];
+  var coreFilled=coreFields.filter(function(id){
+    var el=document.getElementById('f_'+id);
+    return el&&el.value.trim().length>5;
+  }).length;
+  if(coreFilled<2){showToast('✏️ Fill in at least Aim, IV and DV before checking!');return;}
+  // Lock all fields
+  curExp.fields.forEach(function(f){
+    var el=document.getElementById('f_'+f.id);
+    if(el){el.classList.add('done');el.readOnly=true;}
+  });
+  document.getElementById('submitBtn').disabled=true;
+  renderModel();
+}
+
+function renderModel(){
+  var m=curExp.model;
+  var html='<div class="model-card">'
+    +'<div class="mc-hdr">📖 Model Answer</div>';
+  curExp.fields.forEach(function(f){
+    html+='<div class="mc-field">'
+      +'<div class="mc-field-lbl">'+f.icon+' '+f.label+'</div>'
+      +'<div class="mc-field-body">'+(m[f.id]||'—').replace(/\n/g,'<br>')+'</div>'
+      +'</div>';
+  });
+  html+='</div>';
+  // Self-mark
+  html+='<div class="selfmark"><div class="sm-hdr">✅ Mark your own work — tick each point you included:</div>';
+  curExp.markscheme.forEach(function(p,i){
+    html+='<div class="sm-item" onclick="tickPt('+i+')">'
+      +'<div class="sm-box" id="smb'+i+'"></div>'
+      +(p.k?'<span style="color:#7c3aed;margin-right:2px">⭐</span>':'')
+      +'<span>'+p.t+'</span>'
+      +'</div>';
+  });
+  html+='</div>';
+  html+='<div style="text-align:center"><div class="xp-earned" id="xpEarned">Tick the points above to see your score</div></div>';
+  html+='<div class="tip-box"><div class="tip-hdr">💡 Key Mistakes to Avoid</div><div class="tip-body">'+curExp.tips+'</div></div>';
+  html+='<div class="nav-btns"><button class="nav-btn nb-next" onclick="finishExp()">✅ Done — Save Score</button><button class="nav-btn nb-home" onclick="goHome()">🏠 Home</button></div>';
+  document.getElementById('modelSection').innerHTML=html;
+  document.getElementById('modelSection').classList.add('show');
+  window.scrollTo(0,document.getElementById('modelSection').offsetTop-20);
+}
+
+function tickPt(i){
+  ptState[i]=!ptState[i];
+  var box=document.getElementById('smb'+i);
+  if(ptState[i]){box.classList.add('on');box.textContent='✓';}
+  else{box.classList.remove('on');box.textContent='';}
+  var scored=ptState.filter(function(v){return v;}).length;
+  var total=curExp.markscheme.length;
+  document.getElementById('xpEarned').textContent=scored+' / '+total+' points (+' +(scored*8)+' XP)';
+}
+
+function finishExp(){
+  var scored=ptState.filter(function(v){return v;}).length;
+  var total=curExp.markscheme.length;
+  var pct=Math.round(scored/total*100);
+  var xpGain=scored*8;
+  var alreadyDone=!!done[curExp.id];
+  if(!alreadyDone){xp+=xpGain;}
+  if(pct>=70)done[curExp.id]=true;
+  save();
+  if(pct>=70)confetti();
+  var em,msg;
+  if(pct>=85){em='🏆';msg='Excellent experimental design! PSLE ready!';}
+  else if(pct>=70){em='🎉';msg='Great work! Strong fair test skills!';}
+  else if(pct>=50){em='💪';msg='Good effort — review the model answer.';}
+  else{em='📖';msg='Study the model and try again — you\'ll get it!';}
+  document.getElementById('resultCard').innerHTML=
+    '<span class="r-em">'+em+'</span>'
+    +'<div class="r-score">'+scored+' / '+total+'</div>'
+    +'<div style="font-size:13px;color:var(--muted);font-weight:700;margin:4px 0 8px">'+pct+'%</div>'
+    +'<div class="r-msg">'+msg+'</div>'
+    +'<div style="display:inline-block;background:#ede9fe;border:2px solid #c4b5fd;border-radius:50px;padding:8px 20px;font-weight:800;font-size:14px;color:#4c1d95;margin-bottom:20px">'+(alreadyDone?'XP already earned — retry for practice':'+'+ xpGain+' XP')+'</div>'
+    +'<div class="r-btns">'
+    +'<button class="rb rb-p" onclick="openExp(\''+curExp.id+'\')">🔄 Try Again</button>'
+    +'<button class="rb rb-s" onclick="goHome()">← All Experiments</button>'
+    +'</div>';
+  showScreen('resultScreen');
+  document.getElementById('xpD').textContent=xp;
+}
+
+function showScreen(id){document.querySelectorAll('.screen').forEach(function(s){s.classList.remove('active');});document.getElementById(id).classList.add('active');window.scrollTo(0,0);}
+function goHome(){curExp=null;renderHome();showScreen('homeScreen');}
+function confetti(){var w=document.getElementById('cw');var cs=['#7c3aed','#6d28d9','#22c55e','#f59e0b','#0ea5e9','#ec4899'];for(var i=0;i<60;i++){var d=document.createElement('div');d.className='cp';var s=6+Math.random()*10;d.style.cssText='left:'+Math.random()*100+'%;top:-20px;background:'+cs[Math.floor(Math.random()*cs.length)]+';width:'+s+'px;height:'+s+'px;border-radius:'+(Math.random()>.5?'50%':'3px')+';animation-delay:'+Math.random()*1.2+'s;animation-duration:'+(2+Math.random()*2)+'s;';w.appendChild(d);setTimeout(function(){d.remove();},4500);}}
+function showToast(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},2200);}
+document.addEventListener('DOMContentLoaded',renderHome);
+</script>
+
+
+<!-- Adsterra Native Banner -->
+<div style="max-width:900px;margin:0 auto;padding:0 16px 32px">
+<script async="async" data-cfasync="false" src="https://pl29317883.profitablecpmratenetwork.com/0308be89ae30df4fb0bab6a540f70887/invoke.js" defer></script>
+<div id="container-0308be89ae30df4fb0bab6a540f70887"></div>
+</div>
+
+
+<!-- SEO CONTENT SECTION -->
+<section style="background:#f5f3ff;border-top:3px solid #c4b5fd;padding:48px clamp(16px,5%,56px)">
+  <div style="max-width:860px;margin:0 auto">
+    <h2 style="font-family:system-ui,sans-serif;font-size:clamp(22px,3vw,32px);font-weight:800;color:#4c1d95;margin-bottom:16px">Fair Test Design for PSLE Science</h2>
+    <p style="font-size:15px;color:#3730a3;line-height:1.9;margin-bottom:14px">Designing a fair test is a core scientific skill tested in PSLE Science. Every year, the PSLE Science Booklet B includes at least one question that asks students to plan or evaluate a scientific experiment. Students who understand the principles of fair testing consistently score higher in these open-ended questions.</p>
+    <p style="font-size:15px;color:#3730a3;line-height:1.9;margin-bottom:14px">This free Fair Test practice tool gives Singapore Primary students realistic experiment scenarios — just like those in the PSLE — and guides them to identify variables, write a method, and check their answers against model responses. Practising fair test design is one of the best ways to improve your PSLE Science open-ended score.</p>
+
+    <h3 style="font-family:system-ui,sans-serif;font-size:20px;font-weight:800;color:#4c1d95;margin:24px 0 12px">What Is a Fair Test?</h3>
+    <p style="font-size:15px;color:#3730a3;line-height:1.9;margin-bottom:14px">A fair test is an experiment in which only one variable is changed at a time, while all other conditions are kept the same. This ensures that any change observed in the results is caused only by the variable being tested, and not by any other factor.</p>
+    <p style="font-size:15px;color:#3730a3;line-height:1.9;margin-bottom:14px">In PSLE Science, students need to know and correctly use these three types of variables:</p>
+    <ul style="font-size:14px;color:#3730a3;line-height:2;margin-left:20px;margin-bottom:16px">
+      <li><strong>Independent variable (IV)</strong> — the one variable that is deliberately changed in the experiment</li>
+      <li><strong>Dependent variable (DV)</strong> — the variable that is measured or observed as a result of changing the IV</li>
+      <li><strong>Controlled variables (CV)</strong> — all other variables that are kept the same to make the test fair</li>
+    </ul>
+
+    <h3 style="font-family:system-ui,sans-serif;font-size:20px;font-weight:800;color:#4c1d95;margin:24px 0 12px">How to Answer Fair Test Questions in PSLE</h3>
+    <p style="font-size:15px;color:#3730a3;line-height:1.9;margin-bottom:14px">When answering a fair test question in PSLE Science Booklet B, always structure your answer like this:</p>
+    <ol style="font-size:14px;color:#3730a3;line-height:2;margin-left:20px;margin-bottom:16px">
+      <li><strong>State the aim</strong> — "I want to find out how [IV] affects [DV]"</li>
+      <li><strong>Identify the independent variable</strong> — the one thing you are changing</li>
+      <li><strong>Identify the dependent variable</strong> — what you are measuring</li>
+      <li><strong>List at least 2–3 controlled variables</strong> — things you keep the same to make it fair</li>
+      <li><strong>Describe the method</strong> — explain step by step what you would do</li>
+      <li><strong>State how you would measure results</strong> — be specific about the measuring tool and unit</li>
+    </ol>
+
+    <h3 style="font-family:system-ui,sans-serif;font-size:20px;font-weight:800;color:#4c1d95;margin:24px 0 12px">Common Fair Test Topics in PSLE Science</h3>
+    <p style="font-size:15px;color:#3730a3;line-height:1.9;margin-bottom:12px">These are the most common fair test experiment topics that appear in PSLE Science:</p>
+    <ul style="font-size:14px;color:#3730a3;line-height:2;margin-left:20px;margin-bottom:16px">
+      <li>Testing how the length of a wire affects the brightness of a bulb in an electrical circuit</li>
+      <li>Testing how the type of material affects whether it is a conductor or insulator</li>
+      <li>Testing how the amount of light affects the rate of photosynthesis in a plant</li>
+      <li>Testing how the surface area affects the rate of evaporation of water</li>
+      <li>Testing how the type of magnet affects the strength of the magnetic force</li>
+      <li>Testing how the mass of an object affects the distance it stretches a spring</li>
+      <li>Testing how the angle of a ramp affects the distance a ball travels</li>
+    </ul>
+    <p style="font-size:15px;color:#3730a3;line-height:1.9">Practice each of these scenarios using this free fair test tool. Understanding the structure of a well-designed experiment will help you answer PSLE Science open-ended questions accurately and confidently.</p>
+  </div>
+</section>
+
+<section style="background:#f5f3ff;border-top:2px solid #c4b5fd;padding:48px clamp(16px,5%,56px)">
+  <div style="max-width:860px;margin:0 auto">
+    <h2 style="font-family:system-ui,sans-serif;font-size:clamp(20px,2.5vw,28px);font-weight:800;color:#4c1d95;margin-bottom:16px">Fair Test Questions: The One Area Where Well-Prepared Students Consistently Outperform</h2>
+    <p style="font-size:15px;color:#3730a3;line-height:1.9;margin-bottom:14px">Fair test design questions are worth a significant portion of Booklet B marks and are one of the most predictable parts of the PSLE Science paper — the structure of the question rarely changes, even though the scientific context changes each year. A student who truly understands what makes a test fair, and who can communicate that clearly in writing, will score full marks on these questions every time. A student who has memorised the vocabulary without understanding the logic will make small but costly errors.</p>
+    <p style="font-size:15px;color:#3730a3;line-height:1.9;margin-bottom:14px">This guide explains the underlying logic of fair testing from a teacher's perspective — not just the definitions, but the reasoning behind them. Understanding why each variable must be controlled, rather than just that it must be controlled, is what allows students to apply this knowledge to any experimental scenario, including unfamiliar ones they have never seen before.</p>
+
+    <h3 style="font-family:system-ui,sans-serif;font-size:20px;font-weight:800;color:#4c1d95;margin:28px 0 12px">The Logic Behind Fair Testing: Why One Change at a Time?</h3>
+    <p style="font-size:15px;color:#3730a3;line-height:1.9;margin-bottom:14px">Imagine you want to find out whether plants grow faster in sunlight or in shade. You plant one seed in sunlight and water it every day with 100 ml of water. You plant another seed in shade but you forget to water it as consistently, and you also use a different type of soil. At the end of the experiment, the plant in sunlight is taller. Can you conclude that sunlight caused the better growth?</p>
+    <p style="font-size:15px;color:#3730a3;line-height:1.9;margin-bottom:14px">No — because three things were different between the two plants: light, water, and soil. You cannot know which of these three differences caused the outcome. This is exactly what "unfair" means in science. For the test to be fair, only the light level should differ between the two plants, while the amount of water, type of soil, size of pot, temperature, and every other variable must be identical. Only then can you confidently say that any difference in growth was caused by the difference in light.</p>
+    <p style="font-size:15px;color:#3730a3;line-height:1.9;margin-bottom:14px">This logic — change one thing, control everything else — is the entire foundation of experimental science. PSLE students who understand this logic can answer any fair test question, including ones set in completely new contexts.</p>
+
+    <h3 style="font-family:system-ui,sans-serif;font-size:20px;font-weight:800;color:#4c1d95;margin:28px 0 12px">Variables Explained with Real Exam Examples</h3>
+
+    <p style="font-size:15px;color:#4c1d95;font-weight:700;margin:16px 0 4px">Independent Variable (IV) — What You Change</p>
+    <p style="font-size:14px;color:#3730a3;line-height:1.9;margin-bottom:12px">The independent variable is the one factor that the scientist deliberately changes between test groups. In the PSLE, the IV is almost always stated in the aim of the experiment: "to find out how [IV] affects [DV]." If the question says "a student wanted to find out whether the length of wire affects the brightness of a bulb," the IV is the length of wire. Only the length of wire changes between each test; everything else stays the same.</p>
+    <p style="font-size:14px;color:#3730a3;line-height:1.9;margin-bottom:12px">A critical point: the IV must be measurable and changeable in clear steps. "Different types of material" is acceptable as an IV because you can clearly specify each type. "Better conditions" is not acceptable because it is vague and cannot be measured. PSLE answers that name a vague IV instead of a specific one will not receive the mark.</p>
+
+    <p style="font-size:15px;color:#4c1d95;font-weight:700;margin:16px 0 4px">Dependent Variable (DV) — What You Measure</p>
+    <p style="font-size:14px;color:#3730a3;line-height:1.9;margin-bottom:12px">The dependent variable is what you observe or measure as a result of changing the IV. It is called "dependent" because its value depends on what you did to the IV. In the wire length experiment, the DV is the brightness of the bulb. However, in a PSLE answer, you should be more specific: instead of writing "brightness," write "the brightness of the bulb measured using an LDR (light-dependent resistor) or by observing whether the bulb is brighter or dimmer." When possible, describe how you will measure the DV, not just what it is.</p>
+
+    <p style="font-size:15px;color:#4c1d95;font-weight:700;margin:16px 0 4px">Controlled Variables (CV) — Everything You Keep the Same</p>
+    <p style="font-size:14px;color:#3730a3;line-height:1.9;margin-bottom:12px">The controlled variables are all the other factors that could affect the DV but are kept constant throughout the experiment. This is where most students lose marks — they name only one or two controlled variables when the marking scheme expects three or more. To find all the CVs, ask yourself: "What else, besides the IV, could affect the DV?" In the wire experiment, other factors that could affect brightness include: the voltage of the battery, the thickness of the wire, the material the wire is made of, the type of bulb, the temperature of the room. All of these must be kept the same to make the test fair.</p>
+
+    <h3 style="font-family:system-ui,sans-serif;font-size:20px;font-weight:800;color:#4c1d95;margin:28px 0 12px">A Worked Example: Full Model Answer for a Fair Test Question</h3>
+    <p style="font-size:15px;color:#3730a3;line-height:1.9;margin-bottom:12px"><strong>Question:</strong> A student wants to find out whether the type of surface affects how far a toy car travels after being pushed. Describe how the student should carry out a fair test. (4 marks)</p>
+    <p style="font-size:15px;color:#4c1d95;font-weight:700;margin:14px 0 6px">Model Answer:</p>
+    <p style="font-size:14px;color:#3730a3;line-height:1.9;margin-bottom:8px"><strong>Aim:</strong> To find out how the type of surface affects the distance a toy car travels.</p>
+    <p style="font-size:14px;color:#3730a3;line-height:1.9;margin-bottom:8px"><strong>Independent variable:</strong> The type of surface (e.g. smooth tiles, rough carpet, wooden floor).</p>
+    <p style="font-size:14px;color:#3730a3;line-height:1.9;margin-bottom:8px"><strong>Dependent variable:</strong> The distance the toy car travels after being pushed, measured in centimetres using a ruler.</p>
+    <p style="font-size:14px;color:#3730a3;line-height:1.9;margin-bottom:8px"><strong>Controlled variables:</strong> The same toy car, the same pushing force (use the same person pushing with the same strength, or use a spring-loaded launcher), the same starting position, the same direction of travel.</p>
+    <p style="font-size:14px;color:#3730a3;line-height:1.9;margin-bottom:14px"><strong>Method:</strong> Set up the same toy car on the smooth tile surface. Push the car from the same starting position using the same force. Measure the distance from the starting position to where the car stops using a ruler. Record the result. Repeat the test on rough carpet and wooden floor using exactly the same method. Compare the distances to determine which surface allows the car to travel furthest.</p>
+    <p style="font-size:14px;color:#3730a3;line-height:1.9;margin-bottom:14px">This answer would score full marks because it explicitly names the IV, describes how the DV will be measured, lists at least three CVs, and describes a clear, repeatable method.</p>
+
+    <h3 style="font-family:system-ui,sans-serif;font-size:20px;font-weight:800;color:#4c1d95;margin:28px 0 12px">The Most Common Fair Test Mistakes in PSLE — And How to Avoid Them</h3>
+    <ul style="font-size:14px;color:#3730a3;line-height:2.1;margin-left:20px;margin-bottom:16px">
+      <li><strong>Naming the wrong variable as the IV:</strong> Students sometimes name a CV as the IV. Always re-read the aim of the experiment — the IV is whatever the experiment is testing. The word "how" in the aim ("to find out how X affects Y") tells you the IV is X.</li>
+      <li><strong>Listing too few CVs:</strong> The marking scheme typically expects 2–3 CVs. Think systematically: what are all the conditions of the experiment? Any condition that is not the IV must be a CV.</li>
+      <li><strong>Vague measurement of the DV:</strong> "Measure how bright the bulb is" will not score the mark. Instead: "Measure the brightness of the bulb using an LDR and a multimeter, in lumens" or "Observe whether the bulb appears brighter or dimmer compared to the control."</li>
+      <li><strong>Not stating how the comparison will be made:</strong> After collecting results, you must explain how you will compare them. "Record and compare the distances for each surface type" is a complete final step.</li>
+      <li><strong>Writing a prediction instead of a method:</strong> Some students confuse "describe how to carry out the experiment" with "predict what will happen." The method describes the steps you take. The prediction comes after: "I predict that the car will travel furthest on the smooth surface because there is less friction."</li>
+    </ul>
+
+    <h3 style="font-family:system-ui,sans-serif;font-size:20px;font-weight:800;color:#4c1d95;margin:28px 0 12px">Frequently Asked Questions About Fair Test Questions</h3>
+    <p style="font-size:15px;color:#4c1d95;font-weight:700;margin:14px 0 4px">Q: How many controlled variables should I list in my answer?</p>
+    <p style="font-size:14px;color:#3730a3;line-height:1.9;margin-bottom:12px">List at least 2–3 specific controlled variables. The key word is "specific" — do not write "all other variables are kept the same," because this does not show understanding. Name each variable: for example, "the volume of water, the size of the pot, and the type of soil." Each named variable that is relevant and correct is worth a mark.</p>
+    <p style="font-size:15px;color:#4c1d95;font-weight:700;margin:14px 0 4px">Q: Does the order of my answer matter?</p>
+    <p style="font-size:14px;color:#3730a3;line-height:1.9;margin-bottom:12px">The marking scheme checks for the presence of specific elements, not their order. However, organising your answer with clear labels (IV, DV, CV, Method) helps you avoid missing any element and makes your answer easier for the marker to mark. It is good practice to structure your answer this way.</p>
+    <p style="font-size:15px;color:#4c1d95;font-weight:700;margin:14px 0 4px">Q: What if the question gives me a partially described experiment and asks what is wrong with it?</p>
+    <p style="font-size:14px;color:#3730a3;line-height:1.9;margin-bottom:12px">This is a common PSLE question type. Read the described experiment carefully and look for: (1) more than one variable being changed between test groups, (2) a variable that should be controlled but isn't, (3) no repeated trials. State which specific variable makes the test unfair and explain why it needs to be controlled. For example: "The test is unfair because both the type of surface and the pushing force were different between the two trials. To make it fair, the same pushing force should be used in both trials."</p>
+  </div>
+</section>
+
+
+<div style="margin:32px 0;padding:18px 20px;background:linear-gradient(135deg,rgba(249,115,22,.08),rgba(167,139,250,.08));border:1px solid rgba(249,115,22,.2);border-radius:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px">
+  <div>
+    <div style="font-size:12px;font-weight:800;color:#f97316;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px">📝 O-Level Exam Practice</div>
+    <div style="font-size:14px;font-weight:700;color:#fff">Free Mock Papers — Chemistry, Physics &amp; Biology</div>
+    <div style="font-size:12px;color:rgba(232,237,245,.5);margin-top:2px">40 MCQ · 1-hour timed · auto-marked with full explanations</div>
+  </div>
+  <a href="/secondary-science/pure-sciences/chemistry/mock-paper-1/" style="display:inline-flex;align-items:center;gap:6px;padding:9px 18px;background:linear-gradient(135deg,#f97316,#a78bfa);border-radius:50px;color:#fff;font-weight:800;font-size:13px;text-decoration:none;white-space:nowrap">Start a Mock Paper →</a>
+</div>
+
+<script>
+function openSearch(){
+  var ns=document.getElementById('navSearch');
+  ns.classList.add('open');
+  setTimeout(function(){ns.querySelector('.ns-input').focus();},50);
+}
+</script>
+
+<footer style="background:#1e293b;color:#94a3b8;text-align:center;padding:28px 20px;font-size:14px;margin-top:48px;">
+  <p>© 2026 ScienceStar — Free Science for Singapore Students</p>
+  <p style="margin-top:8px;">
+    <a href="/" style="color:#38bdf8;text-decoration:none;margin:0 8px;">Home</a>
+    <a href="/about/" style="color:#38bdf8;text-decoration:none;margin:0 8px;">About</a>
+    <a href="/contact/" style="color:#38bdf8;text-decoration:none;margin:0 8px;">Contact</a>
+    <a href="/privacy/" style="color:#38bdf8;text-decoration:none;margin:0 8px;">Privacy</a>
+    <a href="/terms/" style="color:#38bdf8;text-decoration:none;margin:0 8px;">Terms</a>
+  </p>
+  <p style="margin-top:8px;font-size:12px;">Not affiliated with MOE Singapore. PSLE and O-Level are registered trademarks of SEAB.</p>
+</footer>
+</body>
+</html>

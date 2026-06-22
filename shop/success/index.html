@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XM36L4R49E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XM36L4R49E');
+</script>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank you for your purchase | ScienceStar</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080f1e;--card:#0f1c30;
+  --border:rgba(255,255,255,.08);
+  --text:#e8edf5;--muted:rgba(232,237,245,.55);--dim:rgba(232,237,245,.3);
+  --sky:#38bdf8;--sky2:#0ea5e9;--lime:#a3e635;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);
+  min-height:100vh;display:flex;flex-direction:column}
+
+.top{padding:20px clamp(16px,5%,56px);border-bottom:1px solid var(--border)}
+.brand{font-family:'Sora',sans-serif;font-weight:800;font-size:18px;color:#fff;text-decoration:none}
+.brand span{color:var(--sky)}
+
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:48px clamp(16px,5%,56px)}
+.card{background:var(--card);border:1px solid var(--border);border-radius:20px;
+  padding:40px 36px;max-width:520px;width:100%;text-align:center}
+.icon{font-size:48px;margin-bottom:16px}
+h1{font-family:'Sora',sans-serif;font-size:24px;font-weight:800;color:#fff;margin-bottom:10px}
+p.sub{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:28px}
+
+.dl-list{display:flex;flex-direction:column;gap:12px;margin-bottom:24px}
+.dl-btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;
+  border-radius:50px;font-weight:700;font-size:14px;text-decoration:none;
+  background:var(--sky2);color:#fff;transition:transform .2s,opacity .2s}
+.dl-btn:hover{transform:translateY(-2px);opacity:.92}
+.dl-btn.secondary{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16)}
+
+.state{font-size:13px;color:var(--dim)}
+.state.err{color:#fca5a5}
+.spinner{display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,.2);
+  border-top-color:var(--sky);border-radius:50%;animation:spin .7s linear infinite;margin-right:6px;vertical-align:middle}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.note{font-size:12px;color:var(--dim);line-height:1.7;margin-top:20px;padding-top:20px;border-top:1px solid var(--border)}
+.note a{color:var(--sky);text-decoration:none}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <a href="/" class="brand">⭐ Science<span>Star</span></a>
+</div>
+
+<main>
+  <div class="card" id="card">
+    <div class="icon">⏳</div>
+    <h1>Verifying your payment…</h1>
+    <p class="sub state" id="statusText"><span class="spinner"></span>Please wait a moment, this only takes a second.</p>
+    <div class="dl-list" id="dlList" style="display:none"></div>
+    <div class="note">Trouble downloading? Keep your Stripe receipt email handy and message us via <a href="/contact/">the contact page</a> — we'll sort it out.</div>
+  </div>
+</main>
+
+<script>
+(function(){
+  var params = new URLSearchParams(window.location.search);
+  var sessionId = params.get('session_id');
+  var productId = params.get('product');
+
+  var card = document.getElementById('card');
+  var statusText = document.getElementById('statusText');
+  var dlList = document.getElementById('dlList');
+
+  // Map of productId -> human label + number of files, kept in sync with
+  // functions/_products.js. (Kept simple here since this page doesn't need
+  // to know file paths — the download endpoint resolves those server-side.)
+  var PRODUCT_FILE_COUNTS = {
+    'psle-science-pack': [
+      { label: '📘 Teacher Edition (full answers)', index: 0 },
+      { label: '✏️ Student Edition (write-in)', index: 1 }
+    ]
+  };
+
+  function showError(msg){
+    card.querySelector('.icon').textContent = '⚠️';
+    card.querySelector('h1').textContent = "We couldn't verify that purchase";
+    statusText.className = 'sub state err';
+    statusText.innerHTML = msg;
+  }
+
+  if (!sessionId || !productId) {
+    showError('This page is missing some information from your checkout. If you just paid, check your email for a Stripe receipt and contact us with it.');
+    return;
+  }
+
+  var files = PRODUCT_FILE_COUNTS[productId];
+  if (!files) {
+    showError('Unknown product. Please contact us with your receipt.');
+    return;
+  }
+
+  // We don't have a dedicated "verify" endpoint — the download endpoint
+  // itself verifies payment with Stripe before streaming the file. So we
+  // simply reveal the download buttons; if verification fails, the
+  // download click itself will show a clear error instead of a broken file.
+  card.querySelector('.icon').textContent = '🎉';
+  card.querySelector('h1').textContent = 'Thank you — you\'re all set!';
+  statusText.className = 'sub';
+  statusText.textContent = 'Your files are ready below. Each link verifies your payment before downloading.';
+
+  dlList.style.display = 'flex';
+  files.forEach(function(f, i){
+    var a = document.createElement('a');
+    a.href = '/api/download?session_id=' + encodeURIComponent(sessionId) +
+             '&product=' + encodeURIComponent(productId) +
+             '&file=' + f.index;
+    a.className = 'dl-btn' + (i > 0 ? ' secondary' : '');
+    a.textContent = f.label;
+    dlList.appendChild(a);
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XM36L4R49E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XM36L4R49E');
+</script>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Free Science Level Check — Get Your Study Plan in 10 Min</title>
+<link rel="canonical" href="https://primayscience.org/assess/">
+<meta name="keywords" content="PSLE science level check Singapore, personalised study plan science, science diagnostic quiz free">>
+<meta name="description" content="Not sure where to start your PSLE Science revision? Answer 25 questions and get a personalised science study plan instantly. Free, no sign-up needed.">>
+<meta property="og:description" content="Not sure where to start? Answer 25 questions → get a personalised PSLE Science study plan instantly. Free for all SG students.">
+  <meta property="og:url" content="https://primayscience.org/assess/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free Science Level Check — Get Your Study Plan in 10 Min">
+
+<meta property="og:image" content="https://primayscience.org/images/og-image.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://primayscience.org/images/og-image.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Science Level Check","url":"https://primayscience.org/assess/","description":"Free personalised science study plan for Singapore Primary students.","isPartOf":{"@type":"WebSite","url":"https://primayscience.org","name":"ScienceStar"}}
+</script>
+<script>
+// Init: show welcome, hide others
+document.addEventListener('DOMContentLoaded', function() {
+  // Show welcome screen, hide quiz and result screens
+  showScreen('s-welcome');
+  // Make all lbtns semi-visible to show they're selectable
+  document.querySelectorAll('.lbtn').forEach(b => b.style.opacity = '0.7');
+  // Reset start button to initial grey/disabled state
+  const sb = document.getElementById('startBtn');
+  if (sb) {
+    sb.style.background = '#334155';
+    sb.style.color = 'rgba(255,255,255,0.5)';
+    sb.style.boxShadow = 'none';
+    sb.style.pointerEvents = 'auto';
+    sb.style.cursor = 'pointer';
+  }
+});
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#0c1a2e;--muted:#64748b;--cream:#fafaf7;--card:#fff;
+  --border:#e2e8f0;--r:14px;
+  --sky:#0ea5e9;--lime:#a3e635;--rose:#f43f5e;
+  --green:#16a34a;--amber:#f59e0b;--red:#ef4444;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);line-height:1.65;min-height:100vh}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;
+  background:rgba(250,250,247,.96);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;padding:0 5%}
+.nl{font-family:'Syne',sans-serif;font-weight:800;font-size:19px;color:var(--ink);text-decoration:none}
+.nl span{color:var(--sky)}
+.nr a{font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;margin-left:14px}
+.nr a:hover{color:var(--ink)}
+
+/* SCREENS */
+.screen{display:none;min-height:calc(100vh - 60px);padding-top:60px}
+.screen.active{display:flex;flex-direction:column}
+
+/* ── WELCOME SCREEN ── */
+#s-welcome{background:var(--ink);align-items:center;justify-content:center;text-align:center;padding:80px 5% 60px}
+.w-inner{max-width:600px}
+.w-tag{display:inline-flex;align-items:center;gap:6px;
+  background:rgba(163,230,53,.12);border:1px solid rgba(163,230,53,.3);
+  color:var(--lime);padding:5px 14px;border-radius:50px;
+  font-size:12px;font-weight:700;margin-bottom:20px}
+.w-title{font-family:'Syne',sans-serif;font-size:clamp(28px,5vw,52px);
+  font-weight:800;color:#fff;line-height:1.08;margin-bottom:16px}
+.w-title em{font-style:normal;color:var(--sky)}
+.w-sub{font-size:16px;color:rgba(255,255,255,.62);margin-bottom:36px;line-height:1.75}
+.w-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:36px;text-align:left}
+.w-step{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  border-radius:12px;padding:16px}
+.w-step-n{font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;
+  color:var(--lime);margin-bottom:6px}
+.w-step-t{font-size:14px;font-weight:600;color:#fff;margin-bottom:4px}
+.w-step-d{font-size:12.5px;color:rgba(255,255,255,.5);line-height:1.55}
+.level-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:24px}
+.lbtn{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.15);
+  border-radius:12px;padding:18px 12px;cursor:pointer;
+  color:#fff;font-family:'Syne',sans-serif;font-weight:700;font-size:15px;
+  transition:all .2s;display:flex;flex-direction:column;align-items:center;gap:6px}
+.lbtn .lbtn-lvl{font-size:22px;font-weight:800}
+.lbtn .lbtn-sub{font-size:11px;font-weight:600;opacity:.6;letter-spacing:.3px}
+.lbtn:hover,.lbtn.sel{transform:translateY(-3px)}
+.lbtn[data-l="P3"]:hover,.lbtn[data-l="P3"].sel{background:#f97316;border-color:#f97316}
+.lbtn[data-l="P4"]:hover,.lbtn[data-l="P4"].sel{background:var(--sky);border-color:var(--sky)}
+.lbtn[data-l="P5"]:hover,.lbtn[data-l="P5"].sel{background:#16a34a;border-color:#16a34a}
+.lbtn[data-l="PSLE"]:hover,.lbtn[data-l="PSLE"].sel{background:#8b5cf6;border-color:#8b5cf6}
+.start-btn{background:#334155;color:rgba(255,255,255,.5);border:none;
+  padding:14px 36px;border-radius:50px;font-family:'Syne',sans-serif;
+  font-weight:800;font-size:16px;cursor:pointer;pointer-events:auto;
+  transition:background .3s,color .3s,transform .2s}
+.start-btn:hover{background:#0284c7;color:#fff}
+.start-btn.ready{background:#0ea5e9 !important;color:#fff !important;
+  box-shadow:0 4px 20px rgba(14,165,233,.4);transform:translateY(-1px)}
+
+/* ── QUIZ SCREEN ── */
+#s-quiz{padding:80px 5% 40px;align-items:center}
+.q-wrap{width:100%;max-width:680px;margin:0 auto}
+.q-header{display:flex;align-items:center;gap:12px;margin-bottom:28px}
+.q-progress-bar{flex:1;height:8px;background:var(--border);border-radius:50px;overflow:hidden}
+.q-progress-fill{height:100%;border-radius:50px;background:var(--sky);transition:width .4s ease}
+.q-counter{font-size:13px;font-weight:700;color:var(--muted);white-space:nowrap}
+.q-topic-badge{display:inline-block;padding:4px 12px;border-radius:50px;
+  font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;
+  margin-bottom:14px}
+.q-text{font-family:'Syne',sans-serif;font-size:clamp(17px,2.5vw,22px);
+  font-weight:700;color:var(--ink);line-height:1.4;margin-bottom:24px}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{background:var(--card);border:1.5px solid var(--border);border-radius:12px;
+  padding:14px 18px;cursor:pointer;font-size:15px;font-weight:500;
+  color:var(--ink);text-align:left;transition:all .15s;display:flex;align-items:center;gap:12px}
+.opt:hover:not(:disabled){border-color:var(--sky);background:#f0f9ff;transform:translateX(3px)}
+.opt .opt-letter{width:26px;height:26px;border-radius:50%;
+  background:var(--cream);border:1.5px solid var(--border);
+  font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;color:var(--muted)}
+.opt.correct{background:#f0fdf4;border-color:#16a34a}
+.opt.correct .opt-letter{background:#16a34a;border-color:#16a34a;color:#fff}
+.opt.wrong{background:#fff1f2;border-color:#f43f5e}
+.opt.wrong .opt-letter{background:#f43f5e;border-color:#f43f5e;color:#fff}
+.opt.dim{opacity:.45}
+.opt:disabled{cursor:not-allowed}
+.q-feedback{margin-top:16px;padding:14px 18px;border-radius:12px;
+  font-size:14px;line-height:1.65;display:none}
+.q-feedback.show{display:block}
+.q-feedback.ok{background:#f0fdf4;border:1px solid #86efac;color:#166534}
+.q-feedback.no{background:#fff1f2;border:1px solid #fda4af;color:#9f1239}
+.q-feedback .fb-explain{margin-top:8px;padding-top:8px;border-top:1px solid currentColor;opacity:0.85;font-style:italic}
+.q-feedback .fb-trap{margin-top:6px;background:rgba(0,0,0,.06);border-radius:6px;padding:6px 10px;font-size:13px}
+.next-btn{margin-top:20px;background:var(--ink);color:#fff;border:none;
+  padding:12px 28px;border-radius:50px;font-family:'Syne',sans-serif;
+  font-weight:700;font-size:14px;cursor:pointer;display:none}
+.next-btn.show{display:inline-flex;align-items:center;gap:8px}
+.next-btn:hover{background:#1e3a5f}
+
+/* ── RESULTS SCREEN ── */
+#s-result{padding:80px 5% 60px;align-items:center}
+.r-wrap{width:100%;max-width:800px;margin:0 auto}
+
+.r-hero{text-align:center;margin-bottom:36px}
+.r-score-ring{width:110px;height:110px;border-radius:50%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  margin:0 auto 16px;border:5px solid}
+.r-score-num{font-family:'Syne',sans-serif;font-size:28px;font-weight:800}
+.r-score-label{font-size:11px;font-weight:600;opacity:.7;text-transform:uppercase;letter-spacing:.5px}
+.r-title{font-family:'Syne',sans-serif;font-size:clamp(22px,3vw,30px);
+  font-weight:800;color:var(--ink);margin-bottom:8px}
+.r-sub{font-size:15px;color:var(--muted)}
+
+/* PLAN SECTIONS */
+.plan-section{margin-bottom:28px}
+.plan-label{font-family:'Syne',sans-serif;font-size:12px;font-weight:800;
+  letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;
+  display:flex;align-items:center;gap:8px}
+.plan-label .dot{width:8px;height:8px;border-radius:50%}
+
+.topic-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.tc{background:var(--card);border:1.5px solid var(--border);border-radius:12px;
+  padding:14px 16px;text-decoration:none;color:var(--ink);
+  display:flex;align-items:flex-start;gap:12px;transition:all .2s}
+.tc:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(12,26,46,.1)}
+.tc-icon{font-size:22px;flex-shrink:0;margin-top:1px}
+.tc-body{}
+.tc-name{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px}
+.tc-meta{font-size:12px;color:var(--muted)}
+.tc-score{font-size:12px;font-weight:700;padding:2px 8px;border-radius:50px;margin-top:5px;display:inline-block}
+
+/* urgency colours */
+.tc.urgent{border-color:#fda4af;background:#fff1f2}
+.tc.urgent .tc-score{background:#fff1f2;color:#e11d48}
+.tc.medium{border-color:#fde68a;background:#fffbeb}
+.tc.medium .tc-score{background:#fef9c3;color:#b45309}
+.tc.strong{border-color:#bbf7d0;background:#f0fdf4}
+.tc.strong .tc-score{background:#dcfce7;color:#15803d}
+
+/* WEEK PLAN */
+.week-plan{background:var(--card);border:1.5px solid var(--border);border-radius:var(--r);overflow:hidden}
+.week-header{background:var(--ink);padding:14px 20px;
+  font-family:'Syne',sans-serif;font-weight:800;font-size:15px;color:#fff;
+  display:flex;align-items:center;gap:10px}
+.week-row{display:flex;align-items:flex-start;gap:16px;padding:14px 20px;
+  border-bottom:1px solid var(--border)}
+.week-row:last-child{border-bottom:none}
+.week-day{font-family:'Syne',sans-serif;font-weight:800;font-size:13px;
+  color:var(--muted);min-width:42px;padding-top:2px}
+.week-tasks{flex:1}
+.week-task{font-size:13.5px;color:var(--ink);margin-bottom:4px;
+  display:flex;align-items:center;gap:8px}
+.week-task::before{content:"•";color:var(--sky);font-size:16px}
+.week-badge{display:inline-block;padding:2px 8px;border-radius:50px;
+  font-size:11px;font-weight:700}
+
+/* ACTION BTNS */
+.r-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px;justify-content:center}
+.abtn{padding:12px 24px;border-radius:50px;font-family:'Syne',sans-serif;
+  font-weight:700;font-size:14px;cursor:pointer;text-decoration:none;
+  display:inline-flex;align-items:center;gap:8px;border:none}
+.abtn-p{background:var(--sky);color:#fff}
+.abtn-p:hover{background:#0284c7}
+.abtn-s{background:transparent;color:var(--ink);border:1.5px solid var(--border)}
+.abtn-s:hover{background:var(--cream)}
+
+/* AD */
+.ad{max-width:680px;margin:24px auto;text-align:center}
+
+footer{background:var(--ink);padding:32px 5% 24px;
+  color:rgba(255,255,255,.4);font-size:13px;text-align:center;margin-top:auto}
+footer a{color:rgba(255,255,255,.35);text-decoration:none;margin:0 8px}
+footer strong{color:#fff}
+
+@media(max-width:600px){
+  .w-steps{grid-template-columns:1fr}
+  .level-grid{grid-template-columns:repeat(2,1fr)}
+  .topic-cards{grid-template-columns:1fr}
+}
+
+  /* nav search */
+  .nav-search{display:flex;align-items:center;margin-left:8px;position:relative}
+  .ns-icon{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:8px;color:rgba(232,237,245,.6);cursor:pointer;padding:6px 8px;display:flex;align-items:center;transition:.15s}
+  .ns-icon:hover{color:#fff;background:rgba(255,255,255,.12)}
+  .ns-form{display:flex;align-items:center;overflow:hidden;width:0;opacity:0;transition:width .25s ease,opacity .2s;position:absolute;right:36px;top:50%;transform:translateY(-50%)}
+  .nav-search.open .ns-form{width:200px;opacity:1}
+  .ns-input{background:#0d1629;border:1.5px solid rgba(56,189,248,.4);border-radius:8px 0 0 8px;color:#e8edf5;font-size:13px;padding:6px 10px;outline:none;width:100%;font-family:inherit}
+  .ns-input::placeholder{color:rgba(232,237,245,.3)}
+  .ns-submit{background:rgba(56,189,248,.2);border:1.5px solid rgba(56,189,248,.4);border-left:none;border-radius:0 8px 8px 0;color:#38bdf8;cursor:pointer;padding:6px 10px;font-size:13px;font-family:inherit;transition:.15s}
+  .ns-submit:hover{background:rgba(56,189,248,.35)}
+  @media(max-width:500px){.nav-search.open .ns-form{width:150px}}
+</style>
+<meta name="twitter:title" content="Free Science Level Check — Get Your Study Plan in 10 Min">
+<meta name="twitter:description" content="Not sure where to start? Answer 25 questions → get a personalised PSLE Science study plan instantly. Free for all SG students.">
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nl">⭐ Science<span>Star</span></a>
+  <div class="nr">
+    <a href="/p3/">P3</a>
+    <a href="/p4/">P4</a>
+    <a href="/p5/">P5</a>
+    <a href="/psle/">PSLE</a>
+    <a href="/print/">Print</a>
+  </div>
+
+  <div class="nav-search" id="navSearch">
+    <button class="ns-icon" onclick="openSearch()" aria-label="Search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
+    <form class="ns-form" action="/search/" method="GET" role="search">
+      <input class="ns-input" type="search" name="q" placeholder="Search topics…" autocomplete="off" aria-label="Search ScienceStar" onfocus="this.closest('.nav-search').classList.add('open')" onblur="setTimeout(()=>this.closest('.nav-search').classList.remove('open'),200)">
+      <button type="submit" class="ns-submit" aria-label="Go">→</button>
+    </form>
+  </div>
+</nav>
+
+<!-- ══ SCREEN 1: WELCOME ══════════════════════════════════════════ -->
+<div class="screen active" id="s-welcome">
+  <div class="w-inner">
+    <div class="w-tag">🎯 Free Level Check</div>
+    <h1 class="w-title">Find out exactly<br><em>what to study next</em></h1>
+    <p class="w-sub">Answer 25 questions across all topics.<br>
+    Get a personalised plan showing your strong topics,<br>
+    weak spots, and a day-by-day study schedule.</p>
+
+    <div class="w-steps">
+      <div class="w-step">
+        <div class="w-step-n">Step 1</div>
+        <div class="w-step-t">Choose your level</div>
+        <div class="w-step-d">P3, P4, P5 or full PSLE mix</div>
+      </div>
+      <div class="w-step">
+        <div class="w-step-n">Step 2</div>
+        <div class="w-step-t">Answer 25 questions</div>
+        <div class="w-step-d">5 questions from each main topic — takes about 10 minutes</div>
+      </div>
+      <div class="w-step">
+        <div class="w-step-n">Step 3</div>
+        <div class="w-step-t">Get your plan</div>
+        <div class="w-step-d">See exactly which topics need work and what to do this week</div>
+      </div>
+    </div>
+
+    <p style="font-size:13px;color:rgba(255,255,255,.4);margin-bottom:14px">I am preparing for:</p>
+    <div class="level-grid">
+      <button class="lbtn" data-l="P3" onclick="selectLevel(this)">
+        <span class="lbtn-lvl">P3</span>
+        <span class="lbtn-sub">Primary 3 · 8 topics · 25 questions</span>
+      </button>
+      <button class="lbtn" data-l="P4" onclick="selectLevel(this)">
+        <span class="lbtn-lvl">P4</span>
+        <span class="lbtn-sub">Primary 4 · 8 topics · 25 questions</span>
+      </button>
+      <button class="lbtn" data-l="P5" onclick="selectLevel(this)">
+        <span class="lbtn-lvl">P5</span>
+        <span class="lbtn-sub">Primary 5 · 7 topics · 25 questions</span>
+      </button>
+      <button class="lbtn" data-l="PSLE" onclick="selectLevel(this)" style="grid-column:1/-1">
+        <span class="lbtn-lvl">PSLE Prep</span>
+        <span class="lbtn-sub">Mix of all levels · 25 questions</span>
+      </button>
+    </div>
+
+    <button class="start-btn" id="startBtn" onclick="startQuiz()">
+      Start Level Check →
+    </button>
+  </div>
+</div>
+
+<!-- ══ SCREEN 2: QUIZ ════════════════════════════════════════════ -->
+<div class="screen" id="s-quiz">
+  <div class="q-wrap">
+    <div class="q-header">
+      <div class="q-progress-bar">
+        <div class="q-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <div class="q-counter" id="qCounter">1 / 25</div>
+    </div>
+
+    <div id="topicBadge" class="q-topic-badge"></div>
+    <div class="q-text" id="qText"></div>
+    <div class="opts" id="optsWrap"></div>
+    <div class="q-feedback" id="qFeedback"></div>
+    <button class="next-btn" id="nextBtn" onclick="nextQ()">
+      Next question <span>→</span>
+    </button>
+  </div>
+
+  <div class="ad">
+  </div>
+</div>
+
+<!-- ══ SCREEN 3: RESULTS ══════════════════════════════════════════ -->
+<div class="screen" id="s-result">
+  <div class="r-wrap">
+
+    <div class="r-hero">
+      <div class="r-score-ring" id="scoreRing">
+        <span class="r-score-num" id="scoreNum">—</span>
+        <span class="r-score-label">Score</span>
+      </div>
+      <h1 class="r-title" id="rTitle">Your Science Level Check is Done!</h1>
+      <p class="r-sub" id="rSub"></p>
+    </div>
+
+    <div class="ad">
+    </div>
+
+    <!-- Needs Work -->
+    <div class="plan-section" id="urgentSection" style="display:none">
+      <div class="plan-label">
+        <span class="dot" style="background:#ef4444"></span>
+        🔴 Focus on these first — needs the most work
+      </div>
+      <div class="topic-cards" id="urgentCards"></div>
+    </div>
+
+    <!-- Needs Practice -->
+    <div class="plan-section" id="medSection" style="display:none">
+      <div class="plan-label">
+        <span class="dot" style="background:#f59e0b"></span>
+        🟡 Getting there — needs more practice
+      </div>
+      <div class="topic-cards" id="medCards"></div>
+    </div>
+
+    <!-- Strong -->
+    <div class="plan-section" id="strongSection" style="display:none">
+      <div class="plan-label">
+        <span class="dot" style="background:#16a34a"></span>
+        🟢 Looking good — keep it up
+      </div>
+      <div class="topic-cards" id="strongCards"></div>
+    </div>
+
+    <!-- Week plan -->
+    <div class="plan-section">
+      <div class="plan-label">
+        <span class="dot" style="background:var(--sky)"></span>
+        📅 Your personalised study plan this week
+      </div>
+      <div class="week-plan">
+        <div class="week-header">📚 7-Day Action Plan — based on your results</div>
+        <div id="weekPlanRows"></div>
+      </div>
+    </div>
+
+    <div class="r-actions">
+      <a href="/" class="abtn abtn-p">🚀 Start Studying Now</a>
+      <button class="abtn abtn-s" onclick="retake()">🔄 Retake the Check</button>
+      <a href="/print/" class="abtn abtn-s">📄 Print Summary Sheets</a>
+    </div>
+
+  </div>
+
+  <!-- CONTENT SECTION FOR ADSENSE + SEO -->
+  <div style="max-width:820px;margin:48px auto 0;padding:0 20px 48px">
+    <h2 style="font-family:system-ui,sans-serif;font-size:22px;font-weight:800;color:#e2e8f0;margin-bottom:12px">How the ScienceStar Level Check Works</h2>
+    <p style="color:#94a3b8;font-size:15px;line-height:1.8;margin-bottom:16px">The Level Check is a free diagnostic tool designed for Singapore Primary Science students from P3 to P6. It asks 25 carefully selected questions across all the major PSLE Science topics — Forces, Electrical Systems, Living Things, Plants, Photosynthesis, Food Chains, Matter, Water Cycle, Reproduction, and more. Based on your answers, it identifies exactly which topics you are strong in and which ones need more revision time.</p>
+    <p style="color:#94a3b8;font-size:15px;line-height:1.8;margin-bottom:16px">Unlike a full practice paper which takes 1 hour 45 minutes, the Level Check takes about 10 minutes. It is not a scored exam — it is a study planning tool. When you finish, you get a personalised topic-by-topic breakdown showing your strengths and weak spots, plus a recommended study plan linking directly to the revision materials for each topic you should focus on.</p>
+
+    <h3 style="font-family:system-ui,sans-serif;font-size:18px;font-weight:700;color:#e2e8f0;margin:28px 0 10px">Who Should Use the Level Check?</h3>
+    <p style="color:#94a3b8;font-size:15px;line-height:1.8;margin-bottom:12px">The Level Check is most useful for:</p>
+    <ul style="color:#94a3b8;font-size:15px;line-height:1.9;padding-left:20px;margin-bottom:20px">
+      <li><strong style="color:#e2e8f0">P6 students preparing for PSLE</strong> — find your weakest topics quickly so you can spend your revision time where it matters most</li>
+      <li><strong style="color:#e2e8f0">P5 students starting PSLE preparation early</strong> — see which P5 topics need strengthening before you move into P6 content</li>
+      <li><strong style="color:#e2e8f0">P3 and P4 students before SA1 or SA2</strong> — get a snapshot of where you stand across each topic before your school exams</li>
+      <li><strong style="color:#e2e8f0">Parents helping their child study</strong> — get an objective overview of which science topics your child is confident in and which need more attention at home</li>
+    </ul>
+
+    <h3 style="font-family:system-ui,sans-serif;font-size:18px;font-weight:700;color:#e2e8f0;margin:28px 0 10px">What Happens After the Level Check?</h3>
+    <p style="color:#94a3b8;font-size:15px;line-height:1.8;margin-bottom:16px">After completing the 25 questions, you receive a results summary grouped by topic. Topics where you answered most questions correctly are shown as strengths. Topics where you struggled are highlighted as priority areas. Each priority topic links directly to ScienceStar's full study notes, quiz, and flashcards for that topic — so you can move straight from knowing your weakness to fixing it.</p>
+    <p style="color:#94a3b8;font-size:15px;line-height:1.8;margin-bottom:16px">The tool works entirely in your browser. No account is required, no data is stored, and no email address is needed. Your results are shown immediately and are completely private. You can retake the Level Check as many times as you like — for example, after completing a round of revision to see whether your weak topics have improved.</p>
+
+    <h3 style="font-family:system-ui,sans-serif;font-size:18px;font-weight:700;color:#e2e8f0;margin:28px 0 10px">PSLE Science Topics Tested in the Level Check</h3>
+    <p style="color:#94a3b8;font-size:15px;line-height:1.8;margin-bottom:12px">The Level Check covers all the key themes from the MOE 2026 Primary Science syllabus:</p>
+    <ul style="color:#94a3b8;font-size:15px;line-height:1.9;padding-left:20px;margin-bottom:20px">
+      <li><strong style="color:#e2e8f0">Living and Non-Living Things</strong> — the seven characteristics of life, MRS GREN, classifying organisms</li>
+      <li><strong style="color:#e2e8f0">Plants</strong> — parts and functions, photosynthesis, transport in plants, adaptations</li>
+      <li><strong style="color:#e2e8f0">Animals</strong> — digestive system, respiratory system, circulatory system, life cycles</li>
+      <li><strong style="color:#e2e8f0">Food Chains and Food Webs</strong> — producers, consumers, decomposers, energy flow, population changes</li>
+      <li><strong style="color:#e2e8f0">Reproduction</strong> — pollination, fertilisation, seed dispersal, asexual reproduction</li>
+      <li><strong style="color:#e2e8f0">Matter and Materials</strong> — states of matter, properties, solubility, separation methods</li>
+      <li><strong style="color:#e2e8f0">Water Cycle</strong> — evaporation, condensation, precipitation, transpiration, collection</li>
+      <li><strong style="color:#e2e8f0">Forces</strong> — gravitational force, friction, elastic spring force, contact vs non-contact</li>
+      <li><strong style="color:#e2e8f0">Electrical Systems</strong> — series and parallel circuits, conductors, insulators, switches</li>
+      <li><strong style="color:#e2e8f0">Light and Shadows</strong> — reflection, refraction, opaque, translucent, transparent, shadow formation</li>
+      <li><strong style="color:#e2e8f0">Magnets</strong> — magnetic materials, poles, attraction and repulsion, induced magnetism</li>
+      <li><strong style="color:#e2e8f0">Environment</strong> — ecosystems, habitats, interdependence, human impact, conservation</li>
+    </ul>
+
+    <div style="background:rgba(56,189,248,.08);border:1px solid rgba(56,189,248,.2);border-radius:12px;padding:20px 24px;margin-top:24px">
+      <p style="color:#94a3b8;font-size:14px;line-height:1.8;margin:0"><strong style="color:#38bdf8">💡 Study tip:</strong> Use the Level Check before starting your PSLE revision to create a priority list. Focus your first two weeks on your two or three weakest topics. Then use ScienceStar's topic quizzes and flashcards to build confidence in those areas before moving on to your stronger topics for final polish.</p>
+    </div>
+  </div>
+
+  
+<!-- Adsterra Native Banner -->
+<div style="max-width:900px;margin:0 auto;padding:0 16px 8px">
+<script async="async" data-cfasync="false" src="https://pl29317883.profitablecpmratenetwork.com/0308be89ae30df4fb0bab6a540f70887/invoke.js" defer></script>
+<div id="container-0308be89ae30df4fb0bab6a540f70887"></div>
+</div>
+
+
+<div style="margin:32px 0;padding:18px 20px;background:linear-gradient(135deg,rgba(249,115,22,.08),rgba(167,139,250,.08));border:1px solid rgba(249,115,22,.2);border-radius:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px">
+  <div>
+    <div style="font-size:12px;font-weight:800;color:#f97316;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px">📝 O-Level Exam Practice</div>
+    <div style="font-size:14px;font-weight:700;color:#fff">Free Mock Papers — Chemistry, Physics &amp; Biology</div>
+    <div style="font-size:12px;color:rgba(232,237,245,.5);margin-top:2px">40 MCQ · 1-hour timed · auto-marked with full explanations</div>
+  </div>
+  <a href="/secondary-science/pure-sciences/chemistry/mock-paper-1/" style="display:inline-flex;align-items:center;gap:6px;padding:9px 18px;background:linear-gradient(135deg,#f97316,#a78bfa);border-radius:50px;color:#fff;font-weight:800;font-size:13px;text-decoration:none;white-space:nowrap">Start a Mock Paper →</a>
+</div>
+<footer>
+    <p><strong>⭐ ScienceStar</strong> — Free Singapore Primary Science · <a href="/">primayscience.org</a></p>
+    <p style="margin-top:8px">
+      <a href="/about/">About</a><a href="/contact/">Contact</a>
+      <a href="/privacy/">Privacy</a><a href="/terms/">Terms</a>
+    </p>
+    <p style="margin-top:8px">© 2026 ScienceStar. Not affiliated with MOE or SEAB.</p>
+  </footer>
+</div>
+
+<script>
+// ── DATA ─────────────────────────────────────────────────────────
+const ALL_QS    = {"P3": [{"topic": "diversity","level": "P3","q": "Which of the following is NOT a living thing?","opts": ["Mushroom","Rock","Grasshopper","Fern"],"ans": 1,"exp": "Rocks cannot move on their own, feed, grow, respond, reproduce, or have a lifespan — so they are non-living. All the others are living organisms.","trap": "Students often confuse objects that move (like clouds or fire) with living things. Remember: living things must show ALL seven characteristics."},{"topic": "diversity","level": "P3","q": "What is the main difference between plants and animals?","opts": ["Plants are bigger","Plants make their own food; animals cannot","Animals breathe; plants do not","Plants move; animals do not"],"ans": 1,"exp": "Plants are producers — they make their own food through photosynthesis using sunlight, water, and carbon dioxide. Animals must feed on other organisms.","trap": "Both plants and animals breathe (exchange gases). Plants also move — their stems grow towards light. The key difference is how they obtain food."},{"topic": "diversity","level": "P3","q": "Which group do frogs belong to?","opts": ["Mammals","Reptiles","Amphibians","Fish"],"ans": 2,"exp": "Frogs are amphibians — they can live both in water and on land. They have moist skin, lay eggs in water, and their young (tadpoles) breathe through gills.","trap": "Frogs are not reptiles. Reptiles have scaly skin and most lay eggs on land. Frogs have smooth, moist skin and must stay near water."},{"topic": "diversity","level": "P3","q": "What do ALL living things have in common?","opts": ["They all have legs","They all need sunlight","They all move, feed, grow, respond, reproduce, breathe and have a lifespan","They all live in water"],"ans": 2,"exp": "All living things share seven characteristics: move, feed, grow, respond to the environment, reproduce, breathe/respire, and have a lifespan. These apply to plants and animals alike.","trap": "Not all living things have legs or need sunlight directly. The key is to check ALL seven characteristics, not just one or two."},{"topic": "diversity","level": "P3","q": "A student found an object that grows and responds to light. Is it definitely living?","opts": ["Yes, definitely — it grows and responds","No — only animals are living","Not necessarily — we need to check all seven characteristics","No — living things must move like animals"],"ans": 2,"exp": "Growing and responding to light are only two of the seven characteristics. We need evidence of ALL seven before concluding something is living. For example, crystals grow but are not alive.","trap": "Never conclude something IS living based on just one or two characteristics. You need evidence for all seven: move, feed, grow, respond, reproduce, breathe, have a lifespan."},{"topic": "plants","level": "P3","q": "What do plants need to make their own food?","opts": ["Sunlight, water and carbon dioxide","Soil, water and oxygen","Sunlight, nitrogen and water","Carbon dioxide, oxygen and soil"],"ans": 0,"exp": "Plants make food through photosynthesis using three things: sunlight (energy), water (absorbed by roots), and carbon dioxide (absorbed through leaves). They produce glucose and oxygen.","trap": "Plants do NOT need soil to make food. They need soil to anchor themselves and absorb minerals, but photosynthesis uses sunlight, water, and CO2 — not soil."},{"topic": "plants","level": "P3","q": "What is the function of roots in a plant?","opts": ["To make food","To produce flowers","To anchor the plant and absorb water and minerals","To release oxygen"],"ans": 2,"exp": "Roots have two main functions: they anchor the plant firmly in the soil, and they absorb water and dissolved minerals from the soil. Root hairs increase the surface area for absorption.","trap": "Roots do NOT make food — that is done in the leaves. Roots absorb water and minerals. Do not confuse root function with leaf function."},{"topic": "plants","level": "P3","q": "Which part of the plant carries water from the roots to the leaves?","opts": ["Flower","Stem","Root hair","Seed"],"ans": 1,"exp": "The stem acts like a pipeline — it transports water and minerals absorbed by the roots upward to the leaves and other parts of the plant through special tubes.","trap": "Root hairs absorb water but do not transport it to the leaves. The stem does the transporting. Remember: roots absorb, stems transport."},{"topic": "plants","level": "P3","q": "Which gas do plants release during photosynthesis?","opts": ["Carbon dioxide","Nitrogen","Oxygen","Water vapour only"],"ans": 2,"exp": "During photosynthesis, plants take in carbon dioxide and water, and use sunlight to produce glucose (food) and oxygen. The oxygen is released into the air.","trap": "Plants release OXYGEN during photosynthesis. They also produce carbon dioxide during respiration, but the question asks specifically about photosynthesis."},{"topic": "plants","level": "P3","q": "What would happen to a plant kept in a completely dark room for several weeks?","opts": ["It would grow faster without disturbance","It would survive by absorbing more water","It would eventually die because it cannot make food without light","It would turn green to find more light"],"ans": 2,"exp": "Without light, a plant cannot carry out photosynthesis and cannot make food. It will use up its stored food, its leaves will turn yellow, and it will eventually die.","trap": "Plants cannot substitute more water for missing light. Without the energy from sunlight, photosynthesis stops completely. The plant will weaken and die."},{"topic": "animals","level": "P3","q": "A caterpillar changes into a butterfly. What is this process called?","opts": ["Reproduction","Metamorphosis","Germination","Adaptation"],"ans": 1,"exp": "Metamorphosis is the process by which some animals change body form during their life cycle. A butterfly undergoes COMPLETE metamorphosis: egg, larva (caterpillar), pupa (chrysalis), adult.","trap": "Germination is what seeds do, not animals. Metamorphosis is specifically the dramatic change in body form during development."},{"topic": "animals","level": "P3","q": "What are the four stages of a butterfly life cycle IN ORDER?","opts": ["Egg, Pupa, Larva, Adult","Egg, Larva, Pupa, Adult","Larva, Egg, Pupa, Adult","Adult, Egg, Larva, Pupa"],"ans": 1,"exp": "A butterfly undergoes COMPLETE metamorphosis in four stages: Egg, Larva (caterpillar), Pupa (chrysalis, where transformation happens), Adult (butterfly). This is the correct order.","trap": "Students often mix up larva and pupa. The LARVA (caterpillar) comes BEFORE the PUPA (chrysalis). L comes before P in the alphabet, just as Larva comes before Pupa."},{"topic": "animals","level": "P3","q": "Which of these animals undergoes INCOMPLETE metamorphosis?","opts": ["Butterfly","Frog","Grasshopper","Housefly"],"ans": 2,"exp": "Grasshoppers undergo INCOMPLETE metamorphosis: egg, nymph (young that looks like a small adult), adult. There is NO pupa stage. Butterflies and houseflies have complete metamorphosis (with pupa).","trap": "Incomplete metamorphosis has only 3 stages: egg, nymph, adult — no pupa. Grasshoppers, cockroaches are examples. Butterflies and houseflies have COMPLETE metamorphosis (4 stages including pupa)."},{"topic": "animals","level": "P3","q": "What is the correct life cycle of a FROG?","opts": ["Egg, Larva, Pupa, Adult","Egg, Nymph, Adult","Egg, Tadpole, Young frog, Adult frog","Egg, Caterpillar, Frog"],"ans": 2,"exp": "Frogs have a unique life cycle: Egg (laid in water), Tadpole (aquatic, breathes with gills), Young frog (growing legs, losing tail), Adult frog (can live on land and in water).","trap": "Frogs do NOT go through pupa or larva stages. Their aquatic young are called tadpoles, not larvae or nymphs."},{"topic": "animals","level": "P3","q": "What do mammals have that most other animals do not?","opts": ["Scales on their skin","Fur or hair, and they feed young with milk","Six legs","Cold blood"],"ans": 1,"exp": "Mammals are characterised by having fur or hair, being warm-blooded, and feeding their young with milk produced by the mother. Examples: humans, cats, dolphins, bats.","trap": "Reptiles have scales. Insects have six legs. Fish and reptiles are cold-blooded. Mammals are warm-blooded and feed young with milk — that is what makes them mammals."},{"topic": "fungi","level": "P3","q": "How is a mushroom DIFFERENT from a plant?","opts": ["Mushrooms move; plants do not","Mushrooms cannot make their own food; plants can","Mushrooms need sunlight; plants do not","Mushrooms grow in soil; plants do not"],"ans": 1,"exp": "Mushrooms are fungi. Unlike plants, fungi cannot make their own food through photosynthesis because they have no chlorophyll. Fungi get their food by breaking down dead or decaying organic matter.","trap": "Both plants and fungi grow in soil — that is not the difference. The key difference is that plants CAN make food (photosynthesis), but fungi CANNOT."},{"topic": "fungi","level": "P3","q": "What do bacteria and fungi have in common?","opts": ["Both are plants","Both are animals","Both are decomposers that break down dead matter","Both make food through photosynthesis"],"ans": 2,"exp": "Both bacteria and fungi are decomposers — they break down dead or decaying organic matter into simpler substances. This returns nutrients to the soil for plants to use.","trap": "Neither bacteria nor fungi are plants or animals. Neither can photosynthesize. Their shared role is decomposition — breaking down dead material."},{"topic": "fungi","level": "P3","q": "Fungi reproduce by releasing tiny particles called:","opts": ["Seeds","Eggs","Spores","Pollen"],"ans": 2,"exp": "Fungi reproduce by releasing spores — tiny, lightweight particles that can be carried by wind or water. When spores land on a suitable moist surface, they grow into new fungi.","trap": "Seeds are produced by plants. Pollen is used in plant reproduction. Eggs are produced by animals. Fungi use spores — not seeds or pollen."},{"topic": "fungi","level": "P3","q": "Why does bread in a warm, damp place grow mould faster?","opts": ["Mould needs sunlight to grow","Warm, damp conditions help mould (a fungus) grow faster","Bread produces mould by itself","Cold temperatures help mould reproduce"],"ans": 1,"exp": "Mould is a type of fungus. Fungi grow best in warm, moist, dark conditions. Warmth speeds up their growth, and moisture provides the conditions they need to reproduce and break down the bread.","trap": "Mould does NOT need sunlight — fungi do not photosynthesize. Cold (like a fridge) actually SLOWS mould growth. Warm and DAMP is what mould thrives in."},{"topic": "fungi","level": "P3","q": "What role do decomposers play in a garden?","opts": ["They compete with plants for sunlight","They eat insects","They break down dead leaves and return nutrients to the soil","They produce oxygen for other plants"],"ans": 2,"exp": "Decomposers (fungi and bacteria) break down dead leaves, dead animals, and other organic matter. This releases minerals and nutrients back into the soil, which plants then absorb through their roots.","trap": "Decomposers do not compete with plants or eat insects. Their key role is recycling nutrients — breaking down dead material so minerals can be reused by living plants."},{"topic": "materials","level": "P3","q": "What is the property of a TRANSPARENT material?","opts": ["Light cannot pass through it at all","Light passes through it and you can see clearly through it","Light partially passes through but objects look blurry","It absorbs all light"],"ans": 1,"exp": "Transparent materials allow light to pass through completely and clearly, so you can see objects through them. Examples: clear glass, clean water, clear plastic.","trap": "Transparent is NOT the same as translucent. Translucent lets some light through but makes objects look blurry (e.g., frosted glass). Transparent = see clearly through it."},{"topic": "materials","level": "P3","q": "A wooden block floats but an iron nail sinks. Why?","opts": ["Wood is larger than the nail","Iron is denser than wood — more mass for the same volume","Wood contains air pockets only","Iron absorbs water and becomes heavy"],"ans": 1,"exp": "Density determines whether an object floats or sinks. Iron has much greater density than water, so it sinks. Wood has lower density than water, so it floats. Size alone does not determine floating.","trap": "The SIZE or WEIGHT alone does not determine whether something floats. A large wooden ship floats, but a tiny iron nail sinks. It is DENSITY that matters."},{"topic": "materials","level": "P3","q": "Which is the BEST material to make an oven glove?","opts": ["Metal foil","Thick cloth/fabric","Thin plastic","Clear glass"],"ans": 1,"exp": "An oven glove must be a poor conductor of heat (a heat insulator) to protect your hand. Thick cloth/fabric is a poor conductor — it slows down heat transfer from the hot dish to your hand.","trap": "Metal is an EXCELLENT conductor of heat — it would make the worst oven glove as it would transfer heat very quickly to your hand. Always choose insulators for protection from heat."},{"topic": "light","level": "P3","q": "Light travels in:","opts": ["Curved lines","Straight lines","Zigzag lines","Wavy lines only"],"ans": 1,"exp": "Light always travels in straight lines. This is why we can form sharp shadows — if light curved around objects, shadows would be blurry or non-existent.","trap": "Light travels in straight lines, NOT curved lines. This is easy to see with shadows: a sharp shadow forms because light cannot bend around the object blocking it."},{"topic": "light","level": "P3","q": "When light hits a MIRROR, what happens?","opts": ["Light is absorbed by the mirror","Light passes through the mirror","Light bounces off the mirror (reflection)","Light slows down and stops"],"ans": 2,"exp": "Mirrors reflect light — the light bounces off the smooth, shiny surface. This is called reflection. The angle of incidence equals the angle of reflection.","trap": "Mirrors REFLECT light — they do not absorb it (black surfaces do that) and do not let light pass through (transparent materials do that). The key word is REFLECTION."},{"topic": "light","level": "P3","q": "Which of these objects is a SOURCE of light?","opts": ["Moon","Mirror","White paper","Torch (flashlight)"],"ans": 3,"exp": "A light source produces its own light. A torch has a battery and bulb that generate light. The Moon, mirror, and white paper only REFLECT light from the Sun or other sources — they do not produce light themselves.","trap": "The Moon is NOT a light source — it reflects sunlight. Only objects that PRODUCE their own light (Sun, torch, fire, candle, light bulb) are light sources."},{"topic": "light","level": "P3","q": "Why does a sharp shadow form behind an opaque object?","opts": ["Light bends around the object","Light cannot pass through the opaque object, and light travels in straight lines","The object absorbs all surrounding light","Shadows form because light is magnetic"],"ans": 1,"exp": "Opaque objects block light completely. Since light travels in straight lines and cannot pass through or bend around the object, a region behind the object receives no light — this dark area is the shadow.","trap": "Light does NOT bend around objects. Light travels in straight lines, so the area directly behind an opaque object gets no light at all — forming a sharp shadow."},{"topic": "heat","level": "P3","q": "What happens to most materials when they are heated?","opts": ["They shrink (contract)","They expand (get bigger)","They stay exactly the same size","They immediately melt"],"ans": 1,"exp": "When materials are heated, their particles gain energy and move faster, spreading further apart. This causes the material to expand (get bigger). Metal bridges have expansion joints to allow for this.","trap": "Heating causes EXPANSION (getting bigger), not contraction (shrinking). Cooling causes contraction. Remember: Hot = Expand, Cold = Contract."},{"topic": "heat","level": "P3","q": "Heat flows from a ______ object to a ______ object.","opts": ["Cold to hot","Hot to cold","Big to small","Small to big"],"ans": 1,"exp": "Heat always flows from a hotter object to a cooler object — never in reverse. This continues until both objects reach the same temperature (thermal equilibrium).","trap": "Heat ALWAYS flows from HOT to COLD — never the other way around. When two objects touch, the hotter one loses heat and cools; the colder one gains heat and warms up."},{"topic": "heat","level": "P3","q": "Which of these is the BEST conductor of heat?","opts": ["Wood","Plastic","Iron (metal)","Air"],"ans": 2,"exp": "Metals like iron are excellent conductors of heat because their particles are closely packed and transfer energy quickly. This is why metal pans heat up fast.","trap": "Wood, plastic, and air are all POOR conductors of heat (insulators). Metals are good conductors. This is why pot handles are made of plastic or wood — to stop heat reaching your hands."},{"topic": "magnets","level": "P3","q": "Which of these materials is attracted to a magnet?","opts": ["Copper coin","Aluminium foil","Iron nail","Wooden ruler"],"ans": 2,"exp": "Only magnetic materials (iron, steel, nickel, cobalt) are attracted to magnets. An iron nail contains iron and is strongly attracted. Copper and aluminium are metals but NOT magnetic.","trap": "Not all metals are magnetic! Copper, aluminium, gold, and silver are NOT attracted to magnets. Only iron, steel, nickel, and cobalt are magnetic metals."},{"topic": "magnets","level": "P3","q": "What happens when two NORTH poles of magnets are brought together?","opts": ["They attract each other strongly","They repel each other","They become one magnet","Nothing happens"],"ans": 1,"exp": "Like poles repel each other. North-North repels. South-South repels. Only UNLIKE poles (North-South) attract. This is the fundamental law of magnetism.","trap": "LIKE poles REPEL. N and N push each other away. N and S attract. Likes repel, opposites attract."},{"topic": "magnets","level": "P3","q": "Where is the magnetic force STRONGEST in a bar magnet?","opts": ["In the middle","At both ends (poles)","At the sides","Equally strong everywhere"],"ans": 1,"exp": "The magnetic force is strongest at the two ends (poles) of a magnet — the North pole and the South pole. The force is weakest in the middle. Iron filings cluster at the poles.","trap": "The magnetic force is NOT equal everywhere. It is strongest at the POLES (ends) and weakest in the MIDDLE."},{"topic": "magnets","level": "P3","q": "A bar magnet is cut in half across the middle. What happens to each half?","opts": ["One half has only N, the other only S","Each half becomes a complete magnet with both N and S poles","Both halves lose their magnetism","One half is stronger, one half is weaker"],"ans": 1,"exp": "When a magnet is cut, each piece becomes a complete magnet with its own North and South pole. Magnetic poles always come in pairs — you can never have a magnet with only one pole.","trap": "You CANNOT separate the North and South poles of a magnet. No matter how many times you cut a magnet, each piece always has BOTH a North and a South pole."}],"P4": [{"topic": "plantparts","level": "P4","q": "What are the TWO main functions of roots?","opts": ["Make food and store water","Anchor the plant in soil AND absorb water and minerals","Transport water and produce flowers","Produce pollen and attract insects"],"ans": 1,"exp": "Roots serve two key functions: (1) anchoring the plant firmly in the soil so it does not fall over, and (2) absorbing water and dissolved minerals from the soil through root hairs.","trap": "Roots do NOT make food — that happens in the leaves during photosynthesis. Roots absorb and anchor. Do not confuse root function with leaf function."},{"topic": "plantparts","level": "P4","q": "Which part of the plant transports water from roots to leaves?","opts": ["Flower","Stem","Fruit","Seed"],"ans": 1,"exp": "The stem transports water and dissolved minerals absorbed by the roots upwards to the leaves and other parts of the plant through special tube-like structures called xylem vessels.","trap": "The flower is for reproduction. Fruit contains seeds. Seeds grow into new plants. The STEM is the transport system — think of it like the pipes in a building."},{"topic": "plantparts","level": "P4","q": "What is the main function of the LEAF?","opts": ["Absorb water from soil","Produce seeds","Make food through photosynthesis","Attract pollinators"],"ans": 2,"exp": "The main function of a leaf is photosynthesis — making food using sunlight, water, and carbon dioxide. Leaves are broad and flat to absorb maximum sunlight, and contain chlorophyll.","trap": "Leaves make FOOD, not seeds. Seeds are produced in the flower/ovary. Roots absorb water. The leaf's main job is photosynthesis."},{"topic": "plantparts","level": "P4","q": "Why do leaves appear GREEN?","opts": ["They absorb green light","They contain chlorophyll, which reflects green light and absorbs red and blue light","They are coated with green wax","Sunlight turns leaves green"],"ans": 1,"exp": "Leaves contain chlorophyll — a green pigment used to absorb light energy for photosynthesis. Chlorophyll absorbs red and blue light but reflects green light, which is why leaves appear green.","trap": "Leaves appear green because chlorophyll REFLECTS green light, not absorbs it. The chlorophyll actually absorbs red and blue light (the useful wavelengths) and reflects the green we see."},{"topic": "plantparts","level": "P4","q": "A plant is given all it needs EXCEPT carbon dioxide. What happens?","opts": ["Photosynthesis continues normally","Photosynthesis slows then stops — CO2 is a required raw material","Only the colour of leaves changes","The plant absorbs more water to compensate"],"ans": 1,"exp": "Carbon dioxide is a raw material for photosynthesis. Without CO2, the chemical reaction cannot take place, the plant cannot make glucose, and photosynthesis stops. The plant will eventually die.","trap": "Photosynthesis NEEDS sunlight, water, AND carbon dioxide. Remove any one of these and photosynthesis stops. The plant cannot substitute a missing ingredient with more of another."},{"topic": "digestion","level": "P4","q": "What is the correct order food travels through the digestive system?","opts": ["Mouth, Stomach, Oesophagus, Small intestine, Large intestine","Mouth, Oesophagus, Stomach, Small intestine, Large intestine","Mouth, Small intestine, Stomach, Oesophagus, Large intestine","Stomach, Mouth, Oesophagus, Large intestine, Small intestine"],"ans": 1,"exp": "Food follows this path: Mouth (chewing and mixing with saliva), Oesophagus (tube to stomach), Stomach (churning and chemical digestion), Small intestine (most digestion and absorption), Large intestine (absorb water, form waste).","trap": "The OESOPHAGUS comes BEFORE the stomach — it is the tube connecting mouth to stomach. Small intestine always comes before large intestine."},{"topic": "digestion","level": "P4","q": "Where does MOST nutrient absorption take place?","opts": ["Mouth","Stomach","Small intestine","Large intestine"],"ans": 2,"exp": "Most digested nutrients are absorbed into the bloodstream through the walls of the small intestine. The small intestine has a very large surface area (due to finger-like projections called villi) to maximise absorption.","trap": "The STOMACH digests food but absorbs very little. The LARGE intestine mainly absorbs water. Most nutrient absorption happens in the SMALL intestine — despite its name, it is the longest part of the digestive system."},{"topic": "digestion","level": "P4","q": "What does the LARGE INTESTINE mainly do?","opts": ["Digest proteins with enzymes","Absorb water from undigested food and form solid waste (faeces)","Produce bile to break down fats","Store food before digestion"],"ans": 1,"exp": "By the time food reaches the large intestine, most nutrients have already been absorbed. The large intestine absorbs water from the remaining undigested material, making it more solid. This solid waste is then stored until excreted.","trap": "The large intestine does NOT digest food with enzymes. It absorbs WATER and forms solid waste. Think of the large intestine as a water recycler and waste processor."},{"topic": "digestion","level": "P4","q": "Why must food be DIGESTED before it can be used by the body?","opts": ["Digestion makes food look different","Food molecules are too large to be absorbed into the blood — digestion breaks them into smaller molecules","Digestion removes poisonous parts of food","The body only uses food that has been cooked"],"ans": 1,"exp": "Food molecules like starch and proteins are too large to pass through the intestine walls into the bloodstream. Digestion breaks them into much smaller molecules (starch to glucose, proteins to amino acids) that can be absorbed.","trap": "Digestion is not about appearance or removing poison. It is about SIZE — food molecules are too BIG to be absorbed. Digestion breaks them into SMALLER molecules."},{"topic": "digestion","level": "P4","q": "What is the role of SALIVA in digestion?","opts": ["Saliva kills bacteria only","Saliva moistens food and begins breaking down starch with enzymes","Saliva stores nutrients temporarily","Saliva solidifies food to make swallowing easier"],"ans": 1,"exp": "Saliva from the salivary glands does two things: (1) it moistens and softens food to make it easier to swallow, and (2) it contains digestive enzymes that begin breaking down starch into simpler sugars.","trap": "Saliva does NOT only kill bacteria. Its main digestive role is to BEGIN breaking down STARCH with enzymes. If you chew a plain cracker for a long time, it starts to taste sweet — starch is turning into sugar."},{"topic": "reproduction","level": "P4","q": "What is the main function of a FLOWER?","opts": ["Make food through photosynthesis","Absorb water from soil","For sexual reproduction — to produce seeds","Support the plant weight"],"ans": 2,"exp": "The main function of a flower is sexual reproduction. Flowers contain the male (stamen with pollen) and female (pistil with ovule) reproductive parts. Through pollination and fertilisation, flowers produce seeds.","trap": "Leaves make food, not flowers. Roots absorb water. Stems support the plant. Flowers exist for ONE purpose: reproduction."},{"topic": "reproduction","level": "P4","q": "What is POLLINATION?","opts": ["A seed germinating in soil","Transfer of pollen from the anther to the stigma","The joining of the pollen nucleus with the egg cell","A fruit ripening on a plant"],"ans": 1,"exp": "Pollination is the transfer of pollen grains from the anther (male part) to the stigma (female part) of a flower. This can happen by wind, insects, birds, or water. Pollination must happen before fertilisation.","trap": "POLLINATION is the transfer of POLLEN to the STIGMA — not the joining of cells. That joining is FERTILISATION. Sequence: Pollination, then Fertilisation, then Seed formation."},{"topic": "reproduction","level": "P4","q": "How are seeds of a DANDELION dispersed?","opts": ["By water — they float","By animals eating the fruit","By wind — feathery parachutes carry them","By explosive pods bursting"],"ans": 2,"exp": "Dandelion seeds have a feathery, parachute-like structure (pappus) that allows them to be carried by the wind over long distances. This is a wind dispersal adaptation.","trap": "Dandelions use WIND dispersal, not water or animals. Coconuts use water dispersal. Berries use animal dispersal. Touch-me-not plants use explosive dispersal. Dandelion's feathery structure is the key clue."},{"topic": "reproduction","level": "P4","q": "What happens to the OVULE after fertilisation in a flower?","opts": ["It becomes the fruit","It becomes the seed","It becomes the new stem","It dries up and falls off"],"ans": 1,"exp": "After fertilisation (when the pollen nucleus joins the egg cell inside the ovule), the ovule develops into a seed. The seed contains a tiny embryo and a food store. The ovary surrounding the ovule develops into the fruit.","trap": "The OVULE becomes the SEED. The OVARY (which surrounds the ovule) becomes the FRUIT. Students often mix these up. Ovule = seed, Ovary = fruit."},{"topic": "reproduction","level": "P4","q": "Which feature shows a flower is pollinated by INSECTS rather than wind?","opts": ["Very small and light pollen grains","No petals","Large, colourful petals and sweet nectar","Very tall stamens sticking out of the flower"],"ans": 2,"exp": "Insect-pollinated flowers attract insects with large, colourful, scented petals and sweet nectar. The pollen is sticky and clings to visiting insects. Wind-pollinated flowers have no petals and light pollen.","trap": "WIND-pollinated flowers have light, small pollen and no bright petals (they do not need to attract animals). INSECT-pollinated flowers need to ATTRACT insects, so they have bright colours, scent, and nectar."},{"topic": "matter","level": "P4","q": "Which statement about SOLIDS is correct?","opts": ["No fixed shape, no fixed volume","Fixed shape and fixed volume","No fixed shape but fixed volume","Can be compressed easily"],"ans": 1,"exp": "Solids have a fixed shape and fixed volume — they do not change shape unless a force is applied. This is because particles in a solid are closely packed and held in fixed positions.","trap": "Solids have BOTH fixed shape AND fixed volume. Liquids have fixed volume but NO fixed shape. Gases have NEITHER fixed shape nor fixed volume."},{"topic": "matter","level": "P4","q": "What is the process when a LIQUID changes to a GAS called?","opts": ["Melting","Freezing","Evaporation","Condensation"],"ans": 2,"exp": "Evaporation is when a liquid is heated and changes into a gas (vapour). This happens when liquid water is heated and turns into water vapour. Evaporation can also happen slowly at room temperature.","trap": "Melting = solid to liquid. Freezing = liquid to solid. Condensation = gas to liquid. EVAPORATION = liquid to gas. Learn all four change-of-state terms."},{"topic": "matter","level": "P4","q": "When steam cools and becomes liquid water, this is called:","opts": ["Evaporation","Freezing","Condensation","Melting"],"ans": 2,"exp": "Condensation is when a gas cools down and changes into a liquid. Steam (water vapour) cooling and becoming liquid water droplets is condensation. You see this on cold glasses or mirrors after a shower.","trap": "CONDENSATION = gas to liquid (opposite of evaporation). Evaporation = liquid to gas. A cold glass on a humid day has condensation on the outside — water vapour is cooling and becoming liquid."},{"topic": "matter","level": "P4","q": "A gas is put into a smaller container. What happens to the gas?","opts": ["The gas stays the same size and does not fit","The gas compresses to fill the new container completely","The gas becomes a liquid","The gas escapes through the container walls"],"ans": 1,"exp": "Gases have no fixed shape or fixed volume — they spread out to fill any container completely. When moved to a smaller container, a gas can be compressed (particles move closer together) and still fills the new container fully.","trap": "Gases are COMPRESSIBLE — their particles are far apart and can be pushed closer together. Solids and liquids cannot be compressed significantly. Any gas in any container fills that container completely."},{"topic": "matter","level": "P4","q": "Ice is left at room temperature. What change of state occurs?","opts": ["Condensation","Evaporation","Melting","Freezing"],"ans": 2,"exp": "Ice is a solid (frozen water). At room temperature (above 0 degrees C), heat from the surroundings is absorbed by the ice, causing it to change from solid to liquid — this is melting.","trap": "MELTING = solid to liquid (requires heat to be absorbed). FREEZING = liquid to solid (requires heat to be released). Since the ice is gaining heat from the room, it melts."},{"topic": "electricals","level": "P4","q": "For electricity to flow in a circuit, it must be:","opts": ["Open — with at least one gap","Complete (closed) — with no gaps or breaks","Made of plastic only","Connected to more than one battery"],"ans": 1,"exp": "Electricity flows only in a COMPLETE (closed) circuit — one with no gaps or breaks. If there is any gap (an open switch, a broken wire, a missing bulb), the circuit is broken and no current flows.","trap": "You only need ONE battery to make a circuit work. The critical requirement is that the circuit must be COMPLETE (closed) with no gaps. An open switch creates a gap and breaks the circuit."},{"topic": "electricals","level": "P4","q": "Which is the BEST conductor of electricity?","opts": ["Rubber","Wood","Copper wire","Plastic"],"ans": 2,"exp": "Copper is an excellent conductor of electricity — this is why electrical wires are made of copper. Rubber, wood, and plastic are all electrical insulators — they do not allow electricity to pass through them.","trap": "Not all materials conduct electricity. Copper is one of the best conductors. Rubber, wood, and plastic are all INSULATORS. Wire has copper inside (conductor) with plastic coating outside (insulator for safety)."},{"topic": "electricals","level": "P4","q": "In a SERIES circuit with 2 bulbs, one bulb is removed. What happens to the other?","opts": ["The other bulb glows brighter","The other bulb stays the same brightness","The other bulb goes out too (circuit is broken)","The other bulb flashes on and off"],"ans": 2,"exp": "In a SERIES circuit, all components are connected in one single loop. Removing one bulb creates a gap in the circuit — the circuit is broken. No current flows anywhere, so the remaining bulb also goes out.","trap": "In a SERIES circuit, everything is in ONE loop. Breaking the loop ANYWHERE stops current flowing EVERYWHERE. This is different from a PARALLEL circuit, where removing one bulb does not affect the others."},{"topic": "electricals","level": "P4","q": "A switch is added to a circuit. What does it do?","opts": ["It increases the brightness of all bulbs","It allows the circuit to be opened and closed (turned on and off)","It reduces the number of batteries needed","It changes the direction of current flow"],"ans": 1,"exp": "A switch controls whether the circuit is open (broken — no current flows) or closed (complete — current flows). When the switch is open, the circuit is broken and the bulb goes off. When closed, current flows.","trap": "A switch does NOT change brightness or current direction. It is a simple on/off control — it OPENS or CLOSES the circuit."},{"topic": "electricals","level": "P4","q": "Two batteries are connected in a circuit instead of one. The bulb:","opts": ["Goes out (too much power)","Stays the same brightness","Glows brighter (more electrical energy)","Glows for a shorter time only"],"ans": 2,"exp": "Adding a second battery to a circuit increases the electrical energy (voltage) in the circuit. More electrical energy means more current flows, which makes the bulb glow brighter. Two batteries give roughly double the voltage.","trap": "More batteries = MORE energy = BRIGHTER bulb (up to a point — too many batteries can burn out the bulb). More energy leads to brighter glow."},{"topic": "magnets","level": "P4","q": "Which is attracted to a magnet?","opts": ["Copper coin","Aluminium foil","Steel paper clip","Plastic ruler"],"ans": 2,"exp": "Steel is a magnetic material (it contains iron) and is strongly attracted to magnets. Copper, aluminium, and plastic are all non-magnetic — they are not attracted to magnets.","trap": "Not all metals are magnetic! Copper and aluminium are metals but NOT magnetic. Only iron, steel, nickel, and cobalt are magnetic. If it contains iron, it is likely magnetic."},{"topic": "magnets","level": "P4","q": "Two SOUTH poles face each other. What happens?","opts": ["They attract each other strongly","They repel each other","One pole changes to North","Nothing happens"],"ans": 1,"exp": "Like poles repel. South-South repels, just as North-North repels. Only unlike poles (North and South) attract each other. This is the fundamental law of magnetic poles.","trap": "LIKE poles always REPEL — whether it is N-N or S-S. UNLIKE poles (N-S) attract. The pole type does not matter — as long as they are the same type, they repel."},{"topic": "magnets","level": "P4","q": "A magnet is cut in half. What happens to the two pieces?","opts": ["One = N only; other = S only","Each becomes a complete magnet with N and S poles","Both lose magnetism","One stronger, one weaker"],"ans": 1,"exp": "When a magnet is cut, each piece forms a complete magnet with its own North and South pole. Magnetic poles always come in pairs — you can never isolate a single pole.","trap": "You CANNOT separate the poles of a magnet. Each piece always has BOTH poles. Even if you cut a magnet into 100 pieces, each tiny piece still has a North and a South pole."},{"topic": "magnets","level": "P4","q": "What is the BEST way to test if an unknown metal is magnetic?","opts": ["Weigh it on a scale","Hold it near a magnet and observe if it is attracted","Dip it in water and see if it floats","Heat it and observe if it melts quickly"],"ans": 1,"exp": "To test if a material is magnetic, hold it near a known magnet and observe whether it is attracted. If it is attracted, the material is magnetic. Weighing, floating, or melting tell you nothing about magnetic properties.","trap": "Only a magnetic test can tell you if something is magnetic. The only correct test is to see if the material is ATTRACTED to a known magnet."},{"topic": "magnets","level": "P4","q": "Why is steel used to make permanent magnets rather than iron?","opts": ["Steel is cheaper than iron","Steel is heavier than iron","Steel retains its magnetism much longer than iron","Steel is a better conductor of electricity"],"ans": 2,"exp": "Iron is easily magnetised but also easily loses its magnetism (it is a temporary magnet). Steel retains its magnetism for much longer after being magnetised, making it suitable for permanent magnets.","trap": "STEEL retains magnetism longer, making it ideal for PERMANENT magnets. IRON is easily magnetised and demagnetised — it is used for TEMPORARY magnets (like electromagnets). The key difference is how long each material holds its magnetism."}],"P5": [{"topic": "reproduction","level": "P5","q": "Which type of reproduction involves ONE parent and produces offspring IDENTICAL to the parent?","opts": ["Sexual reproduction","Asexual reproduction","Pollination","Fertilisation"],"ans": 1,"exp": "Asexual reproduction involves only ONE parent and produces offspring that are genetically identical to that parent. Examples: budding in Hydra, runners in strawberry plants, spores in ferns. No fertilisation is needed.","trap": "SEXUAL reproduction needs TWO parents and produces offspring with a mix of both parents' characteristics. ASEXUAL reproduction needs only ONE parent and produces identical copies. PSLE loves testing this distinction."},{"topic": "reproduction","level": "P5","q": "In sexual reproduction in flowering plants, what happens at FERTILISATION?","opts": ["Pollen lands on the stigma","The pollen nucleus fuses with the egg cell inside the ovule","Seeds are dispersed by wind","Flowers bloom to attract insects"],"ans": 1,"exp": "Fertilisation is when the pollen nucleus (male cell) travels down the style and fuses with the egg cell inside the ovule (female cell). This creates a zygote that develops into an embryo inside the seed.","trap": "POLLINATION is pollen landing on the stigma. FERTILISATION is the actual joining (fusion) of pollen nucleus and egg cell inside the ovule. These are two separate and sequential events."},{"topic": "reproduction","level": "P5","q": "A strawberry plant sends out long shoots with plantlets at the tips. This is:","opts": ["Sexual reproduction","Fertilisation","Asexual reproduction by runners","Seed dispersal"],"ans": 2,"exp": "Runners are horizontal stems that grow from the parent plant. Where the runner touches the soil, a new plantlet grows, genetically identical to the parent. This is asexual reproduction — no pollen, no fertilisation.","trap": "Runners are a form of ASEXUAL reproduction — the new plant is a clone of the parent. No flowers, no pollen, no fertilisation involved. Other examples: bulbs (onions), tubers (potatoes), spores (ferns)."},{"topic": "reproduction","level": "P5","q": "What is the main advantage of sexual reproduction over asexual reproduction?","opts": ["It requires less energy","It produces more offspring quickly","Offspring have genetic variation — better chance of surviving environmental changes","All offspring are identical and guaranteed to survive"],"ans": 2,"exp": "Sexual reproduction combines genes from two parents, producing offspring with varied characteristics. This genetic variation means some offspring may be better suited to survive if the environment changes.","trap": "Asexual reproduction produces MORE offspring FASTER and requires LESS energy. The ADVANTAGE of sexual reproduction is GENETIC VARIATION — variation gives a species a better chance of surviving environmental changes."},{"topic": "reproduction","level": "P5","q": "Which of the following is an example of ASEXUAL reproduction in animals?","opts": ["A dog giving birth to puppies","A hen laying a fertilised egg","A Hydra producing a bud that grows into a new organism","A frog releasing eggs into water"],"ans": 2,"exp": "Hydra (a tiny aquatic animal) reproduces asexually by budding — a small bud grows from the parent's body and eventually breaks off to become a complete, identical new organism. Dogs, hens, and frogs all reproduce sexually.","trap": "Most animals reproduce sexually. Asexual reproduction in animals is less common — Hydra (budding) is the key P5 example. All other options involve eggs being fertilised by sperm — that is sexual reproduction."},{"topic": "respiratory","level": "P5","q": "What is the correct PATH of air entering your body?","opts": ["Mouth/Nose, Trachea, Bronchi, Bronchioles, Alveoli","Mouth, Stomach, Lungs","Nose, Alveoli, Trachea, Bronchi","Bronchi, Trachea, Alveoli, Lungs"],"ans": 0,"exp": "Air enters through the mouth or nose, passes down the trachea (windpipe), branches into two bronchi (one per lung), then into smaller bronchioles, and finally reaches the alveoli where gas exchange occurs.","trap": "The order is: Mouth/Nose, Trachea, Bronchi, Bronchioles, Alveoli. Air goes from BIGGER tubes to SMALLER tubes. Many students forget that bronchi come before bronchioles, and that alveoli are the final destination."},{"topic": "respiratory","level": "P5","q": "Gas exchange in the alveoli: oxygen goes ______, carbon dioxide goes ______.","opts": ["Into the blood; into the alveoli","From the alveoli into the blood; from the blood into the alveoli","Both gases go into the blood","Neither gas moves — gases stay in the alveoli"],"ans": 1,"exp": "In the alveoli: oxygen (from inhaled air) diffuses across the thin alveoli walls into the surrounding blood capillaries. Carbon dioxide (from body cells carried by blood) diffuses from the blood into the alveoli, to be breathed out.","trap": "Remember: oxygen IN (to blood), CO2 OUT (to alveoli to be exhaled). Oxygen and CO2 move in OPPOSITE directions across the alveoli wall."},{"topic": "respiratory","level": "P5","q": "What is the role of the DIAPHRAGM in breathing?","opts": ["Filter dust from air","A dome-shaped muscle that contracts to pull air IN and relaxes to push air OUT","Produce mucus to trap germs","Exchange oxygen and carbon dioxide with the blood"],"ans": 1,"exp": "The diaphragm is a large, dome-shaped muscle below the lungs. When it CONTRACTS, it flattens and moves down, increasing chest volume — air is pulled IN (inhalation). When it RELAXES, it curves up, decreasing chest volume — air is pushed OUT (exhalation).","trap": "The diaphragm is a MUSCLE — it does NOT filter air or exchange gases. Filtering is done by nose hairs and mucus. Gas exchange happens in the alveoli. The diaphragm's job is to CHANGE THE VOLUME of the chest."},{"topic": "respiratory","level": "P5","q": "Why do alveoli have MANY small sacs rather than being one large chamber?","opts": ["To slow down gas exchange","To increase the total surface area for faster, more efficient gas exchange","To store more air in the lungs","To prevent air from entering the bloodstream directly"],"ans": 1,"exp": "There are millions of tiny alveoli in each lung. Their small, round shape creates an enormous total surface area — much larger than one big chamber would have. Greater surface area means more oxygen can diffuse into the blood per breath.","trap": "The millions of tiny alveoli create a MASSIVE surface area for gas exchange. If the lungs were one big air sac, the surface area would be tiny. More surface area = faster, more efficient gas exchange."},{"topic": "respiratory","level": "P5","q": "Why does breathing rate INCREASE during exercise?","opts": ["The body needs less oxygen during exercise","Muscle cells need more oxygen and produce more CO2 — the body breathes faster to supply O2 and remove CO2","Exercise makes the diaphragm relax permanently","The alveoli get bigger during exercise"],"ans": 1,"exp": "During exercise, muscle cells respire faster and need more oxygen while producing more carbon dioxide. The body detects the rise in CO2 and signals the diaphragm to contract faster — increasing breathing rate.","trap": "Exercise INCREASES — not decreases — oxygen need. The body speeds up breathing to SUPPLY more O2 to working muscles AND to REMOVE the extra CO2 they produce."},{"topic": "transport","level": "P5","q": "What are the THREE main types of blood cells and their functions?","opts": ["Red (carry O2), white (fight infection), platelets (form clots)","Red (fight infection), white (carry O2), platelets (absorb nutrients)","Red (carry nutrients), white (carry O2), platelets (fight infection)","All blood cells carry oxygen equally"],"ans": 0,"exp": "Red blood cells carry oxygen (using haemoglobin). White blood cells fight bacteria and viruses (the immune system). Platelets are tiny cell fragments that clump together to form blood clots and stop bleeding.","trap": "Each blood cell type has ONE specific job: Red = oxygen transport, White = fight infection, Platelets = clotting. Do not mix them up — especially red and white. Red does NOT fight infection."},{"topic": "transport","level": "P5","q": "What is the function of RED BLOOD CELLS?","opts": ["Fight bacteria and viruses","Carry oxygen from the lungs to all body cells","Form blood clots at wounds","Transport nutrients from digestion"],"ans": 1,"exp": "Red blood cells contain haemoglobin, a protein that binds to oxygen in the lungs and carries it through the bloodstream to all cells in the body. The red blood cells then carry carbon dioxide from cells back to the lungs.","trap": "RED blood cells carry OXYGEN. WHITE blood cells fight infection. Platelets form clots. Plasma transports nutrients. Each type has a specific function."},{"topic": "transport","level": "P5","q": "Blood flows: Heart to Lungs to Heart to Body. The journey from HEART to LUNGS and back is called:","opts": ["Systemic circulation","Pulmonary circulation","Lymphatic circulation","Cardiac circulation"],"ans": 1,"exp": "Pulmonary circulation is the journey of blood from the heart to the lungs (to pick up oxygen and drop off CO2) and back to the heart. Systemic circulation is from the heart to the rest of the body and back.","trap": "PULMONARY = LUNGS (pulmonary means relating to the lungs). SYSTEMIC = BODY. Heart to Lungs and back = PULMONARY circulation. Heart to Body and back = SYSTEMIC circulation."},{"topic": "transport","level": "P5","q": "Why is the blood in ARTERIES under HIGH pressure?","opts": ["High pressure cools the blood","High pressure is needed to push blood all the way from the heart to distant body cells","High pressure prevents oxygen loss","High pressure makes blood move slower for better absorption"],"ans": 1,"exp": "Arteries carry blood away from the heart. The heart pumps blood at high pressure so that it can travel the long distances to the extremities (fingers, toes, brain) and still have enough pressure to enter tiny capillaries.","trap": "High pressure in arteries is needed for DISTANCE — to push blood all the way to the far reaches of the body. Without sufficient pressure, blood would not reach the fingers, feet, or brain."},{"topic": "transport","level": "P5","q": "What is the main difference between ARTERIES and VEINS?","opts": ["Arteries carry red blood; veins carry blue blood","Arteries carry blood away from the heart; veins carry blood back to the heart","Arteries carry nutrients; veins carry oxygen","Arteries are in the legs only; veins are in the arms only"],"ans": 1,"exp": "Arteries carry blood AWAY from the heart (usually oxygenated). Veins carry blood BACK to the heart (usually deoxygenated, carrying CO2). The pulmonary artery is an exception — it carries deoxygenated blood to the lungs.","trap": "Blood in arteries is NOT always red and veins NOT always blue — that is a simplification. The real distinction is DIRECTION: Arteries = Away from heart. Veins = returning to heart. Use the A in Artery to remember: Away."},{"topic": "watercycle","level": "P5","q": "What is EVAPORATION in the water cycle?","opts": ["Water vapour cooling to form liquid water","Liquid water absorbing heat energy and turning into water vapour","Rain falling from clouds","Water soaking into the ground"],"ans": 1,"exp": "Evaporation is when liquid water at the surface (oceans, lakes, rivers, puddles) absorbs heat energy from the sun and transforms into water vapour (a gas) that rises into the atmosphere.","trap": "EVAPORATION = liquid to gas (needs heat energy). CONDENSATION = gas to liquid (releases heat energy). The word clue: evaporate means to turn into vapour."},{"topic": "watercycle","level": "P5","q": "What is CONDENSATION in the water cycle?","opts": ["Water vapour rising into the atmosphere","Water vapour cooling and turning back into liquid water droplets, forming clouds","Rain falling from clouds","Plants releasing water vapour through leaves"],"ans": 1,"exp": "Condensation happens when water vapour rises and cools at high altitude. As it cools below its dew point, it turns back into tiny liquid water droplets that form clouds.","trap": "CONDENSATION = gas to liquid (water vapour forming liquid droplets and clouds). PRECIPITATION = water falling from clouds as rain or snow. Many students confuse condensation with rain — condensation is cloud FORMATION, not water FALLING."},{"topic": "watercycle","level": "P5","q": "What process releases water vapour from plants into the atmosphere?","opts": ["Evaporation","Condensation","Transpiration","Precipitation"],"ans": 2,"exp": "Transpiration is the process by which plants release water vapour through tiny pores (stomata) on their leaves. Plants absorb water through roots, use some for photosynthesis, and release the excess as water vapour through their leaves.","trap": "TRANSPIRATION is the plant-specific process. EVAPORATION is from non-living water surfaces (oceans, lakes, puddles). Do not call plant water loss evaporation — the correct term is TRANSPIRATION."},{"topic": "watercycle","level": "P5","q": "What is PRECIPITATION?","opts": ["Water turning into vapour from the ocean surface","Water vapour cooling to form clouds","Water falling from clouds as rain, snow, sleet or hail","Plants releasing water into the air"],"ans": 2,"exp": "Precipitation is any form of water that falls from clouds to the ground — rain, snow, sleet, or hail, depending on temperature. It is the stage where water returns from the atmosphere back to the Earth surface.","trap": "PRECIPITATION = water FALLING from clouds. CONDENSATION = water vapour forming clouds. EVAPORATION = liquid water becoming vapour. TRANSPIRATION = plants releasing water. Each step has its own specific name."},{"topic": "watercycle","level": "P5","q": "Why is the water cycle important for life on Earth?","opts": ["It creates new water that did not exist before","It continuously recycles water — distributing fresh water across the Earth surface for all living things","It removes salt from seawater only","It prevents the Earth from getting too hot"],"ans": 1,"exp": "The water cycle continuously moves and recycles water around the Earth. It distributes freshwater (as rain and snow) across land areas, fills rivers and aquifers, and ensures a constant supply of fresh water for plants, animals, and humans.","trap": "The water cycle does NOT create new water — it RECYCLES existing water. The total amount of water on Earth stays roughly the same; the cycle just moves it between the ocean, atmosphere, and land."},{"topic": "adaptation","level": "P5","q": "What does ADAPTATION mean in science?","opts": ["An animal changing its species","Features of a living thing that make it well-suited to survive in its environment","Migration to a new habitat","A species becoming extinct"],"ans": 1,"exp": "An adaptation is a feature (structural, behavioural, or physiological) that helps an organism survive and reproduce in its specific environment. Adaptations are inherited and develop over many generations.","trap": "Adaptations are NOT things that happen in ONE organism lifetime (like a person getting used to cold weather). They are inherited FEATURES that the organism is BORN with, which help it survive in its environment."},{"topic": "adaptation","level": "P5","q": "A camel hump stores FAT — not water. Why is this an adaptation?","opts": ["Fat keeps the camel warm at night only","Fat can be broken down to release water and energy when food and water are scarce","Fat reflects sunlight from the body","Fat absorbs water from the dry desert air"],"ans": 1,"exp": "The camel hump stores fat (not water as many people think). When food and water are scarce in the desert, the camel can break down this fat to release both energy and metabolic water.","trap": "The hump stores FAT, not water. But fat IS an adaptation because when broken down it releases water AND energy. The camel does not store water directly — it produces water by metabolising fat. This is a common PSLE misconception."},{"topic": "adaptation","level": "P5","q": "A cactus has thick fleshy stems, a waxy coating, and spines instead of leaves. These adaptations help it:","opts": ["Attract pollinators in the desert","Survive in dry, hot desert conditions by storing water and reducing water loss","Grow in cold Arctic regions","Float in water environments"],"ans": 1,"exp": "Cactus adaptations for the desert: thick stems store water; waxy coating reduces water loss by evaporation; spines (modified leaves) reduce surface area (less water lost) and protect from animals.","trap": "Each adaptation of the cactus is specifically to CONSERVE WATER in a DRY environment. Spines reduce surface area (less water lost) — they are modified leaves. The waxy coat is a waterproof layer."},{"topic": "adaptation","level": "P5","q": "Why do polar bears have WHITE fur?","opts": ["White fur keeps them warmer than dark fur","White fur camouflages them against snow and ice — helping them hunt and avoid predators","White fur repels water better","White fur is lighter and helps them swim faster"],"ans": 1,"exp": "The white fur of polar bears provides camouflage — it blends in with the snow and ice of the Arctic environment. This helps polar bears hunt prey (like seals) by making them harder to spot.","trap": "White fur actually absorbs LESS heat than dark fur. The advantage of white fur is CAMOUFLAGE — blending in with snow — NOT warmth. Polar bears stay warm because of thick blubber (fat) under their skin."},{"topic": "adaptation","level": "P5","q": "A fish has a streamlined body shape. Why is this an adaptation?","opts": ["To look similar to other fish","To reduce water resistance, allowing it to swim faster and use less energy","To absorb more sunlight in water","To make it heavier so it sinks to the right depth"],"ans": 1,"exp": "A streamlined (torpedo-shaped) body is an adaptation for moving through water efficiently. The smooth, tapered shape reduces drag (water resistance), allowing the fish to swim faster and travel further using less energy.","trap": "Streamlining is about REDUCING DRAG (water resistance). Less drag = faster swimming with less energy. This is why boats, submarines, and aeroplanes also have streamlined shapes."},{"topic": "foodwebs","level": "P5","q": "In a food chain, what do ARROWS represent?","opts": ["Where animals move to find food","The direction of energy flow — from food source to the feeder","Which animals are predators","The speed at which animals move"],"ans": 1,"exp": "Arrows in a food chain show the direction of ENERGY FLOW — pointing from what is being eaten toward the animal that eats it. For example: Grass to Rabbit to Fox means energy flows from grass to rabbit to fox.","trap": "The arrows show ENERGY FLOW, not who eats who directly. Arrows point FROM the food TO the eater — from the source of energy toward the organism gaining that energy. Many students draw arrows in the wrong direction."},{"topic": "foodwebs","level": "P5","q": "What is a PRODUCER in a food chain?","opts": ["An animal that produces young","A plant that makes its own food through photosynthesis","An animal that eats other animals","A decomposer that breaks down dead matter"],"ans": 1,"exp": "Producers are plants (or algae) that produce their own food through photosynthesis using sunlight. They are ALWAYS at the START (base) of every food chain, as they are the original source of energy for all other organisms.","trap": "PRODUCERS make their own food (photosynthesis) — they are plants. CONSUMERS eat other organisms. DECOMPOSERS break down dead matter. The word producer means makes its own food."},{"topic": "foodwebs","level": "P5","q": "What happens to all organisms in a food web if the PRODUCERS are removed?","opts": ["Only the herbivores die","Only the carnivores die","All organisms eventually die — producers are the energy foundation","Decomposers take over and supply energy"],"ans": 2,"exp": "Without producers, herbivores (plant-eaters) have nothing to eat and die. Without herbivores, carnivores (meat-eaters) that depend on them also starve and die. Decomposers need dead matter — once all organisms die, they too have no food.","trap": "Removing producers causes a CHAIN REACTION: herbivores then carnivores then all animals. Even decomposers cannot sustain the ecosystem because they only break down dead matter — they cannot create energy from sunlight like plants do."},{"topic": "foodwebs","level": "P5","q": "A food web shows: Grass to Rabbit to Fox AND Grass to Grasshopper to Frog to Fox. If all rabbits die, what happens to the fox population initially?","opts": ["Fox population increases (more grasshoppers now available)","Fox population decreases but may survive on the frog-grasshopper pathway","Fox population stays exactly the same","All foxes immediately die"],"ans": 1,"exp": "When rabbits disappear, foxes lose one food source so their population decreases. However, foxes can still eat frogs, so the population does not immediately collapse — it depends on whether the remaining food source is sufficient.","trap": "A FOOD WEB has multiple pathways, unlike a food chain. Removing one organism affects others but may not cause complete collapse if alternative food sources exist."},{"topic": "foodwebs","level": "P5","q": "What is the role of DECOMPOSERS in a food web?","opts": ["They eat large animals","They produce energy through photosynthesis like plants","They break down dead organisms and return nutrients to the soil for plants to absorb","They control the population of herbivores"],"ans": 2,"exp": "Decomposers (bacteria and fungi) break down dead plants and animals into simpler substances (minerals and salts). These are returned to the soil where plant roots absorb them. Without decomposers, dead matter would pile up and essential minerals would be locked away.","trap": "Decomposers do NOT eat living animals or photosynthesize. They are the cleanup crew that breaks down DEAD material. Their role is NUTRIENT RECYCLING — releasing minerals from dead organisms back into the soil for plants to use again."},{"topic": "matter","level": "P5","q": "What are the THREE states of matter?","opts": ["Hot, warm, cold","Solid, liquid, gas","Heavy, medium, light","Rock, water, air"],"ans": 1,"exp": "The three states of matter are: Solid (fixed shape and volume — particles closely packed in fixed positions), Liquid (fixed volume but takes shape of container — particles close but can flow), Gas (no fixed shape or volume — particles far apart and move freely).","trap": "States of matter are not about temperature or weight. The three states are SOLID, LIQUID, and GAS. Each has different particle arrangement."},{"topic": "matter","level": "P5","q": "When a SOLID changes directly to a GAS without becoming liquid first, this is called:","opts": ["Evaporation","Condensation","Sublimation","Melting"],"ans": 2,"exp": "Sublimation is when a solid changes directly into a gas, skipping the liquid state. A common example is dry ice (solid CO2) turning into CO2 gas directly, or iodine crystals forming iodine vapour when heated.","trap": "SUBLIMATION is a special change of state — solid directly to gas (no liquid stage). This is different from MELTING (solid to liquid). Sublimation is tested at PSLE — dry ice is the classic example."},{"topic": "matter","level": "P5","q": "Which statement about GASES is correct?","opts": ["Gases have a fixed shape but no fixed volume","Gases have fixed shape and fixed volume","Gases have no fixed shape and no fixed volume — they fill any container completely","Gases are always invisible"],"ans": 2,"exp": "Gases have no fixed shape (they take the shape of their container) and no fixed volume (they expand to fill all available space). Gas particles are far apart and move rapidly in all directions.","trap": "Not all gases are invisible (steam is visible, chlorine gas is yellow-green). Gases have NEITHER fixed shape NOR fixed volume. Solids have BOTH. Liquids have fixed volume but NO fixed shape."},{"topic": "matter","level": "P5","q": "Why can gases be COMPRESSED but solids and liquids cannot?","opts": ["Gases are lighter than solids and liquids","Gas particles are far apart — they can be pushed closer together; solid and liquid particles are already closely packed","Gases change colour when compressed","Gases have more energy than solids"],"ans": 1,"exp": "Gas particles are very far apart with large spaces between them. When pressure is applied, these particles can be pushed closer together. In contrast, solid and liquid particles are already closely packed, so there is little space to compress further.","trap": "Compressibility is about SPACE BETWEEN PARTICLES. Gas particles are FAR APART — lots of space to compress. Solid and liquid particles are ALREADY CLOSE — no room to compress. This is why we can compress air in a bicycle pump but not water."},{"topic": "matter","level": "P5","q": "A student says water boiling at 100 degrees C disappears. What is the correct explanation?","opts": ["The water disappears because it is destroyed","The water turns into invisible water vapour (a gas) — it is still there, just in a different state","The water evaporates completely into the air and is gone forever","The water becomes part of the container"],"ans": 1,"exp": "When water boils, it undergoes vaporisation — it changes from liquid to gaseous water vapour. The water is not destroyed; it is still water (H2O) but in its gaseous state. Water vapour is invisible but still exists. This is a change of state, not the creation or destruction of matter.","trap": "Matter is NEVER destroyed — it just changes state. Boiling water does not disappear — it becomes WATER VAPOUR (invisible gas). The total mass of water stays the same. This is conservation of matter."}]};
+const NAMES     = {"P3": {"diversity": "Diversity of Living Things", "plants": "Plant System", "animals": "Animal Life Cycles", "fungi": "Fungi & Bacteria", "materials": "Materials & Properties", "light": "Light", "heat": "Heat", "magnets": "Magnets"}, "P4": {"plantparts": "Plant Parts & Functions", "digestion": "Human Digestive System", "reproduction": "Plant Reproduction", "matter": "Matter & States of Change", "light": "Light", "heat": "Heat", "electricals": "Electrical Systems", "magnets": "Magnets"}, "P5": {"reproduction": "Reproduction in Plants & Animals", "respiratory": "Respiratory System", "transport": "Transport System", "watercycle": "Water Cycle", "adaptation": "Adaptation & Survival", "foodwebs": "Food Chains & Food Webs", "matter": "Matter — Solids, Liquids & Gases"}};
+const LINKS     = {"P3": {"diversity": "../p3/", "plants": "../p3/", "animals": "../p3/", "fungi": "../p3/", "materials": "../p3/", "light": "../p3/", "heat": "../p3/", "magnets": "../p3/"}, "P4": {"plantparts": "../p4/", "digestion": "../p4/", "reproduction": "../p4/", "matter": "../p4/", "light": "../p4/", "heat": "../p4/", "electricals": "../p4/", "magnets": "../p4/"}, "P5": {"reproduction": "../p5/", "respiratory": "../p5/", "transport": "../p5/", "watercycle": "../p5/", "adaptation": "../p5/", "foodwebs": "../p5/", "matter": "../p5/"}};
+
+const TOPIC_EMOJIS = {
+  diversity:'🦁', plants:'🌿', animals:'🦋', fungi:'🍄',
+  materials:'🧪', light:'💡', heat:'🌡️', magnets:'🧲',
+  plantparts:'🌸', digestion:'🍎', reproduction:'🌸',
+  matter:'💧', electricals:'⚡', watercycle:'💧',
+  respiratory:'🫁', transport:'🫀', adaptation:'🦎',
+  foodwebs:'🕸️'
+};
+
+const LEVEL_COLORS = {P3:'#f97316', P4:'#0ea5e9', P5:'#16a34a'};
+
+// ── STATE ─────────────────────────────────────────────────────────
+let chosenLevel = null;
+let quizPool    = [];
+let current     = 0;
+let answered    = false;
+let scores      = {}; // topic -> {correct, total}
+
+// ── STEP 1: SELECT LEVEL ──────────────────────────────────────────
+function selectLevel(btn) {
+  document.querySelectorAll('.lbtn').forEach(b => {
+    b.classList.remove('sel');
+    b.style.opacity = '0.6';
+    b.style.transform = '';
+  });
+  btn.classList.add('sel');
+  btn.style.opacity = '1';
+  btn.style.transform = 'translateY(-3px)';
+  chosenLevel = btn.dataset.l;
+  const sb = document.getElementById('startBtn');
+  sb.style.background = '#0ea5e9';
+  sb.style.color = '#ffffff';
+  sb.style.boxShadow = '0 4px 20px rgba(14,165,233,0.4)';
+  sb.style.opacity = '1';
+  sb.style.pointerEvents = 'auto';
+  sb.style.cursor = 'pointer';
+}
+
+// ── STEP 2: BUILD QUIZ POOL ───────────────────────────────────────
+function buildPool(level) {
+  let pool = [];
+  if (level === 'PSLE') {
+    // PSLE mix: pick topics from each level, then pick questions
+    // P3: 3 random topics × 2 questions = 6; P4: 3 random topics × 2 = 6; P5: all 7 × ~1-2 = 13 → trim to 25 total
+    const shuffle = arr => [...arr].sort(() => Math.random() - .5);
+    ['P3','P4','P5'].forEach(l => {
+      const allLevelQs = ALL_QS[l] || [];
+      // Group by topic
+      const byTopic = {};
+      allLevelQs.forEach(q => { if (!byTopic[q.topic]) byTopic[q.topic] = []; byTopic[q.topic].push(q); });
+      const topics = shuffle(Object.keys(byTopic));
+      const take = l === 'P5' ? topics : topics.slice(0, Math.min(3, topics.length));
+      take.forEach(t => {
+        const qsForTopic = shuffle(byTopic[t]);
+        const perTopic = l === 'P5' ? 2 : 2;
+        pool.push(...qsForTopic.slice(0, perTopic));
+      });
+    });
+    // Shuffle and trim to 25
+    pool = shuffle(pool).slice(0, 25);
+  } else {
+    // Single level: pick exactly 5 per topic from a shuffled set
+    const qs = ALL_QS[level] || [];
+    const byTopic = {};
+    qs.forEach(q => { if (!byTopic[q.topic]) byTopic[q.topic] = []; byTopic[q.topic].push(q); });
+    Object.keys(byTopic).forEach(t => {
+      const shuffled = [...byTopic[t]].sort(() => Math.random() - .5);
+      // Take up to 3 per topic, fill to 25 total
+      pool.push(...shuffled.slice(0, 3));
+    });
+    // Top up to 25 if needed by taking more from topics with extra questions
+    let extra = [];
+    Object.keys(byTopic).forEach(t => {
+      const shuffled = [...byTopic[t]].sort(() => Math.random() - .5);
+      shuffled.slice(3).forEach(q => extra.push(q));
+    });
+    extra = extra.sort(() => Math.random() - .5);
+    const used = new Set(pool.map(q => q.q));
+    for (const q of extra) {
+      if (pool.length >= 25) break;
+      if (!used.has(q.q)) { pool.push(q); used.add(q.q); }
+    }
+    pool = pool.sort(() => Math.random() - .5).slice(0, 25);
+  }
+  return pool;
+}
+
+function startQuiz() {
+  if (!chosenLevel) {
+    alert('Please select a level first — tap P3, P4, P5 or PSLE Prep above.');
+    return;
+  }
+  quizPool = buildPool(chosenLevel);
+  scores = {};
+  current = 0;
+  quizPool.forEach(q => {
+    const key = q.level + '_' + q.topic;
+    if (!scores[key]) scores[key] = {correct:0, total:0, level:q.level, topic:q.topic};
+    scores[key].total++;
+  });
+  // Reset scores correct counts
+  Object.keys(scores).forEach(k => scores[k].correct = 0);
+
+  showScreen('s-quiz');
+  renderQ();
+}
+
+// ── STEP 3: RENDER QUESTION ───────────────────────────────────────
+function renderQ() {
+  const q = quizPool[current];
+  const total = quizPool.length;
+  answered = false;
+
+  // Progress
+  document.getElementById('progressFill').style.width = ((current/total)*100) + '%';
+  document.getElementById('qCounter').textContent = (current+1) + ' / ' + total;
+
+  // Topic badge
+  const badge = document.getElementById('topicBadge');
+  const lcolor = LEVEL_COLORS[q.level] || '#0ea5e9';
+  const tname = (NAMES[q.level]||{})[q.topic] || q.topic;
+  badge.textContent = q.level + ' · ' + tname;
+  badge.style.cssText = `background:${lcolor}22;color:${lcolor};border:1px solid ${lcolor}44;
+    display:inline-block;padding:4px 12px;border-radius:50px;
+    font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-bottom:14px`;
+
+  document.getElementById('qText').textContent = q.q;
+
+  // Options
+  const wrap = document.getElementById('optsWrap');
+  wrap.innerHTML = '';
+  const letters = ['A','B','C','D'];
+  q.opts.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'opt';
+    btn.innerHTML = `<span class="opt-letter">${letters[i]}</span>${opt}`;
+    btn.onclick = () => answer(i, q.ans, q.exp || '', q.trap || '');
+    wrap.appendChild(btn);
+  });
+
+  document.getElementById('qFeedback').className = 'q-feedback';
+  document.getElementById('qFeedback').textContent = '';
+  document.getElementById('nextBtn').className = 'next-btn';
+}
+
+// ── ANSWER ────────────────────────────────────────────────────────
+function answer(chosen, correct, explanation, trap) {
+  if (answered) return;
+  answered = true;
+
+  const q = quizPool[current];
+  const key = q.level + '_' + q.topic;
+  const opts = document.querySelectorAll('.opt');
+  const isRight = chosen === correct;
+
+  if (isRight) scores[key].correct++;
+
+  opts.forEach((btn, i) => {
+    btn.disabled = true;
+    if (i === correct) btn.classList.add('correct');
+    else if (i === chosen && !isRight) btn.classList.add('wrong');
+    else btn.classList.add('dim');
+  });
+
+  const fb = document.getElementById('qFeedback');
+  fb.className = 'q-feedback show ' + (isRight ? 'ok' : 'no');
+  const q2 = quizPool[current];
+  let html = isRight
+    ? '<strong>✅ Correct!</strong>'
+    : '<strong>❌ Not quite — the correct answer is ' + q2.opts[correct] + '.</strong>';
+  if (explanation) html += '<div class="fb-explain">' + explanation + '</div>';
+  if (!isRight && q2.trap) html += '<div class="fb-trap">⚠️ Common mistake: ' + q2.trap + '</div>';
+  fb.innerHTML = html;
+
+  const nb = document.getElementById('nextBtn');
+  nb.className = 'next-btn show';
+  nb.textContent = current < quizPool.length - 1 ? 'Next question →' : 'See my study plan →';
+}
+
+function nextQ() {
+  current++;
+  if (current >= quizPool.length) {
+    showResults();
+  } else {
+    renderQ();
+  }
+}
+
+// ── RESULTS ───────────────────────────────────────────────────────
+function showResults() {
+  showScreen('s-result');
+
+  // Total score
+  let totalCorrect = 0, totalQs = 0;
+  Object.values(scores).forEach(s => { totalCorrect += s.correct; totalQs += s.total; });
+  const pct = Math.round((totalCorrect / totalQs) * 100);
+
+  // Score ring
+  const ring = document.getElementById('scoreRing');
+  const ringColor = pct >= 70 ? '#16a34a' : pct >= 45 ? '#f59e0b' : '#ef4444';
+  ring.style.borderColor = ringColor;
+  ring.style.color = ringColor;
+  document.getElementById('scoreNum').textContent = pct + '%';
+
+  // Title and sub
+  let title, sub;
+  if (pct >= 80) {
+    title = "Excellent work! You're well-prepared. 🏆";
+    sub = 'You got ' + totalCorrect + ' out of ' + totalQs + ' correct. A few topics to polish — see below.';
+  } else if (pct >= 60) {
+    title = 'Good foundation! A few gaps to close. 📚';
+    sub = 'You got ' + totalCorrect + ' out of ' + totalQs + ' correct. Focus on the topics below to reach AL1.';
+  } else if (pct >= 40) {
+    title = 'Getting started — your plan is ready. 💪';
+    sub = 'You got ' + totalCorrect + ' out of ' + totalQs + ' correct. The personalised plan below will guide you step by step.';
+  } else {
+    title = 'Great that you checked early — lots of time to improve! 🌱';
+    sub = 'You got ' + totalCorrect + ' out of ' + totalQs + ' correct. Start with the red topics below — they need the most work first.';
+  }
+  document.getElementById('rTitle').textContent = title;
+  document.getElementById('rSub').textContent = sub;
+
+  // Classify topics
+  const urgent = [], medium = [], strong = [];
+  Object.values(scores).forEach(s => {
+    const pctT = s.total > 0 ? Math.round((s.correct/s.total)*100) : 0;
+    const entry = {
+      key: s.level + '_' + s.topic,
+      level: s.level,
+      topic: s.topic,
+      correct: s.correct,
+      total: s.total,
+      pct: pctT
+    };
+    // With 3 Qs per topic: 0/3=0%, 1/3=33%, 2/3=67%, 3/3=100%
+    if (pctT <= 33) urgent.push(entry);
+    else if (pctT <= 66) medium.push(entry);
+    else strong.push(entry);
+  });
+
+  // Sort each group worst-first
+  urgent.sort((a,b) => a.pct - b.pct);
+  medium.sort((a,b) => a.pct - b.pct);
+  strong.sort((a,b) => b.pct - a.pct);
+
+  renderTopicCards('urgentCards', urgent, 'urgent');
+  renderTopicCards('medCards', medium, 'medium');
+  renderTopicCards('strongCards', strong, 'strong');
+
+  document.getElementById('urgentSection').style.display = urgent.length ? 'block' : 'none';
+  document.getElementById('medSection').style.display = medium.length ? 'block' : 'none';
+  document.getElementById('strongSection').style.display = strong.length ? 'block' : 'none';
+
+  // Build week plan
+  buildWeekPlan([...urgent, ...medium]);
+
+  // Try to save to localStorage
+  try {
+    localStorage.setItem('ss_assess', JSON.stringify({
+      date: new Date().toISOString(),
+      level: chosenLevel,
+      pct,
+      scores: Object.fromEntries(Object.entries(scores).map(([k,v]) => [k, {c:v.correct,t:v.total}]))
+    }));
+  } catch(e) {}
+}
+
+function renderTopicCards(containerId, topics, urgency) {
+  const wrap = document.getElementById(containerId);
+  wrap.innerHTML = '';
+  topics.forEach(t => {
+    const name = (NAMES[t.level]||{})[t.topic] || t.topic;
+    const emoji = TOPIC_EMOJIS[t.topic] || '📚';
+    const link = (LINKS[t.level]||{})[t.topic] || '../';
+    const lcolor = LEVEL_COLORS[t.level] || '#0ea5e9';
+    const scoreLabel = t.correct + '/' + t.total + ' correct (' + t.pct + '%)';
+
+    const studyTips = {
+      urgent: 'Revise all topic notes first, then redo these questions.',
+      medium: 'Review the questions you got wrong and target that specific concept.',
+      strong: 'Quick review 1 week before PSLE is enough for this topic.'
+    };
+    const card = document.createElement('a');
+    card.href = link;
+    card.className = 'tc ' + urgency;
+    card.innerHTML = `
+      <span class="tc-icon">${emoji}</span>
+      <div class="tc-body">
+        <div class="tc-name">${name}</div>
+        <div class="tc-meta">${t.level} Science</div>
+        <span class="tc-score">${scoreLabel}</span>
+        <div style="font-size:11.5px;color:var(--muted);margin-top:5px;line-height:1.45">${studyTips[urgency]}</div>
+      </div>`;
+    wrap.appendChild(card);
+  });
+}
+
+function buildWeekPlan(focusTopics) {
+  const days = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+  const wrap = document.getElementById('weekPlanRows');
+  wrap.innerHTML = '';
+
+  // Pair up topics across the week
+  const tasks = [];
+
+  focusTopics.slice(0, 5).forEach((t, i) => {
+    const name = (NAMES[t.level]||{})[t.topic] || t.topic;
+    const link = (LINKS[t.level]||{})[t.topic] || '../';
+    const urgTag = t.pct < 34 ? '🔴' : '🟡';
+    tasks.push({ urgTag, name, link, level: t.level, pct: t.pct });
+  });
+
+  // If fewer than 5 weak topics, pad with review
+  while (tasks.length < 5) {
+    tasks.push({ urgTag:'🔵', name:'Full topic review', link:'../', level:'', pct:100 });
+  }
+
+  const schedule = [
+    { day:'Mon', items: [tasks[0], {urgTag:'📄', name:"Print summary sheet for today's topic", link:'../print/', level:''}] },
+    { day:'Tue', items: [tasks[1], {urgTag:'🃏', name:"Flashcards on Monday's topic", link:'../', level:''}] },
+    { day:'Wed', items: [tasks[2], {urgTag:'✍️', name:'Exam practice: open-ended questions', link:'../pyq/', level:''}] },
+    { day:'Thu', items: [tasks[3], {urgTag:'📖', name:'Re-read study notes for weakest topic', link:'../', level:''}] },
+    { day:'Fri', items: [tasks[4], {urgTag:'🧪', name:'Fair test + diagram practice', link:'../fairtest/', level:''}] },
+    { day:'Sat', items: [
+      {urgTag:'🔁', name:"Redo today's level check — see if your score improved", link:'./'},
+      {urgTag:'📊', name:'Data interpretation practice', link:'../data/'}
+    ]},
+    { day:'Sun', items: [
+      {urgTag:'📜', name:'Past Year Questions — Booklet A practice', link:'../pyq/'},
+      {urgTag:'🏆', name:'Read the AL1 guide', link:'../al1-guide.html'}
+    ]}
+  ];
+
+  schedule.forEach(row => {
+    const div = document.createElement('div');
+    div.className = 'week-row';
+    const taskHTML = row.items.map(item =>
+      `<div class="week-task">
+        <a href="/assess/${item.link}" style="color:var(--ink);text-decoration:none;font-size:13.5px">
+          ${item.urgTag} <strong>${item.name}</strong>${item.level ? ' <span style="color:var(--muted);font-size:12px">('+item.level+')</span>' : ''}
+        </a>
+      </div>`
+    ).join('');
+    div.innerHTML = `<div class="week-day">${row.day}</div><div class="week-tasks">${taskHTML}</div>`;
+    wrap.appendChild(div);
+  });
+}
+
+// ── UTILS ─────────────────────────────────────────────────────────
+function showScreen(id) {
+  ['s-welcome','s-quiz','s-result'].forEach(sid => {
+    const el = document.getElementById(sid);
+    if (el) el.style.display = sid === id ? 'flex' : 'none';
+  });
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function retake() {
+  chosenLevel = null;
+  document.querySelectorAll('.lbtn').forEach(b => {
+    b.classList.remove('sel');
+    b.style.opacity = '0.6';
+    b.style.transform = '';
+  });
+  const sb = document.getElementById('startBtn');
+  sb.style.background = '#334155';
+  sb.style.color = 'rgba(255,255,255,.5)';
+  sb.style.boxShadow = 'none';
+  sb.style.opacity = '1';
+  showScreen('s-welcome');
+}
+</script>
+
+<!-- SEO CONTENT SECTION -->
+<section style="background:#f0f9ff;border-top:3px solid #bae6fd;padding:48px clamp(16px,5%,56px)">
+  <div style="max-width:860px;margin:0 auto">
+    <h2 style="font-family:'Syne',sans-serif;font-size:clamp(22px,3vw,32px);font-weight:800;color:#0c1a2e;margin-bottom:16px">Free Science Level Check for Singapore Primary Students</h2>
+    <p style="font-size:15px;color:#334155;line-height:1.9;margin-bottom:14px">Not sure which Primary Science topics your child needs to focus on? The ScienceStar Level Check is a free 5-minute diagnostic quiz that tests knowledge across all PSLE Science topics and gives you a personalised study plan based on the results.</p>
+    <p style="font-size:15px;color:#334155;line-height:1.9;margin-bottom:14px">This tool is designed for students in Primary 3, Primary 4, Primary 5 and Primary 6. By answering 25 carefully selected questions, students receive an instant report showing which topics they have mastered and which topics need more revision. Parents and students can then use the recommended study plan to focus revision time more effectively.</p>
+
+    <h3 style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#0c1a2e;margin:24px 0 12px">How the Level Check Works</h3>
+    <ol style="font-size:14px;color:#334155;line-height:2;margin-left:20px;margin-bottom:16px">
+      <li><strong>Select your level</strong> — choose P3, P4, P5 or PSLE to get questions matched to your current syllabus</li>
+      <li><strong>Answer 25 questions</strong> — multiple-choice questions covering a range of topics from the MOE Science syllabus</li>
+      <li><strong>Get your result instantly</strong> — see your score and a breakdown by topic area</li>
+      <li><strong>Follow your personalised plan</strong> — the tool shows you exactly which topics to revise first based on your answers</li>
+    </ol>
+
+    <h3 style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#0c1a2e;margin:24px 0 12px">Why Use a Science Level Check?</h3>
+    <p style="font-size:15px;color:#334155;line-height:1.9;margin-bottom:14px">Many students and parents revise Science by going through every topic from beginning to end — even the topics the student already knows well. This wastes valuable revision time. A level check helps you identify exactly where the gaps are, so you can focus your effort where it matters most.</p>
+    <p style="font-size:15px;color:#334155;line-height:1.9;margin-bottom:14px">This is especially important for PSLE preparation, when students need to cover all 15 PSLE Science topics within a limited time. Using diagnostic feedback to guide revision is far more effective than random topic-by-topic practice.</p>
+
+    <h3 style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#0c1a2e;margin:24px 0 12px">What Topics Are Covered?</h3>
+    <p style="font-size:15px;color:#334155;line-height:1.9;margin-bottom:12px">The Level Check covers topics from the full MOE 2026 Primary Science syllabus, including:</p>
+    <ul style="font-size:14px;color:#334155;line-height:2;margin-left:20px;margin-bottom:16px">
+      <li>Diversity of Living Things, Plants and Animals (P3–P5)</li>
+      <li>Electrical Systems and Circuits (P4–PSLE)</li>
+      <li>Forces and their effects including gravity, friction and elastic spring force (P4–PSLE)</li>
+      <li>Photosynthesis and the role of plants in ecosystems (P4–PSLE)</li>
+      <li>The Water Cycle — evaporation, condensation and precipitation (P4–PSLE)</li>
+      <li>Matter — states, properties and changes of state (P3–PSLE)</li>
+      <li>Food chains, food webs and ecosystems (P4–PSLE)</li>
+      <li>Human body systems — digestion, respiration and circulation (P4–PSLE)</li>
+      <li>Reproduction in plants and animals (P5–PSLE)</li>
+      <li>Light, shadows and optical phenomena (P3–P4)</li>
+    </ul>
+    <p style="font-size:15px;color:#334155;line-height:1.9">The Level Check is completely free and requires no registration. Take it now to find out exactly where to focus your PSLE Science revision.</p>
+  </div>
+</section>
+<section style="background:#e0f2fe;border-top:2px solid #7dd3fc;padding:32px clamp(16px,5%,56px)">
+  <div style="max-width:860px;margin:0 auto">
+    <h3 style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:#0c4a6e;margin-bottom:12px">Tips for Parents — Using the Level Check</h3>
+    <p style="font-size:14px;color:#075985;line-height:1.9;margin-bottom:12px">Parents often ask: "How do I know which Science topics my child is weak in?" The Level Check answers this question in under 5 minutes. After your child completes the quiz, the results page shows a clear breakdown by topic — so you can see at a glance whether they need more practice on Forces, Electrical Systems, Photosynthesis, or other key PSLE topics.</p>
+    <p style="font-size:14px;color:#075985;line-height:1.9;margin-bottom:12px">Use the Level Check at the start of the school term to identify gaps early. Then use ScienceStar's topic-specific quizzes and study notes to address those gaps systematically. Running the Level Check again after 4–6 weeks of focused revision will show you exactly how much progress your child has made.</p>
+    <p style="font-size:14px;color:#075985;line-height:1.9">The Level Check is completely free, requires no registration, and works on any device — phone, tablet or laptop. There is no time limit, so students can take it at a relaxed pace without pressure.</p>
+  </div>
+</section>
+
+<section style="background:#f0fdf4;border-top:2px solid #86efac;padding:48px clamp(16px,5%,56px)">
+  <div style="max-width:860px;margin:0 auto">
+    <h2 style="font-family:'Syne',sans-serif;font-size:clamp(20px,2.5vw,28px);font-weight:800;color:#14532d;margin-bottom:16px">How to Use a Diagnostic Level Check to Build the Most Effective PSLE Study Plan</h2>
+    <p style="font-size:15px;color:#166534;line-height:1.9;margin-bottom:14px">Every student who prepares for PSLE Science has the same 24 hours in a day and the same 15 topics to master. What separates students who improve rapidly from those who plateau is not the amount of time they study — it is how intelligently they direct that time. A student who spends three hours revising Photosynthesis when they already understand it well has wasted three hours they could have spent closing their actual knowledge gaps.</p>
+    <p style="font-size:15px;color:#166534;line-height:1.9;margin-bottom:14px">A diagnostic level check solves this problem by identifying exactly which topics need attention before a student starts revising. This is the same principle used by teachers when they give pre-tests at the start of a term, and by educational psychologists when they design learning programmes — assess first, then teach to the gaps. This free level check applies that professional approach to PSLE Science revision.</p>
+
+    <h3 style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#14532d;margin:28px 0 12px">The P3 Science Syllabus: What Primary 3 Students Are Expected to Know</h3>
+    <p style="font-size:15px;color:#166534;line-height:1.9;margin-bottom:12px">Primary 3 is the first year students encounter Science as a formal subject in Singapore schools. The P3 syllabus introduces foundational concepts that will be built upon throughout P4, P5 and PSLE. A strong P3 foundation prevents confusion at later levels. The key P3 topics assessed in the Level Check are:</p>
+    <ul style="font-size:14px;color:#166534;line-height:2.1;margin-left:20px;margin-bottom:16px">
+      <li><strong>Diversity of Living Things:</strong> Characteristics of living things (move, feed, grow, respond, reproduce, have a lifespan); classification of animals by characteristics; plants and their basic needs.</li>
+      <li><strong>Plants:</strong> Parts of a plant and their functions; what plants need to make food (photosynthesis introduced at a basic level); types of roots, stems and leaves.</li>
+      <li><strong>Fungi and Bacteria:</strong> Distinguishing living from non-living things; the role of fungi and bacteria in the environment.</li>
+      <li><strong>Matter:</strong> Solids, liquids and gases and their properties; how matter changes state when heated or cooled.</li>
+      <li><strong>Light:</strong> How light travels; shadows and what causes them; transparent, translucent and opaque materials.</li>
+      <li><strong>Heat:</strong> What heat is; how heat transfers from hot to cold; conductors and insulators.</li>
+      <li><strong>Magnets:</strong> Magnetic and non-magnetic materials; the poles of a magnet; attraction and repulsion.</li>
+    </ul>
+
+    <h3 style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#14532d;margin:28px 0 12px">The P4 Science Syllabus: Building Towards More Complex Concepts</h3>
+    <p style="font-size:15px;color:#166534;line-height:1.9;margin-bottom:12px">Primary 4 Science introduces more complex systems and requires students to apply knowledge in experimental contexts for the first time. The P4 topics in the Level Check include:</p>
+    <ul style="font-size:14px;color:#166534;line-height:2.1;margin-left:20px;margin-bottom:16px">
+      <li><strong>Digestion:</strong> The journey of food through the digestive system; the role of each organ; what digestion does to food and why.</li>
+      <li><strong>Electrical Systems:</strong> Components of a simple circuit; how to draw circuit diagrams using symbols; conductors and insulators; series circuits and what happens when a bulb is added or removed.</li>
+      <li><strong>Forces:</strong> What a force is; effects of forces (change shape, speed, direction); gravity and weight; friction as a force that opposes motion.</li>
+      <li><strong>Water:</strong> The water cycle; evaporation and condensation; how water reaches the atmosphere from plants (transpiration) and the ocean (evaporation).</li>
+      <li><strong>Photosynthesis:</strong> What plants need for photosynthesis; what is produced; why leaves are green; the importance of photosynthesis to the food chain.</li>
+      <li><strong>Food Chains:</strong> Producers and consumers; predators and prey; how to construct a food chain; the direction of arrows in a food chain and what they represent.</li>
+    </ul>
+
+    <h3 style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#14532d;margin:28px 0 12px">The P5 and PSLE Science Syllabus: Higher-Order Thinking Becomes Essential</h3>
+    <p style="font-size:15px;color:#166534;line-height:1.9;margin-bottom:12px">From Primary 5 onwards, PSLE Science questions shift significantly towards application and evaluation. Students are expected to explain why things happen, not just describe what happens. The P5/PSLE topics covered by the Level Check include:</p>
+    <ul style="font-size:14px;color:#166534;line-height:2.1;margin-left:20px;margin-bottom:16px">
+      <li><strong>Reproduction in Plants:</strong> Pollination (insect-pollinated vs wind-pollinated flowers), fertilisation, seed formation, seed dispersal methods (wind, water, animals, explosive).</li>
+      <li><strong>Reproduction in Animals:</strong> Sexual and asexual reproduction; life cycles including complete metamorphosis (egg, larva, pupa, adult) and incomplete metamorphosis (egg, nymph, adult).</li>
+      <li><strong>Ecosystems:</strong> The concept of an ecosystem; how producers, consumers and decomposers interact; the effect of removing one organism from a food web; adaptation of organisms to their environment.</li>
+      <li><strong>Human Respiratory System:</strong> The structure of the lungs; how breathing works (role of the diaphragm); gas exchange in the alveoli; oxygen going into the blood and carbon dioxide leaving.</li>
+      <li><strong>Advanced Electrical Systems:</strong> Parallel circuits; comparing series and parallel circuits; calculating the effect on brightness or current of adding components.</li>
+      <li><strong>Forces — Advanced:</strong> Elastic spring force; balanced and unbalanced forces; how forces affect stationary and moving objects; the relationship between mass and weight.</li>
+    </ul>
+
+    <h3 style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#14532d;margin:28px 0 12px">How to Interpret Your Level Check Results and Build a Study Plan</h3>
+    <p style="font-size:15px;color:#166534;line-height:1.9;margin-bottom:14px">After completing the Level Check, you will see your results organised by topic. Here is how to interpret each category and what to do next:</p>
+    <ul style="font-size:14px;color:#166534;line-height:2.1;margin-left:20px;margin-bottom:16px">
+      <li><strong>Red topics (0–1 correct out of 3):</strong> This is a significant gap. Do not try to revise this topic from memory — go back to the full topic notes, read them carefully, and then attempt the topic-specific quiz on ScienceStar before returning to Level Check questions on this topic. Budget at least 2–3 study sessions of 30–45 minutes each for red topics.</li>
+      <li><strong>Yellow topics (2 correct out of 3):</strong> This topic is partially understood but has specific gaps. Review the questions you got wrong, identify exactly which concept you missed, and target that specific concept. One focused study session is usually enough to move a yellow topic to green.</li>
+      <li><strong>Green topics (3 correct out of 3):</strong> This topic is well understood. Do not spend significant time here — a quick review one week before the PSLE is sufficient. Redirect that time to red and yellow topics.</li>
+    </ul>
+    <p style="font-size:15px;color:#166534;line-height:1.9;margin-bottom:14px">The most effective study timetable for PSLE Science spends 60% of study time on red topics, 30% on yellow topics, and only 10% maintaining green topics. This allocation feels uncomfortable to many students and parents because spending time on weak areas means spending less time on the topics that feel easy — but it is the fastest route to overall score improvement.</p>
+
+    <h3 style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#14532d;margin:28px 0 12px">Frequently Asked Questions About the Science Level Check</h3>
+    <p style="font-size:15px;color:#14532d;font-weight:700;margin:14px 0 4px">Q: How often should my child retake the Level Check?</p>
+    <p style="font-size:14px;color:#166534;line-height:1.9;margin-bottom:12px">Retake the Level Check every 4–6 weeks. This gives enough time for meaningful revision to take place between checks, and the improvement in results provides concrete motivation to continue. A child who scores 60% on the first check and 78% six weeks later can see directly that their effort is working. Retaking the check too frequently (every week) does not give enough time for learning to consolidate.</p>
+    <p style="font-size:15px;color:#14532d;font-weight:700;margin:14px 0 4px">Q: My child scored well on the Level Check but still struggles on PSLE practice papers. Why?</p>
+    <p style="font-size:14px;color:#166534;line-height:1.9;margin-bottom:12px">The Level Check tests recall of factual knowledge. PSLE Science also requires application — the ability to use knowledge in new contexts, explain processes, interpret data, and design experiments. If a student knows all the facts but struggles with application questions, the next step is to practise Booklet B style questions, particularly data interpretation and fair test design, which require a different kind of thinking than factual recall.</p>
+    <p style="font-size:15px;color:#14532d;font-weight:700;margin:14px 0 4px">Q: Is this Level Check aligned to the MOE 2026 syllabus changes?</p>
+    <p style="font-size:14px;color:#166534;line-height:1.9;margin-bottom:12px">Yes. The 2026 MOE syllabus removed the Energy Conversion unit and added additional content on Ecosystems and Adaptations. All questions in this Level Check reflect the current 2026 syllabus. Questions on energy conversion forms have been removed, and questions on ecosystem interactions and organism adaptations have been included.</p>
+    <p style="font-size:15px;color:#14532d;font-weight:700;margin:14px 0 4px">Q: Should my child use this Level Check before or after starting revision?</p>
+    <p style="font-size:14px;color:#166534;line-height:1.9;margin-bottom:12px">Before. This is a diagnostic tool, designed to be used before revision begins, not after. Taking it before revision reveals where to focus. Taking it after revision confirms what has been learned. Using it before revision and again after a block of study gives you a clear before-and-after comparison that shows exactly how much has improved — and what still needs work.</p>
+  </div>
+</section>
+
+
+<script>
+function openSearch(){
+  var ns=document.getElementById('navSearch');
+  ns.classList.add('open');
+  setTimeout(function(){ns.querySelector('.ns-input').focus();},50);
+}
+</script>
+</body>
+</html>

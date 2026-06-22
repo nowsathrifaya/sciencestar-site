@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XM36L4R49E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XM36L4R49E');
+</script>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Interpretation Practice — Free PSLE Science Tool</title>
+
+  
+  <meta property="og:description" content="Master graphs, tables & data for PSLE Science. Real exam-style questions with model answers. Free for Singapore students.">
+  <meta property="og:url" content="https://primayscience.org/data/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Data Interpretation Practice — Free PSLE Science Tool">
+<meta name="keywords" content="PSLE data interpretation practice, graphs tables PSLE science Singapore, data skills primary science free">>
+<meta name="description" content="Master graphs, tables and data interpretation for PSLE Science. Real exam-style questions with model answers. Free for all Singapore primary students.">>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fafaf9;--card:#fff;--ink:#1c1917;--muted:#78716c;--border:#e7e5e4;--r:18px;--sh:0 4px 20px rgba(0,0,0,.07);--shl:0 10px 36px rgba(0,0,0,.13);--acc:#d97706;--acc2:#b45309;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;overflow-x:hidden;}
+/* BG */
+.bg-dots{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:radial-gradient(circle,#d9770620 1px,transparent 1px);background-size:28px 28px;}
+.bg-glow{position:fixed;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,#fbbf2418,transparent 70%);top:-200px;right:-200px;pointer-events:none;z-index:0;}
+/* HEADER */
+header{position:relative;z-index:20;background:linear-gradient(135deg,#d97706,#b45309);padding:13px 20px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 4px 20px rgba(217,119,6,.35);}
+.logo{font-family:system-ui,sans-serif;font-size:22px;font-weight:800;color:#fff;text-decoration:none;display:flex;align-items:center;gap:8px;}
+.logo-em{animation:spin 12s linear infinite;font-size:26px;}
+@keyframes spin{to{transform:rotate(360deg)}}
+.back-lnk{background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.4);border-radius:50px;padding:5px 14px;font-weight:700;font-size:13px;color:#fff;text-decoration:none;transition:.2s;}
+.back-lnk:hover{background:rgba(255,255,255,.35);}
+.xp-pill{background:rgba(255,255,255,.25);border:2px solid rgba(255,255,255,.4);border-radius:50px;padding:5px 14px;font-weight:800;font-size:14px;color:#fff;display:flex;align-items:center;gap:5px;}
+/* TICKER */
+.ticker{background:linear-gradient(90deg,#d97706,#b45309);color:#fff;font-weight:700;font-size:12px;padding:5px 0;overflow:hidden;position:relative;z-index:10;}
+.tick-in{display:inline-block;white-space:nowrap;animation:tick 32s linear infinite;padding-left:100%;}
+@keyframes tick{to{transform:translateX(-100%)}}
+/* LAYOUT */
+.container{position:relative;z-index:5;max-width:900px;margin:0 auto;padding:28px 16px;}
+.screen{display:none;}.screen.active{display:block;}
+/* HERO */
+.hero{text-align:center;margin-bottom:32px;animation:fadeUp .5s ease;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.hero h1{font-family:system-ui,sans-serif;font-size:clamp(26px,5vw,42px);font-weight:800;background:linear-gradient(135deg,#d97706,#92400e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px;line-height:1.15;}
+.hero p{font-size:15px;color:var(--muted);font-weight:600;max-width:580px;margin:0 auto;}
+/* QUESTION CARDS */
+.sec-lbl{font-family:system-ui,sans-serif;font-size:18px;font-weight:700;color:var(--acc);margin:24px 0 14px;display:flex;align-items:center;gap:8px;}
+.q-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-bottom:32px;}
+.q-card{background:var(--card);border-radius:var(--r);padding:18px 16px;cursor:pointer;border:3px solid var(--border);box-shadow:var(--sh);transition:all .3s cubic-bezier(.34,1.56,.64,1);position:relative;}
+.q-card:hover{transform:translateY(-5px) scale(1.02);box-shadow:var(--shl);border-color:var(--qc,#d97706);}
+.q-em{font-size:34px;display:block;margin-bottom:8px;transition:.3s;}
+.q-card:hover .q-em{transform:scale(1.18);}
+.q-name{font-weight:800;font-size:14px;color:var(--ink);line-height:1.3;margin-bottom:4px;}
+.q-level{display:inline-block;background:var(--qc,#d97706);color:#fff;font-size:10px;font-weight:800;padding:2px 8px;border-radius:50px;margin-bottom:6px;}
+.q-type{font-size:11px;color:var(--muted);font-weight:700;}
+.q-done{position:absolute;top:10px;right:10px;width:22px;height:22px;background:#22c55e;border-radius:50%;display:none;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:900;}
+.q-done.show{display:flex;}
+/* QUESTION SCREEN */
+.back-btn{background:var(--card);border:none;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;color:var(--acc);display:flex;align-items:center;gap:6px;padding:8px 16px;border-radius:50px;box-shadow:0 2px 8px rgba(0,0,0,.07);margin-bottom:18px;transition:.2s;}
+.back-btn:hover{background:#fef3c7;transform:translateX(-2px);}
+/* DATA DISPLAY */
+.data-card{background:var(--card);border-radius:var(--r);padding:22px;box-shadow:var(--sh);margin-bottom:20px;border:3px solid var(--border);}
+.data-title{font-family:system-ui,sans-serif;font-size:17px;font-weight:700;color:var(--acc2);margin-bottom:14px;}
+/* TABLE */
+.data-table{width:100%;border-collapse:collapse;font-size:13px;}
+.data-table th{background:linear-gradient(135deg,#d97706,#b45309);color:#fff;padding:10px 12px;text-align:center;font-weight:800;font-size:12px;}
+.data-table td{padding:9px 12px;text-align:center;border-bottom:1px solid #f5f5f4;font-weight:600;}
+.data-table tr:nth-child(even) td{background:#fef9f0;}
+.data-table tr:hover td{background:#fef3c7;}
+/* BAR CHART */
+.chart-wrap{overflow-x:auto;}
+.bar-chart{display:flex;align-items:flex-end;gap:8px;height:200px;padding:8px 0;border-bottom:3px solid #d6d3d1;border-left:3px solid #d6d3d1;margin:8px 0 4px;min-width:300px;}
+.bar-col{display:flex;flex-direction:column;align-items:center;flex:1;min-width:36px;}
+.bar{border-radius:6px 6px 0 0;width:100%;transition:height .8s cubic-bezier(.34,1.56,.64,1);cursor:default;position:relative;}
+.bar:hover::after{content:attr(data-val);position:absolute;top:-22px;left:50%;transform:translateX(-50%);background:#1c1917;color:#fff;font-size:10px;font-weight:800;padding:2px 6px;border-radius:4px;white-space:nowrap;}
+.bar-lbl{font-size:10px;font-weight:700;color:var(--muted);margin-top:4px;text-align:center;line-height:1.2;}
+.chart-y-lbl{font-size:11px;color:var(--muted);font-weight:600;margin-bottom:4px;}
+/* LINE CHART via SVG */
+.line-chart{width:100%;overflow-x:auto;}
+/* QUESTIONS */
+.qs-wrap{background:var(--card);border-radius:var(--r);padding:22px;box-shadow:var(--sh);border:3px solid var(--border);}
+.q-num{background:var(--acc);color:#fff;font-weight:900;font-size:12px;padding:3px 10px;border-radius:50px;display:inline-block;margin-bottom:8px;}
+.q-text{font-size:15px;font-weight:700;color:var(--ink);line-height:1.5;margin-bottom:12px;}
+.q-hint{font-size:12px;color:var(--muted);font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:4px;}
+.answer-ta{width:100%;min-height:100px;border:3px solid var(--border);border-radius:12px;padding:12px;font-family:'Nunito',sans-serif;font-size:13px;font-weight:600;resize:vertical;transition:border-color .2s;background:#fafaf9;}
+.answer-ta:focus{outline:none;border-color:var(--acc);background:#fff;}
+.answer-ta.done{background:#f9fafb;color:var(--muted);border-color:var(--border);}
+.check-btn{margin-top:10px;padding:11px 24px;background:linear-gradient(135deg,#d97706,#b45309);color:#fff;border:none;border-radius:50px;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;cursor:pointer;transition:.2s;box-shadow:0 3px 12px rgba(217,119,6,.35);}
+.check-btn:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(217,119,6,.4);}
+.check-btn:disabled{opacity:.45;cursor:not-allowed;transform:none;}
+.model-box{display:none;background:#f0fdf4;border:2px solid #86efac;border-radius:12px;padding:16px;margin-top:12px;animation:fadeUp .3s ease;}
+.model-box.show{display:block;}
+.model-hdr{font-family:system-ui,sans-serif;font-size:15px;color:#15803d;margin-bottom:8px;display:flex;align-items:center;gap:5px;}
+.model-body{font-size:13px;color:#166534;font-weight:600;line-height:1.7;}
+.checklist{margin-top:12px;background:#fff;border:2px solid #e5e7eb;border-radius:10px;padding:12px;}
+.cl-hdr{font-size:13px;font-weight:800;color:#b45309;margin-bottom:8px;}
+.cl-item{display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px solid #f5f5f4;cursor:pointer;user-select:none;font-size:12px;font-weight:700;color:var(--ink);transition:.15s;border-radius:6px;}
+.cl-item:last-child{border-bottom:none;}
+.cl-item:hover{background:#fef9c3;padding-left:4px;}
+.cl-box{width:20px;height:20px;border-radius:50%;border:2.5px solid #d1d5db;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:.2s;margin-top:1px;}
+.cl-box.on{background:#22c55e;border-color:#22c55e;color:#fff;font-size:11px;}
+.trap-box{background:#fffbeb;border:2px solid #fcd34d;border-radius:10px;padding:12px 14px;margin-top:10px;}
+.pretrap{background:#fff8e1;border:1.5px solid #fbbf24;border-radius:10px;padding:9px 12px;margin-bottom:10px;font-size:12px;font-weight:700;color:#92400e;display:flex;align-items:flex-start;gap:7px;line-height:1.55;}
+.pretrap span:first-child{font-size:14px;flex-shrink:0;}
+.answer-guide{background:#fffbeb;border:2px solid #fde68a;border-radius:14px;margin-bottom:16px;overflow:hidden;}
+.ag-toggle{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;cursor:pointer;font-family:system-ui,sans-serif;font-weight:700;font-size:14px;color:#92400e;user-select:none;}
+.ag-toggle:hover{background:#fef9c3;}
+.ag-body{padding:0 14px 12px;display:none;}
+.ag-body.open{display:block;}
+.ag-steps{display:flex;flex-direction:column;gap:7px;}
+.ag-step{display:flex;align-items:flex-start;gap:9px;font-size:13px;color:#78350f;font-weight:600;line-height:1.45;}
+.ag-n{background:#d97706;color:#fff;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0;margin-top:1px;}
+.trap-hdr{font-size:12px;font-weight:800;color:#92400e;margin-bottom:4px;display:flex;align-items:center;gap:4px;}
+.trap-body{font-size:12px;color:#78350f;font-weight:600;line-height:1.6;}
+.q-divider{height:2px;background:linear-gradient(90deg,#fde68a,transparent);margin:20px 0;}
+.nav-btns{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;}
+.nav-btn{flex:1;padding:11px;border:none;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;cursor:pointer;transition:.2s;}
+.nav-btn:hover{transform:translateY(-2px);}
+.nb-next{background:linear-gradient(135deg,#d97706,#b45309);color:#fff;box-shadow:0 3px 12px rgba(217,119,6,.3);}
+.nb-home{background:#f5f5f4;color:var(--ink);}
+/* RESULT */
+.result-card{background:var(--card);border-radius:var(--r);padding:36px 24px;text-align:center;box-shadow:var(--sh);}
+.r-em{font-size:68px;display:block;margin-bottom:10px;animation:bob 1s ease infinite;}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.r-score{font-family:system-ui,sans-serif;font-size:50px;font-weight:800;background:linear-gradient(135deg,#d97706,#b45309);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.r-msg{font-size:16px;font-weight:700;color:var(--muted);margin:8px 0 20px;}
+.r-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.rb{padding:11px 22px;border:none;border-radius:50px;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;cursor:pointer;transition:.2s;}
+.rb:hover{transform:translateY(-2px);}
+.rb-p{background:linear-gradient(135deg,#d97706,#b45309);color:#fff;box-shadow:0 3px 12px rgba(217,119,6,.3);}
+.rb-s{background:#fff;color:#d97706;border:3px solid #d97706;}
+/* TOAST */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:#1c1917;color:#fff;padding:10px 22px;border-radius:50px;font-weight:700;font-size:14px;z-index:500;transition:transform .4s cubic-bezier(.34,1.56,.64,1);pointer-events:none;white-space:nowrap;}
+.toast.show{transform:translateX(-50%) translateY(0);}
+.cw{position:fixed;inset:0;z-index:1000;pointer-events:none;}
+.cp{position:absolute;opacity:0;animation:cf 2.8s ease-in forwards;border-radius:50%;}
+@keyframes cf{0%{opacity:1;transform:translateY(-30px) rotate(0)}100%{opacity:0;transform:translateY(100vh) rotate(720deg)}}
+/* STATS STRIP */
+.stats-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:12px 0 0;}
+.stat-pill{background:var(--card);border:2px solid var(--border);border-radius:50px;padding:5px 14px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:5px;box-shadow:var(--sh);}
+/* PROGRESS */
+.prog-bar-wrap{max-width:400px;margin:14px auto 0;background:#e7e5e4;border-radius:50px;height:9px;overflow:hidden;}
+.prog-bar-fill{height:100%;border-radius:50px;background:linear-gradient(90deg,#d97706,#b45309);transition:width .6s ease;}
+.prog-lbl{font-size:11px;color:var(--muted);font-weight:600;text-align:right;max-width:400px;margin:3px auto 0;}
+@media(max-width:600px){.q-grid{grid-template-columns:1fr 1fr;}}
+
+  /* nav search */
+  .nav-search{display:flex;align-items:center;margin-left:8px;position:relative}
+  .ns-icon{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:8px;color:rgba(232,237,245,.6);cursor:pointer;padding:6px 8px;display:flex;align-items:center;transition:.15s}
+  .ns-icon:hover{color:#fff;background:rgba(255,255,255,.12)}
+  .ns-form{display:flex;align-items:center;overflow:hidden;width:0;opacity:0;transition:width .25s ease,opacity .2s;position:absolute;right:36px;top:50%;transform:translateY(-50%)}
+  .nav-search.open .ns-form{width:200px;opacity:1}
+  .ns-input{background:#0d1629;border:1.5px solid rgba(56,189,248,.4);border-radius:8px 0 0 8px;color:#e8edf5;font-size:13px;padding:6px 10px;outline:none;width:100%;font-family:inherit}
+  .ns-input::placeholder{color:rgba(232,237,245,.3)}
+  .ns-submit{background:rgba(56,189,248,.2);border:1.5px solid rgba(56,189,248,.4);border-left:none;border-radius:0 8px 8px 0;color:#38bdf8;cursor:pointer;padding:6px 10px;font-size:13px;font-family:inherit;transition:.15s}
+  .ns-submit:hover{background:rgba(56,189,248,.35)}
+  @media(max-width:500px){.nav-search.open .ns-form{width:150px}}
+</style>
+<meta property="og:image" content="https://primayscience.org/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://primayscience.org/images/og-image.png">
+<link rel="canonical" href="https://primayscience.org/data/">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Data Interpretation – ScienceStar Singapore Primary Science",
+  "description": "Practice reading graphs, tables and data for PSLE Science. Identify trends, explain anomalies and draw conclusions. Free Singapore primary science practice.",
+  "url": "https://primayscience.org/data/",
+  "isPartOf": {"@type": "WebSite", "url": "https://primayscience.org", "name": "ScienceStar"}
+}</script>
+<meta name="twitter:title" content="Data Interpretation Practice — Free PSLE Science Tool">
+<meta name="twitter:description" content="Master graphs, tables & data for PSLE Science. Real exam-style questions with model answers. Free for Singapore students.">
+</head>
+<body>
+<div class="bg-dots"></div>
+<div class="bg-glow"></div>
+<div class="ticker"><span class="tick-in">📊 Tip: Always state the TREND first, then explain WHY using science! 📈 If a data point doesn't fit the trend, it's an ANOMALY — always mention it! 🔢 Quote numbers from the table/graph in your answer to get full marks! 🎯 PSLE always asks: trend, reason, conclusion, and improvement!</span></div>
+<header>
+  <a href="/" class="logo"><span class="logo-em">📊</span> ScienceStar</a>
+  <div style="display:flex;align-items:center;gap:10px">
+    <div class="xp-pill">⭐ <span id="xpD">0</span> XP</div>
+    <a href="/" class="back-lnk">← Home</a>
+  </div>
+</header>
+
+<!-- HOME -->
+<div id="homeScreen" class="screen active">
+<div class="container">
+  <div class="hero">
+    <h1>📊 Data Interpretation</h1>
+    <p>Read graphs and tables, identify trends, explain anomalies and draw conclusions — exactly what PSLE Science tests every year.</p>
+    <div class="stats-row">
+      <div class="stat-pill">✅ <span id="sDone">0</span> / <span id="sTotal">12</span> completed</div>
+      <div class="stat-pill">⭐ <span id="sXP">0</span> XP earned</div>
+      <div class="stat-pill">🎯 <span id="sAcc">—</span> accuracy</div>
+    </div>
+    <div class="prog-bar-wrap"><div class="prog-bar-fill" id="gFill" style="width:0%"></div></div>
+    <div class="prog-lbl" id="gLbl">0 of 12 question sets completed</div>
+  </div>
+  <div style="background:#fff8e1;border:2px solid #fde68a;border-radius:16px;padding:16px 18px;margin-bottom:20px;max-width:680px;margin-left:auto;margin-right:auto;">
+    <div style="font-family:system-ui,sans-serif;font-weight:800;font-size:15px;color:#92400e;margin-bottom:10px;">📖 Quick Guide — How to read each data type</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;">
+      <div style="background:#fff;border-radius:10px;padding:10px 12px;border:1.5px solid #fde68a;">
+        <div style="font-weight:800;font-size:13px;color:#b45309;margin-bottom:4px;">📋 Tables</div>
+        <div style="font-size:12px;color:#78350f;font-weight:600;line-height:1.5;">Left column = what was changed. Other columns = what was measured. Look for the trend going DOWN the results column.</div>
+      </div>
+      <div style="background:#fff;border-radius:10px;padding:10px 12px;border:1.5px solid #fde68a;">
+        <div style="font-weight:800;font-size:13px;color:#b45309;margin-bottom:4px;">📊 Bar Charts</div>
+        <div style="font-size:12px;color:#78350f;font-weight:600;line-height:1.5;">Compare heights of bars. Always check the y-axis scale. Hover over bars to see exact values.</div>
+      </div>
+      <div style="background:#fff;border-radius:10px;padding:10px 12px;border:1.5px solid #fde68a;">
+        <div style="font-weight:800;font-size:13px;color:#b45309;margin-bottom:4px;">📈 Line Graphs</div>
+        <div style="font-size:12px;color:#78350f;font-weight:600;line-height:1.5;">Look for: overall trend (up/down/flat), turning points, and any dot that does NOT fit the line — that is an anomaly.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sec-lbl">🌱 Biology Data</div>
+  <div class="q-grid" id="bioGrid"></div>
+  <div class="sec-lbl">⚗️ Physics &amp; Earth Science Data</div>
+  <div class="q-grid" id="physGrid"></div>
+</div>
+</div>
+
+<!-- QUESTION SCREEN -->
+<div id="qScreen" class="screen">
+<div class="container">
+  <button class="back-btn" onclick="goHome()">← All Sets</button>
+  <div class="answer-guide" id="ansGuide">
+    <div class="ag-toggle" onclick="toggleGuide()">
+      <span>📋 How to answer data questions</span>
+      <span id="agArrow">▼</span>
+    </div>
+    <div class="ag-body" id="agBody">
+      <div class="ag-steps">
+        <div class="ag-step"><span class="ag-n">1</span><span>State the <strong>trend</strong> — as X increases/decreases, Y increases/decreases</span></div>
+        <div class="ag-step"><span class="ag-n">2</span><span><strong>Quote numbers</strong> from the table/graph to support your trend</span></div>
+        <div class="ag-step"><span class="ag-n">3</span><span>For anomalies — name it and suggest a <strong>scientific reason</strong></span></div>
+        <div class="ag-step"><span class="ag-n">4</span><span>Link back to the <strong>science concept</strong> (e.g. chlorophyll, conduction, forces)</span></div>
+      </div>
+      <div style="font-size:11px;color:#92400e;font-weight:700;margin-top:8px;padding-top:8px;border-top:1px solid #fde68a">
+        📌 Trend → Numbers → Science → Anomaly (if any)
+      </div>
+    </div>
+  </div>
+  <div id="qTitle" style="font-family:system-ui,sans-serif;font-size:20px;font-weight:800;color:var(--ink);margin-bottom:14px;"></div>
+  <div class="data-card" id="dataDisplay"></div>
+  <div class="qs-wrap" id="questionsWrap"></div>
+</div>
+</div>
+
+<!-- RESULT -->
+<div id="resultScreen" class="screen">
+<div class="container"><div class="result-card" id="resultCard"></div></div>
+</div>
+
+<div class="toast" id="toast"></div>
+<div class="cw" id="cw"></div>
+
+<script>
+// ═══════════════════════════════════════
+// DATA SETS
+// Each set: id, name, emoji, level, colour, category
+//   dataType: 'table' | 'bar' | 'line'
+//   data: for table = {headers,rows}, for bar/line = {labels,datasets,yLabel,xLabel}
+//   questions: [{q, marks, hint, model, points, trap}]
+// ═══════════════════════════════════════
+var SETS=[
+{id:'plant_growth',name:'Effect of Light on Plant Growth',emoji:'🌱',level:'P3/P4',color:'#16a34a',cat:'bio',
+ dataType:'table',
+ data:{
+   caption:'A student grew 5 identical bean seedlings for 2 weeks under different light conditions. The table shows the height (cm) after 2 weeks.',
+   headers:['Plant','Light Condition','Height after 2 weeks (cm)','Leaf Colour'],
+   rows:[['A','Full sunlight (8 hrs)','22','Dark green'],['B','Partial sunlight (4 hrs)','16','Light green'],['C','Fluorescent light (8 hrs)','18','Green'],['D','No light','8','Yellow'],['E','Full sunlight (8 hrs)','21','Dark green']]
+ },
+ questions:[
+   {q:'(a) State the trend shown by the data for Plants A, B, and D.',marks:2,hint:'Look at what changes between A, B and D. Quote the numbers.',
+    model:'As the amount of light the plant receives increases, the height of the plant after 2 weeks increases. Plant D (no light) grew only 8 cm, Plant B (4 hrs) grew 16 cm, and Plant A (8 hrs sunlight) grew 22 cm.',
+    points:[{t:'As light <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">increases</span>, plant height increases',k:true},{t:'Numbers quoted from the table (e.g. 8 cm, 16 cm, 22 cm)',k:true},{t:'Correct direction of trend stated clearly',k:false}],
+    trap:'Never just say "more light = taller". You must use the word INCREASES or DECREASES, and quote specific numbers from the data to score full marks.'},
+   {q:'(b) Plants A and E received the same conditions but E grew only 21 cm while A grew 22 cm. What is this called and suggest ONE reason for it.',marks:2,hint:'This data point does not fit the expected result.',
+    model:'This is an anomalous result (anomaly). A possible reason is that Plant E may have had a slightly different amount of soil nutrients, or it may have been slightly smaller as a seedling at the start of the experiment, even though they appeared identical.',
+    points:[{t:'Correctly identifies it as an <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">anomalous result / anomaly</span>',k:true},{t:'Reasonable scientific explanation for the difference',k:true}],
+    trap:'Many students say "the student made an error". This is too vague. You must suggest a SPECIFIC reason — soil nutrients, different seedling size, slightly different watering, etc.'},
+   {q:'(c) Why is Plant D\'s leaf colour yellow instead of green? Use your science knowledge to explain.',marks:2,hint:'Think about why leaves are green and what happens without light.',
+    model:'Leaves are green because they contain chlorophyll. Without light, the plant cannot produce chlorophyll (or the existing chlorophyll breaks down). Therefore Plant D has no chlorophyll and its leaves appear yellow.',
+    points:[{t:'Leaves are green due to <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">chlorophyll</span>',k:true},{t:'Without light, chlorophyll cannot be produced / breaks down',k:true}],
+    trap:'Do not say "no light means no photosynthesis so leaves turn yellow" — this does not explain WHY they turn yellow. You must link the absence of light to the absence of chlorophyll specifically.'},
+ ]
+},
+{id:'pulse_rate',name:'Exercise and Pulse Rate',emoji:'🫀',level:'P5',color:'#ef4444',cat:'bio',
+ dataType:'bar',
+ data:{
+   caption:'A student measured her pulse rate (beats per minute) at rest, immediately after 2 minutes of jogging, and after 5 minutes of rest following jogging.',
+   labels:['At rest','After jogging','After 5 min rest'],
+   datasets:[{label:'Pulse Rate (beats/min)',values:[72,128,80],color:'#ef4444'}],
+   yLabel:'Pulse Rate (beats/min)',xLabel:'Condition',yMax:160
+ },
+ questions:[
+   {q:'(a) By how much did the pulse rate increase after jogging compared to at rest? Show your working.',marks:2,hint:'Calculate the difference. Always show the subtraction.',
+    model:'Increase in pulse rate = 128 − 72 = 56 beats per minute. The pulse rate increased by 56 beats per minute after jogging.',
+    points:[{t:'Correct subtraction shown: 128 − 72',k:true},{t:'Answer: <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">56 beats per minute</span>',k:true}],
+    trap:'Always show the calculation (128 − 72 = 56). Just writing "56" without working may not receive full marks. Always include the unit: beats per minute.'},
+   {q:'(b) Explain why the pulse rate increased immediately after jogging.',marks:3,hint:'Think about what the muscles need during exercise and how the body responds.',
+    model:'During jogging, the muscles are working harder and need more oxygen and glucose to carry out aerobic respiration and release energy. The heart beats faster to pump oxygenated blood to the muscles more quickly. This also helps remove carbon dioxide produced by the muscles more rapidly.',
+    points:[{t:'Muscles need more <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">oxygen and glucose</span> for respiration',k:true},{t:'Heart beats faster to pump <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">oxygenated blood</span> to muscles',k:true},{t:'Also helps remove CO₂ more rapidly',k:false}],
+    trap:'Do not just say "the body needs more energy". You must explain the chain: muscles → need O₂ for respiration → heart beats faster → to deliver O₂ faster. Each link must be present.'},
+   {q:'(c) The pulse rate after 5 minutes of rest (80 bpm) is slightly higher than at rest (72 bpm). Is this what you would expect? Explain.',marks:2,hint:'Think about how long recovery takes.',
+    model:'Yes, this is expected. After only 5 minutes of rest, the body has not fully recovered to its resting state. The muscles may still have slightly elevated oxygen demand or slightly elevated carbon dioxide levels, so the heart rate has not completely returned to the resting pulse rate of 72 bpm. Full recovery may take longer than 5 minutes.',
+    points:[{t:'Yes — expected / body has not fully <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">recovered</span> yet',k:true},{t:'Scientific reason: O₂ demand still slightly elevated or CO₂ not fully cleared',k:true}],
+    trap:'Some students say "No, it should be back to 72 exactly after 5 minutes." This is wrong — recovery is gradual and 5 minutes may not be enough. Always think about whether the trend makes biological sense.'},
+ ]
+},
+{id:'food_web_data',name:'Population Changes in a Food Web',emoji:'🌿',level:'P5',color:'#22c55e',cat:'bio',
+ dataType:'line',
+ data:{
+   caption:'The graph shows population changes (in thousands) of grass, rabbits and foxes in a field over 4 years after a disease reduced the fox population in Year 1.',
+   labels:['Year 0','Year 1','Year 2','Year 3','Year 4'],
+   datasets:[
+     {label:'Grass (×1000 kg)',values:[100,100,70,90,100],color:'#16a34a'},
+     {label:'Rabbits (×1000)',values:[20,35,50,30,22],color:'#f97316'},
+     {label:'Foxes (×1000)',values:[5,2,3,6,5],color:'#7c3aed'}
+   ],
+   yLabel:'Population',xLabel:'Year',yMax:120
+ },
+ questions:[
+   {q:'(a) Describe what happened to the rabbit population between Year 1 and Year 2, and explain why.',marks:3,hint:'Read the rabbit line. Then think about what changed at Year 1 (fox disease).',
+    model:'The rabbit population increased from 35,000 in Year 1 to 50,000 in Year 2. This is because the fox population decreased due to disease in Year 1 (from 5,000 to 2,000). With fewer foxes preying on them, fewer rabbits were being eaten, so more rabbits survived and the population increased.',
+    points:[{t:'Rabbit population <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">increased</span> from Year 1 to Year 2 (with values)',k:true},{t:'Fox population <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">decreased</span> due to disease — fewer rabbits eaten',k:true},{t:'Therefore more rabbits survived → population rose',k:true}],
+    trap:'You must state both what happened AND why. Many students only describe the trend without linking it to the fox population change. Always trace the cause through the food web.'},
+   {q:'(b) Explain why the grass population decreased between Year 1 and Year 2.',marks:2,hint:'What happened to the rabbits? What do rabbits eat?',
+    model:'As the rabbit population increased significantly between Year 1 and Year 2 (from 35,000 to 50,000), more rabbits were eating the grass. The increased grazing pressure meant more grass was consumed, so the grass population decreased from 100 to 70.',
+    points:[{t:'More rabbits → more grass <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">eaten / consumed</span>',k:true},{t:'Therefore grass population <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">decreased</span> (with values)',k:true}],
+    trap:'Trace the chain: fox disease → fewer foxes → more rabbits → more grass eaten → grass decreases. You must show each step of the logic.'},
+   {q:'(c) By Year 4, all three populations have returned close to Year 0 levels. What does this suggest about this ecosystem?',marks:2,hint:'Think about stability and balance in ecosystems.',
+    model:'This suggests that the ecosystem is self-regulating (stable / in balance). After the disturbance (fox disease), the populations of all three organisms adjusted and returned to their original levels through the interactions between predators and prey. This shows that the food web is resilient — it can recover from disruption.',
+    points:[{t:'Ecosystem is <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">self-regulating / stable / balanced</span>',k:true},{t:'Populations recover after disturbance — ecosystem is <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">resilient</span>',k:true}],
+    trap:'Do not just say "populations go back to normal". Use the word SELF-REGULATING or STABLE ECOSYSTEM. These are the key terms that earn marks in conclusion questions.'},
+ ]
+},
+{id:'dissolving',name:'Temperature and Dissolving Rate',emoji:'🧪',level:'P4',color:'#0ea5e9',cat:'phys',
+ dataType:'table',
+ data:{
+   caption:'A student added 5 g of sugar to 100 ml of water at different temperatures and measured the time for it to fully dissolve (without stirring).',
+   headers:['Temperature of water (°C)','Time to dissolve (minutes)'],
+   rows:[['20','8.5'],['30','6.2'],['40','4.8'],['50','3.1'],['60','1.9'],['70','0.8']]
+ },
+ questions:[
+   {q:'(a) State the relationship between water temperature and the time taken for sugar to dissolve.',marks:2,hint:'Is it a direct or inverse relationship? Quote two data points.',
+    model:'As the temperature of the water increases, the time taken for the sugar to dissolve decreases. For example, at 20°C the sugar took 8.5 minutes to dissolve, but at 70°C it took only 0.8 minutes.',
+    points:[{t:'As temperature increases, dissolving time <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">decreases</span>',k:true},{t:'Data values quoted to support the trend',k:true}],
+    trap:'This is an INVERSE relationship — more temperature, LESS time. Many students write "as temperature increases, dissolving time increases" — which is the opposite. Read the data carefully before stating the trend.'},
+   {q:'(b) Explain WHY sugar dissolves faster in hotter water. Use the idea of particles in your answer.',marks:3,hint:'Think about what temperature does to water particles and sugar particles.',
+    model:'In hotter water, the water particles have more kinetic energy and move faster. This means the water particles collide with the sugar particles more frequently and with greater force. These collisions break apart the sugar particles more quickly and spread them throughout the water, so the sugar dissolves faster.',
+    points:[{t:'Hotter water → particles have more <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">kinetic energy</span> / move faster',k:true},{t:'Water particles <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">collide</span> with sugar more frequently/forcefully',k:true},{t:'Sugar particles broken apart and spread more quickly',k:true}],
+    trap:'Do not just say "hot water makes things dissolve faster" — this is circular reasoning. The answer must include: more energy → faster particle movement → more/harder collisions → faster dissolving.'},
+   {q:'(c) The student did not stir the water. Suggest how this might have affected the results and what the student should do to improve the experiment.',marks:2,hint:'How would stirring change the results? Is this a fair test issue?',
+    model:'Without stirring, the dissolving rate would be slower and the results may vary because the sugar particles tend to sink and accumulate at the bottom. In a real experiment, the student should stir each sample at the same rate and for the same duration to ensure it is a fair test, as stirring is a variable that could affect how quickly the sugar dissolves.',
+    points:[{t:'Without stirring, dissolving is <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">slower / less consistent</span>',k:true},{t:'Improvement: stir each sample <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">the same way</span> to make it a fair test',k:true}],
+    trap:'Always link your improvement to FAIR TEST. Changing one thing (like adding stirring) without saying "to keep it a fair test" or "to control this variable" will lose you a mark.'},
+ ]
+},
+{id:'shadow',name:'Distance and Shadow Length',emoji:'💡',level:'P3/P4',color:'#eab308',cat:'phys',
+ dataType:'table',
+ data:{
+   caption:'A student placed a torch 10 cm from a wall and moved an opaque ball between the torch and wall. She measured shadow length at different distances from the torch.',
+   headers:['Distance of ball from torch (cm)','Length of shadow (cm)'],
+   rows:[['5','30'],['10','18'],['15','12'],['20','9'],['25','7'],['30','6']]
+ },
+ questions:[
+   {q:'(a) Describe the trend in the data. Use values from the table in your answer.',marks:2,hint:'What happens to the shadow as the ball moves further from the torch?',
+    model:'As the distance of the ball from the torch increases, the length of the shadow decreases. For example, when the ball was 5 cm from the torch, the shadow was 30 cm long, but when the ball was 30 cm from the torch, the shadow was only 6 cm long.',
+    points:[{t:'Shadow length <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">decreases</span> as distance from torch increases',k:true},{t:'Specific values quoted (e.g. 30 cm → 6 cm)',k:true}],
+    trap:'Quote at least TWO specific data points. Just saying "shadow gets shorter" without numbers will not get full marks for a "describe the trend" question.'},
+   {q:'(b) Explain using the properties of light why the shadow gets shorter as the ball moves away from the torch.',marks:3,hint:'Remember how light travels and how shadows form.',
+    model:'Light travels in straight lines. When the ball is close to the torch, the ball blocks a wider cone of light, causing a larger shadow on the wall. As the ball moves further from the torch, the ball blocks a narrower cone of light because the light rays spread out less around the object at that distance, so the shadow becomes shorter.',
+    points:[{t:'Light travels in <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">straight lines</span>',k:true},{t:'Ball closer to torch blocks <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">wider cone</span> of light → larger shadow',k:true},{t:'Ball further from torch blocks narrower cone → smaller shadow',k:true}],
+    trap:'You must mention that light travels in straight lines — this is the core property. Without this, you cannot fully explain why shadow size changes with distance.'},
+   {q:'(c) Predict what the shadow length would be if the ball were placed 35 cm from the torch. Explain your prediction.',marks:2,hint:'Look at the pattern of change between each row.',
+    model:'The shadow length would be approximately 5 cm. The trend shows that as the distance increases by 5 cm, the shadow decreases by a smaller and smaller amount (the rate of change is decreasing). The difference between 25 cm (7 cm shadow) and 30 cm (6 cm shadow) is 1 cm, so extending the pattern suggests the shadow at 35 cm would be approximately 5 cm.',
+    points:[{t:'Reasonable prediction ~5 cm (accept 4.5–5.5 cm)',k:true},{t:'Prediction is based on the <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">pattern / trend</span> in the data',k:true}],
+    trap:'For prediction questions, always JUSTIFY your answer by referring to the pattern. "I predict 5 cm" alone gets 1 mark. "I predict 5 cm because the trend shows..." gets full marks.'},
+ ]
+},
+{id:'heat_insulation',name:'Comparing Insulating Materials',emoji:'🌡️',level:'P4',color:'#f97316',cat:'phys',
+ dataType:'table',
+ data:{
+   caption:'Students wrapped identical cups of hot water (starting at 80°C) with different materials and measured the water temperature every 5 minutes.',
+   headers:['Time (min)','No insulation (°C)','Cotton wool (°C)','Bubble wrap (°C)','Aluminium foil (°C)'],
+   rows:[['0','80','80','80','80'],['5','68','74','76','71'],['10','58','69','72','65'],['15','50','64','69','60'],['20','44','60','67','57'],['25','39','57','65','54']]
+ },
+ questions:[
+   {q:'(a) Which material is the best insulator? Justify your answer using data from the table.',marks:2,hint:'Best insulator = least heat lost. Which cup kept the highest temperature?',
+    model:'Bubble wrap is the best insulator. After 25 minutes, the cup wrapped in bubble wrap retained the highest temperature at 65°C, compared to cotton wool (57°C), aluminium foil (54°C), and no insulation (39°C). The bubble wrap lost the least heat over 25 minutes.',
+    points:[{t:'<span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">Bubble wrap</span> is the best insulator',k:true},{t:'Justified with data: highest temperature retained (65°C at 25 min)',k:true}],
+    trap:'Do not say "bubble wrap has the highest temperature at 25 min" without explaining what that MEANS. Always link the data to the conclusion: highest temperature = least heat lost = best insulator.'},
+   {q:'(b) Why does aluminium foil perform worse than cotton wool, even though metals are generally good conductors?',marks:3,hint:'Think about the properties of metals and how they interact with heat energy.',
+    model:'Aluminium foil is a metal and a good conductor of heat. This means it allows heat to transfer quickly from the hot water through the foil to the surrounding air by conduction. Cotton wool, on the other hand, traps pockets of air between its fibres. Air is a very poor conductor of heat (an insulator), so cotton wool slows down heat loss more effectively than the conducting aluminium foil.',
+    points:[{t:'Aluminium is a good <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">conductor</span> — transfers heat quickly to surroundings',k:true},{t:'Cotton wool traps <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">air between fibres</span>',k:true},{t:'Air is a poor conductor / insulator — reduces heat loss',k:true}],
+    trap:'The key insight is that cotton wool works because of the AIR it traps, not the cotton itself. Many students say "cotton is a better insulator" without explaining WHY. Always explain the mechanism.'},
+   {q:'(c) Suggest ONE way to make this a more reliable experiment and explain your reasoning.',marks:2,hint:'Think about what could cause results to vary between trials.',
+    model:'The experiment should be repeated at least 3 times for each material and the average temperature taken. This would reduce the effect of random errors (e.g., slight differences in measuring temperature, or different starting conditions) and make the results more reliable and trustworthy.',
+    points:[{t:'Repeat the experiment and take the <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">average</span>',k:true},{t:'Reason: reduces effect of <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">random errors</span> / makes results more reliable',k:true}],
+    trap:'Just saying "repeat the experiment" is only 1 mark. You MUST say WHY repeating improves reliability — to reduce the effect of random errors and calculate a more accurate average.'},
+ ]
+},
+];
+
+// ── Placeholder sets to reach 12 ──
+var EXTRA=[
+{id:'photosyn',name:'Light Intensity & Photosynthesis',emoji:'🌞',level:'PSLE',color:'#65a30d',cat:'bio',
+ dataType:'table',
+ data:{
+   caption:'A student measured the number of oxygen bubbles produced per minute by a water plant (Elodea) at different distances from a lamp.',
+   headers:['Distance from lamp (cm)','Bubbles per minute'],
+   rows:[['10','38'],['20','28'],['30','18'],['40','10'],['50','4'],['60','2']]
+ },
+ questions:[
+   {q:'(a) State the relationship between distance from the lamp and rate of photosynthesis. Justify with data.',marks:2,hint:'More bubbles = faster photosynthesis. What is the trend?',
+    model:'As the distance from the lamp increases, the rate of photosynthesis decreases (shown by fewer oxygen bubbles produced per minute). At 10 cm, 38 bubbles/min were produced; at 60 cm, only 2 bubbles/min were produced.',
+    points:[{t:'Photosynthesis rate <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">decreases</span> as distance increases',k:true},{t:'Data values quoted (38 at 10 cm, 2 at 60 cm)',k:true}],
+    trap:'State the trend in terms of PHOTOSYNTHESIS RATE, not just "bubbles". The oxygen bubble count is the evidence for photosynthesis rate — link them explicitly.'},
+   {q:'(b) Explain why increasing distance from the lamp reduces the rate of photosynthesis.',marks:2,hint:'What does the plant need for photosynthesis? What changes with distance?',
+    model:'As the plant moves further from the lamp, the light intensity reaching the plant decreases. Photosynthesis requires light energy (absorbed by chlorophyll). With less light energy available, the plant can carry out photosynthesis at a slower rate, producing less glucose and oxygen.',
+    points:[{t:'Further distance → less <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">light intensity</span> reaching plant',k:true},{t:'Photosynthesis requires light energy — less light = <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">slower rate</span>',k:true}],
+    trap:'The key word is LIGHT INTENSITY — not just "less light". Examiners want to see you use this term.'},
+   {q:'(c) Name ONE other factor (besides distance/light intensity) that could affect the rate of photosynthesis. Explain how it would affect the rate.',marks:2,hint:'What else does the plant need for photosynthesis?',
+    model:'Temperature is another factor. If the temperature increases (up to an optimum), the rate of photosynthesis increases because the enzymes involved work faster. However, if the temperature is too high, the enzymes are denatured and photosynthesis stops. Carbon dioxide concentration is also a factor — more CO₂ allows faster photosynthesis.',
+    points:[{t:'Named valid factor: temperature / CO₂ concentration / water',k:true},{t:'Correct explanation of HOW it affects the rate',k:true}],
+    trap:'Just naming the factor is only 1 mark. Always explain the mechanism of effect.'},
+ ]
+},
+{id:'water_conservation',name:'Singapore Water Usage',emoji:'💧',level:'P5/PSLE',color:'#6366f1',cat:'phys',
+ dataType:'bar',
+ data:{
+   caption:'The bar chart shows the average daily household water usage (litres per person) in Singapore across different activities in 2023.',
+   labels:['Toilet flushing','Showering','Laundry','Washing up','Drinking/cooking','Others'],
+   datasets:[{label:'Litres per person per day',values:[27,23,12,8,4,7],color:'#6366f1'}],
+   yLabel:'Litres per person per day',xLabel:'Activity',yMax:35
+ },
+ questions:[
+   {q:'(a) Calculate the total average daily water usage per person in Singapore. Show your working.',marks:2,hint:'Add all the values from the bar chart.',
+    model:'Total = 27 + 23 + 12 + 8 + 4 + 7 = 81 litres per person per day.',
+    points:[{t:'Shows addition of all 6 values',k:true},{t:'Correct answer: <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">81 litres per person per day</span>',k:true}],
+    trap:'Always show the addition. Just writing "81" without showing 27+23+12+8+4+7 may not receive full marks for a "show your working" question.'},
+   {q:'(b) What percentage of total water usage is used for toilet flushing? Give your answer to 1 decimal place.',marks:2,hint:'Use your total from (a). Percentage = (part ÷ total) × 100.',
+    model:'Percentage = (27 ÷ 81) × 100 = 33.3% (to 1 decimal place). Toilet flushing accounts for 33.3% of total household water usage.',
+    points:[{t:'Correct method: (27 ÷ 81) × 100',k:true},{t:'Answer: <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">33.3%</span>',k:true}],
+    trap:'Show the formula AND the calculation. "27/81 = 33.3%" is incomplete — include × 100 explicitly.'},
+   {q:'(c) Suggest TWO ways households could reduce toilet flushing water usage. For each, explain how it saves water.',marks:2,hint:'Think practically about toilets.',
+    model:'1. Install a dual-flush toilet — using the half-flush button uses less water (e.g., 3 litres instead of 9 litres) for liquid waste, saving 6 litres per flush. 2. Place a water-filled bottle inside the toilet cistern — this reduces the volume of water in the cistern, so less water is used per flush without changing the toilet hardware.',
+    points:[{t:'Suggestion 1 with explanation of HOW it saves water',k:true},{t:'Suggestion 2 with explanation of HOW it saves water',k:true}],
+    trap:'Just saying "flush less often" is not a strong answer — it does not reduce water per flush. Give suggestions that address water efficiency, not just frequency.'},
+ ]
+},
+{id:'magnet_strength',name:'Magnet Strength and Distance',emoji:'🧲',level:'P4',color:'#8b5cf6',cat:'phys',
+ dataType:'table',
+ data:{
+   caption:'A student investigated how the distance between a magnet and a steel paperclip affects the number of paperclips the magnet could pick up in a chain.',
+   headers:['Distance between magnet and first clip (cm)','Number of clips in chain'],
+   rows:[['0','8'],['1','6'],['2','4'],['3','2'],['4','1'],['5','0']]
+ },
+ questions:[
+   {q:'(a) Describe the relationship between distance and magnetic strength (number of clips).',marks:2,hint:'What happens to the number of clips as distance increases? Quote values.',
+    model:'As the distance between the magnet and the first paperclip increases, the number of paperclips that can be picked up decreases. At 0 cm, 8 clips could be picked up, but at 5 cm, no clips could be picked up at all.',
+    points:[{t:'Clips decrease as distance <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">increases</span>',k:true},{t:'Data values quoted (8 clips at 0 cm, 0 clips at 5 cm)',k:true}],
+    trap:'This is a decreasing/inverse relationship. If you write it the wrong way round (clips increase as distance increases), you will lose all marks. Check which variable is on which axis.'},
+   {q:'(b) What can you conclude about the relationship between distance and magnetic force?',marks:2,hint:'Draw a conclusion — what does the pattern MEAN in terms of physics?',
+    model:'Magnetic force decreases as the distance between the magnet and the object increases. Beyond a certain distance (5 cm in this experiment), the magnetic force is too weak to attract and hold the steel paperclip. This shows that magnetic force acts over a limited range and gets weaker with increasing distance.',
+    points:[{t:'Magnetic force <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">decreases with increasing distance</span>',k:true},{t:'Beyond a certain distance, force is too weak to attract objects',k:true}],
+    trap:'A trend description is NOT a conclusion. A conclusion interprets what the results MEAN. "The number of clips decreases" is a trend. "Magnetic force decreases with distance" is a conclusion.'},
+   {q:'(c) Identify ONE variable that must be kept constant to make this a fair test. Explain why.',marks:2,hint:'What else could affect how many clips a magnet picks up?',
+    model:'The type and size of paperclip must be kept the same throughout the experiment. If different clips were used, some may be made of a more magnetic material (more iron/steel) or be heavier, which would affect how many can be picked up — this would make it an unfair test as an uncontrolled variable would affect the results.',
+    points:[{t:'Valid controlled variable identified: clip size/type, same magnet, same surface',k:true},{t:'Reason: changing this variable would affect results — makes it <span style="background:#fef9c3;padding:1px 4px;border-radius:3px;font-weight:800">unfair test</span>',k:true}],
+    trap:'Always explain WHY it must be kept constant. "Same paperclips" alone is 1 mark. "Same paperclips because different clips could affect how many are attracted" is 2 marks.'},
+ ]
+},
+];
+SETS=SETS.concat(EXTRA);
+
+// ── STATE ──
+var xp=0,tc=0,ta=0,done={};
+try{var sv=JSON.parse(localStorage.getItem('ss_data')||'{}');xp=sv.xp||0;tc=sv.tc||0;ta=sv.ta||0;done=sv.done||{};}catch(e){}
+function save(){try{localStorage.setItem('ss_data',JSON.stringify({xp,tc,ta,done}));}catch(e){}}
+
+// Per-question session
+var curSet=null,qAnswers=[],qScores=[];
+
+// ── RENDER HOME ──
+function renderHome(){
+  document.getElementById('xpD').textContent=xp;
+  document.getElementById('sXP').textContent=xp;
+  document.getElementById('sTotal').textContent=SETS.length;
+  var d=Object.keys(done).length;
+  document.getElementById('sDone').textContent=d;
+  document.getElementById('sAcc').textContent=ta>0?Math.round(tc/ta*100)+'%':'—';
+  document.getElementById('gFill').style.width=(d/SETS.length*100)+'%';
+  document.getElementById('gLbl').textContent=d+' of '+SETS.length+' question sets completed';
+  var bio=SETS.filter(function(s){return s.cat==='bio';});
+  var phys=SETS.filter(function(s){return s.cat==='phys';});
+  document.getElementById('bioGrid').innerHTML=bio.map(setCard).join('');
+  document.getElementById('physGrid').innerHTML=phys.map(setCard).join('');
+}
+function setCard(s){
+  return '<div class="q-card" style="--qc:'+s.color+'" onclick="openSet(\''+s.id+'\')">'
+    +'<div class="q-done'+(done[s.id]?' show':'')+'">✓</div>'
+    +'<span class="q-em">'+s.emoji+'</span>'
+    +'<div class="q-name">'+s.name+'</div>'
+    +'<div class="q-level">'+s.level+'</div>'
+    +'<div class="q-type">'+s.questions.length+' questions · '+s.dataType.charAt(0).toUpperCase()+s.dataType.slice(1)+' data</div>'
+    +'</div>';
+}
+
+// ── OPEN SET ──
+function openSet(id){
+  curSet=SETS.find(function(s){return s.id===id;});
+  if(!curSet)return;
+  qAnswers=curSet.questions.map(function(){return '';});
+  qScores=curSet.questions.map(function(){return 0;});
+  document.getElementById('qTitle').textContent=curSet.emoji+' '+curSet.name;
+  renderDataDisplay();
+  renderQuestions();
+  showScreen('qScreen');
+  // Open the guide by default
+  setTimeout(function(){
+    var body=document.getElementById('agBody');
+    var arrow=document.getElementById('agArrow');
+    if(body&&!body.classList.contains('open')){body.classList.add('open');arrow.textContent='▲';}
+  },100);
+}
+
+function renderDataDisplay(){
+  var d=curSet.data, html='';
+  html+='<div class="data-title">📋 '+d.caption+'</div>';
+  if(curSet.dataType==='table'){
+    html+='<div style="overflow-x:auto"><table class="data-table"><thead><tr>'+d.headers.map(function(h){return '<th>'+h+'</th>';}).join('')+'</tr></thead><tbody>'+d.rows.map(function(r){return '<tr>'+r.map(function(c){return '<td>'+c+'</td>';}).join('')+'</tr>';}).join('')+'</tbody></table></div>';
+  } else if(curSet.dataType==='bar'){
+    var ds=d.datasets[0];
+    var max=d.yMax||Math.max.apply(null,ds.values)*1.2;
+    html+='<div class="chart-y-lbl">'+d.yLabel+'</div>';
+    html+='<div class="chart-wrap"><div class="bar-chart">';
+    ds.values.forEach(function(v,i){
+      var h=Math.round(v/max*180);
+      html+='<div class="bar-col"><div class="bar" style="height:'+h+'px;background:'+ds.color+';opacity:.85" data-val="'+v+'"></div><div class="bar-lbl">'+d.labels[i]+'</div></div>';
+    });
+    html+='</div></div>';
+    html+='<div style="font-size:11px;color:var(--muted);font-weight:600;text-align:center;margin-top:4px">'+d.xLabel+'</div>';
+  } else if(curSet.dataType==='line'){
+    // SVG line chart
+    var W=700,H=220,PAD={t:20,r:20,b:50,l:50};
+    var iW=W-PAD.l-PAD.r, iH=H-PAD.t-PAD.b;
+    var allVals=[];d.datasets.forEach(function(ds){allVals=allVals.concat(ds.values);});
+    var vMax=d.yMax||Math.ceil(Math.max.apply(null,allVals)*1.1);
+    var xCount=d.labels.length;
+    function px(i){return PAD.l+i*(iW/(xCount-1));}
+    function py(v){return PAD.t+iH-(v/vMax*iH);}
+    var colors=['#16a34a','#f97316','#7c3aed','#0ea5e9'];
+    html+='<div class="line-chart"><svg viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg" font-family="Nunito,sans-serif" style="width:100%;max-width:'+W+'px;display:block;margin:0 auto">';
+    // Grid lines
+    [0,25,50,75,100].forEach(function(pct){
+      var v=vMax*pct/100;
+      var y=py(v);
+      html+='<line x1="'+PAD.l+'" y1="'+y+'" x2="'+(W-PAD.r)+'" y2="'+y+'" stroke="#e7e5e4" stroke-width="1"/>';
+      html+='<text x="'+(PAD.l-5)+'" y="'+(y+4)+'" text-anchor="end" font-size="9" fill="#78716c">'+Math.round(v)+'</text>';
+    });
+    // X labels
+    d.labels.forEach(function(lbl,i){
+      html+='<text x="'+px(i)+'" y="'+(H-PAD.b+15)+'" text-anchor="middle" font-size="9" fill="#78716c">'+lbl+'</text>';
+    });
+    // Datasets
+    d.datasets.forEach(function(ds,di){
+      var col=colors[di]||'#6366f1';
+      var pts=ds.values.map(function(v,i){return px(i)+','+py(v);}).join(' ');
+      html+='<polyline points="'+pts+'" fill="none" stroke="'+col+'" stroke-width="2.5" stroke-linejoin="round"/>';
+      ds.values.forEach(function(v,i){html+='<circle cx="'+px(i)+'" cy="'+py(v)+'" r="4" fill="'+col+'" stroke="#fff" stroke-width="1.5"></circle>';});
+    });
+    // Axes
+    html+='<line x1="'+PAD.l+'" y1="'+PAD.t+'" x2="'+PAD.l+'" y2="'+(H-PAD.b)+'" stroke="#d6d3d1" stroke-width="2"/>';
+    html+='<line x1="'+PAD.l+'" y1="'+(H-PAD.b)+'" x2="'+(W-PAD.r)+'" y2="'+(H-PAD.b)+'" stroke="#d6d3d1" stroke-width="2"/>';
+    // Y axis label
+    html+='<text x="14" y="'+(H/2)+'" text-anchor="middle" font-size="10" fill="#78716c" transform="rotate(-90,14,'+(H/2)+')">'+d.yLabel+'</text>';
+    // Legend
+    d.datasets.forEach(function(ds,di){
+      var col=colors[di]||'#6366f1';
+      html+='<rect x="'+(PAD.l+di*180)+'" y="6" width="12" height="8" fill="'+col+'" rx="2"/>';
+      html+='<text x="'+(PAD.l+di*180+16)+'" y="14" font-size="9" fill="#44403c" font-weight="700">'+ds.label+'</text>';
+    });
+    html+='</svg></div>';
+  }
+  document.getElementById('dataDisplay').innerHTML=html;
+}
+
+function renderQuestions(){
+  var html='';
+  curSet.questions.forEach(function(q,i){
+    html+='<div id="qblock_'+i+'">';
+    html+='<div class="q-num">Question '+(i+1)+' — '+q.marks+' mark'+(q.marks>1?'s':'')+'</div>';
+    html+='<div class="q-text">'+q.q+'</div>';
+    html+='<div class="q-hint">💡 Hint: '+q.hint+'</div>';
+    html+='<div class="pretrap" id="pt_'+i+'"><span>⚠️</span><span>Common mistake to avoid: '+q.trap+'</span></div>';
+    html+='<textarea class="answer-ta" id="ta_'+i+'" rows="5" placeholder="Write your answer here using full sentences. Quote data from the table/graph."></textarea>';
+    html+='<button class="check-btn" id="chk_'+i+'" onclick="checkQ('+i+')">✅ Check Answer</button>';
+    html+='<div class="model-box" id="mod_'+i+'">';
+    html+='<div class="model-hdr">📖 Model Answer — read carefully, then tick what you included below</div>';
+    html+='<div class="model-body">'+q.model+'</div>';
+    html+='<div class="checklist"><div class="cl-hdr">✅ Tick points you included:</div>';
+    q.points.forEach(function(p,pi){
+      html+='<div class="cl-item" id="cli_'+i+'_'+pi+'" onclick="tickPt('+i+','+pi+')">'
+        +'<div class="cl-box" id="clb_'+i+'_'+pi+'"></div>'
+        +(p.k?'<span>⭐ </span>':'')+'<span>'+p.t+'</span>'
+        +'</div>';
+    });
+    html+='</div>';
+    html+='<div class="trap-box"><div class="trap-hdr">⚠️ Exam Trap</div><div class="trap-body">'+q.trap+'</div></div>';
+    html+='</div>';
+    if(i<curSet.questions.length-1)html+='<div class="q-divider"></div>';
+    html+='</div>';
+  });
+  var isLast=true; // single-page — all Qs shown, finish btn at bottom
+  html+='<div class="nav-btns"><button class="nav-btn nb-next" onclick="finishSet()">✅ Finish &amp; See Results</button><button class="nav-btn nb-home" onclick="goHome()">🏠 Home</button></div>';
+  document.getElementById('questionsWrap').innerHTML=html;
+  // Init pt state
+  window._ptState=curSet.questions.map(function(q){return q.points.map(function(){return false;});});
+}
+
+function checkQ(i){
+  var ta=document.getElementById('ta_'+i);
+  var ans=ta.value.trim();
+  if(ans.length<5){showToast('✏️ Write your answer first!');return;}
+  qAnswers[i]=ans;
+  ta.classList.add('done');ta.readOnly=true;
+  document.getElementById('chk_'+i).disabled=true;
+  document.getElementById('mod_'+i).classList.add('show');
+  showToast('📖 Read the model answer and tick what you got right!');
+}
+
+function tickPt(qi,pi){
+  if(!window._ptState[qi])return;
+  window._ptState[qi][pi]=!window._ptState[qi][pi];
+  var box=document.getElementById('clb_'+qi+'_'+pi);
+  if(window._ptState[qi][pi]){box.classList.add('on');box.textContent='✓';}
+  else{box.classList.remove('on');box.textContent='';}
+  // Update score for this question
+  var q=curSet.questions[qi];
+  var keyTicked=window._ptState[qi].filter(function(v,i){return v&&q.points[i].k;}).length;
+  var allTicked=window._ptState[qi].filter(function(v){return v;}).length;
+  qScores[qi]=Math.min(Math.max(keyTicked,Math.floor(allTicked/2)),q.marks);
+}
+
+function finishSet(){
+  // Check at least one answer given
+  var allAnswered=qAnswers.every(function(a){return a.length>0;});
+  var anyAnswered=qAnswers.some(function(a){return a.length>0;});
+  if(!anyAnswered){showToast('✏️ Write and check your answers first!');return;}
+  if(!allAnswered){
+    var unanswered=qAnswers.map(function(a,i){return a.length===0?i+1:null;}).filter(function(i){return i!==null;});
+    showToast('✏️ Question '+unanswered[0]+' not checked yet!');return;
+  }
+  var totalMarks=curSet.questions.reduce(function(a,q){return a+q.marks;},0);
+  var earned=qScores.reduce(function(a,b){return a+b;},0);
+  var pct=Math.round(earned/totalMarks*100);
+  xp+=earned*5;tc+=earned;ta+=totalMarks;
+  if(pct>=70)done[curSet.id]=true;
+  save();
+  if(pct>=70)confetti();
+  var em,msg;
+  if(pct>=80){em='🏆';msg='Excellent data skills! PSLE ready!';}
+  else if(pct>=65){em='🎉';msg='Great work! Keep practising!';}
+  else if(pct>=50){em='💪';msg='Good effort — review the model answers.';}
+  else{em='📖';msg='Review the key steps and try again!';}
+  document.getElementById('resultCard').innerHTML=
+    '<span class="r-em">'+em+'</span>'
+    +'<div class="r-score">'+earned+' / '+totalMarks+'</div>'
+    +'<div style="font-size:13px;color:var(--muted);font-weight:700;margin:4px 0 8px">'+pct+'%</div>'
+    +'<div class="r-msg">'+msg+'</div>'
+    +'<div style="display:inline-block;background:#fef3c7;border:2px solid #fde68a;border-radius:50px;padding:8px 20px;font-weight:800;font-size:14px;color:#92400e;margin-bottom:20px">+'+(earned*5)+' XP</div>'
+    +'<div class="r-btns">'
+    +'<button class="rb rb-p" onclick="openSet(\''+curSet.id+'\')">🔄 Try Again</button>'
+    +'<button class="rb rb-s" onclick="goHome()">← All Sets</button>'
+    +'</div>';
+  showScreen('resultScreen');
+  document.getElementById('xpD').textContent=xp;
+}
+
+function toggleGuide(){
+  var body=document.getElementById('agBody');
+  var arrow=document.getElementById('agArrow');
+  if(body.classList.contains('open')){body.classList.remove('open');arrow.textContent='▼';}
+  else{body.classList.add('open');arrow.textContent='▲';}
+}
+function showScreen(id){document.querySelectorAll('.screen').forEach(function(s){s.classList.remove('active');});document.getElementById(id).classList.add('active');window.scrollTo(0,0);}
+function goHome(){curSet=null;renderHome();showScreen('homeScreen');}
+function confetti(){var w=document.getElementById('cw');var cs=['#d97706','#b45309','#22c55e','#0ea5e9','#f59e0b','#6366f1'];for(var i=0;i<60;i++){var d=document.createElement('div');d.className='cp';var s=6+Math.random()*10;d.style.cssText='left:'+Math.random()*100+'%;top:-20px;background:'+cs[Math.floor(Math.random()*cs.length)]+';width:'+s+'px;height:'+s+'px;border-radius:'+(Math.random()>.5?'50%':'3px')+';animation-delay:'+Math.random()*1.2+'s;animation-duration:'+(2+Math.random()*2)+'s;';w.appendChild(d);setTimeout(function(){d.remove();},4500);}}
+function showToast(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},2200);}
+document.addEventListener('DOMContentLoaded',renderHome);
+</script>
+
+
+<!-- Adsterra Native Banner -->
+<div style="max-width:900px;margin:0 auto;padding:0 16px 32px">
+<script async="async" data-cfasync="false" src="https://pl29317883.profitablecpmratenetwork.com/0308be89ae30df4fb0bab6a540f70887/invoke.js" defer></script>
+<div id="container-0308be89ae30df4fb0bab6a540f70887"></div>
+</div>
+
+
+<!-- SEO CONTENT SECTION -->
+<section style="background:#fffbeb;border-top:3px solid #fde68a;padding:48px clamp(16px,5%,56px)">
+  <div style="max-width:860px;margin:0 auto">
+    <h2 style="font-family:system-ui,sans-serif;font-size:clamp(22px,3vw,32px);font-weight:800;color:#92400e;margin-bottom:16px">Data Interpretation Skills for PSLE Science</h2>
+    <p style="font-size:15px;color:#78350f;line-height:1.9;margin-bottom:14px">Data interpretation is one of the most important skills tested in the PSLE Science examination. In Booklet A and Booklet B, students are regularly asked to read tables, bar charts, line graphs and pictographs — and then answer questions based on the data shown. Many students lose marks not because they don't know the science, but because they don't read the data carefully enough.</p>
+    <p style="font-size:15px;color:#78350f;line-height:1.9;margin-bottom:14px">This free data skills practice tool helps Singapore Primary students practise reading and interpreting scientific data. Each question presents a real-style data set — just like what appears in the actual PSLE — and asks you to identify trends, explain anomalies, calculate differences, and draw conclusions based on evidence.</p>
+
+    <h3 style="font-family:system-ui,sans-serif;font-size:20px;font-weight:800;color:#92400e;margin:24px 0 12px">What Data Skills Are Tested in PSLE Science?</h3>
+    <p style="font-size:15px;color:#78350f;line-height:1.9;margin-bottom:14px">The MOE 2026 PSLE Science syllabus tests the following data interpretation skills:</p>
+    <ul style="font-size:14px;color:#78350f;line-height:2;margin-left:20px;margin-bottom:16px">
+      <li><strong>Reading tables</strong> — extracting specific values from rows and columns accurately</li>
+      <li><strong>Reading bar charts</strong> — comparing values across categories and identifying the highest and lowest values</li>
+      <li><strong>Reading line graphs</strong> — identifying trends (increasing, decreasing, constant) and spotting anomalies</li>
+      <li><strong>Calculating differences</strong> — finding the difference between two values shown in a table or graph</li>
+      <li><strong>Identifying anomalies</strong> — spotting a data point that does not fit the overall trend and explaining why it might have occurred</li>
+      <li><strong>Drawing conclusions</strong> — using data as evidence to support a scientific conclusion</li>
+      <li><strong>Predicting values</strong> — extending a trend to predict what the next data point might be</li>
+    </ul>
+
+    <h3 style="font-family:system-ui,sans-serif;font-size:20px;font-weight:800;color:#92400e;margin:24px 0 12px">How to Answer Data Questions in PSLE Science</h3>
+    <p style="font-size:15px;color:#78350f;line-height:1.9;margin-bottom:14px">When answering data-based questions in the PSLE Science paper, always follow these steps:</p>
+    <ol style="font-size:14px;color:#78350f;line-height:2;margin-left:20px;margin-bottom:16px">
+      <li><strong>Read the title and axes carefully</strong> — always check what is being measured and what the units are</li>
+      <li><strong>Look for the overall trend</strong> — is the data going up, going down, staying the same, or is there a pattern?</li>
+      <li><strong>Quote specific values</strong> — when explaining a trend, use actual numbers from the data to support your answer</li>
+      <li><strong>Spot any anomalies</strong> — if one data point doesn't fit the trend, mention it and suggest a reason</li>
+      <li><strong>Link back to science</strong> — always connect your data observation back to a scientific concept or principle</li>
+    </ol>
+
+    <h3 style="font-family:system-ui,sans-serif;font-size:20px;font-weight:800;color:#92400e;margin:24px 0 12px">Common Mistakes Students Make with Data Questions</h3>
+    <p style="font-size:15px;color:#78350f;line-height:1.9;margin-bottom:14px">Based on PSLE Science marking schemes, these are the most common data interpretation mistakes Singapore students make:</p>
+    <ul style="font-size:14px;color:#78350f;line-height:2;margin-left:20px;margin-bottom:16px">
+      <li>Describing a trend without using specific numbers from the data</li>
+      <li>Misreading the scale on the y-axis of a graph</li>
+      <li>Confusing "as X increases, Y increases" with "X causes Y to increase" — correlation is not always causation</li>
+      <li>Ignoring the anomaly in the data when asked to comment on the results</li>
+      <li>Not identifying the dependent and independent variables correctly when describing the experiment</li>
+    </ul>
+    <p style="font-size:15px;color:#78350f;line-height:1.9">Use this free data skills tool to practise regularly. The more data questions you attempt before the PSLE, the more confident and accurate you will become. All practice questions are aligned to the MOE 2026 Primary Science syllabus and reflect the style and difficulty of the actual PSLE examination.</p>
+  </div>
+</section>
+
+<section style="background:#fffbeb;border-top:2px solid #fcd34d;padding:48px clamp(16px,5%,56px)">
+  <div style="max-width:860px;margin:0 auto">
+    <h2 style="font-family:system-ui,sans-serif;font-size:clamp(20px,2.5vw,28px);font-weight:800;color:#92400e;margin-bottom:16px">Understanding Data Questions: The Skill That Separates AL1 from AL2</h2>
+    <p style="font-size:15px;color:#78350f;line-height:1.9;margin-bottom:14px">In every PSLE Science paper from 2019 to 2024, data interpretation questions have been the single biggest source of lost marks for students who know their science well. A student who can recite the conditions for photosynthesis perfectly will still lose marks on a data question if they say "the plant produced more oxygen" without quoting the specific value from the table. PSLE markers are trained to deduct marks for answers that do not reference the data, even when the scientific reasoning is correct.</p>
+    <p style="font-size:15px;color:#78350f;line-height:1.9;margin-bottom:14px">This page explains exactly what PSLE data questions test, how to read each type of graph and table, and how to structure answers that earn full marks. Understanding these techniques is one of the fastest ways to improve a PSLE Science score without needing to learn new scientific content.</p>
+
+    <h3 style="font-family:system-ui,sans-serif;font-size:20px;font-weight:800;color:#92400e;margin:28px 0 12px">The Four Types of Data PSLE Students Must Read</h3>
+
+    <p style="font-size:15px;color:#92400e;font-weight:700;margin:16px 0 4px">1. Tables</p>
+    <p style="font-size:14px;color:#78350f;line-height:1.9;margin-bottom:12px">Tables present data in rows and columns. The left column usually shows the independent variable (what was changed), and the other columns show the measured results. When reading a table, first identify what each column is measuring and what the units are. Then look down the results column to spot the trend — is the value going up, going down, staying the same, or does it change in a pattern? A very common mistake is skipping straight to the largest and smallest values without noticing whether the change is gradual or sudden. PSLE questions often ask you to calculate the difference between two specific values — always subtract the smaller number from the larger and include the correct unit in your answer.</p>
+
+    <p style="font-size:15px;color:#92400e;font-weight:700;margin:16px 0 4px">2. Bar Charts</p>
+    <p style="font-size:14px;color:#78350f;line-height:1.9;margin-bottom:12px">Bar charts compare values across separate categories — for example, the mass of different materials, or the number of seeds produced by different plants. Each bar represents one category. When reading a bar chart, always start at the y-axis to check the scale: does it start at zero? If the scale starts at a number other than zero, the visual difference between bars will look much larger than the actual difference — this is a classic trick question in PSLE data papers. To find the exact value of a bar, trace a horizontal line from the top of the bar across to the y-axis. If the bar falls between two gridlines, estimate the value by looking at how far between the lines it falls.</p>
+
+    <p style="font-size:15px;color:#92400e;font-weight:700;margin:16px 0 4px">3. Line Graphs</p>
+    <p style="font-size:14px;color:#78350f;line-height:1.9;margin-bottom:12px">Line graphs show how a value changes continuously over time or as another variable changes. They are more common in PSLE Science than bar charts because most experiments in biology and physics involve continuous change. When reading a line graph, identify three things: the overall trend (does the line go up, go down, or stay flat overall?), any turning points (where does the line change direction?), and any anomalies (a data point that does not fit the pattern). An anomaly appears as a dot that is noticeably above or below the line that the other dots form. PSLE questions that include an anomaly will almost always ask you to identify it and suggest a reason — never ignore a data point that does not fit.</p>
+
+    <p style="font-size:15px;color:#92400e;font-weight:700;margin:16px 0 4px">4. Pictographs</p>
+    <p style="font-size:14px;color:#78350f;line-height:1.9;margin-bottom:12px">Pictographs use pictures or symbols to represent quantities. Each symbol represents a set number of units — for example, one leaf symbol = 5 plants. Always check the key before counting symbols. A common error is to count half-symbols as whole units — if the key shows that one symbol = 10 units, then half a symbol = 5 units. Pictographs appear more frequently in P3 and P4 papers but can still appear in PSLE as part of a multi-part question.</p>
+
+    <h3 style="font-family:system-ui,sans-serif;font-size:20px;font-weight:800;color:#92400e;margin:28px 0 12px">The PSLE Data Answer Formula: Four Sentences That Get Full Marks</h3>
+    <p style="font-size:15px;color:#78350f;line-height:1.9;margin-bottom:12px">For any data question that asks you to describe results or explain what the data shows, use this four-sentence structure. Every sentence serves a specific purpose in the marking scheme:</p>
+    <ul style="font-size:14px;color:#78350f;line-height:2.1;margin-left:20px;margin-bottom:16px">
+      <li><strong>Sentence 1 — The trend:</strong> "As [independent variable] increases / decreases, [dependent variable] increases / decreases / stays the same."</li>
+      <li><strong>Sentence 2 — The evidence:</strong> "For example, when [IV] was [value], [DV] was [value], and when [IV] was [value], [DV] was [value]." Always use two specific data points with units.</li>
+      <li><strong>Sentence 3 — The science:</strong> "This is because [scientific explanation linking the IV to the DV]."</li>
+      <li><strong>Sentence 4 — The anomaly (if present):</strong> "However, at [value], the result was [value], which does not follow this trend. This may be because [reason such as experimental error or unusual condition]."</li>
+    </ul>
+    <p style="font-size:15px;color:#78350f;line-height:1.9;margin-bottom:14px">Students who follow this structure consistently score higher because they naturally include all the elements that the marking scheme checks for: trend, evidence, explanation, and acknowledgement of anomalies.</p>
+
+    <h3 style="font-family:system-ui,sans-serif;font-size:20px;font-weight:800;color:#92400e;margin:28px 0 12px">Real-World Contexts in PSLE Data Questions</h3>
+    <p style="font-size:15px;color:#78350f;line-height:1.9;margin-bottom:12px">PSLE data questions are always set in a real-world scientific context. The most common contexts that have appeared in past papers include:</p>
+    <ul style="font-size:14px;color:#78350f;line-height:2.1;margin-left:20px;margin-bottom:16px">
+      <li><strong>Photosynthesis experiments:</strong> graphs showing the effect of light intensity or carbon dioxide concentration on the amount of oxygen produced by a plant</li>
+      <li><strong>Electrical circuits:</strong> tables showing how the number of batteries or bulbs in a circuit affects the current or brightness</li>
+      <li><strong>Forces and motion:</strong> graphs showing the effect of mass or surface type on the distance a trolley travels</li>
+      <li><strong>Heat and temperature:</strong> line graphs showing how a substance heats or cools over time, sometimes with a plateau during a change of state</li>
+      <li><strong>Plant growth:</strong> bar charts comparing the growth of plants under different conditions (light, water, nutrients)</li>
+      <li><strong>Population data:</strong> tables showing the number of animals or plants in an ecosystem over several years, often linked to food chain questions</li>
+    </ul>
+    <p style="font-size:15px;color:#78350f;line-height:1.9;margin-bottom:14px">Recognising these familiar contexts quickly in the exam saves time and helps you immediately know what science to apply. Practice reading data from all these contexts using the questions in this tool.</p>
+
+    <h3 style="font-family:system-ui,sans-serif;font-size:20px;font-weight:800;color:#92400e;margin:28px 0 12px">Frequently Asked Questions About PSLE Data Questions</h3>
+    <p style="font-size:15px;color:#92400e;font-weight:700;margin:14px 0 4px">Q: Do I always need to quote numbers in my answer?</p>
+    <p style="font-size:14px;color:#78350f;line-height:1.9;margin-bottom:12px">Yes — whenever the question asks you to describe results or compare values, you must quote specific numbers from the data with the correct units. An answer that says "the plant grew more" will not receive full marks. An answer that says "the plant grew from 8 cm to 15 cm, an increase of 7 cm" will. This is the single most common reason students lose marks on data questions.</p>
+    <p style="font-size:15px;color:#92400e;font-weight:700;margin:14px 0 4px">Q: What if I am not sure what the anomaly is?</p>
+    <p style="font-size:14px;color:#78350f;line-height:1.9;margin-bottom:12px">Look for the data point that does not fit the pattern formed by all the other points. If four results show a steady increase and one result is lower than expected, that lower result is the anomaly. If you are unsure whether a point is truly anomalous, mention it anyway and say it "does not follow the general trend." Never ignore a data point that looks out of place — the question almost certainly expects you to comment on it.</p>
+    <p style="font-size:15px;color:#92400e;font-weight:700;margin:14px 0 4px">Q: Is there a difference between "correlation" and "cause" in data questions?</p>
+    <p style="font-size:14px;color:#78350f;line-height:1.9;margin-bottom:12px">Yes, and PSLE markers are aware of this distinction. When describing a trend, it is safe to say "as X increases, Y increases." But when explaining why, you must provide a scientific mechanism. You cannot say "X causes Y" unless you can explain the science behind it. For example: "As light intensity increases, the rate of photosynthesis increases, because there is more light energy available for the plant to convert carbon dioxide and water into glucose."</p>
+    <p style="font-size:15px;color:#92400e;font-weight:700;margin:14px 0 4px">Q: How much time should I spend on data questions in the exam?</p>
+    <p style="font-size:14px;color:#78350f;line-height:1.9;margin-bottom:12px">In Booklet B (44 marks, approximately 55 minutes), data questions often carry 6–10 marks and require structured written answers. Budget about 2–3 minutes per mark — so a 4-mark data question deserves about 8–10 minutes. Do not rush these questions; a well-structured answer with data references is worth more time investment than any other question type in the paper.</p>
+  </div>
+</section>
+
+
+<div style="margin:32px 0;padding:18px 20px;background:linear-gradient(135deg,rgba(249,115,22,.08),rgba(167,139,250,.08));border:1px solid rgba(249,115,22,.2);border-radius:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px">
+  <div>
+    <div style="font-size:12px;font-weight:800;color:#f97316;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px">📝 O-Level Exam Practice</div>
+    <div style="font-size:14px;font-weight:700;color:#fff">Free Mock Papers — Chemistry, Physics &amp; Biology</div>
+    <div style="font-size:12px;color:rgba(232,237,245,.5);margin-top:2px">40 MCQ · 1-hour timed · auto-marked with full explanations</div>
+  </div>
+  <a href="/secondary-science/pure-sciences/chemistry/mock-paper-1/" style="display:inline-flex;align-items:center;gap:6px;padding:9px 18px;background:linear-gradient(135deg,#f97316,#a78bfa);border-radius:50px;color:#fff;font-weight:800;font-size:13px;text-decoration:none;white-space:nowrap">Start a Mock Paper →</a>
+</div>
+
+<script>
+function openSearch(){
+  var ns=document.getElementById('navSearch');
+  ns.classList.add('open');
+  setTimeout(function(){ns.querySelector('.ns-input').focus();},50);
+}
+</script>
+
+<footer style="background:#1e293b;color:#94a3b8;text-align:center;padding:28px 20px;font-size:14px;margin-top:48px;">
+  <p>© 2026 ScienceStar — Free Science for Singapore Students</p>
+  <p style="margin-top:8px;">
+    <a href="/" style="color:#38bdf8;text-decoration:none;margin:0 8px;">Home</a>
+    <a href="/about/" style="color:#38bdf8;text-decoration:none;margin:0 8px;">About</a>
+    <a href="/contact/" style="color:#38bdf8;text-decoration:none;margin:0 8px;">Contact</a>
+    <a href="/privacy/" style="color:#38bdf8;text-decoration:none;margin:0 8px;">Privacy</a>
+    <a href="/terms/" style="color:#38bdf8;text-decoration:none;margin:0 8px;">Terms</a>
+  </p>
+  <p style="margin-top:8px;font-size:12px;">Not affiliated with MOE Singapore. PSLE and O-Level are registered trademarks of SEAB.</p>
+</footer>
+</body>
+</html>

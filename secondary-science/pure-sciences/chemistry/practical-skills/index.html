@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XM36L4R49E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XM36L4R49E');
+</script>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O-Level Chemistry Practical Skills — Titration & Planning</title>
+<meta name="keywords" content="O-Level chemistry notes Singapore, GCE chemistry 6092, pure chemistry O-Level free notes">>
+<meta name="description" content="Master O-Level Chemistry practical skills: titration calculations, experimental planning, identifying variables, evaluating results, and describing tests.">
+<link rel="canonical" href="https://primayscience.org/secondary-science/pure-sciences/chemistry/practical-skills/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080f1e;--bg2:#0b1424;--card:#0e1b2e;--card2:#111f36;--border:rgba(255,255,255,.07);--text:#e8edf5;--muted:rgba(232,237,245,.55);--dim:rgba(232,237,245,.28);--sky:#38bdf8;--green:#34d399;--amber:#fbbf24;--red:#f87171;--purple:#a78bfa;--hub:#7c3aed;--chem:#f97316;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;align-items:center;padding:0 clamp(16px,5%,56px);background:rgba(8,15,30,.93);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+.nav-brand{font-family:'Sora',sans-serif;font-weight:800;font-size:18px;color:#fff;text-decoration:none}.nav-brand span{color:var(--sky)}
+.nav-links{display:flex;align-items:center;gap:4px;margin-left:auto;flex-wrap:wrap}
+.nav-links a{font-size:12px;font-weight:600;color:var(--muted);text-decoration:none;padding:5px 10px;border-radius:8px;transition:.15s}.nav-links a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.npill{padding:5px 12px!important;border-radius:50px!important;font-weight:700!important;font-size:11px!important;color:#fff!important}
+.np3{background:#fb923c!important}.np4{background:#818cf8!important}.np5{background:#34d399!important;color:#0d1629!important}.npsle{background:var(--sky)!important}.nsec{background:var(--hub)!important}
+.crumb{font-size:12px;color:var(--dim);padding:76px clamp(16px,5%,56px) 0;max-width:1100px;margin:0 auto}
+.crumb a{color:var(--muted);text-decoration:none}.crumb span{margin:0 6px}
+.hero{padding:32px clamp(16px,5%,56px) 40px;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(249,115,22,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(249,115,22,.04) 1px,transparent 1px);background-size:56px 56px;pointer-events:none}
+.hero-in{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.badge-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:5px 13px;border-radius:50px;font-size:11px;font-weight:700}
+.b1{background:rgba(249,115,22,.1);border:1px solid rgba(249,115,22,.3);color:var(--chem)}
+.b2{background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.3);color:var(--green)}
+.hero h1{font-family:'Sora',sans-serif;font-size:clamp(24px,3.5vw,40px);font-weight:800;color:#fff;line-height:1.1;margin-bottom:10px}
+.hero h1 em{font-style:normal;color:var(--chem)}
+.hero-desc{font-size:14px;color:var(--muted);max-width:680px;line-height:1.8}
+.main{max-width:1100px;margin:0 auto;padding:36px clamp(16px,5%,56px)}
+.skill-sec{margin-bottom:52px}
+.skill-hdr{display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:14px;border-bottom:2px solid rgba(255,255,255,.07)}
+.skill-icon{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.si1{background:rgba(249,115,22,.12)}.si2{background:rgba(56,189,248,.12)}.si3{background:rgba(52,211,153,.12)}.si4{background:rgba(251,191,36,.12)}.si5{background:rgba(167,139,250,.12)}
+.skill-title{font-family:'Sora',sans-serif;font-size:19px;font-weight:800;color:#fff}
+.skill-sub{font-size:12px;color:var(--dim);margin-top:3px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px 24px;margin-bottom:16px}
+.card h3{font-size:15px;font-weight:800;color:#fff;margin-bottom:10px}
+.card p{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:10px}
+.card p:last-child{margin-bottom:0}
+.step-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:12px 0}
+.step-list li{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--muted);line-height:1.7}
+.step-num{width:28px;height:28px;border-radius:50%;background:rgba(249,115,22,.15);border:1px solid rgba(249,115,22,.3);color:var(--chem);font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.step-list li strong{color:#fff}
+.rule-box{background:rgba(52,211,153,.05);border:1px solid rgba(52,211,153,.2);border-radius:10px;padding:14px 16px;margin:12px 0}
+.rule-box strong{color:var(--green);display:block;font-size:12px;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px}
+.rule-box p{font-size:13px;color:var(--muted);line-height:1.7}
+.trap-box{background:rgba(251,191,36,.05);border:1px solid rgba(251,191,36,.2);border-radius:10px;padding:14px 16px;margin:12px 0}
+.trap-box strong{color:var(--amber);display:block;font-size:12px;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px}
+.trap-box p{font-size:13px;color:var(--muted);line-height:1.7}
+.formula-box{background:rgba(249,115,22,.06);border:1px solid rgba(249,115,22,.25);border-radius:12px;padding:16px 20px;text-align:center;margin:14px 0}
+.formula-label{font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--chem);margin-bottom:8px}
+.formula-text{font-family:'Sora',sans-serif;font-size:15px;font-weight:800;color:#fff;line-height:1.5}
+.formula-note{font-size:12px;color:var(--muted);margin-top:6px}
+.eg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px;margin:14px 0}
+.eg-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:16px 18px}
+.eg-card h4{font-size:13px;font-weight:800;color:#fff;margin-bottom:6px}
+.eg-card p{font-size:13px;color:var(--muted);line-height:1.7}
+.q-box{background:var(--card);border:1px solid var(--border);border-radius:14px;margin-bottom:14px;overflow:hidden}
+.q-box-head{padding:16px 20px 12px;display:flex;gap:12px;align-items:flex-start}
+.q-num{width:32px;height:32px;border-radius:8px;background:rgba(249,115,22,.12);color:var(--chem);font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.q-text{font-size:14px;color:var(--text);line-height:1.75;flex:1}
+.q-marks{font-size:11px;font-weight:700;color:var(--dim);padding:2px 8px;border-radius:50px;background:rgba(255,255,255,.05);white-space:nowrap}
+.q-tbl{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0}
+.q-tbl th{background:rgba(249,115,22,.1);color:var(--chem);text-align:left;padding:7px 12px;border:1px solid var(--border);font-weight:700}
+.q-tbl td{padding:7px 12px;border:1px solid var(--border);color:var(--muted)}
+.q-answer{padding:0 20px 16px}
+.ans-toggle{display:inline-flex;align-items:center;gap:7px;margin-top:10px;padding:7px 16px;border-radius:50px;font-size:12px;font-weight:700;cursor:pointer;border:1px solid rgba(52,211,153,.3);color:var(--green);background:rgba(52,211,153,.05);transition:.18s;user-select:none}
+.ans-toggle:hover{background:rgba(52,211,153,.12)}
+.ans-body{display:none;margin-top:12px;border-top:1px solid rgba(52,211,153,.1);padding-top:12px}
+.ans-body.open{display:block}
+.ms{background:rgba(52,211,153,.04);border:1px solid rgba(52,211,153,.12);border-radius:10px;padding:12px 16px;font-size:13px;color:var(--muted);line-height:1.75}
+.ms strong{color:var(--green)}
+.ms ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.ms li{padding-left:18px;position:relative}
+.ms li::before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:800;font-size:11px;top:1px}
+footer{background:#040a14;border-top:1px solid var(--border);padding:28px clamp(16px,5%,56px) 20px;margin-top:48px}
+.fi{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:20px;font-size:13px}
+.flogo{font-family:'Sora',sans-serif;font-weight:800;color:#fff;text-decoration:none}.flogo span{color:var(--sky)}
+.fcol h4{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--dim);margin-bottom:8px}.fcol a{display:block;color:var(--muted);text-decoration:none;margin-bottom:7px}.fcol a:hover{color:#fff}
+.fb{max-width:1100px;margin:12px auto 0;padding-top:12px;border-top:1px solid var(--border);font-size:11px;color:var(--dim)}
+@media(max-width:750px){.fi{grid-template-columns:1fr 1fr}.nav-links .npill{display:none}}
+
+/* ANSWER WRITING AREA */
+.write-area{margin:12px 0 4px;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.1)}
+.write-area-top{background:rgba(255,255,255,.03);padding:6px 14px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(232,237,245,.3);border-bottom:1px solid rgba(255,255,255,.06)}
+.write-lines{padding:4px 0}
+.write-line{height:34px;border-bottom:1px solid rgba(255,255,255,.06);margin:0 14px}
+
+
+/* ── INTERACTIVE WRITE AREAS ──────────────────── */
+.wa-wrap{margin:14px 0 6px;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.1)}
+.wa-label{background:rgba(255,255,255,.03);padding:7px 14px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(232,237,245,.35);border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;gap:6px}
+.wa-textarea{width:100%;min-height:100px;background:rgba(255,255,255,.02);border:none;resize:vertical;padding:12px 14px;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;color:var(--text);line-height:1.7;outline:none;display:block}
+.wa-textarea::placeholder{color:rgba(232,237,245,.18)}
+.wa-textarea:focus{background:rgba(255,255,255,.04)}
+.wa-footer{padding:8px 12px;background:rgba(255,255,255,.02);border-top:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.wa-chars{font-size:11px;color:var(--dim)}
+.wa-submit{padding:7px 16px;border-radius:50px;background:rgba(56,189,248,.12);border:1px solid rgba(56,189,248,.3);color:var(--sky);font-size:12px;font-weight:700;cursor:pointer;transition:.18s;user-select:none}
+.wa-submit:hover{background:rgba(56,189,248,.22)}
+.wa-submit.submitted{background:rgba(52,211,153,.12);border-color:rgba(52,211,153,.4);color:var(--green)}
+.wa-submit.submitted:hover{background:rgba(52,211,153,.2)}
+.ans-toggle.locked{opacity:.35;pointer-events:none;cursor:not-allowed}
+.ans-toggle.unlocked{opacity:1;pointer-events:auto}
+.wa-hint{font-size:11px;color:var(--dim);font-style:italic}
+
+
+  /* nav search */
+  .nav-search{display:flex;align-items:center;margin-left:8px;position:relative}
+  .ns-icon{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:8px;color:rgba(232,237,245,.6);cursor:pointer;padding:6px 8px;display:flex;align-items:center;transition:.15s}
+  .ns-icon:hover{color:#fff;background:rgba(255,255,255,.12)}
+  .ns-form{display:flex;align-items:center;overflow:hidden;width:0;opacity:0;transition:width .25s ease,opacity .2s;position:absolute;right:36px;top:50%;transform:translateY(-50%)}
+  .nav-search.open .ns-form{width:200px;opacity:1}
+  .ns-input{background:#0d1629;border:1.5px solid rgba(56,189,248,.4);border-radius:8px 0 0 8px;color:#e8edf5;font-size:13px;padding:6px 10px;outline:none;width:100%;font-family:inherit}
+  .ns-input::placeholder{color:rgba(232,237,245,.3)}
+  .ns-submit{background:rgba(56,189,248,.2);border:1.5px solid rgba(56,189,248,.4);border-left:none;border-radius:0 8px 8px 0;color:#38bdf8;cursor:pointer;padding:6px 10px;font-size:13px;font-family:inherit;transition:.15s}
+  .ns-submit:hover{background:rgba(56,189,248,.35)}
+  @media(max-width:500px){.nav-search.open .ns-form{width:150px}}
+</style>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="O-Level Chemistry Practical Skills — Titration, Planning, Evaluation | ScienceStar">
+<meta name="twitter:description" content="Master O-Level Chemistry practical skills: titration calculations, experimental planning, identifying variables, evaluating results, and describing tests.">
+<meta name="twitter:image" content="https://primayscience.org/images/og-image.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://primayscience.org/secondary-science/pure-sciences/chemistry/practical-skills/">
+<meta property="og:title" content="O-Level Chemistry Practical Skills — Titration, Planning, Evaluation | ScienceStar">
+<meta property="og:description" content="Master O-Level Chemistry practical skills: titration calculations, experimental planning, identifying variables, evaluating results, and describing tests.">
+<meta property="og:image" content="https://primayscience.org/images/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "O-Level Chemistry Practical Skills \u2014 Titration, Planning, Evaluation",
+  "description": "Master O-Level Chemistry practical skills: titration calculations, experimental planning, identifying variables and evaluation for Singapore GCE O-Level.",
+  "provider": {
+    "@type": "Organization",
+    "name": "ScienceStar"
+  },
+  "educationalLevel": "Secondary School",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "url": "https://primayscience.org/secondary-science/pure-sciences/chemistry/practical-skills/"
+}
+</script>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-brand">⭐ Science<span>Star</span></a>
+  <div class="nav-links">
+    <a href="/articles/">Articles</a><a href="/assess/">Level Check</a>
+    <a href="/exam-countdown-2026/" style="color:var(--sky);font-weight:700">📅 Countdown</a>
+    <a href="/p3/" class="npill np3">P3</a><a href="/p4/" class="npill np4">P4</a><a href="/p5/" class="npill np5">P5</a>
+    <a href="/psle/" class="npill npsle">PSLE</a><a href="/secondary-science/" class="npill nsec">Secondary</a>
+    <a href="/secondary-science/pure-sciences/chemistry/mock-paper-1/" class="npill nmock">📝 Mock Papers</a>
+  </div>
+
+  <div class="nav-search" id="navSearch">
+    <button class="ns-icon" onclick="openSearch()" aria-label="Search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
+    <form class="ns-form" action="/search/" method="GET" role="search">
+      <input class="ns-input" type="search" name="q" placeholder="Search topics…" autocomplete="off" aria-label="Search ScienceStar" onfocus="this.closest('.nav-search').classList.add('open')" onblur="setTimeout(()=>this.closest('.nav-search').classList.remove('open'),200)">
+      <button type="submit" class="ns-submit" aria-label="Go">→</button>
+    </form>
+  </div>
+</nav>
+<div class="crumb"><a href="/">Home</a><span>›</span><a href="/secondary-science/pure-sciences/chemistry/">Chemistry</a><span>›</span>Practical Skills</div>
+
+<div class="hero">
+  <div class="hero-in">
+    <div class="badge-row">
+      <span class="badge b1">🧪 Pure Chemistry 6092</span>
+      <span class="badge b2">🔬 Paper 2 Essential Skills</span>
+    </div>
+    <h1>Chemistry <em>Practical Skills</em></h1>
+    <p class="hero-desc">Practical questions appear throughout O-Level Chemistry Paper 2. This page covers every skill type: titration calculations, planning investigations, identifying variables, recording and processing data, evaluating experiments, and describing chemical tests. Each section has worked examples and practice questions with full mark schemes.</p>
+  </div>
+</div>
+
+<div class="main">
+
+<!-- SKILL 1: TITRATION -->
+<div class="skill-sec" id="titration">
+  <div class="skill-hdr">
+    <div class="skill-icon si1">🧫</div>
+    <div><div class="skill-title">Skill 1 — Titration Calculations</div><div class="skill-sub">Acid-base titrations, moles from concentration and volume, finding unknown concentrations</div></div>
+  </div>
+
+  <div class="card">
+    <h3>The titration procedure</h3>
+    <p>Titration is used to find the exact volume of one solution that reacts completely with a known volume of another solution. In acid-base titration:</p>
+    <ul class="step-list">
+      <li><div class="step-num">1</div><div><strong>Fill the burette</strong> with the acid (or alkali). Record the initial burette reading to 2 decimal places (e.g. 0.00 cm³).</div></li>
+      <li><div class="step-num">2</div><div><strong>Pipette exactly 25.0 cm³</strong> of the alkali (or acid) into a conical flask. Add 2–3 drops of indicator (phenolphthalein or methyl orange).</div></li>
+      <li><div class="step-num">3</div><div><strong>Add the burette solution slowly</strong>, swirling constantly. Near the endpoint, add dropwise.</div></li>
+      <li><div class="step-num">4</div><div><strong>Stop at the endpoint</strong> — the indicator changes colour permanently. Record the final burette reading.</div></li>
+      <li><div class="step-num">5</div><div><strong>Calculate the titre</strong> = final reading − initial reading. Repeat until two concordant results (within 0.10 cm³ of each other). Average the concordant results.</div></li>
+    </ul>
+    <div class="trap-box"><strong>⚠ Common errors</strong><p>Using all titres to find the average (should use only concordant ones). Not reading the burette to 2 decimal places. Using the wrong indicator — phenolphthalein for strong acid + strong alkali; methyl orange also acceptable. Not rinsing the burette with the solution to be used (causes dilution error).</p></div>
+  </div>
+
+  <div class="formula-box">
+    <div class="formula-label">Titration Calculation Sequence</div>
+    <div class="formula-text">moles = c × V(dm³) → mole ratio → moles of other → c = moles / V(dm³)</div>
+    <div class="formula-note">Always convert cm³ to dm³ by dividing by 1000. Use the mole ratio from the balanced equation between steps.</div>
+  </div>
+
+  <div class="q-box">
+    <div class="q-box-head"><div class="q-num">Q1</div><div class="q-text">25.0 cm³ of NaOH solution is neutralised by 22.4 cm³ of 0.100 mol/dm³ HCl. Calculate the concentration of the NaOH solution. (HCl + NaOH → NaCl + H₂O) <span class="q-marks">[4]</span></div></div>
+    <div class="q-answer">
+      
+      <div class="wa-wrap"><div class="wa-label">✏ Your answer</div><textarea class="wa-textarea" id="ta_0" placeholder="Write your answer here before revealing the mark scheme…" rows="5"></textarea><div class="wa-footer"><span class="wa-chars">0 characters</span><span class="wa-hint">Submit your answer to unlock the mark scheme</span><span class="wa-submit">Submit Answer</span></div></div>
+      <div class="ans-toggle" onclick="tog('t1')">▶ Show answer</div>
+      <div class="ans-body" id="t1"><div class="ms"><strong>Step-by-step solution:</strong>
+        <ul>
+          <li>Moles HCl = c × V = 0.100 × (22.4/1000) = 0.100 × 0.0224 = 0.00224 mol [1]</li>
+          <li>Mole ratio HCl : NaOH = 1 : 1 (from equation). So moles NaOH = 0.00224 mol [1]</li>
+          <li>Concentration NaOH = moles / V = 0.00224 / (25.0/1000) = 0.00224 / 0.025 [1]</li>
+          <li>= <strong>0.0896 mol/dm³ ≈ 0.0896 mol/dm³</strong> [1]</li>
+        </ul>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="q-box">
+    <div class="q-box-head"><div class="q-num">Q2</div><div class="q-text">A student titrates H₂SO₄ against 25.0 cm³ of 0.200 mol/dm³ NaOH. Titration results: 18.60, 18.55, 18.90, 18.50 cm³. (H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O). (a) Identify the concordant results and calculate the mean titre. (b) Calculate the concentration of the H₂SO₄. <span class="q-marks">[5]</span></div></div>
+    <div class="q-answer">
+      
+      <div class="wa-wrap"><div class="wa-label">✏ Your answer</div><textarea class="wa-textarea" id="ta_1" placeholder="Write your answer here before revealing the mark scheme…" rows="5"></textarea><div class="wa-footer"><span class="wa-chars">0 characters</span><span class="wa-hint">Submit your answer to unlock the mark scheme</span><span class="wa-submit">Submit Answer</span></div></div>
+      <div class="ans-toggle" onclick="tog('t2')">▶ Show answer</div>
+      <div class="ans-body" id="t2"><div class="ms"><strong>Answer:</strong>
+        <ul>
+          <li>(a) Concordant results: 18.60, 18.55, 18.50 cm³ (all within 0.10 cm³ of each other). 18.90 is anomalous — exclude it. [1] Mean titre = (18.60 + 18.55 + 18.50) / 3 = 55.65 / 3 = <strong>18.55 cm³</strong> [1]</li>
+          <li>(b) Moles NaOH = 0.200 × 0.0250 = 0.00500 mol [1]</li>
+          <li>Mole ratio H₂SO₄ : NaOH = 1 : 2. Moles H₂SO₄ = 0.00500 / 2 = 0.00250 mol [1]</li>
+          <li>Concentration H₂SO₄ = 0.00250 / (18.55/1000) = 0.00250 / 0.01855 = <strong>0.135 mol/dm³</strong> [1]</li>
+        </ul>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="q-box">
+    <div class="q-box-head"><div class="q-num">Q3</div><div class="q-text">What volume of 0.250 mol/dm³ HNO₃ is needed to react completely with 40.0 cm³ of 0.150 mol/dm³ Ca(OH)₂? (2HNO₃ + Ca(OH)₂ → Ca(NO₃)₂ + 2H₂O) <span class="q-marks">[3]</span></div></div>
+    <div class="q-answer">
+      
+      <div class="wa-wrap"><div class="wa-label">✏ Your answer</div><textarea class="wa-textarea" id="ta_2" placeholder="Write your answer here before revealing the mark scheme…" rows="5"></textarea><div class="wa-footer"><span class="wa-chars">0 characters</span><span class="wa-hint">Submit your answer to unlock the mark scheme</span><span class="wa-submit">Submit Answer</span></div></div>
+      <div class="ans-toggle" onclick="tog('t3')">▶ Show answer</div>
+      <div class="ans-body" id="t3"><div class="ms"><strong>Answer:</strong>
+        <ul>
+          <li>Moles Ca(OH)₂ = 0.150 × 0.0400 = 0.00600 mol [1]</li>
+          <li>Mole ratio HNO₃ : Ca(OH)₂ = 2 : 1. Moles HNO₃ = 2 × 0.00600 = 0.0120 mol [1]</li>
+          <li>Volume HNO₃ = moles / c = 0.0120 / 0.250 = 0.0480 dm³ = <strong>48.0 cm³</strong> [1]</li>
+        </ul>
+      </div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SKILL 2: PLANNING INVESTIGATIONS -->
+<div class="skill-sec" id="planning">
+  <div class="skill-hdr">
+    <div class="skill-icon si2">📋</div>
+    <div><div class="skill-title">Skill 2 — Planning Investigations</div><div class="skill-sub">Variables, method, safety, reliability</div></div>
+  </div>
+
+  <div class="card">
+    <h3>The planning framework — always use this structure</h3>
+    <ul class="step-list">
+      <li><div class="step-num">1</div><div><strong>State the independent variable (IV)</strong> — what you deliberately change. Be specific: "the concentration of HCl (in mol/dm³)" not "the acid."</div></li>
+      <li><div class="step-num">2</div><div><strong>State the dependent variable (DV)</strong> — what you measure. Include HOW you measure it: "the volume of CO₂ collected in a gas syringe (cm³)" not "the amount of gas."</div></li>
+      <li><div class="step-num">3</div><div><strong>State at least two controlled variables (CVs)</strong> — what you keep constant AND how: "the mass of CaCO₃ (5.0 g, weighed on a balance)" and "the temperature of the acid (maintained at 25°C using a water bath)."</div></li>
+      <li><div class="step-num">4</div><div><strong>Describe the method in steps</strong> — set up apparatus, take measurements, repeat for each value of IV.</div></li>
+      <li><div class="step-num">5</div><div><strong>State a safety precaution relevant to the specific chemicals</strong> — not just "wear goggles" (too generic). E.g. "wear safety goggles to protect eyes from acid splashes."</div></li>
+      <li><div class="step-num">6</div><div><strong>State how to improve reliability</strong> — repeat each measurement and take an average; use a data logger; exclude anomalous results.</div></li>
+    </ul>
+    <div class="trap-box"><strong>⚠ Never say "human error"</strong><p>Always identify the specific source: "parallax error when reading the burette meniscus" or "timing error when starting the stopwatch at the moment of mixing" — vague errors earn no marks.</p></div>
+  </div>
+
+  <div class="eg-grid">
+    <div class="eg-card"><h4>IV examples (specific)</h4><p>"The concentration of hydrochloric acid (0.5, 1.0, 1.5, 2.0, 2.5 mol/dm³)"<br>"The temperature of the reaction mixture (20, 30, 40, 50, 60 °C)"<br>"The surface area of zinc (fine powder, small granules, large pieces)"</p></div>
+    <div class="eg-card"><h4>DV examples (specific)</h4><p>"The volume of hydrogen gas collected in a gas syringe after 60 s (cm³)"<br>"The time for the cross to disappear through the sulfur precipitate (s)"<br>"The mass loss of the flask + contents every 30 s (g)"</p></div>
+    <div class="eg-card"><h4>CV examples (with control method)</h4><p>"The volume of acid (25.0 cm³, measured with a pipette)"<br>"The mass of zinc (1.0 g, measured on a top-pan balance)"<br>"The concentration of acid (kept at 1.0 mol/dm³ throughout)"</p></div>
+    <div class="eg-card"><h4>Safety examples (specific)</h4><p>"Wear safety goggles — HCl is corrosive and could damage eyes if it splashes"<br>"Work in a fume cupboard when using concentrated H₂SO₄ — fumes are toxic"<br>"Handle hot apparatus with tongs — risk of burns during heating"</p></div>
+  </div>
+
+  <div class="q-box">
+    <div class="q-box-head"><div class="q-num">Q4</div><div class="q-text">Plan an investigation to find how temperature affects the rate of reaction between sodium thiosulfate solution and dilute HCl. The reaction produces a yellow sulfur precipitate. State the IV, DV (and how to measure it), two CVs (and how to control them), the method in steps, and one safety precaution. <span class="q-marks">[6]</span></div></div>
+    <div class="q-answer">
+      
+      <div class="wa-wrap"><div class="wa-label">✏ Your answer</div><textarea class="wa-textarea" id="ta_3" placeholder="Write your answer here before revealing the mark scheme…" rows="5"></textarea><div class="wa-footer"><span class="wa-chars">0 characters</span><span class="wa-hint">Submit your answer to unlock the mark scheme</span><span class="wa-submit">Submit Answer</span></div></div>
+      <div class="ans-toggle" onclick="tog('p1')">▶ Show answer</div>
+      <div class="ans-body" id="p1"><div class="ms"><strong>Model answer:</strong>
+        <ul>
+          <li><strong>IV:</strong> Temperature of the sodium thiosulfate solution (e.g. 20, 30, 40, 50, 60 °C) [1]</li>
+          <li><strong>DV:</strong> Time taken for the cross (drawn on paper beneath the flask) to become invisible due to sulfur precipitate formation — measured with a stopwatch (s). Rate ∝ 1/time. [1]</li>
+          <li><strong>CVs:</strong> (i) Concentration of Na₂S₂O₃ (0.1 mol/dm³ throughout, measured with a volumetric flask). (ii) Volume of Na₂S₂O₃ (25 cm³, measured with a measuring cylinder). (iii) Concentration and volume of HCl (any stated constant value). [1 for any two with control method]</li>
+          <li><strong>Method:</strong> Heat 25 cm³ Na₂S₂O₃ to the required temperature in a water bath. Place the flask over a paper cross. Add 5 cm³ HCl quickly, start the stopwatch immediately. Stop timing when the cross is no longer visible from above. Record the time. Repeat at each temperature. [1]</li>
+          <li><strong>Repeat for reliability:</strong> Repeat each temperature measurement twice and average the times. [1]</li>
+          <li><strong>Safety:</strong> Wear safety goggles — HCl is corrosive; carry out in a well-ventilated area as SO₂ gas may be produced. [1]</li>
+        </ul>
+      </div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SKILL 3: RECORDING & PROCESSING DATA -->
+<div class="skill-sec" id="data">
+  <div class="skill-hdr">
+    <div class="skill-icon si3">📊</div>
+    <div><div class="skill-title">Skill 3 — Recording &amp; Processing Results</div><div class="skill-sub">Tables, rate calculations, percentage calculations, identifying patterns</div></div>
+  </div>
+
+  <div class="card">
+    <h3>Rules for results tables</h3>
+    <ul class="step-list">
+      <li><div class="step-num">1</div><div><strong>Column headers must include quantity AND unit</strong>: "Temperature / °C" or "Volume of CO₂ / cm³". Never just "Temperature" or "Volume."</div></li>
+      <li><div class="step-num">2</div><div><strong>All readings to consistent decimal places</strong>: if burette reads to 0.05 cm³, record as 18.50, 18.55 — not 18.5 or 18.</div></li>
+      <li><div class="step-num">3</div><div><strong>Calculated columns</strong>: show the formula used and results to appropriate significant figures — usually 3 s.f. for rate calculations.</div></li>
+      <li><div class="step-num">4</div><div><strong>Identify anomalous results</strong>: circle them in the table and exclude from averaging/graphing.</div></li>
+    </ul>
+    <div class="rule-box"><strong>✓ Rate calculations</strong><p>Rate = amount of product / time (e.g. cm³/s or g/s). OR Rate = 1 / time (when measuring time for a fixed event — e.g. cross disappearance). Units of 1/time = s⁻¹.</p></div>
+  </div>
+
+  <div class="q-box">
+    <div class="q-box-head"><div class="q-num">Q5</div>
+    <div style="flex:1">
+      <div class="q-text">A student investigates rate of reaction between excess marble chips and HCl at different concentrations by measuring the volume of CO₂ produced in the first 60 s.</div>
+      <table class="q-tbl" style="margin:10px 0">
+        <tr><th>[HCl] (mol/dm³)</th><th>0.5</th><th>1.0</th><th>1.5</th><th>2.0</th><th>2.5</th></tr>
+        <tr><td>Volume CO₂ in 60 s (cm³)</td><td>12</td><td>26</td><td>35</td><td>72</td><td>62</td></tr>
+      </table>
+      <div class="q-text">(a) Identify the anomalous result. (b) Calculate the rate of CO₂ production (cm³/s) for the three middle concentrations. (c) State the relationship between concentration and rate. <span class="q-marks">[4]</span></div>
+    </div></div>
+    <div class="q-answer">
+      
+      <div class="wa-wrap"><div class="wa-label">✏ Your answer</div><textarea class="wa-textarea" id="ta_4" placeholder="Write your answer here before revealing the mark scheme…" rows="5"></textarea><div class="wa-footer"><span class="wa-chars">0 characters</span><span class="wa-hint">Submit your answer to unlock the mark scheme</span><span class="wa-submit">Submit Answer</span></div></div>
+      <div class="ans-toggle" onclick="tog('d1')">▶ Show answer</div>
+      <div class="ans-body" id="d1"><div class="ms"><strong>Answer:</strong>
+        <ul>
+          <li>(a) The anomalous result is 72 cm³ at 2.0 mol/dm³ — it is much higher than the trend and higher than the next concentration (2.5 mol/dm³). It should be circled and excluded. [1]</li>
+          <li>(b) Rate = volume / time = volume / 60. At 1.0: 26/60 = 0.433 cm³/s. At 1.5: 35/60 = 0.583 cm³/s. At 2.5: 62/60 = 1.033 cm³/s. [1 for correct method; 1 for correct values]</li>
+          <li>(c) As HCl concentration increases, the rate of CO₂ production increases (excluding the anomalous value at 2.0 mol/dm³). [1 — must quote data or reference trend]</li>
+        </ul>
+      </div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SKILL 4: EVALUATING EXPERIMENTS -->
+<div class="skill-sec" id="evaluation">
+  <div class="skill-hdr">
+    <div class="skill-icon si4">🔍</div>
+    <div><div class="skill-title">Skill 4 — Evaluating Experiments</div><div class="skill-sub">Sources of error, improvements, validity, reliability</div></div>
+  </div>
+
+  <div class="card">
+    <h3>Types of errors in chemistry practicals</h3>
+    <div class="eg-grid">
+      <div class="eg-card"><h4>Measurement errors (random)</h4><p>Parallax error reading a meniscus (read at eye level to avoid). Reaction time error starting/stopping a stopwatch. Variable timing — use a data logger instead.</p></div>
+      <div class="eg-card"><h4>Systematic errors</h4><p>Zero error on a balance (tare before use). Using contaminated glassware (rinse with the solution to be used). Incomplete reaction (wait longer or warm gently). Heat loss to surroundings in calorimetry (insulate the flask).</p></div>
+      <div class="eg-card"><h4>Validity issues</h4><p>Not controlling a key variable (e.g. temperature changes during rate experiment — use a water bath). Using impure reactants — affects concentration. Not rinsing the burette (dilutes the solution).</p></div>
+      <div class="eg-card"><h4>Reliability improvements</h4><p>Repeat measurements and average. Use automated equipment (data logger, colorimeter). Take more data points. Use larger volumes for greater precision. Calibrate instruments before use.</p></div>
+    </div>
+    <div class="trap-box"><strong>⚠ Evaluation question technique</strong><p>For "suggest an improvement" questions: always write as PROBLEM → SOLUTION. "The temperature of the solution varied during the experiment (problem); use a water bath set to a constant temperature to maintain 25°C throughout (solution)." Never just state the problem without the fix, or the fix without explaining what it corrects.</p></div>
+  </div>
+
+  <div class="q-box">
+    <div class="q-box-head"><div class="q-num">Q6</div><div class="q-text">A student measures the temperature change when NaOH solution is added to HCl using a polystyrene cup. The maximum temperature rise recorded is 8.4°C. State two sources of error in this experiment and suggest a specific improvement for each. <span class="q-marks">[4]</span></div></div>
+    <div class="q-answer">
+      
+      <div class="wa-wrap"><div class="wa-label">✏ Your answer</div><textarea class="wa-textarea" id="ta_5" placeholder="Write your answer here before revealing the mark scheme…" rows="5"></textarea><div class="wa-footer"><span class="wa-chars">0 characters</span><span class="wa-hint">Submit your answer to unlock the mark scheme</span><span class="wa-submit">Submit Answer</span></div></div>
+      <div class="ans-toggle" onclick="tog('e1')">▶ Show answer</div>
+      <div class="ans-body" id="e1"><div class="ms"><strong>Model answer:</strong>
+        <ul>
+          <li><strong>Error 1:</strong> Heat loss to the surroundings through the cup and to the thermometer. The measured temperature rise is less than the true value. <strong>Improvement:</strong> Place a cardboard lid on the cup and wrap the cup in insulating material (cotton wool) to reduce heat loss to the environment. [2]</li>
+          <li><strong>Error 2:</strong> The thermometer may not have been stirred throughout — the reading may not reflect the maximum temperature accurately. <strong>Improvement:</strong> Stir continuously with the thermometer and record the temperature every 30 s to capture the true maximum. [2]</li>
+        </ul>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="q-box">
+    <div class="q-box-head"><div class="q-num">Q7</div><div class="q-text">A student uses a gas syringe to collect CO₂ from the reaction of CaCO₃ with HCl. She records volume every 10 s. She notices her first reading (at t=0) is already 2 cm³ instead of 0. Explain the likely cause and state how it affects the results. <span class="q-marks">[2]</span></div></div>
+    <div class="q-answer">
+      
+      <div class="wa-wrap"><div class="wa-label">✏ Your answer</div><textarea class="wa-textarea" id="ta_6" placeholder="Write your answer here before revealing the mark scheme…" rows="5"></textarea><div class="wa-footer"><span class="wa-chars">0 characters</span><span class="wa-hint">Submit your answer to unlock the mark scheme</span><span class="wa-submit">Submit Answer</span></div></div>
+      <div class="ans-toggle" onclick="tog('e2')">▶ Show answer</div>
+      <div class="ans-body" id="e2"><div class="ms"><strong>Answer:</strong>
+        <ul>
+          <li>The likely cause is a zero error (systematic error) — air was already present in the gas syringe before the reaction began, or the reaction had already started before she began timing. [1]</li>
+          <li>This makes all volume readings 2 cm³ too high (a constant offset), so the total volume of CO₂ collected appears greater than it actually is. The rate calculation would also be slightly overestimated if uncorrected. The student should subtract 2 cm³ from every reading. [1]</li>
+        </ul>
+      </div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SKILL 5: CHEMICAL TESTS SUMMARY -->
+<div class="skill-sec" id="tests">
+  <div class="skill-hdr">
+    <div class="skill-icon si5">🧬</div>
+    <div><div class="skill-title">Skill 5 — Chemical Tests Reference</div><div class="skill-sub">Complete O-Level Chemistry qualitative analysis test chart</div></div>
+  </div>
+
+  <div class="card">
+    <h3>Gas tests</h3>
+    <table style="width:100%;border-collapse:collapse;font-size:13px">
+      <tr style="background:rgba(249,115,22,.1)"><th style="padding:8px 12px;border:1px solid var(--border);color:var(--chem);text-align:left">Gas</th><th style="padding:8px 12px;border:1px solid var(--border);color:var(--chem);text-align:left">Test</th><th style="padding:8px 12px;border:1px solid var(--border);color:var(--chem);text-align:left">Positive result</th></tr>
+      <tr><td style="padding:8px 12px;border:1px solid var(--border);color:#fff;font-weight:700">Hydrogen (H₂)</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--muted)">Hold a lit splint near the tube mouth</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--green)">Squeaky pop / burns with a small explosion</td></tr>
+      <tr style="background:rgba(255,255,255,.015)"><td style="padding:8px 12px;border:1px solid var(--border);color:#fff;font-weight:700">Oxygen (O₂)</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--muted)">Insert a glowing splint</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--green)">Glowing splint relights</td></tr>
+      <tr><td style="padding:8px 12px;border:1px solid var(--border);color:#fff;font-weight:700">Carbon dioxide (CO₂)</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--muted)">Bubble through limewater (Ca(OH)₂ solution)</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--green)">Limewater turns milky/cloudy</td></tr>
+      <tr style="background:rgba(255,255,255,.015)"><td style="padding:8px 12px;border:1px solid var(--border);color:#fff;font-weight:700">Chlorine (Cl₂)</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--muted)">Hold damp litmus paper in the gas</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--green)">Turns red then bleaches white</td></tr>
+      <tr><td style="padding:8px 12px;border:1px solid var(--border);color:#fff;font-weight:700">Ammonia (NH₃)</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--muted)">Hold damp red litmus paper in the gas</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--green)">Turns blue (alkaline); pungent smell</td></tr>
+      <tr style="background:rgba(255,255,255,.015)"><td style="padding:8px 12px;border:1px solid var(--border);color:#fff;font-weight:700">Sulfur dioxide (SO₂)</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--muted)">Bubble through acidified potassium manganate(VII)</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--green)">Purple/pink decolourises to colourless</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Cation tests — adding NaOH solution</h3>
+    <table style="width:100%;border-collapse:collapse;font-size:13px">
+      <tr style="background:rgba(249,115,22,.1)"><th style="padding:8px 12px;border:1px solid var(--border);color:var(--chem);text-align:left">Ion</th><th style="padding:8px 12px;border:1px solid var(--border);color:var(--chem);text-align:left">Precipitate colour</th><th style="padding:8px 12px;border:1px solid var(--border);color:var(--chem);text-align:left">Behaviour with excess NaOH</th></tr>
+      <tr><td style="padding:8px 12px;border:1px solid var(--border);color:#fff;font-weight:700">Cu²⁺ (copper)</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--sky)">Blue precipitate Cu(OH)₂</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--muted)">Insoluble in excess NaOH</td></tr>
+      <tr style="background:rgba(255,255,255,.015)"><td style="padding:8px 12px;border:1px solid var(--border);color:#fff;font-weight:700">Fe²⁺ (iron II)</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--green)">Green precipitate Fe(OH)₂</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--muted)">Insoluble; may turn brown on exposure to air</td></tr>
+      <tr><td style="padding:8px 12px;border:1px solid var(--border);color:#fff;font-weight:700">Fe³⁺ (iron III)</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--amber)">Brown/rust precipitate Fe(OH)₃</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--muted)">Insoluble in excess NaOH</td></tr>
+      <tr style="background:rgba(255,255,255,.015)"><td style="padding:8px 12px;border:1px solid var(--border);color:#fff;font-weight:700">Zn²⁺ (zinc)</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--muted)">White precipitate Zn(OH)₂</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--green)">Dissolves in excess NaOH (amphoteric)</td></tr>
+      <tr><td style="padding:8px 12px;border:1px solid var(--border);color:#fff;font-weight:700">Al³⁺ (aluminium)</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--muted)">White precipitate Al(OH)₃</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--green)">Dissolves in excess NaOH (amphoteric)</td></tr>
+      <tr style="background:rgba(255,255,255,.015)"><td style="padding:8px 12px;border:1px solid var(--border);color:#fff;font-weight:700">Ca²⁺ (calcium)</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--muted)">White precipitate Ca(OH)₂ (may be slight)</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--muted)">Partially soluble — precipitate may dissolve slightly</td></tr>
+      <tr><td style="padding:8px 12px;border:1px solid var(--border);color:#fff;font-weight:700">NH₄⁺ (ammonium)</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--muted)">No precipitate</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--green)">On warming: ammonia gas produced (pungent, turns damp red litmus blue)</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Anion tests</h3>
+    <table style="width:100%;border-collapse:collapse;font-size:13px">
+      <tr style="background:rgba(249,115,22,.1)"><th style="padding:8px 12px;border:1px solid var(--border);color:var(--chem);text-align:left">Ion</th><th style="padding:8px 12px;border:1px solid var(--border);color:var(--chem);text-align:left">Test reagent</th><th style="padding:8px 12px;border:1px solid var(--border);color:var(--chem);text-align:left">Positive result</th></tr>
+      <tr><td style="padding:8px 12px;border:1px solid var(--border);color:#fff;font-weight:700">Cl⁻ (chloride)</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--muted)">Add dilute HNO₃ then AgNO₃(aq)</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--green)">White precipitate (AgCl)</td></tr>
+      <tr style="background:rgba(255,255,255,.015)"><td style="padding:8px 12px;border:1px solid var(--border);color:#fff;font-weight:700">Br⁻ (bromide)</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--muted)">Add dilute HNO₃ then AgNO₃(aq)</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--amber)">Cream precipitate (AgBr)</td></tr>
+      <tr><td style="padding:8px 12px;border:1px solid var(--border);color:#fff;font-weight:700">I⁻ (iodide)</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--muted)">Add dilute HNO₃ then AgNO₃(aq)</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--amber)">Yellow precipitate (AgI)</td></tr>
+      <tr style="background:rgba(255,255,255,.015)"><td style="padding:8px 12px;border:1px solid var(--border);color:#fff;font-weight:700">SO₄²⁻ (sulfate)</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--muted)">Add dilute HCl then BaCl₂(aq)</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--green)">White precipitate (BaSO₄), insoluble in HCl</td></tr>
+      <tr><td style="padding:8px 12px;border:1px solid var(--border);color:#fff;font-weight:700">CO₃²⁻ (carbonate)</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--muted)">Add dilute HCl; bubble gas through limewater</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--green)">Effervescence; limewater turns milky (CO₂)</td></tr>
+      <tr style="background:rgba(255,255,255,.015)"><td style="padding:8px 12px;border:1px solid var(--border);color:#fff;font-weight:700">NO₃⁻ (nitrate)</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--muted)">Add NaOH + aluminium foil, warm gently</td><td style="padding:8px 12px;border:1px solid var(--border);color:var(--green)">Ammonia gas produced (turns damp red litmus blue)</td></tr>
+    </table>
+    <div class="trap-box" style="margin-top:12px"><strong>⚠ Acid first for anion tests</strong><p>Always acidify the solution with dilute acid before adding AgNO₃ (for halides) or BaCl₂ (for sulfates). This removes carbonate ions (CO₃²⁻) that would give false white precipitates. Use HNO₃ for halide tests (NOT HCl — would introduce Cl⁻). Use HCl for sulfate tests (NOT H₂SO₄ — would introduce SO₄²⁻).</p></div>
+  </div>
+
+  <div class="q-box">
+    <div class="q-box-head"><div class="q-num">Q8</div><div class="q-text">An unknown white solid dissolves in water to give a colourless solution. Tests: (i) Adding NaOH(aq) → white precipitate that dissolves in excess. (ii) Adding dil HNO₃ then AgNO₃(aq) → cream precipitate. (iii) Flame test → no colour. Identify the solid, giving reasons. <span class="q-marks">[3]</span></div></div>
+    <div class="q-answer">
+      
+      <div class="wa-wrap"><div class="wa-label">✏ Your answer</div><textarea class="wa-textarea" id="ta_7" placeholder="Write your answer here before revealing the mark scheme…" rows="5"></textarea><div class="wa-footer"><span class="wa-chars">0 characters</span><span class="wa-hint">Submit your answer to unlock the mark scheme</span><span class="wa-submit">Submit Answer</span></div></div>
+      <div class="ans-toggle" onclick="tog('ts1')">▶ Show answer</div>
+      <div class="ans-body" id="ts1"><div class="ms"><strong>Answer:</strong>
+        <ul>
+          <li>Test (i): white ppt with NaOH that dissolves in excess → cation is <strong>Zn²⁺ or Al³⁺</strong> (both amphoteric). [1]</li>
+          <li>Test (ii): cream ppt with AgNO₃ after HNO₃ → anion is <strong>Br⁻ (bromide)</strong>. (White = Cl⁻; cream = Br⁻; yellow = I⁻). [1]</li>
+          <li>Test (iii): no flame colour → not Na, K, Li, Ca, Cu. Combined with above: the solid is most likely <strong>zinc bromide (ZnBr₂)</strong> or <strong>aluminium bromide (AlBr₃)</strong>. Zinc is more likely as Al³⁺ bromide is unusual. [1]</li>
+        </ul>
+      </div></div>
+    </div>
+  </div>
+</div>
+
+<!-- QUICK CHECKLIST -->
+<div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px 24px;margin-bottom:32px">
+  <h3 style="font-size:15px;font-weight:800;color:#fff;margin-bottom:16px">📋 Chemistry Practical Skills Checklist</h3>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px">
+    <div style="font-size:13px;color:var(--muted);padding:8px 12px;background:rgba(52,211,153,.05);border:1px solid rgba(52,211,153,.15);border-radius:8px">✓ Titration: always use concordant results only</div>
+    <div style="font-size:13px;color:var(--muted);padding:8px 12px;background:rgba(52,211,153,.05);border:1px solid rgba(52,211,153,.15);border-radius:8px">✓ Convert cm³ to dm³ (÷1000) for concentration</div>
+    <div style="font-size:13px;color:var(--muted);padding:8px 12px;background:rgba(52,211,153,.05);border:1px solid rgba(52,211,153,.15);border-radius:8px">✓ Use mole ratio from balanced equation</div>
+    <div style="font-size:13px;color:var(--muted);padding:8px 12px;background:rgba(52,211,153,.05);border:1px solid rgba(52,211,153,.15);border-radius:8px">✓ IV/DV/CV: be specific, include units and method</div>
+    <div style="font-size:13px;color:var(--muted);padding:8px 12px;background:rgba(52,211,153,.05);border:1px solid rgba(52,211,153,.15);border-radius:8px">✓ Safety: name the specific hazard, not just "goggles"</div>
+    <div style="font-size:13px;color:var(--muted);padding:8px 12px;background:rgba(52,211,153,.05);border:1px solid rgba(52,211,153,.15);border-radius:8px">✓ Error evaluation: problem → specific solution</div>
+    <div style="font-size:13px;color:var(--muted);padding:8px 12px;background:rgba(52,211,153,.05);border:1px solid rgba(52,211,153,.15);border-radius:8px">✓ Gas tests: memorise all 6 gases and their tests</div>
+    <div style="font-size:13px;color:var(--muted);padding:8px 12px;background:rgba(52,211,153,.05);border:1px solid rgba(52,211,153,.15);border-radius:8px">✓ Halide test: HNO₃ first (not HCl)</div>
+    <div style="font-size:13px;color:var(--muted);padding:8px 12px;background:rgba(52,211,153,.05);border:1px solid rgba(52,211,153,.15);border-radius:8px">✓ Sulfate test: HCl first (not H₂SO₄)</div>
+    <div style="font-size:13px;color:var(--muted);padding:8px 12px;background:rgba(52,211,153,.05);border:1px solid rgba(52,211,153,.15);border-radius:8px">✓ Fe²⁺ = green ppt. Fe³⁺ = brown ppt. Cu²⁺ = blue</div>
+  </div>
+</div>
+
+<!-- Related -->
+<div style="padding-top:24px;border-top:1px solid var(--border)">
+  <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--dim);margin-bottom:14px">Continue revising</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px">
+    <a href="/secondary-science/pure-sciences/chemistry/mock-paper-1/" style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px;text-decoration:none;display:block"><strong style="display:block;font-size:13px;color:#fff;margin-bottom:4px">📝 Mock Paper 1</strong><span style="font-size:12px;color:var(--muted)">40 MCQ · auto-marked · timed</span></a>
+    <a href="/secondary-science/pure-sciences/chemistry/mock-paper-2/" style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px;text-decoration:none;display:block"><strong style="display:block;font-size:13px;color:#fff;margin-bottom:4px">📄 Mock Paper 2</strong><span style="font-size:12px;color:var(--muted)">Full 80-mark structured paper</span></a>
+    <a href="/secondary-science/pure-sciences/chemistry/" style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px;text-decoration:none;display:block"><strong style="display:block;font-size:13px;color:#fff;margin-bottom:4px">✏️ Open-Ended Qs</strong><span style="font-size:12px;color:var(--muted)">31 structured Paper 2 questions</span></a>
+    <a href="/secondary-science/pure-sciences/chemistry/data-based-questions/" style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px;text-decoration:none;display:block"><strong style="display:block;font-size:13px;color:#fff;margin-bottom:4px">📊 Data Questions</strong><span style="font-size:12px;color:var(--muted)">Unfamiliar context practice</span></a>
+    <a href="/secondary-science/pure-sciences/chemistry/" style="background:var(--card);border:1px solid rgba(249,115,22,.3);border-radius:12px;padding:14px 16px;text-decoration:none;display:block"><strong style="display:block;font-size:13px;color:#fff;margin-bottom:4px">← Chemistry Hub</strong><span style="font-size:12px;color:var(--muted)">All 11 topics + flashcards</span></a>
+  </div>
+</div>
+</div>
+
+<footer>
+  <div class="fi">
+    <div><a href="/" class="flogo">⭐ Science<span>Star</span></a><p style="color:var(--dim);margin-top:8px;font-size:13px;max-width:240px">Free O-Level Science for Singapore students.</p></div>
+    <div class="fcol"><h4>Chemistry</h4><a href="/secondary-science/pure-sciences/chemistry/">Chemistry Hub</a><a href="/secondary-science/pure-sciences/chemistry/mock-paper-1/">Mock Paper 1</a><a href="/secondary-science/pure-sciences/chemistry/mock-paper-2/">Mock Paper 2</a><a href="/secondary-science/pure-sciences/chemistry/data-based-questions/">Data Questions</a></div>
+    <div class="fcol"><h4>Other subjects</h4><a href="/secondary-science/pure-sciences/physics/">Physics</a><a href="/secondary-science/pure-sciences/biology/">Biology</a></div>
+    <div class="fcol"><h4>Site</h4><a href="/">Home</a><a href="/privacy/">Privacy</a><a href="/about/">About</a></div>
+  </div>
+  <div class="fb">© 2026 ScienceStar · Free practical skills guide for O-Level Chemistry (SEAB 6092). Not affiliated with MOE or SEAB.</div>
+</footer>
+<script>function tog(id){var el=document.getElementById(id),t=el.previousElementSibling;el.classList.toggle('open');t.textContent=t.textContent.replace(el.classList.contains('open')?'▶':'▼',el.classList.contains('open')?'▼':'▶');}</script>
+
+<script>
+// ── ANSWER-GATED MARK SCHEME REVEAL ────────────────────
+(function(){
+  // Assign IDs to every write-area
+  document.querySelectorAll('.wa-textarea').forEach(function(ta, i) {
+    var id = 'wa_' + i;
+    ta.dataset.waId = id;
+    var submitBtn = ta.closest('.wa-wrap').querySelector('.wa-submit');
+    var hint = ta.closest('.wa-wrap').querySelector('.wa-hint');
+    var charEl = ta.closest('.wa-wrap').querySelector('.wa-chars');
+    // Find next ans-toggle sibling
+    var wrap = ta.closest('.wa-wrap');
+    var toggle = wrap.nextElementSibling;
+    while (toggle && !toggle.classList.contains('ans-toggle')) {
+      toggle = toggle.nextElementSibling;
+    }
+    if (toggle) toggle.classList.add('locked');
+
+    // char counter
+    ta.addEventListener('input', function() {
+      var n = ta.value.trim().length;
+      if (charEl) charEl.textContent = n + ' characters';
+    });
+
+    // submit button
+    if (submitBtn) {
+      submitBtn.addEventListener('click', function() {
+        var val = ta.value.trim();
+        if (val.length < 3) {
+          if (hint) { hint.textContent = 'Write at least a few words before revealing the mark scheme.'; hint.style.color = 'var(--amber)'; }
+          return;
+        }
+        // unlock toggle
+        if (toggle) {
+          toggle.classList.remove('locked');
+          toggle.classList.add('unlocked');
+        }
+        submitBtn.textContent = '✓ Submitted — reveal mark scheme above';
+        submitBtn.classList.add('submitted');
+        ta.style.borderTop = '1px solid rgba(52,211,153,.2)';
+        if (hint) { hint.textContent = 'Mark scheme unlocked. Compare your answer.'; hint.style.color = 'var(--green)'; }
+        ta.readOnly = true;
+      });
+    }
+  });
+
+  // Existing toggle function (rp / tog / t) — patch to check locked state
+  var origRp = window.rp; var origTog = window.tog; var origT = window.t;
+  function patchToggle(fn) {
+    if (!fn) return fn;
+    return function(id) {
+      var el = document.getElementById(id);
+      // find the preceding toggle for this ans-body
+      var toggle = el ? el.previousElementSibling : null;
+      if (toggle && toggle.classList.contains('locked')) {
+        // find the textarea in the write-area before the toggle
+        var wa = toggle.previousElementSibling;
+        while (wa && !wa.classList.contains('wa-wrap')) wa = wa.previousElementSibling;
+        if (wa) {
+          var hint = wa.querySelector('.wa-hint');
+          if (hint) { hint.textContent = 'Write your answer and click Submit Answer first.'; hint.style.color = 'var(--amber)'; }
+          var ta = wa.querySelector('.wa-textarea');
+          if (ta) { ta.focus(); ta.style.borderTop = '1px solid rgba(251,191,36,.4)'; setTimeout(function(){ ta.style.borderTop=''; }, 1500); }
+        }
+        return;
+      }
+      fn(id);
+    };
+  }
+  // wait for page load then patch
+  window.addEventListener('load', function() {
+    if (window.rp) window.rp = patchToggle(window.rp);
+    if (window.tog) window.tog = patchToggle(window.tog);
+    if (window.t) window.t = patchToggle(window.t);
+  });
+})();
+</script>
+
+
+<script>
+function openSearch(){
+  var ns=document.getElementById('navSearch');
+  ns.classList.add('open');
+  setTimeout(function(){ns.querySelector('.ns-input').focus();},50);
+}
+</script>
+</body>
+</html>

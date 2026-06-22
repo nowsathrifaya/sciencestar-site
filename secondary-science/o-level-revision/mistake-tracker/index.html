@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XM36L4R49E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XM36L4R49E');
+</script>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O-Level Science Mistake Tracker — Log & Close Lost Marks</title>
+<meta name="keywords" content="O, Singapore science, free study notes, PSLE science, O-Level science Singapore">>
+<meta name="description" content="Interactive O-Level Science mistake tracker for Singapore students. Log lost marks by code after each practice paper, set a correction action and mark.">
+<meta property="og:title" content="O-Level Science Mistake Tracker | ScienceStar">
+<meta property="og:description" content="Log lost marks, record your error and track corrections. An interactive tool for O-Level Science revision.">
+<meta property="og:url" content="https://primayscience.org/secondary-science/o-level-revision/mistake-tracker/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://primayscience.org/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://primayscience.org/images/og-image.png">
+<link rel="canonical" href="https://primayscience.org/secondary-science/o-level-revision/mistake-tracker/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"O-Level Science Mistake Tracker","description":"Interactive mistake tracker for O-Level Science revision. Log lost marks, set corrections and close gaps.","url":"https://primayscience.org/secondary-science/o-level-revision/mistake-tracker/","inLanguage":"en","educationalLevel":"Upper Secondary / GCE O-Level","isAccessibleForFree":true,"provider":{"@type":"Organization","name":"ScienceStar","url":"https://primayscience.org"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080f1e;--bg2:#0d1629;--card:#0f1c30;--border:rgba(255,255,255,.08);--border2:rgba(255,255,255,.14);--text:#e8edf5;--muted:rgba(232,237,245,.55);--dim:rgba(232,237,245,.3);--sky:#38bdf8;--sky2:#0ea5e9;--green:#34d399;--amber:#fbbf24;--red:#f87171;--purple:#a78bfa;--hub:#7c3aed;--p3:#fb923c;--p4:#818cf8;--p5:#34d399}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;display:flex;align-items:center;padding:0 clamp(16px,5%,56px);background:rgba(8,15,30,.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-brand{font-family:'Sora',sans-serif;font-weight:800;font-size:18px;color:#fff;text-decoration:none}.nav-brand span{color:var(--sky)}
+.nav-links{display:flex;align-items:center;gap:4px;margin-left:auto;flex-wrap:wrap}
+.nav-links a{font-size:12px;font-weight:600;color:var(--muted);text-decoration:none;padding:5px 10px;border-radius:8px;transition:all .15s}.nav-links a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.npill{padding:5px 12px!important;border-radius:50px!important;font-weight:700!important;font-size:11px!important;color:#fff!important}
+.np3{background:var(--p3)!important}.np4{background:var(--p4)!important}.np5{background:var(--p5)!important;color:#0d1629!important}.npsle{background:var(--sky2)!important}.nsec{background:var(--hub)!important}
+.crumb{font-size:12px;color:var(--dim);padding:76px clamp(16px,5%,56px) 0;max-width:1100px;margin:0 auto}.crumb a{color:var(--muted);text-decoration:none}.crumb a:hover{color:var(--sky)}.crumb span{margin:0 5px}
+.hero{padding:32px clamp(16px,5%,56px) 44px;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(248,113,113,.07),rgba(251,191,36,.05))}
+.hero-in{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(248,113,113,.1);border:1px solid rgba(248,113,113,.35);color:var(--red);padding:6px 14px;border-radius:50px;font-size:11px;font-weight:700;letter-spacing:.5px;margin-bottom:14px}
+h1{font-family:'Sora',sans-serif;font-size:clamp(26px,3.5vw,40px);font-weight:800;color:#fff;line-height:1.1;margin-bottom:12px}
+.lead{max-width:660px;color:var(--muted);font-size:15px;line-height:1.8}
+
+/* Stats row */
+.stats-row{display:flex;gap:14px;flex-wrap:wrap;max-width:1100px;margin:20px auto 0;padding:0 clamp(16px,5%,56px)}
+.stat-pill{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 18px;display:flex;align-items:center;gap:10px}
+.stat-num{font-family:'Sora',sans-serif;font-size:22px;font-weight:800;color:#fff}
+.stat-lbl{font-size:12px;color:var(--dim)}
+
+/* Code pills */
+.codes{display:flex;flex-wrap:wrap;gap:8px;padding:0 clamp(16px,5%,56px);max-width:1100px;margin:20px auto 0}
+.code-pill{padding:5px 12px;border-radius:50px;font-size:11px;font-weight:700;cursor:pointer;border:1px solid transparent;transition:.15s}
+.code-pill:hover{opacity:.85}
+
+/* Add entry form */
+.sec{padding:clamp(28px,4vw,48px) clamp(16px,5%,56px)}.si{max-width:1100px;margin:0 auto}
+.add-form{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin-bottom:24px}
+.add-form h3{font-family:'Sora',sans-serif;font-size:15px;font-weight:800;color:#fff;margin-bottom:14px}
+.form-row{display:grid;grid-template-columns:1fr 1fr 1fr 1fr auto;gap:10px;align-items:end}
+.fgroup label{font-size:11px;font-weight:700;color:var(--dim);display:block;margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px}
+.fgroup input,.fgroup select{width:100%;background:rgba(255,255,255,.05);border:1px solid var(--border2);color:var(--text);padding:9px 12px;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;outline:none;transition:.15s}
+.fgroup input:focus,.fgroup select:focus{border-color:var(--sky2);background:rgba(14,165,233,.06)}
+.fgroup select option{background:#0d1629}
+.btn-add{background:var(--sky2);color:#fff;border:none;padding:10px 18px;border-radius:8px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:13px;cursor:pointer;white-space:nowrap;transition:.15s}.btn-add:hover{opacity:.85}
+
+/* Tracker table */
+.tracker-wrap{overflow-x:auto}
+.tracker-table{width:100%;border-collapse:collapse;min-width:700px}
+.tracker-table th{background:var(--bg2);padding:10px 12px;text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--dim);border-bottom:1px solid var(--border)}
+.tracker-table td{padding:11px 12px;border-bottom:1px solid var(--border);font-size:13px;color:var(--muted);vertical-align:middle}
+.tracker-table tr:last-child td{border-bottom:none}
+.tracker-table tr.closed td{opacity:.4;text-decoration:line-through}
+.tracker-table tr.closed td:last-child{text-decoration:none}
+.code-badge{padding:3px 8px;border-radius:50px;font-size:10px;font-weight:800}
+.btn-close{background:rgba(52,211,153,.12);border:1px solid rgba(52,211,153,.35);color:var(--green);padding:5px 10px;border-radius:6px;font-size:11px;font-weight:700;cursor:pointer;transition:.15s;white-space:nowrap}
+.btn-close:hover{background:rgba(52,211,153,.2)}
+.btn-del{background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.2);color:var(--red);padding:5px 8px;border-radius:6px;font-size:11px;cursor:pointer;transition:.15s;margin-left:4px}
+.btn-del:hover{background:rgba(248,113,113,.15)}
+.empty-state{text-align:center;padding:40px 20px;color:var(--dim);font-size:14px}
+.empty-state span{display:block;font-size:32px;margin-bottom:12px}
+
+/* Info blocks */
+.block{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin-bottom:12px}
+.block h2{font-family:'Sora',sans-serif;font-size:16px;font-weight:800;color:#fff;margin-bottom:8px}
+.block p,.block li{font-size:13px;color:var(--muted);line-height:1.75}.block ul{margin:8px 0 0 18px}
+
+footer{background:#040a14;border-top:1px solid var(--border);padding:40px clamp(16px,5%,56px) 24px;margin-top:16px}
+.fi{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:28px;margin-bottom:24px}
+.flogo{font-family:'Sora',sans-serif;font-weight:800;font-size:17px;color:#fff;text-decoration:none}.flogo span{color:var(--sky)}
+.fcol h4{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--dim);margin-bottom:10px}
+.fcol a{display:block;font-size:13px;color:var(--muted);text-decoration:none;margin-bottom:7px}.fcol a:hover{color:#fff}
+.fb{max-width:1100px;margin:0 auto;padding-top:16px;border-top:1px solid var(--border);font-size:12px;color:var(--dim)}
+@media(max-width:760px){.fi{grid-template-columns:1fr 1fr}.form-row{grid-template-columns:1fr 1fr}.nav-links .npill{display:none}}
+@media print{nav,footer,.add-form,.btn-close,.btn-del,.codes,.stats-row{display:none}body{background:#fff;color:#111}.tracker-table th{color:#555;background:#eee}.tracker-table td{color:#222;border-color:#ddd}}
+
+  /* nav search */
+  .nav-search{display:flex;align-items:center;margin-left:8px;position:relative}
+  .ns-icon{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:8px;color:rgba(232,237,245,.6);cursor:pointer;padding:6px 8px;display:flex;align-items:center;transition:.15s}
+  .ns-icon:hover{color:#fff;background:rgba(255,255,255,.12)}
+  .ns-form{display:flex;align-items:center;overflow:hidden;width:0;opacity:0;transition:width .25s ease,opacity .2s;position:absolute;right:36px;top:50%;transform:translateY(-50%)}
+  .nav-search.open .ns-form{width:200px;opacity:1}
+  .ns-input{background:#0d1629;border:1.5px solid rgba(56,189,248,.4);border-radius:8px 0 0 8px;color:#e8edf5;font-size:13px;padding:6px 10px;outline:none;width:100%;font-family:inherit}
+  .ns-input::placeholder{color:rgba(232,237,245,.3)}
+  .ns-submit{background:rgba(56,189,248,.2);border:1.5px solid rgba(56,189,248,.4);border-left:none;border-radius:0 8px 8px 0;color:#38bdf8;cursor:pointer;padding:6px 10px;font-size:13px;font-family:inherit;transition:.15s}
+  .ns-submit:hover{background:rgba(56,189,248,.35)}
+  @media(max-width:500px){.nav-search.open .ns-form{width:150px}}
+</style>
+<meta name="twitter:title" content="O-Level Science Mistake Tracker | ScienceStar">
+<meta name="twitter:description" content="Log lost marks, record your error and track corrections. An interactive tool for O-Level Science revision.">
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-brand">⭐ Science<span>Star</span></a>
+  <div class="nav-links">
+    <a href="/articles/">Articles</a>
+    <a href="/p3/" class="npill np3">P3</a>
+    <a href="/p4/" class="npill np4">P4</a>
+    <a href="/p5/" class="npill np5">P5</a>
+    <a href="/psle/" class="npill npsle">PSLE</a>
+    <a href="/secondary-science/" class="npill nsec">Secondary</a>
+    <a href="/secondary-science/pure-sciences/chemistry/mock-paper-1/" class="npill nmock">📝 Mock Papers</a>
+  </div>
+
+  <div class="nav-search" id="navSearch">
+    <button class="ns-icon" onclick="openSearch()" aria-label="Search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
+    <form class="ns-form" action="/search/" method="GET" role="search">
+      <input class="ns-input" type="search" name="q" placeholder="Search topics…" autocomplete="off" aria-label="Search ScienceStar" onfocus="this.closest('.nav-search').classList.add('open')" onblur="setTimeout(()=>this.closest('.nav-search').classList.remove('open'),200)">
+      <button type="submit" class="ns-submit" aria-label="Go">→</button>
+    </form>
+  </div>
+</nav>
+<div class="crumb"><a href="/">Home</a><span>›</span><a href="/secondary-science/">Secondary Science</a><span>›</span><a href="/secondary-science/o-level-revision/">O-Level Pack</a><span>›</span> Mistake Tracker</div>
+
+<section class="hero">
+  <div class="hero-in">
+    <div class="badge">📌 Mistake Tracker</div>
+    <h1>Turn Lost Marks into a Revision Plan</h1>
+    <p class="lead">After each practice paper, log the exact reason you lost marks. Entries save to your browser. Redo the question and mark the row closed when you get it right without notes.</p>
+  </div>
+</section>
+
+<!-- Stats -->
+<div class="stats-row" id="stats-row">
+  <div class="stat-pill"><span class="stat-num" id="stat-open">0</span><div><div class="stat-lbl">Open mistakes</div></div></div>
+  <div class="stat-pill"><span class="stat-num" id="stat-closed">0</span><div><div class="stat-lbl" style="color:var(--green)">Closed</div></div></div>
+  <div class="stat-pill"><span class="stat-num" id="stat-total">0</span><div><div class="stat-lbl">Total logged</div></div></div>
+</div>
+
+<!-- Code legend -->
+<div class="codes">
+  <span class="code-pill" style="background:rgba(248,113,113,.15);border-color:rgba(248,113,113,.4);color:var(--red)">DEF: weak definition</span>
+  <span class="code-pill" style="background:rgba(251,191,36,.12);border-color:rgba(251,191,36,.4);color:var(--amber)">UNIT: wrong/missing unit</span>
+  <span class="code-pill" style="background:rgba(56,189,248,.12);border-color:rgba(56,189,248,.4);color:var(--sky)">CMD: command word error</span>
+  <span class="code-pill" style="background:rgba(167,139,250,.12);border-color:rgba(167,139,250,.4);color:var(--purple)">GRAPH: graph/data error</span>
+  <span class="code-pill" style="background:rgba(52,211,153,.12);border-color:rgba(52,211,153,.4);color:var(--green)">LINK: explanation not linked</span>
+  <span class="code-pill" style="background:rgba(251,146,60,.12);border-color:rgba(251,146,60,.4);color:var(--p3)">CALC: formula/calculation error</span>
+  <span class="code-pill" style="background:rgba(244,114,182,.12);border-color:rgba(244,114,182,.4);color:#f472b6">PRAC: variable/control issue</span>
+</div>
+
+<section class="sec">
+  <div class="si">
+    <!-- Add form -->
+    <div class="add-form">
+      <h3>+ Log a new mistake</h3>
+      <div class="form-row">
+        <div class="fgroup"><label>Paper / Topic</label><input type="text" id="f-paper" placeholder="e.g. Prelim Physics P1 Q12"></div>
+        <div class="fgroup"><label>Code</label>
+          <select id="f-code">
+            <option value="DEF">DEF — weak definition</option>
+            <option value="UNIT">UNIT — wrong/missing unit</option>
+            <option value="CMD">CMD — command word</option>
+            <option value="GRAPH">GRAPH — graph/data</option>
+            <option value="LINK">LINK — explanation not linked</option>
+            <option value="CALC">CALC — calculation error</option>
+            <option value="PRAC">PRAC — variable/control</option>
+          </select>
+        </div>
+        <div class="fgroup"><label>What I wrote / missed</label><input type="text" id="f-error" placeholder="e.g. Forgot 'net movement'"></div>
+        <div class="fgroup"><label>Next action</label><input type="text" id="f-action" placeholder="e.g. Rewrite definition 3×"></div>
+        <button class="btn-add" onclick="addEntry()">Add →</button>
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div class="tracker-wrap">
+      <table class="tracker-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Paper / Topic</th>
+            <th>Code</th>
+            <th>What I wrote / missed</th>
+            <th>Next action</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="tracker-body">
+          <tr class="empty-row"><td colspan="6"><div class="empty-state"><span>📝</span>No mistakes logged yet. Add your first entry above after your next practice paper.</div></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin-top:20px">
+      <button class="btn-del" style="font-size:12px;padding:6px 12px" onclick="clearClosed()">Remove all closed rows</button>
+      <button class="btn-del" style="font-size:12px;padding:6px 12px;margin-left:4px" onclick="clearAll()">Reset tracker</button>
+    </div>
+
+    <div style="margin-top:32px">
+      <div class="block">
+        <h2>How to use the tracker effectively</h2>
+        <p>The tracker stops repeated mistakes. After every practice paper or mini paper, record the lost-mark code, the exact phrase or working that caused the loss, and one concrete next action. The next action should be small enough to do immediately: rewrite a definition, redo a graph, practise unit conversions, or reattempt a similar question from notes.</p>
+      </div>
+      <div class="block">
+        <h2>Review rule</h2>
+        <ul>
+          <li>Return to each open entry after two days and again after one week.</li>
+          <li>If you can answer the same question correctly twice without notes, mark the row closed.</li>
+          <li>If not, the issue is probably conceptual — revisit the topic explanation before doing more papers.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<style>
+.info-sec{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px 32px;margin:24px 0}
+.info-sec h3{font-size:16px;font-weight:800;color:#fff;margin-bottom:12px}
+.info-sec p{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:12px}
+.info-sec ul{padding-left:20px}
+.info-sec li{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:6px}
+.info-sec li strong{color:#fff}
+.info-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin:20px 0}
+.info-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px}
+.info-card-icon{font-size:22px;margin-bottom:10px}
+.info-card h4{font-size:14px;font-weight:800;color:#fff;margin-bottom:8px}
+.info-card p{font-size:13px;color:var(--muted);line-height:1.7}
+.faq-item{border-bottom:1px solid var(--border);padding:16px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-q{font-size:14px;font-weight:700;color:#fff;margin-bottom:8px}
+.faq-a{font-size:13px;color:var(--muted);line-height:1.8}
+.tip-row{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--border)}
+.tip-row:last-child{border-bottom:none}
+.tip-num{width:28px;height:28px;border-radius:50%;background:rgba(var(--rgb),.15);border:1px solid rgba(var(--rgb),.3);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:var(--acc);flex-shrink:0}
+.tip-text{font-size:13px;color:var(--muted);line-height:1.7}
+.tip-text strong{color:#fff}
+</style>
+
+<div class="info-sec">
+<h3>Why tracking mistakes is the most powerful revision technique</h3>
+<p>Research in educational psychology consistently shows that simply re-reading notes or re-doing questions you already know how to answer has minimal effect on exam performance. The highest-impact revision comes from deliberately practising your weakest areas — and that requires knowing exactly what they are.</p>
+<p>The mistake tracker turns every practice paper you attempt into structured data. Instead of moving on after marking your work, you log the specific reason for each mark lost. Over time, patterns emerge: you may consistently lose marks on explanation questions involving enzymes, or consistently misremember the direction of current in circuits. Once a pattern is identified, it can be directly targeted.</p>
+</div>
+
+<div class="info-sec">
+<h3>How to use the tracker</h3>
+<div class="tip-row"><div class="tip-num">1</div><div class="tip-text"><strong>After every practice paper:</strong> do not leave it until the next day. Log each wrong answer immediately while your thinking is fresh. Include the question reference, topic, marks lost, and the exact reason — not just "didn't know" but "confused Fe2+ (green precipitate) with Fe3+ (brown precipitate)."</div></div>
+<div class="tip-row"><div class="tip-num">2</div><div class="tip-text"><strong>Be specific about the reason:</strong> vague entries like "didn't revise" are useless. Specific entries like "used rate = 1/time instead of measuring gradient of tangent" or "forgot to subtract background radiation" are actionable.</div></div>
+<div class="tip-row"><div class="tip-num">3</div><div class="tip-text"><strong>Redo the question without notes:</strong> within 24 hours, attempt the exact question again without looking at the answer. If you get it right, mark the tracker row as closed. If not, the row stays open and is reviewed again next session.</div></div>
+<div class="tip-row"><div class="tip-num">4</div><div class="tip-text"><strong>Review open rows weekly:</strong> at the start of each revision session, read through all open tracker rows before starting new work. This spaced repetition effect significantly improves long-term retention of corrected mistakes.</div></div>
+<div class="tip-row"><div class="tip-num">5</div><div class="tip-text"><strong>Target patterns in the final weeks:</strong> in the two weeks before your exam, your tracker is your most important revision tool. If you have 10 open rows on enzyme kinetics, that topic needs a focused revision session — not another topic you already understand.</div></div>
+</div>
+
+<div class="info-sec">
+<h3>Common mistake categories in O-Level Science</h3>
+<div class="info-grid">
+<div class="info-card">
+<div class="info-card-icon">📝</div>
+<h4>Language precision</h4>
+<p>Biology especially penalises vague language. "Oxygen is used up" loses the mark that "oxygen is used in aerobic respiration in mitochondria to produce ATP" earns. Log language precision errors separately — they require a different type of correction.</p>
+</div>
+<div class="info-card">
+<div class="info-card-icon">🧮</div>
+<h4>Calculation errors</h4>
+<p>In Chemistry and Physics, most calculation errors fall into three categories: wrong formula recalled, correct formula but wrong rearrangement, or correct rearrangement but unit conversion error (e.g. cm3 vs dm3). Each has a different fix.</p>
+</div>
+<div class="info-card">
+<div class="info-card-icon">📊</div>
+<h4>Data interpretation</h4>
+<p>Graph questions lose marks when students describe rather than explain, or quote a trend without numerical evidence. Practise reading anomalous points, drawing tangents, and calculating rates from gradients.</p>
+</div>
+<div class="info-card">
+<div class="info-card-icon">🔬</div>
+<h4>Practical skills</h4>
+<p>Experimental design questions require identifying the independent variable, controlled variables, and a valid measurement method. Students often state a dependent variable but fail to describe how it is measured — that loses the method mark.</p>
+</div>
+</div>
+</div>
+
+<footer>
+  <div class="fi">
+    <div><a href="/" class="flogo">⭐ Science<span>Star</span></a><p style="color:var(--dim);margin-top:10px;font-size:13px">Free Science for Singapore students.</p></div>
+    <div class="fcol"><h4>O-Level Pack</h4><a href="/secondary-science/o-level-revision/">Pack home</a><a href="/secondary-science/o-level-revision/checklists/">Checklists</a><a href="/secondary-science/o-level-revision/formula-definition-sheets/">Formula Sheets</a><a href="/secondary-science/o-level-revision/timed-mini-papers/">Mini Papers</a><a href="/secondary-science/o-level-revision/practical-data/">Practical</a></div>
+    <div class="fcol"><h4>Secondary</h4><a href="/secondary-science/">Hub</a><a href="/secondary-science/sec-1/">Sec 1</a><a href="/secondary-science/pure-sciences/">Pure Sciences</a></div>
+    <div class="fcol"><h4>Site</h4><a href="/articles/">Articles</a><a href="/psle/">PSLE</a><a href="/privacy/">Privacy</a></div>
+  </div>
+  <div class="fb">© 2026 ScienceStar · Not affiliated with MOE, SEAB or Cambridge. Use with official syllabus documents.</div>
+</footer>
+
+<script>
+const CODE_COLORS = {
+  DEF:'rgba(248,113,113,.15);color:#f87171',
+  UNIT:'rgba(251,191,36,.12);color:#fbbf24',
+  CMD:'rgba(56,189,248,.12);color:#38bdf8',
+  GRAPH:'rgba(167,139,250,.12);color:#a78bfa',
+  LINK:'rgba(52,211,153,.12);color:#34d399',
+  CALC:'rgba(251,146,60,.12);color:#fb923c',
+  PRAC:'rgba(244,114,182,.12);color:#f472b6'
+};
+
+let entries = [];
+
+function loadEntries() {
+  try { entries = JSON.parse(localStorage.getItem('ss-tracker') || '[]'); } catch(e){ entries = []; }
+}
+function saveEntries() {
+  try { localStorage.setItem('ss-tracker', JSON.stringify(entries)); } catch(e){}
+}
+
+function today() {
+  const d = new Date(); return d.getDate() + '/' + (d.getMonth()+1) + '/' + d.getFullYear();
+}
+
+function addEntry() {
+  const paper = document.getElementById('f-paper').value.trim();
+  const code = document.getElementById('f-code').value;
+  const error = document.getElementById('f-error').value.trim();
+  const action = document.getElementById('f-action').value.trim();
+  if (!paper) { document.getElementById('f-paper').focus(); return; }
+  entries.push({ id: Date.now(), date: today(), paper, code, error, action, closed: false });
+  saveEntries();
+  renderTable();
+  document.getElementById('f-paper').value = '';
+  document.getElementById('f-error').value = '';
+  document.getElementById('f-action').value = '';
+}
+
+function toggleClosed(id) {
+  const e = entries.find(x => x.id === id);
+  if (e) { e.closed = !e.closed; saveEntries(); renderTable(); }
+}
+
+function deleteEntry(id) {
+  entries = entries.filter(x => x.id !== id);
+  saveEntries(); renderTable();
+}
+
+function clearClosed() {
+  entries = entries.filter(x => !x.closed);
+  saveEntries(); renderTable();
+}
+
+function clearAll() {
+  if (!confirm('Delete all entries? This cannot be undone.')) return;
+  entries = []; saveEntries(); renderTable();
+}
+
+function renderTable() {
+  const tbody = document.getElementById('tracker-body');
+  const open = entries.filter(e => !e.closed).length;
+  const closed = entries.filter(e => e.closed).length;
+  document.getElementById('stat-open').textContent = open;
+  document.getElementById('stat-closed').textContent = closed;
+  document.getElementById('stat-total').textContent = entries.length;
+
+  if (!entries.length) {
+    tbody.innerHTML = '<tr class="empty-row"><td colspan="6"><div class="empty-state"><span>📝</span>No mistakes logged yet. Add your first entry above after your next practice paper.</div></td></tr>';
+    return;
+  }
+
+  tbody.innerHTML = entries.map(e => {
+    const cc = CODE_COLORS[e.code] || 'rgba(255,255,255,.08);color:#e8edf5';
+    const [bg, col] = cc.split(';color:');
+    return `<tr class="${e.closed ? 'closed' : ''}">
+      <td>${e.date}</td>
+      <td>${e.paper}</td>
+      <td><span class="code-badge" style="background:${bg};color:${col}">${e.code}</span></td>
+      <td>${e.error || '—'}</td>
+      <td>${e.action || '—'}</td>
+      <td>
+        <button class="btn-close" onclick="toggleClosed(${e.id})">${e.closed ? '↩ Reopen' : '✓ Close'}</button>
+        <button class="btn-del" onclick="deleteEntry(${e.id})">✕</button>
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+loadEntries();
+renderTable();
+</script>
+
+<script>
+function openSearch(){
+  var ns=document.getElementById('navSearch');
+  ns.classList.add('open');
+  setTimeout(function(){ns.querySelector('.ns-input').focus();},50);
+}
+</script>
+</body>
+</html>

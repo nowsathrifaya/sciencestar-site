@@ -122,6 +122,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;display:flex;ali
 .stat-l{font-size:11px;color:var(--dim);margin-top:3px}
 @keyframes fu{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 
+.hero-promo{display:inline-flex;align-items:center;gap:10px;width:fit-content;
+  background:rgba(56,189,248,.08);border:1px solid rgba(56,189,248,.25);border-radius:50px;
+  padding:9px 16px 9px 12px;text-decoration:none;transition:transform .2s,border-color .2s,background .2s;
+  animation:fu .5s .26s ease both}
+.hero-promo:hover{transform:translateY(-2px);border-color:rgba(56,189,248,.45);background:rgba(56,189,248,.13)}
+.hero-promo-ico{font-size:15px}
+.hero-promo-text{font-size:12.5px;font-weight:600;color:var(--sky)}
+.hero-promo-text strong{color:#fff}
+.hero-promo-arrow{font-size:13px;color:var(--sky);font-weight:700}
+
 /* HERO CARD */
 .hero-right{animation:fu .5s .1s ease both}
 .psle-card{background:var(--card);border:1px solid rgba(56,189,248,.2);border-radius:var(--rxl);overflow:hidden;
@@ -230,6 +240,33 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;display:flex;ali
 .al1-title{font-family:'Sora',sans-serif;font-size:clamp(18px,2.5vw,26px);font-weight:800;color:var(--amber);margin-bottom:6px}
 .al1-desc{font-size:14px;color:rgba(251,191,36,.6);line-height:1.7;max-width:480px}
 
+/* WORKSHEET PACK BAND */
+.ws-band{position:relative;overflow:hidden;background:linear-gradient(135deg,#04141f,#062633);
+  border-top:1px solid rgba(56,189,248,.2);border-bottom:1px solid rgba(56,189,248,.2);
+  padding:clamp(44px,6.5vw,76px) clamp(16px,5%,56px)}
+.ws-glow{position:absolute;width:500px;height:500px;top:-180px;right:5%;border-radius:50%;
+  background:radial-gradient(circle,rgba(56,189,248,.18) 0%,transparent 65%);pointer-events:none}
+.ws-inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;display:flex;
+  align-items:center;justify-content:space-between;gap:36px;flex-wrap:wrap}
+.ws-left{display:flex;align-items:flex-start;gap:22px}
+.ws-emoji{font-size:52px;flex-shrink:0;filter:drop-shadow(0 4px 16px rgba(56,189,248,.3))}
+.ws-eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:800;
+  letter-spacing:1.2px;text-transform:uppercase;color:var(--sky);margin-bottom:8px}
+.ws-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--sky);
+  animation:pulse 2s infinite}
+.ws-title{font-family:'Sora',sans-serif;font-size:clamp(20px,2.8vw,29px);font-weight:800;
+  color:#fff;line-height:1.2;margin-bottom:8px}
+.ws-desc{font-size:14.5px;color:rgba(232,237,245,.6);line-height:1.7;max-width:480px;margin-bottom:12px}
+.ws-features{display:flex;gap:16px;flex-wrap:wrap}
+.ws-features span{font-size:12px;font-weight:700;color:var(--sky)}
+.ws-cta{display:flex;align-items:center;gap:14px;background:var(--sky2);border-radius:50px;
+  padding:10px 26px 10px 22px;text-decoration:none;box-shadow:0 8px 32px rgba(14,165,233,.4);
+  transition:transform .2s,box-shadow .2s;flex-shrink:0}
+.ws-cta:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(14,165,233,.55)}
+.ws-cta-price{font-family:'Sora',sans-serif;font-size:20px;font-weight:800;color:#fff;
+  background:rgba(255,255,255,.18);border-radius:50px;padding:4px 12px}
+.ws-cta-label{font-weight:700;font-size:14.5px;color:#fff;white-space:nowrap}
+
 /* TOOLS */
 .tools-sec{background:var(--bg2)}
 .tools-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
@@ -311,6 +348,12 @@ footer{background:#040a14;border-top:1px solid var(--border);padding:56px clamp(
   .topic-chips{grid-template-columns:1fr 1fr}
   .al1-inner{flex-direction:column;text-align:center}
   .al1-left{flex-direction:column;align-items:center;text-align:center}
+  .ws-inner{flex-direction:column;text-align:center}
+  .ws-left{flex-direction:column;align-items:center;text-align:center}
+  .ws-features{justify-content:center}
+  .ws-cta{width:100%;justify-content:center}
+  .hero-promo{width:100%;white-space:normal}
+  .hero-promo-text{line-height:1.4}
 }
 
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .5s,transform .5s;pointer-events:none}.reveal.visible{pointer-events:auto}
@@ -449,6 +492,11 @@ function onboardGo(key){
         <a href="/psle/" class="btn btn-sky">🔭 Start PSLE Prep</a>
         <a href="/assess/" class="btn btn-ghost">🎯 Level Check</a>
       </div>
+      <a href="/shop/psle-science-pack/" class="hero-promo">
+        <span class="hero-promo-ico">📝</span>
+        <span class="hero-promo-text">Printable worksheets with full model answers — <strong>S$6</strong></span>
+        <span class="hero-promo-arrow">→</span>
+      </a>
       <div class="hero-stats">
         <div><div class="stat-n">39+</div><div class="stat-l">Science Topics</div></div>
         <div><div class="stat-n">150+</div><div class="stat-l">Free Quizzes</div></div>
@@ -611,16 +659,26 @@ function onboardGo(key){
 </div>
 
 <!-- WORKSHEET PACK PROMO -->
-<div class="al1-band" style="background:linear-gradient(135deg,#06222e,#082230);border-top-color:rgba(56,189,248,.15);border-bottom-color:rgba(56,189,248,.15)">
-  <div class="al1-inner">
-    <div class="al1-left">
-      <div class="al1-emoji">📝</div>
+<div class="ws-band">
+  <div class="ws-glow"></div>
+  <div class="ws-inner">
+    <div class="ws-left">
+      <div class="ws-emoji">📝</div>
       <div>
-        <div class="al1-title" style="color:var(--sky)">Want printable worksheets with full model answers?</div>
-        <div class="al1-desc" style="color:rgba(232,237,245,.55)">PSLE Science Worksheet Pack — 15 topics, 660+ questions, 6 diagrams, 40-mark mock exam. Teacher + Student editions. S$6, instant download.</div>
+        <div class="ws-eyebrow">Most popular download</div>
+        <div class="ws-title">Want printable worksheets with full model answers?</div>
+        <div class="ws-desc">PSLE Science Worksheet Pack — 15 topics, 660+ questions, 6 diagrams, 40-mark mock exam. Teacher + Student editions.</div>
+        <div class="ws-features">
+          <span>✓ Instant download</span>
+          <span>✓ Print-ready PDF</span>
+          <span>✓ Full answer key</span>
+        </div>
       </div>
     </div>
-    <a href="/shop/psle-science-pack/" class="btn btn-sky">Get the Worksheet Pack — S$6 →</a>
+    <a href="/shop/psle-science-pack/" class="ws-cta">
+      <span class="ws-cta-price">S$6</span>
+      <span class="ws-cta-label">Get the Worksheet Pack →</span>
+    </a>
   </div>
 </div>
 

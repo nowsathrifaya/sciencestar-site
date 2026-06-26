@@ -14,6 +14,9 @@
 /shared.css
   Cache-Control: public, max-age=86400
 
+/topic-page.css
+  Cache-Control: public, max-age=86400
+
 /*.html
   Cache-Control: public, max-age=3600, must-revalidate
 
